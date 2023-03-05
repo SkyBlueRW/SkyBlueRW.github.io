@@ -17,8 +17,8 @@ linkedin_username: "wang.ruitao@outlook.com"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-# theme: "minima"
-remote_theme: pages-themes/cayman@v0.2.0
+theme: "minima"
+# remote_theme: pages-themes/cayman@v0.2.0
 
 
 markdown: kramdown
@@ -28,12 +28,12 @@ rss: rss
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
-    disable: false
+    disable: true
     
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-remote-theme 
+  #- jekyll-remote-theme 
 titles_from_headings:
   strip_title: true
   collections: true
