@@ -3,10 +3,19 @@
 ### Stochastic Discount Factor: a nutshell of asset pricing 
 
 
-[Section 1](https://skybluerw.github.io/2023/03/04/sdf-nutshell.html#section1)
+1. [Introduction](#introduction)
+2. [Some paragraph](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Another paragraph](#paragraph2)
 
-[Section 2](https://skybluerw.github.io/2023/03/04/sdf-nutshell.html#section2)
+#### This is the introduction <a name="introduction"></a>
+Some introduction text, formatted in heading 2 style
 
-#### section1
+#### Some paragraph <a name="paragraph1"></a>
+The first paragraph text
 
-#### section2
+##### Sub paragraph <a name="subparagraph1"></a>
+This is a sub paragraph, formatted in heading 3 style
+
+#### Another paragraph <a name="paragraph2"></a>
+The second paragraph text
