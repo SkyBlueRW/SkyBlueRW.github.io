@@ -1,6 +1,7 @@
+---
 layout: page
 title: ABOUT
 ---
 
-# Test1
-# Test2
+# test 1
+# test 2
