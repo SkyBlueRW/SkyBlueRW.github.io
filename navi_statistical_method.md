@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Statistical Method Model
+title: Statistical Method
 ---
 
-# Static Factor Model
+# **Factor Model**
 
-# Dynamic Factor Model
+# **Dynamic Factor Model**
+
+# **Empirical Method in Academic Asset Pricing**
