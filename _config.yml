@@ -10,9 +10,10 @@ linkedin_username: "ray-wang-cfa-frm-155516a4"
 
 
 header_pages:
-  - factor_model.md
-  - port.md
-  - asset_pricing.md
+  - navi_factor_model.md
+  - navi_port.md
+  - navi_asset_pricing.md
+  - navi_other.md
   - archive.md
   - about.md
   
