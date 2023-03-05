@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Factor Model
+title: Statistical Method Model
 ---
 
 # Static Factor Model
