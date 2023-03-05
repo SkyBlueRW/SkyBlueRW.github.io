@@ -1,4 +1,4 @@
-Hey there. Welcome to my research & learning blog.
+Hey there! Welcome to my research & learning blog.
 
 This blog is mostly about topics that I have a huge passion for: 
 - **asset pricing theories**
