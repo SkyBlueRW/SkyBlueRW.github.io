@@ -1,4 +1,4 @@
 ##
 
-### Convex Optimization: 101 and further
+### Convex Optimization: a 101 refresh and further
 
