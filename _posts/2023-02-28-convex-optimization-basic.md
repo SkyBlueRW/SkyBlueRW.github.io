@@ -8,7 +8,7 @@
 
 #### Why should you care? <a name="introduction"></a>
 
-I think you will agree that optimization has become an indispensable tool in the world of finance. Nowdays, it's common to see people using optimizers to decide allocation of resources (like portfolio construction or cash flow management), to determine parameters in model fitting (like regression), to ...
+It is likely that you will agree optimization has become an indispensable tool in the world of finance. Nowdays, it's common to see people using optimizers to decide allocation of resources (like portfolio construction or cash flow management), to determine parameters in model fitting (like regression), to ...
 
 While you may be wondering why you should care about the details under the hood. With abundance of open-source and commercial optimizers available (cvx, mosek, ... the list can goes on and on lasting for more than a page) why shouldn't you simply choose one of them and let the professionals work their magic? How would it help to know a bit more about the details of this magic? Here are my answers 
 
