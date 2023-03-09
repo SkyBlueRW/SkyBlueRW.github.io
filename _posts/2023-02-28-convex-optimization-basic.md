@@ -40,7 +40,11 @@ $$
 
  **why is it so special?**
 
-It is such a special category of optimization that we are guaranteed to have global optimal from it (let's ignore all the numerical and scability issues for now). Imagine what does convex function look like. It is a reversed bell curve with increasing (to be more precise: non-decrease) slope. 
+It is such a special category of optimization that global optimum is guaranteed theoretically (let's ignore all the practical issues like numerical issue, scability issue, etc..). As long as we can formulate a real world problem in the above mentioned format, we are in a terrific position of solving it. 
+
+To add a bit geometrical intuition. Imagine the convex objective function as a valley with increasing (to be more precise: non-decrease) slope in 2D. Finding the minimum point is like rolling down the hill. While the constraint set is like a fence restricting us in a defined area. We can go any point from the area to any other point in a straight line (convex set) hence we can continue rolling before we got to the minimum point.
+
+
 
 #### Reference <a name="reference"></a>
 - Boyd & Vandenberghe: Convex Optimization
