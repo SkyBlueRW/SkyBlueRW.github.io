@@ -28,9 +28,12 @@ markdown: kramdown
 rss: rss
 
 markdown: kramdown
+markdown_ext: markdown,mkd,mkdn,md
+textile_ext: textile
 kramdown:
   syntax_highlighter_opts:
     disable: true
+  input: GFM
     
 plugins:
   - jekyll-feed
