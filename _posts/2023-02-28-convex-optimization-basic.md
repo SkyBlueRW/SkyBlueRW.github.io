@@ -27,7 +27,7 @@ Let's start with some refresh on the most important category (in my limited unde
 
 **What is a convex optimization?** 
 
-In short, convex optimization is the type of optimization in which we minimize a convex function within a convex set. Without loss of generality, a convex optimization can always be fomulated as the following problem where the objective function ($f_0$) and the constraint function ($f_i$ and $h_i$) are convex. The two sets of constraint functions ($f_i$, $h_i$) define a general convex set.
+In short, convex optimization is the type of optimization in which we minimize a convex function within a convex set. Without loss of generality, a convex optimization can always be fomulated as the following problem where the objective function ($$f_0$$) and the constraint function ($$f_i$$ and $$h_i$$) are convex. The two sets of constraint functions ($$f_i$$, $$h_i$$) define a general convex set.
 
 $$
 \begin{aligned}
