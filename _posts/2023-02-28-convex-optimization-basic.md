@@ -40,12 +40,16 @@ $$
 
  **why is it so special?**
 
-It is such a special category of optimization that global optimum is guaranteed theoretically (let's ignore all the practical issues like numerical issue, scability issue, etc..). As long as we can formulate a real world problem in the above mentioned format, we are in a terrific position of solving it. 
+It is such a special category of optimization that global optimum is guaranteed theoretically. While practical issues such as numerical and scalability problems must be considered, formulating a real world problem in the above mentioned format allows for an terrific chance in finding the solution. 
 
-To add a bit geometrical intuition. Imagine the convex objective function as a valley with increasing (to be more precise: non-decrease) slope in 2D. Finding the minimum point is like rolling down the hill. While the constraint set is like a fence restricting us in a defined area. We can go any point from the area to any other point in a straight line (convex set) hence we can continue rolling before we got to the minimum point.
+To add a bit geometrical intuition, imagine the convex objective function as a valley with increasing (to be more precise: non-decrease) slope in 2D. Finding the minimum point is like rolling down the hill. While the constraint set is like a fence restricting us in a defined area. We can go any point from the area to any other point in a straight line (convex set) hence we can continue rolling before we got to the minimum point.
 
+In addition, many real world problems can be formulated as convex optimization. For instance, in finance, we model investors' utility toward consumption with a cancave function to express the diminishing utility of consumption. Rational acts according to the maximization of the concave utility function (equivalent to minimization of a convex function) given budget constraint (convex, or more specifically affine set). Similarly, in model calibration, sum of suqared error is a widely used loss function to determin parameter estimates. One more example in portfolio construction, a traditional way to determine portfolio mix with mean and variance can also be modelled as convex optimization easily. 
+
+It is an incredibly useful technique that has a wide range of applications.
 
 
 #### Reference <a name="reference"></a>
 - Boyd & Vandenberghe: Convex Optimization
 - Cornuejols, Pena & Tutuncu: Optimization methods in Finance
+
