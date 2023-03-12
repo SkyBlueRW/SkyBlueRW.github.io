@@ -100,7 +100,7 @@ The dual problem is a powerful tool in various perspects.
 
 First and foremost, the dual problem provides a way to do sensitivity analysis upon constraint values. Essentially, the optimal dual solution represents the marginal improvement on primal objective upon relaxation of respective constraint. This optimal dual solution usually has profound economic interpretations (price of resources in equilibirum state, utility improvement given one unit of budget change, etc..Carr & Zhu even have a book called [Convex Duality and Financial Mathematics](https://link.springer.com/book/10.1007/978-3-319-92492-2))
 
-Second, it can be used to simplify complex optimization problems. Often, the dual problem of a complex optimization problem (I.E. L1 norm minimization) can be much simpler than the original problem, making it easier to solve or analyze. 
+Second, it can be used to simplify complex optimization problems. Often, the dual problem of a complex optimization problem (I.E. L1 norm minimization) can be much simpler than the original problem, making it easier to solve or analyze. Furthermore, For complex optimization problems with strong duality (duality gap to be 0), even analytical solution becomes possible via KKT condition hence provides way more possibilities to carry on further analysis. 
 
 Last but not least, it can be used to prove the optimality of a solution. By solving the dual problem and comparing its objective value with the objective value of the original problem, we can determine whether a given solution is optimal. Actually a lot of optimizers out there is using the duality gap as a stop criteria.
 
