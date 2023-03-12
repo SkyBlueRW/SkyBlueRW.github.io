@@ -1,6 +1,6 @@
 ##
 
-## Convex Optimization: a 101 refresh and further
+## Numerical Optimization: a 101 refresh and further
 
 
 - [Why should you care?](#introduction)
@@ -51,14 +51,24 @@ It is an incredibly useful technique that has a wide range of applications.
 
 ### Numerical Algorithms to solve <a name="solve"></a>
 
-With such an optimization problem at hand, we can easily feed it into one of the optimizers and get the optimal solution. However, it's imporant to note that optimizers offer various numerical algorithms to solve the problem, and the choice of algorithm can significantly impact the efficiency of the process.The choice depends on questions such as whether the optimization is strongly convex, whether it is in huge dimension, whether it is large in scale, or whether we have any knowledge of the first or second derivative of the objective function. 
+With such an optimization problem at hand, we can easily feed it into one of the optimizers and get the optimal solution. However, it's imporant to note that optimizers offer various numerical algorithms to solve the problem, and the choice of algorithm can significantly impact the efficiency of the process. How to choose? it largely depends on questions such as whether the optimization is strongly convex, whether it is in huge dimension, whether it is large in scale, or whether we have any knowledge of the first or second derivative of the objective function. 
 
-For a optimization with strong convexity structure, the quest for global minimum actually boils down to the quest for local minimum. To find the local minimum, we can start arbitrarily from one x and march toward the direction with the most negative gradient iteratively Hence the **Gradient Descent Algorithm**. One iteration of gradient descent is as shown below. $$\alpha$$ is the learning rate that controls how aggressive would we want to update for one iteration. $$\triangledown f(x)$$ is the first order derivate that governs where to update along the feasible set. 
+For an optimization with strong convexity structure, the quest for global minimum actually boils down to the quest for local minimum. To find the local minimum, we can start arbitrarily from one X and march toward the direction with the most negative gradient iteratively hence the **Gradient Descent Algorithm**. One iteration of gradient descent is as shown below. $$\alpha$$ is the learning rate that controls how aggressivly do we want to update for one iteration. $$\triangledown f(x)$$ is the first order derivate that governs where to update along the feasible set. 
 
 $$x_{k+1} = x_{k} - \alpha \triangledown f(x_{k})$$
 
-Various tricks can help to speed up this 
+Several strategies can improve this basic version of Gradient descent:
+- We can use a **decayed learning rate** to improve the speed of convergence. Essentially to update with larger step size in the initial iterations and to reduce the step size gradually along the iterations for a careful search for the local minimum at later iterations.
+- We can use **Gradient descent with moment** to fasten the process by smoothing out noise in derivatives and to jump beyond diminishing gradients. Basically, weighted average of derivatives in the last few iterations instead of the derivative of current step is used for the update of the iteration. The accumulation of derivatives from past few iterations can drag us from potential saddle point and speed up the process if there is a clear trend locally.
+- We can further use **RMSprop** to normalize the direction of the derivative. Basically, we scale the derivative along each dimension by respective second moments hence we are moving further for dimensions with smaller historical variation and vice versa. 
 
+Adding all 3 modifications together leads to the famous **ADAM** (Adaptive Momentum Gradient descent) algorithm, which is widely used in the fitting of machine learning models.
+
+So far with various gradient descent algorithms, we have been exclusively focusing on the first derivatives of the objective function. We are actually searching for minimum via a local linear approximation. It is true that as long as we are dealing with a problem with reasonable convex structure, gradient descent can reliably gets the job done, It is not necessarily the most efficient way. Think about the linear approximation we are relying on, to ensure a reasonable local estimate, we will have to restrict us to a relatively small step size because higher derivatives will come into play as the step size gets larger. 
+
+Incoporating second order derivatives (**Newton Method**) can potentially improve the efficiency. With a second order approximation, the one step update can be as followed, where $$H(x_k)$$ is the hession matrix (second order derivatives). The Newton method can significantly improve the optimization efficiency especially when the objective function is curved. While it is important to note that in practice the computation of reversed hessian matrix can be really expensive when the dimmension of the problem is large. There is actually a tradeoff between more vs less in the decision. Technical modifications (BFGS optimization, Newton GC) are at our disposal to partly reduce the heavy computations required.
+
+$$x_{k+1} = x_{k} - H(x_k)^{-1} \triangledown f(x_{k})$$
 
 ### Reference <a name="reference"></a>
 - Boyd & Vandenberghe: Convex Optimization
