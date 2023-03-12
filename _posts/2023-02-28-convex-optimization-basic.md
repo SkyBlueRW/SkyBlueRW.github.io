@@ -51,6 +51,14 @@ It is an incredibly useful technique that has a wide range of applications.
 
 ### Numerical Algorithms to solve <a name="solve"></a>
 
+With such an optimization problem at hand, we can easily feed it into one of the optimizers and get the optimal solution. However, it's imporant to note that optimizers offer various numerical algorithms to solve the problem, and the choice of algorithm can significantly impact the efficiency of the process.The choice depends on questions such as whether the optimization is strongly convex, whether it is in huge dimension, whether it is large in scale, or whether we have any knowledge of the first or second derivative of the objective function. 
+
+For a optimization with strong convexity structure, the quest for global minimum actually boils down to the quest for local minimum. To find the local minimum, we can start arbitrarily from one x and march toward the direction with the most negative gradient iteratively Hence the **Gradient Descent Algorithm**. One iteration of gradient descent is as shown below. $$\alpha$$ is the learning rate that controls how aggressive would we want to update for one iteration. $$\triangledown f(x)$$ is the first order derivate that governs where to update along the feasible set. 
+
+$$x_{k+1} = x_{k} - \alpha \triangledown f(x_{k})$$
+
+Various tricks can help to speed up this 
+
 
 ### Reference <a name="reference"></a>
 - Boyd & Vandenberghe: Convex Optimization
