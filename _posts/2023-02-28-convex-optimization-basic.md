@@ -7,7 +7,7 @@
 - [Convex Optimization: what and why?](#convex)
 - [Numerical algorithms to solve](#solve)
 - [Duality: Further Insights](#dual)
-- [Reference](#reference)
+- [Summary](#summary)
 
 
 ### Why should you care? <a name="introduction"></a>
@@ -67,15 +67,48 @@ Adding all 3 modifications together leads to the famous **ADAM** (Adaptive Momen
 
 So far with various gradient descent algorithms, we have been exclusively focusing on the first derivatives of the objective function. We are actually searching for minimum via a local linear approximation. It is true that as long as we are dealing with a problem with reasonable convex structure, gradient descent can reliably gets the job done, It is not necessarily the most efficient way. Think about the linear approximation we are relying on, to ensure a reasonable local estimate, we will have to restrict us to a relatively small step size because higher derivatives will come into play as the step size gets larger. 
 
-Incoporating second order derivatives (**Newton Method**) can potentially improve the efficiency further. With a second order approximation, the one step update can be as followed, where $$H(x_k)$$ is the hession matrix (second order derivatives). The Newton method can significantly improve the optimization efficiency especially when the objective function is curved. While it is important to note that in practice the computation of reversed hessian matrix can be really expensive when the dimmension of the problem is large. There is actually a tradeoff between more vs less in this decision. In real world, technical modifications (quasi-Newton method such asBFGS optimization, Newton GC, etc) are at our disposal to partly reduce the heavy computations required.
-
+Incoporating second order derivatives (**Newton Method**) can potentially improve the efficiency further. With a second order approximation, the one step update can be as followed, where $$H(x_k)$$ is the hession matrix (second order derivatives). The Newton method can significantly improve the optimization efficiency especially when the objective function is curved. While it is important to note that in practice the computation of reversed hessian matrix can be really expensive when the dimmension of the problem is large. There is actually a tradeoff between more vs less in this decision. In real world, technical modifications (**quasi-Newton** method such as **BFGS** optimization, **Newton GC**, etc) are at our disposal to partly reduce the heavy computations required.
 $$x_{k+1} = x_{k} - H(x_k)^{-1} \triangledown f(x_{k})$$
 
 ### Duality: Further Insights <a name="dual"></a>
 
-(Carr & Zhu even have a book called [Convex Duality and Financial Mathematics](https://link.springer.com/book/10.1007/978-3-319-92492-2))
+Duality is the unavoidable next stop if we want to gain further insights. It looks a little ambiguous at first glance but makes a lot of sense in various aspects very quickly. In plain English, for a convex optimization in general form as detailed in the first section, duality is to find a lower bound function of the original objective function. The maximization of such a lower bound function leads us to the best lower bound and is called the dual problem of the original primal problem.
 
-### Reference <a name="reference"></a>
+The questions remain how to get the dual problem and what's the point. 
+
+One way to get a dual problem is to start with the Lagrangian function as shown below. Take the Lagrangian multipler $$\lambda_i$$ and $$v_i$$ as decision variables with infimum with regard to x. 
+
+$$
+\begin{aligned}
+L(x, \lambda, v) &= f_0(x) + \sum_i^m{\lambda_i f_i(x)} + \sum_i^p{v_i h_i(x)} \\
+g(\lambda, v) &= inf_x L(x, \lambda, v)
+\end{aligned}
+$$
+
+It's clear that $$g(\lambda, v) <= f_0(x)$$ as long as x is feasible ($$f_i(x) <=0, h_i(x) = 0$$) and $$\lambda >=0$$ hence the following dual problem as the best lower bound over the primal problem. 
+
+$$
+\begin{aligned}
+\max_{\lambda, v} & {g(\lambda, v)} \\
+\lambda & >=0
+\end{aligned}
+$$
+
+The difference between the optimal dual value and the optimal primal value ($$g(\lambda^{\star}, v^{\star}) - f_0(x^{\star})$$) is called **Duality Gap**. Here is one more speciality of convex optimization: the duality gap of convex optimization is almost always (Slater Condition) 0. 
+
+The dual problem is a powerful tool in various perspects.
+
+First and foremost, the dual problem provides a way to do sensitivity analysis upon constraint values. Essentially, the optimal dual solution represents the marginal improvement on primal objective upon relaxation of respective constraint. This optimal dual solution usually has profound economic interpretations (price of resources in equilibirum state, utility improvement given one unit of budget change, etc..Carr & Zhu even have a book called [Convex Duality and Financial Mathematics](https://link.springer.com/book/10.1007/978-3-319-92492-2))
+
+Second, it can be used to simplify complex optimization problems. Often, the dual problem of a complex optimization problem (I.E. L1 norm minimization) can be much simpler than the original problem, making it easier to solve or analyze. 
+
+Last but not least, it can be used to prove the optimality of a solution. By solving the dual problem and comparing its objective value with the objective value of the original problem, we can determine whether a given solution is optimal. Actually a lot of optimizers out there is using the duality gap as a stop criteria.
+
+
+### Summary <a name="summary"></a>
+
+With a focus on financial application in mind, we talked about the meaning, the solver algorithm, and duality of numerical optimizations. I hope you find it relavant and informative upon reading. If you feel interested in delving deeper, I highly recommend the following books for further reference
+
 - Boyd & Vandenberghe: Convex Optimization
 - Cornuejols, Pena & Tutuncu: Optimization methods in Finance
 
