@@ -1,14 +1,15 @@
 ##
 
-### Convex Optimization: a 101 refresh and further
+## Convex Optimization: a 101 refresh and further
 
 
 - [Why should you care?](#introduction)
 - [Convex Optimization: what and why?](#convex)
+- [Numerical algorithms to solve](#solve)
 - [Reference](#reference)
 
 
-#### Why should you care? <a name="introduction"></a>
+### Why should you care? <a name="introduction"></a>
 
 It is likely that you will agree optimization has become an indispensable tool in the world of finance. Nowdays, it's common to see people using optimizers to decide allocation of resources (like portfolio construction or cash flow management), to determine parameters in model fitting (like regression), to ...
 
@@ -19,7 +20,7 @@ While you may be wondering why you should care about the details under the hood.
 - **Knowing optimization helps to get a sense of the boundary**. Last but not least, optimzation is not a magical box that can always be solved. It is crutial to know whether an optimization can be solved and to what degree. Is it garuanteed to have a global optimum? Will local optimum provide a reasonable approximation if it's not? As far as I am concerned, there are a bunch of questions to ask yourself when looking into the arsenal of optimization methods during a project.
 
 
-#### Convex Optimization: what and why? <a name="convex"></a>
+### Convex Optimization: what and why? <a name="convex"></a>
 
 I will take "agreed" as your response if you do not close the page yet :) 
 
@@ -48,8 +49,10 @@ In addition, many real world problems can be formulated as convex optimization. 
 
 It is an incredibly useful technique that has a wide range of applications.
 
+### Numerical Algorithms to solve <a name="solve"></a>
 
-#### Reference <a name="reference"></a>
+
+### Reference <a name="reference"></a>
 - Boyd & Vandenberghe: Convex Optimization
 - Cornuejols, Pena & Tutuncu: Optimization methods in Finance
 
