@@ -94,7 +94,7 @@ $$
 \end{aligned}
 $$
 
-The difference between the optimal dual value and the optimal primal value ($$g(\lambda^{\star}, v^{\star}) - f_0(x^{\star})$$) is called **Duality Gap**. Here is one more speciality of convex optimization: the duality gap of convex optimization is almost always (Slater Condition) 0. 
+The difference between the optimal dual value and the optimal primal value ($$f_0(x^{\star}) - g(\lambda^{\star}, v^{\star})$$) is called **Duality Gap**. Here is one more speciality of convex optimization: the duality gap of convex optimization is almost always (Slater Condition) 0. 
 
 The dual problem is a powerful tool in various perspects.
 
