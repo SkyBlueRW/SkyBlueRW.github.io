@@ -6,7 +6,7 @@
 - [Why should you care?](#introduction)
 - [Convex Optimization: what and why?](#convex)
 - [Numerical algorithms to solve](#solve)
-- [Duality](#dual)
+- [Duality: Further Insights](#dual)
 - [Reference](#reference)
 
 
@@ -67,12 +67,13 @@ Adding all 3 modifications together leads to the famous **ADAM** (Adaptive Momen
 
 So far with various gradient descent algorithms, we have been exclusively focusing on the first derivatives of the objective function. We are actually searching for minimum via a local linear approximation. It is true that as long as we are dealing with a problem with reasonable convex structure, gradient descent can reliably gets the job done, It is not necessarily the most efficient way. Think about the linear approximation we are relying on, to ensure a reasonable local estimate, we will have to restrict us to a relatively small step size because higher derivatives will come into play as the step size gets larger. 
 
-Incoporating second order derivatives (**Newton Method**) can potentially improve the efficiency further. With a second order approximation, the one step update can be as followed, where $$H(x_k)$$ is the hession matrix (second order derivatives). The Newton method can significantly improve the optimization efficiency especially when the objective function is curved. While it is important to note that in practice the computation of reversed hessian matrix can be really expensive when the dimmension of the problem is large. There is actually a tradeoff between more vs less in this decision. In real world, technical modifications (BFGS optimization, Newton GC) are at our disposal to partly reduce the heavy computations required.
+Incoporating second order derivatives (**Newton Method**) can potentially improve the efficiency further. With a second order approximation, the one step update can be as followed, where $$H(x_k)$$ is the hession matrix (second order derivatives). The Newton method can significantly improve the optimization efficiency especially when the objective function is curved. While it is important to note that in practice the computation of reversed hessian matrix can be really expensive when the dimmension of the problem is large. There is actually a tradeoff between more vs less in this decision. In real world, technical modifications (quasi-Newton method such asBFGS optimization, Newton GC, etc) are at our disposal to partly reduce the heavy computations required.
 
 $$x_{k+1} = x_{k} - H(x_k)^{-1} \triangledown f(x_{k})$$
 
-### Duality <a name="dual"></a>
+### Duality: Further Insights <a name="dual"></a>
 
+(Carr & Zhu even have a book called [Convex Duality and Financial Mathematics](https://link.springer.com/book/10.1007/978-3-319-92492-2))
 
 ### Reference <a name="reference"></a>
 - Boyd & Vandenberghe: Convex Optimization
