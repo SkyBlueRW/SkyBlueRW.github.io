@@ -108,7 +108,7 @@ Last but not least, it can be used to prove the optimality of a solution. By sol
 
 ### Summary <a name="summary"></a>
 
-With a focus on financial application in mind, we talked about the meaning, the solver algorithm, and duality of numerical optimizations. I hope you find it relavant and informative upon reading. If you feel interested in delving deeper, I highly recommend the following books for further reference
+With a focus on convex optimization and financial applications, we talked about the meaning, the solver algorithm, and duality of numerical optimizations. I hope you find it relavant and interesting upon reading. If you feel interested in delving deeper, I highly recommend the following books for further reference.
 
 - Boyd & Vandenberghe: Convex Optimization
 - Cornuejols, Pena & Tutuncu: Optimization methods in Finance
