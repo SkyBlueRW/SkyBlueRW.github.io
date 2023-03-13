@@ -68,13 +68,14 @@ Adding all 3 modifications together leads to the famous **ADAM** (Adaptive Momen
 So far with various gradient descent algorithms, we have been exclusively focusing on the first derivatives of the objective function. We are actually searching for minimum via a local linear approximation. It is true that as long as we are dealing with a problem with reasonable convex structure, gradient descent can reliably gets the job done, It is not necessarily the most efficient way. Think about the linear approximation we are relying on, to ensure a reasonable local estimate, we will have to restrict us to a relatively small step size because higher derivatives will come into play as the step size gets larger. 
 
 Incoporating second order derivatives (**Newton Method**) can potentially improve the efficiency further. With a second order approximation, the one step update can be as followed, where $$H(x_k)$$ is the hession matrix (second order derivatives). The Newton method can significantly improve the optimization efficiency especially when the objective function is curved. While it is important to note that in practice the computation of reversed hessian matrix can be really expensive when the dimmension of the problem is large. There is actually a tradeoff between more vs less in this decision. In real world, technical modifications (**quasi-Newton** method such as **BFGS** optimization, **Newton GC**, etc) are at our disposal to partly reduce the heavy computations required.
+
 $$x_{k+1} = x_{k} - H(x_k)^{-1} \triangledown f(x_{k})$$
 
 ### Duality: Further Insights <a name="dual"></a>
 
 Duality is the unavoidable next stop if we want to gain further insights. It looks a little ambiguous at first glance but makes a lot of sense in various aspects very quickly. In plain English, for a convex optimization in general form as detailed in the first section, duality is to find a lower bound function of the original objective function. The maximization of such a lower bound function leads us to the best lower bound and is called the dual problem of the original primal problem.
 
-The questions remain how to get the dual problem and what's the point. 
+The questions now remain **how to get the dual problem** and **what's the point**. 
 
 One way to get a dual problem is to start with the Lagrangian function as shown below. Take the Lagrangian multipler $$\lambda_i$$ and $$v_i$$ as decision variables with infimum with regard to x. 
 
@@ -102,7 +103,7 @@ First and foremost, the dual problem provides a way to do sensitivity analysis u
 
 Second, it can be used to simplify complex optimization problems. Often, the dual problem of a complex optimization problem (I.E. L1 norm minimization) can be much simpler than the original problem, making it easier to solve or analyze. Furthermore, For complex optimization problems with strong duality (duality gap to be 0), even analytical solution becomes possible via KKT condition hence provides way more possibilities to carry on further analysis. 
 
-Last but not least, it can be used to prove the optimality of a solution. By solving the dual problem and comparing its objective value with the objective value of the original problem, we can determine whether a given solution is optimal. Actually a lot of optimizers out there is using the duality gap as a stop criteria.
+Last but not least, it can be used to prove the optimality of a solution. By solving the dual problem and comparing its objective value with the objective value of the original problem, we can determine whether a given solution is optimal or at least close to optimal. A lot of optimizers out there are actually using the duality gap as a stop criteria to determine the convergence of the algorithm.
 
 
 ### Summary <a name="summary"></a>
