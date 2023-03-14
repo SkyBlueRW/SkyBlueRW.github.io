@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Asset Pricing & Empirical Method
+title: Asset Pricing & Statistical Method
 ---
 
 
