@@ -9,8 +9,8 @@
 3. [Another paragraph](#paragraph2)
 
 #### This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
 
+It all starts with the formula $$P_t = E_{t}(m_{t+1}x{t+1})$$
 #### Some paragraph <a name="paragraph1"></a>
 The first paragraph text
 
