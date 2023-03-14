@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Asset Pricing & Statistical Method
+title: Financial Market & Statistical Method
 ---
 
 
