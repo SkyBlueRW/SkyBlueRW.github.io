@@ -4,6 +4,11 @@ hr {
 }
 
 /* Post navigation links */
+
+.post-content {
+  font-size: 20px;
+}
+
 .post_navi {
   display: flex;
 }
