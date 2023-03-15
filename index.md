@@ -1,6 +1,6 @@
 Hey there!
 
-Welcome to my **research and learning blog**, where I'll be sharing my thoughts and learning on topics from **asset pricing**, **empirical methods in financial markets**, and **portfolio construction techniques**. 
+Welcome to my **research and learning blog**, where I'll be sharing my thoughts and learning on topics mostly from **portfolio construction techniques**, **Statistical method**, and **asset pricing**. 
 
 Throughout this blog, my aim is to challenge myself to engage in further structured thinking on the aforementioned topics, while also sharing my journey of learning with others who share my passion for these subjects.
 
