@@ -98,17 +98,16 @@ We can also obtain a portfolio perspecitive via the Sharpe ratio bound. It tells
 $$
 \begin{aligned}
 E(R^{i}) - R^{f} &= -R^{f}cov(m, R^{i}R)\\
-E(R^{i}) - R^{f} &= -R^{f}corr(m, R^{i})\sigma(m) \sigma(R^{i})\\
 \dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})} &= -corr(m, R^{i}) \dfrac{\sigma(m)}{E(m)} \\
 |\dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})}| &<= \dfrac{\sigma(m)}{E(m)}
 \end{aligned}
 $$
 
-It is incredibly that without further assumption we can already extend the pricing equation to important notiosn that we care like risk premium, factor mdoels and efficient portfolio.
+Isn't it incredibly that without further assumption we can already extend the pricing equation to important notiosn that we care like risk premium, factor mdoels and efficient portfolio.
 
 ### The modeling <a name="model"></a>
 
-As you might notice, though insitful, the equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
+As you might notice at the moment, though insitful, the pricing equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
 
 As suggested by Prof Cochrane in his book [Asset Pricing](https://www.amazon.com/Asset-Pricing-John-H-Cochrane/dp/0691121370/ref=sr_1_1?crid=3FZCYELEHP9YW&keywords=asset+pricing&qid=1679215995&sprefix=asset+pric%2Caps%2C293&sr=8-1), those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
@@ -120,6 +119,8 @@ p_t &= E_t(m_{t+1}x_{t+1}) \\
 m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
+
+
 
 #### Beta Representation <a name="beta"></a>
 
