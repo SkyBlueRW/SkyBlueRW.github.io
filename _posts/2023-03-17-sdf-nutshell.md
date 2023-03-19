@@ -3,13 +3,14 @@
 ## Stochastic Discount Factor: a nutshell of asset pricing 
 
 
-- [P = E(mx)](#introduction)
+- [Introduction](#introduction)
 - [The origin: as little as LOOP](#ma)
-- [The Implication: the representation and common languange](#im)
+- [P = E(mx)](#im)
+- [The modeling](#model)
     - [Beta Representation](#beta)
     - [Portfolio Representation](#port)
 
-### P = E(mx) <a name="introduction"></a>
+### Introduction <a name="introduction"></a>
 
 It all starts with $$P_t = E_t(m_{t+1}x_{t+1})$$! 
 
@@ -49,11 +50,44 @@ Here we are with the pricing equation $$p = E(mx)$$ :)  To state it more formall
 It is worth noting that this SDF may not be the only one available. In cases where the payoff space does not span the entire future scenario set (**incomplete market**) we can simply go beyond the payoff space to obtain an alternative SDF ($$E(mX) = E((m+\epsilon)X) $$) by adding an arbitrary orthogonal component ($${\epsilon: E(\epsilon X)=0}$$).
 
 
-### The Implication: the representation and common languange <a name="im"></a>
+### P = E(mx) <a name="im"></a>
 
-Let's pause for a moment to sink in the equation at hand.
+Let's take a moment to consider the equation at hand and explore various representations that can be derived from it.
 
-As you might noticed already, the equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
+One representation you may find familiar is in terms of gross returns. We can simply divide both sides by p and transform the payoff into gross return:
+
+$$
+\begin{aligned}
+1 &= E(m\dfrac{x}{p}) \\
+1 &= E(mR) \\
+\end{aligned}
+$$
+
+An intersting special case is the risk free return. For a risk free security, its gross return R is no longer a randon variable hence we have 
+
+$$
+\begin{aligned}
+1 & = E(m)R^{f} \\
+R^{f} &= \dfrac{1}{E(m)}
+\end{aligned}
+$$
+
+
+A even more familiar representation is as follows. Using the definition of covariance $$cov(m, R) = E(mR) - E(m)E(R)$$, thus we have
+
+$$
+\begin{aligned}
+1 &= E(mR) =  E(m)E(R) + cov(m, R) \\
+E(R) &= \dfrac{1}{E(m)} - \dfrac{cov(m, R)}{E(m)} \\
+E(R) &= R^{f} - R^{f}cov(m, R)
+\end{aligned}
+$$
+
+Here, the expected return is comprised of two distinct components. The first component is the risk-free rate, which accounts for the time value of investing. The second component is a risk adjustment that accounts for uncertainty regarding future returns. Notably, risk is measured as a covariance with the SDF. Any volatility that does not correlate with the SDF does not receive a reward in expected return.
+
+### The modeling <a name="model"></a>
+
+As you might notice, the equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
 
 As suggested by Prof Cochrane in his book [Asset Pricing](https://www.amazon.com/Asset-Pricing-John-H-Cochrane/dp/0691121370/ref=sr_1_1?crid=3FZCYELEHP9YW&keywords=asset+pricing&qid=1679215995&sprefix=asset+pric%2Caps%2C293&sr=8-1), those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
@@ -66,56 +100,13 @@ m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
 
-The price equation can be extended to equivalent representations. You might find the one in gross return more familiar. 
-
-$$
-\begin{aligned}
-1 &= E(m\dfrac{x}{p}) \\
-1 &= E(mR) \\
-\end{aligned}
-$$
-
-Also an intersting special case of risk free return. For a risk free security, its gross return R is no longer a randon variable hence we have 
-
-$$
-\begin{aligned}
-1 & = E(m)R^{f} \\
-R^{f} &= \dfrac{1}{E(m)}
-\end{aligned}
-$$
-
-Return can be further decomposed into accormodation for time value and risk premium. With such a representation, it is clear that risk is defined as covariance with the SDF. 
-
-$$
-\begin{aligned}
-1 &= E(m)E(R) + cov(m, R) \\
-E(R) &= \dfrac{1}{E(m)} - \dfrac{cov(m, R)}{E(m)} \\
-E(R) &= R^{f} - R^{f}cov(m, R)
-\end{aligned}
-$$
-
-
-
 #### Beta Representation <a name="beta"></a>
+
 
 #### Portfolio Representation <a name="port"></a>
 
 
 
 
-
-### 
-
-
-### Another paragraph <a name="paragraph2"></a>
-The second paragraph text
-
-
-Deviation from Law of One Price. introduce of prob measure. risk premium
-
-equivalent representation in beta 
-
-equivalent of mv. apply for all rn.
-rn
 
 
