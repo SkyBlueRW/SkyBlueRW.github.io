@@ -104,7 +104,7 @@ E(R^{i}) - R^{f} &= -R^{f}corr(m, R^{i})\sigma(m) \sigma(R^{i})\\
 \end{aligned}
 $$
 
-It is incredibly how the pricing equation extend insights into important notiosn that we care like risk premium, factor mdoels and efficient portfolio.
+It is incredibly that without further assumption we can already extend the pricing equation to important notiosn that we care like risk premium, factor mdoels and efficient portfolio.
 
 ### The modeling <a name="model"></a>
 
@@ -125,7 +125,6 @@ $$
 
 
 #### Portfolio Representation <a name="port"></a>
-
 
 
 
