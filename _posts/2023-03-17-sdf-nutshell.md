@@ -84,7 +84,7 @@ $$
 
 Here, the expected return is comprised of two distinct components. The first component is the risk-free rate, which accounts for the time value of investing. The second component is a risk adjustment that accounts for uncertainty regarding future returns. Notably, risk is measured as a covariance with the SDF. Any volatility that does not correlate with the SDF does not receive a reward in expected return.
 
-By taking one step of transformation, we arrive at a single factor model representation that enhances the notion of systematic risk in terms of covariance with the SDF. The risk premium, on the other hand depend on the volatility of SDF.
+By taking one step of transformation, we arrive at a single factor model representation that enhances the notion of systematic risk. The exposure of risk is measured in terms of covariance with SDF while the risk premium, on the other hand depend on the volatility of SDF.
 
 $$
 \begin{aligned}
@@ -99,7 +99,7 @@ $$
 \begin{aligned}
 E(R^{i}) - R^{f} &= -R^{f}cov(m, R^{i}R)\\
 E(R^{i}) - R^{f} &= -R^{f}corr(m, R^{i})\sigma(m) \sigma(R^{i})\\
-\dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})} &= corr(m, R^{i}) \dfrac{\sigma(m)}{E(m)} \\
+\dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})} &= -corr(m, R^{i}) \dfrac{\sigma(m)}{E(m)} \\
 |\dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})}| &<= \dfrac{\sigma(m)}{E(m)}
 \end{aligned}
 $$
@@ -123,7 +123,4 @@ $$
 
 
 #### Portfolio Representation <a name="port"></a>
-
-
-
 
