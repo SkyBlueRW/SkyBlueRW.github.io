@@ -4,8 +4,8 @@
 
 
 - [P = E(mx)](#introduction)
-- [The origin](#ma)
-- [The implication](#im)
+- [The origin: as little as LOOP](#ma)
+- [The Implication: a representation and common languange](#im)
 
 ### P = E(mx) <a name="introduction"></a>
 
@@ -18,7 +18,7 @@ It is amazing that with such a neat equation based on few assumptions, one can p
 Throughout this blog, I would like to kick off the discussion on the subject of asset pricing with a focus on stochastic discount factor. Where does it come from? what's the implication? how to allign it with real world? these are the questions we hope to address. 
  
 
-### The Origin <a name="ma"></a>
+### The Origin: as little as LOOP <a name="ma"></a>
 
 There are actually several ways to get to the asset pricing formula. I will begin with the one that requires the fewest assumptions and gradually build upon it with more perspectives and assumptions. 
 
@@ -46,15 +46,15 @@ Here we are. Starting from Law of one Price, we get to the pricing equation $$p 
 
 **There exists an unique stochastic discount factor in the payoff space $$m \in Row(X)$$ that prices all securities under LOOP**. 
 
-### The Implication <a name="im"></a>
+### The Implication: a representation and common languange <a name="im"></a>
 
-Let's halt here for a while to sink in the equation at hand.
+Let's pause for a moment to sink in the equation at hand.
 
-As you might notice already, it is a very general equation with limited structure placed. More than enough generality is reserved to apply the formula for different securities from different perspectives. While with abundance of generality, the equation is more of a paradigm rather than a full sized model. Further assumptions and structures can be and should be placed on this foundation for further insights. 
+As you might notice already, the equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
 
 As suggested by Prof Cochrane in his book [Asset Pricing](https://www.amazon.com/Asset-Pricing-John-H-Cochrane/dp/0691121370/ref=sr_1_1?crid=3FZCYELEHP9YW&keywords=asset+pricing&qid=1679215995&sprefix=asset+pric%2Caps%2C293&sr=8-1), those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
-Asset pricing models are then summarized in the two equations, where the first equation decides the empirical representation and common languanges we hope to keep invariant across security markets and perspectives. 
+Asset pricing models are then summarized in these two equations. The first equation sets the empirical representation and common language that we hope to keep invariant across security markets and perspectives. With this prerequisite in place, we can unleash our imagination in economic reasoning with the second equation, while still maintaining a comparable language.
 
 $$
 \begin{aligned}
@@ -62,11 +62,6 @@ p_t &= E_t(m_{t+1}x_{t+1}) \\
 m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
-
-
-
-
-
 
 
 ### 
