@@ -13,7 +13,7 @@ It all starts with $$P_t = E_t(m_{t+1}x_{t+1})$$!
 
 At the heart of many interesting topics in finance such as factor pricing models, market anomalies, return preidiction, time variant risk premimum..etc lies this fundamental asset pricing formula. 
 
-It is amazing that with such a neat equation based on few assumptions, one can price all future payoffs $$x_{t+1}$$ with a stochastic discount factor $$m_{t+1}$$. Through the len of the paradigm with stochastic discount factor, we can extend insights across asset classes from different perspectives such as macro, consumption, production， portfolio... 
+It is amazing that with such a neat equation based on few assumptions, one can price all future payoffs $$x_{t+1}$$ with a stochastic discount factor $$m_{t+1}$$. Through the len of the paradigm with stochastic discount factor, we can extend insights across asset classes from different perspectives such as macro, consumption, production, portfolio... 
 
 Throughout this blog, I would like to kick off the discussion on the subject of asset pricing with a focus on stochastic discount factor. Where does it come from? what's the implication? how to allign it with real world? these are the questions we hope to address. 
  
@@ -26,7 +26,7 @@ In its most general form, **Law of One Price** (LOOP later in the blog) can garu
 
 To gain some intuition, let's swtich to the state space of random variable. Remember that up to time t, the payoff $$x_{t+1}$$ of a security is a random variable with different potential realizations in future scenarios. We can express it explicitly in state space with a vector $$x = [x^{1},...x^{i}...x^{k}]$$, where each element in the vector represents a possible realized payoff in the corresponding scenario. 
 
-Stacking all securities (1...n) in the market at time t together, we get a matrix $$X = [x_1, ... , x_n]^T$$, whose row space is the payoff space for time t+1. Any payoffs availble in the market lie in this row space. We can put Law of One Price in the same context as well: any two portfolios $$w_1$$ and $$w_2$$ with same payoff at t+1 ($$Xw_1 = Xw_2$$) should have the same price at time t ($$Pw_1 = Pw_2$$). 
+Stacking all securities (1...n) in the market at time t together, we get a matrix $$X = [x_1, ... , x_n]^T$$, whose row space is the payoff space for time t+1. Any payoffs availble in the market lie in this row space. We can put LOOP in the same context as well: any two portfolios $$w_1$$ and $$w_2$$ with same payoff at t+1 ($$Xw_1 = Xw_2$$) should have the same price at time t ($$Pw_1 = Pw_2$$). 
 
 It's equivalent to saying that $$X(w_1 - w_2) = 0$$ leads to $$p (w_1 - w_2)$$ for any two portfolios $$w_1$$ and $$w_2$$. With a bit of linear algebra we know that price p has to be a member of the payoff space for such condition to hold. Hence there exists a vector $$q = (XX^T)^{-1}XP$$ such that $$P = Xq$$. We link the price at time t ($$p$$) and payoff at time t+1 ($$X$$) with a vector ($$q \in Row(X)$$). Random variable q is all we need to price any securites in the market. 
 
@@ -46,13 +46,26 @@ Here we are. Starting from Law of one Price, we get to the pricing equation $$p 
 
 **There exists an unique stochastic discount factor in the payoff space $$m \in Row(X)$$ that prices all securities under LOOP**. 
 
+### The Implication <a name="im"></a>
+
 Let's halt here for a while to sink in the equation at hand.
 
-We actually do not impose much structure in assuming Law of One Price, a break of which implies profit with literally no risk. More than enough generality is reserved to apply the formula for different securities from different perspectives. While with abundance of generality the equation is more of a paradigm rather than a full sized model. Further assumptions and structures can be and should be placed on this foundation for further insights.  
+As you might notice already, it is a very general equation with limited structure placed. More than enough generality is reserved to apply the formula for different securities from different perspectives. While with abundance of generality, the equation is more of a paradigm rather than a full sized model. Further assumptions and structures can be and should be placed on this foundation for further insights. 
 
-As suggested 
+As suggested by Prof Cochrane in his book [Asset Pricing](https://www.amazon.com/Asset-Pricing-John-H-Cochrane/dp/0691121370/ref=sr_1_1?crid=3FZCYELEHP9YW&keywords=asset+pricing&qid=1679215995&sprefix=asset+pric%2Caps%2C293&sr=8-1), those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
-### The Implication <a name="im"></a>
+Asset pricing models are then summarized in the two equations, where the first equation decides the empirical representation and common languanges we hope to keep invariant across security markets and perspectives. 
+
+$$
+\begin{aligned}
+p_t &= E_t(m_{t+1}x_{t+1}) \\
+m_{t+1} &= f(data, parameter)
+\end{aligned}
+$$
+
+
+
+
 
 
 
