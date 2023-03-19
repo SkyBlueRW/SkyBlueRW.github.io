@@ -72,8 +72,7 @@ R^{f} &= \dfrac{1}{E(m)}
 \end{aligned}
 $$
 
-
-A even more familiar representation is as follows. Using the definition of covariance $$cov(m, R) = E(mR) - E(m)E(R)$$, thus we have
+Yet another insightful representation can be derived using the definition of covariance. With $$cov(m, R) = E(mR) - E(m)E(R)$$, we have
 
 $$
 \begin{aligned}
@@ -84,6 +83,26 @@ E(R) &= R^{f} - R^{f}cov(m, R)
 $$
 
 Here, the expected return is comprised of two distinct components. The first component is the risk-free rate, which accounts for the time value of investing. The second component is a risk adjustment that accounts for uncertainty regarding future returns. Notably, risk is measured as a covariance with the SDF. Any volatility that does not correlate with the SDF does not receive a reward in expected return.
+
+By taking one step of transformation, we arrive at a single factor model representation that enhances the notion of systematic risk in terms of covariance with the SDF. The risk premium, on the other hand depend on the volatility of SDF.
+
+$$
+\begin{aligned}
+E(R^{i}) &= R^{f} + \dfrac{cov(R^{i}, m)}{Var(m)}(-\dfrac{var(m)}{E(m)}) \\
+E(R^{i}) &= R^{f} + \beta_{R^{i}, m} \lambda_{m}
+\end{aligned}
+$$
+
+We can also obtain a portfolio perspecitive via the Sharpe ratio bound. It tells us that investors can obtain the maximum Sharpe ratio portfolio only when it is perfectly correlated with the SDF. This is because the Sharpe ratio depends on the covariance between the asset return and the SDF, and the maximum Sharpe ratio is achieved when this covariance is maximized. 
+
+$$
+\begin{aligned}
+E(R^{i}) - R^{f} &= -R^{f}cov(m, R^{i}R)\\
+E(R^{i}) - R^{f} &= -R^{f}corr(m, R^{i})\sigma(m) \sigma(R^{i})\\
+\dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})} &= corr(m, R^{i}) \dfrac{\sigma(m)}{E(m)} \\
+|\dfrac{E(R^{i}) - R^{f}}{\sigma(R^{i})}| &<= \dfrac{\sigma(m)}{E(m)}
+\end{aligned}
+$$
 
 ### The modeling <a name="model"></a>
 
@@ -104,8 +123,6 @@ $$
 
 
 #### Portfolio Representation <a name="port"></a>
-
-
 
 
 
