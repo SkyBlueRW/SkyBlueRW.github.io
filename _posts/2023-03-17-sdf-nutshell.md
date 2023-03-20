@@ -142,19 +142,48 @@ m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
 
-The theory of asset pricing encompasses a wide range of models, each with its own set of assumptions and perspectives. These models often begin with one or multiple types of market participants, such as consumers, business operators, and institutional investors, whose preferences and actions determine security returns through the maximization of their utilities. However,  these types of structural models are complex and beyond the scope of this post. Instead, I will focus on two reduced-form models that are much simpler to implement and use in real-world scenarios. These models provide valuable insights into how different factors and risks affect asset prices and returns, making them useful tools for investors and financial practitioners alike.
+The theory of asset pricing encompasses a wide range of models, each with its own set of assumptions and perspectives. These models often begin with one or multiple types of market participants, such as consumers, business operators, and institutional investors, whose preferences and actions determine security returns through the maximization of their utilities. However,  these types of structural models are complex and beyond the scope of this post. Instead, I will touch upon two **reduced-form models** that are much simpler to implement and use in real-world scenarios. These models provide valuable insights into how different factors and risks affect asset prices and returns, making them useful tools for investors and financial practitioners alike.
 
 
 #### Factor Models <a name="beta"></a>
+
+SDF is not observable nor easy to proxy hence hard to use directly. One natural response is to use a linear factor model to approximate it with observable factors ($$F$$). This approach leads to the most widely used category of models: the multi factor model.
+
+
+By assuming a linear approximation of SDF, we implicitly assume a multi factor model with $$\lambda$$ as risk premium.
+
+$$
+\begin{aligned}
+m &= a + b^T F \\
+E(R^{i}) &= \gamma + \beta^T \lambda \\
+\beta &= E(ff^T)^{-1}E(fR^{i})
+\end{aligned}
+$$
+
+The intercept $$\gamma$$ and the risk premium $$\lambda$$ can be obtained through a transformation.
+
+$$
+\begin{aligned}
+\gamma &= \dfrac{1}{E(m)} =R^{f} = \dfrac{1}{a}\\
+\lambda &= -\gamma E(mF)= -\dfrac{ff^T}{a}b
+\end{aligned}
+$$
+
+While factors with clear economic interpretations are usually preferred for robust performance, any type of factors, including macro, fundamental, or statistical factors, can be used in the multi-factor model. Examples of widely used multi-factor models include Fama-Frensh 3/5 factor models and Hou-Xue-Zhang q factor models in academia, as well as Barra equity risk models and Northfield equity risk model in the industry.
+
+It is also worth noting that factor mimicking portfolios, which carry all relevant pricing information in the factors (a projection of the factor on the return space), are also widely used in multi-factor models. These are more frequently measured and easier to estimate risk premium as the expected return of the factor itself. We can represent the expected return of the factor as:
+
+$$
+\begin{aligned}
+E(F^{\star}) &= R^{f} + 1 * \lambda_{F^{\star}} \\
+\lambda_{F^{\star}} &= E(F^{\star}) - R^{f}
+\end{aligned}
+$$
 
 
 #### Portfolio Approach <a name="port"></a>
 
 
 ### Summary <a name="summary"></a> 
-
-
-
-
 
 
