@@ -7,8 +7,6 @@
 - [The origin: as little as LOOP](#ma)
 - [P = E(mx)](#im)
 - [The modeling](#model)
-    - [Factor Models](#beta)
-    - [Portfolio Approach](#port)
 - [Summary](#summary)
 
 ### Introduction <a name="introduction"></a>
@@ -133,7 +131,7 @@ As you might notice at the moment, though insightful, the pricing equation is hi
 
 Those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
-Asset pricing models are then summarized in these two equations. The first equation sets the empirical representation and common language that we hope to keep invariant across security markets and perspectives. With this prerequisite in place, we can unleash our imagination in economic reasoning with the second equation, while still maintaining a comparable language.
+Asset pricing models are then summarized in following two equations. The first equation sets the empirical representation and common language that we hope to keep invariant across security markets and perspectives. With this prerequisite in place, we can unleash our imagination in economic reasoning with the second equation, while still maintaining a comparable language.
 
 $$
 \begin{aligned}
@@ -142,12 +140,9 @@ m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
 
-The theory of asset pricing encompasses a wide range of models, each with its own set of assumptions and perspectives. These models often begin with one or multiple types of market participants, such as consumers, business operators, and institutional investors, whose preferences and actions determine security returns through the maximization of their utilities. However,  these types of structural models are complex and beyond the scope of this post. Instead, I will touch upon two **reduced-form models** that are much simpler to implement and use in real-world scenarios. These models provide valuable insights into how different factors and risks affect asset prices and returns, making them useful tools for investors and financial practitioners alike.
+The theory of asset pricing encompasses a wide range of models, each with its own set of assumptions and perspectives. These models often begin with one or multiple types of market participants, such as consumers, business operators, and institutional investors, whose preferences and actions determine security returns through the maximization of their utilities. However,  these types of structural models are complex and beyond the scope of this post. Instead, I will touch upon on one whidely used **reduced-form model: the multi factor model** 
 
-
-#### Factor Models <a name="beta"></a>
-
-SDF is not observable nor easy to proxy hence hard to use directly. One natural response is to use a linear factor model to approximate it with observable factors ($$F$$). This approach leads to the most widely used category of models: the multi factor model.
+SDF is not observable nor easy to proxy hence hard to use directly. The natural response is to use a linear factor model to approximate it with observable factors ($$F$$). This approach leads to the most widely used category of models: the multi factor model.
 
 
 By assuming a linear approximation of SDF, we implicitly assume a multi factor model with $$\lambda$$ as risk premium.
@@ -171,7 +166,7 @@ $$
 
 While factors with clear economic interpretations are usually preferred for robust performance, any type of factors, including macro, fundamental, or statistical factors, can be used in the multi-factor model. Examples of widely used multi-factor models include Fama-Frensh 3/5 factor models and Hou-Xue-Zhang q factor models in academia, as well as Barra equity risk models and Northfield equity risk model in the industry.
 
-It is also worth noting that factor mimicking portfolios, which carry all relevant pricing information in the factors (a projection of the factor on the return space), are also widely used in multi-factor models. These are more frequently measured and easier to estimate risk premium as the expected return of the factor itself. We can represent the expected return of the factor as:
+It's worth noting that most of these models rely on factor mimicking portfolios, which are projections of the factor on the return space and carry all relevant pricing information. This makes them easier to measure and estimate. As the risk premium associated can be represented with exepected reutnr directly:
 
 $$
 \begin{aligned}
@@ -181,9 +176,12 @@ E(F^{\star}) &= R^{f} + 1 * \lambda_{F^{\star}} \\
 $$
 
 
-#### Portfolio Approach <a name="port"></a>
-
 
 ### Summary <a name="summary"></a> 
 
+In this blog, we delved into the fundamentals of asset pricing with a focus on the Stochastic Discount Factor (SDF) and its role in pricing securities. We discussed the existence of SDF and its different representations, and briefly touched upon the models that can be placed on the equation.
 
+I hope you find the blog informative and engaging.  As an apprentice in the world of asset pricing, I acknowledge that there may be errors, and I invite feedback to improve the content. For further reading, I highly recommend the following books as references for those interested in learning more about asset pricing:
+
+- Cochrane: Asset Pricing 
+- Back: Asset Pricing and Portfolio Choice Theory
