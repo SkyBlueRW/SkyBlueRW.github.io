@@ -53,7 +53,7 @@ It is worth noting that this SDF may not be the only one available. In cases whe
 
 Let's take a moment to consider the equation at hand and explore various representations that can be derived from it.
 
-You may find the price equation familiar in terms of gross returns and excess return. We can simply divide both sides by p and transform the payoff into gross return ($$R$$):
+You may find the price equation more familiar in terms of gross returns and excess return. We can simply divide both sides by p and transform the payoff into gross return ($$R$$):
 
 $$
 \begin{aligned}
@@ -71,7 +71,7 @@ $$
 \end{aligned}
 $$
 
-An intersting special case is the risk free return. For a risk free security, its gross return R is no longer a randon variable hence we have 
+An unavoidable special case is the risk free return. For a risk free security, its gross return R is no longer a randon variable hence we have 
 
 $$
 \begin{aligned}
@@ -101,7 +101,7 @@ E(R^{i}) &= R^{f} + \beta_{R^{i}, m} \lambda_{m}
 \end{aligned}
 $$
 
-We can also obtain a **portfolio perspecitive** via the Sharpe ratio bound. The powerful insight is that the maximum Sharpe ratio portfolios investors can obtain are perfectly correlated with the SDF. Hence it contains every bit of information in pricing as SDF does.
+We can also obtain a **portfolio perspecitive** via the Sharpe ratio bound. The powerful insight is that the maximum Sharpe ratio portfolios investors can obtain are perfectly correlated with the SDF. Hence it contains every bit of information in pricing as SDF does. The quest of SDF can boil to the quest of Mean variance efficient portfolio as well.
 
 $$
 \begin{aligned}
@@ -118,7 +118,7 @@ $$
 p &= Xq \\
 p_j &= \sum_{i}^k x_j^{i} q^{i} \\
 &= \sum_{i}^k x_j^{i} \dfrac{q^{i}}{\pi^{i}} \pi^{i}\\
-&= E^{\pi^{\star}}(x)
+&= E^{\pi^{\star}}(x_j)
 \end{aligned}
 $$
 
@@ -127,7 +127,7 @@ It is truly remarkable that wihout much modeling yet, we can extend the pricing 
 
 ### The modeling <a name="model"></a>
 
-As you might notice at the moment, though insightful, the pricing equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
+As you might notice at the moment, though insightful, the pricing equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structures to this foundation.
 
 Those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
@@ -142,7 +142,7 @@ $$
 
 The theory of asset pricing encompasses a wide range of models, each with its own set of assumptions and perspectives. These models often begin with one or multiple types of market participants, such as consumers, business operators, and institutional investors, whose preferences and actions determine security returns through the maximization of their utilities. However,  these types of structural models are complex and beyond the scope of this post. Instead, I will touch upon on one whidely used **reduced-form model: the multi factor model** 
 
-SDF is not observable nor easy to proxy hence hard to use directly. The natural response is to use a linear factor model to approximate it with observable factors ($$F$$). This approach leads to the most widely used category of models: the multi factor model.
+SDF is not observable nor easy to proxy hence hard to use directly. One natural response is to use a linear factor model to approximate it with observable factors ($$F$$). This approach leads to the most widely used category of models: the multi factor model.
 
 
 By assuming a linear approximation of SDF, we implicitly assume a multi factor model with $$\lambda$$ as risk premium.
