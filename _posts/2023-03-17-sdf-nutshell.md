@@ -9,6 +9,7 @@
 - [The modeling](#model)
     - [Factor Models](#beta)
     - [Portfolio Approach](#port)
+- [Summary](#summary)
 
 ### Introduction <a name="introduction"></a>
 
@@ -141,7 +142,7 @@ m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
 
-There are actually a lot of SDF modelings in the theory of asset pricing. They usually start from one set of market participants (consumer, busines operator, institutional investors) and deduce security returns from maximization of their utilities.
+The theory of asset pricing encompasses a wide range of models, each with its own set of assumptions and perspectives. These models often begin with one or multiple types of market participants, such as consumers, business operators, and institutional investors, whose preferences and actions determine security returns through the maximization of their utilities. However,  these types of structural models are complex and beyond the scope of this post. Instead, I will focus on two reduced-form models that are much simpler to implement and use in real-world scenarios. These models provide valuable insights into how different factors and risks affect asset prices and returns, making them useful tools for investors and financial practitioners alike.
 
 
 #### Factor Models <a name="beta"></a>
@@ -150,7 +151,7 @@ There are actually a lot of SDF modelings in the theory of asset pricing. They u
 #### Portfolio Approach <a name="port"></a>
 
 
-
+### Summary <a name="summary"></a> 
 
 
 
