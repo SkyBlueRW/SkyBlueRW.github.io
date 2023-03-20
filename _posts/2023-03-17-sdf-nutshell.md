@@ -66,7 +66,7 @@ $$
 While excess return ($$R^{e}$$) is simply the difference of two returns, which provide a purer view on difference of risk.
 
 $$
-\begin{alinged}
+\begin{aligned}
 1 - 1 & = E(m(R^{i} - R^{j})) \\
 0 &= E(mR^{e})
 \end{aligned}
