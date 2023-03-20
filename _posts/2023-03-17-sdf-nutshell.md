@@ -7,8 +7,8 @@
 - [The origin: as little as LOOP](#ma)
 - [P = E(mx)](#im)
 - [The modeling](#model)
-    - [Beta Representation](#beta)
-    - [Portfolio Representation](#port)
+    - [Factor Models](#beta)
+    - [Portfolio Approach](#port)
 
 ### Introduction <a name="introduction"></a>
 
@@ -123,14 +123,14 @@ p_j &= \sum_{i}^k x_j^{i} q^{i} \\
 \end{aligned}
 $$
 
-It is truly remarkable that wihout much modeling yet, we can extend the pricing equation to these useful concepts already. Having access to different representations with different focuses is incredibly convenient in application. We can choose the representation that best suits our application and continue with further modeling. Moreover, the insights gained from one representation can be extended to all other representations since they are equivalent in the first place.
+It is truly remarkable that wihout much modeling yet, we can extend the pricing equation to these useful concepts with direct rewriting of the equation. Having access to different representations with different focuses is incredibly convenient in application. We can choose the representation that best suits our application and continue with further modeling. Moreover, the insights gained from one representation can be extended to all other representations since they are equivalent in the first place.
 
 
 ### The modeling <a name="model"></a>
 
-As you might notice at the moment, though insitful, the pricing equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
+As you might notice at the moment, though insightful, the pricing equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structure to this foundation.
 
-As suggested by Prof Cochrane in his book [Asset Pricing](https://www.amazon.com/Asset-Pricing-John-H-Cochrane/dp/0691121370/ref=sr_1_1?crid=3FZCYELEHP9YW&keywords=asset+pricing&qid=1679215995&sprefix=asset+pric%2Caps%2C293&sr=8-1), those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
+Those structures and assumptions can be placed directly on SDF in the form $$m_{t+1} = f(data, parameter)$$. 
 
 Asset pricing models are then summarized in these two equations. The first equation sets the empirical representation and common language that we hope to keep invariant across security markets and perspectives. With this prerequisite in place, we can unleash our imagination in economic reasoning with the second equation, while still maintaining a comparable language.
 
@@ -141,12 +141,18 @@ m_{t+1} &= f(data, parameter)
 \end{aligned}
 $$
 
+There are actually a lot of SDF modelings in the theory of asset pricing. They usually start from one set of market participants (consumer, busines operator, institutional investors) and deduce security returns from maximization of their utilities.
 
 
 #### Factor Models <a name="beta"></a>
 
 
-#### Portfolio Representation <a name="port"></a>
+#### Portfolio Approach <a name="port"></a>
+
+
+
+
+
 
 
 
