@@ -20,18 +20,18 @@ It is amazing that with such a neat equation based on few assumptions, one can p
 
 Throughout this blog, I would like to kick off the discussion on the subject of asset pricing with a focus on stochastic discount factor. Where does it come from? what's the implication? how to allign it with real world? these are the questions we hope to address. 
  
+There are actually several ways to get to the asset pricing formula. I will begin with the one that requires the fewest assumptions and gradually build upon it with more perspectives and assumptions. 
+
 
 ### The Origin: as little as LOOP <a name="ma"></a>
 
-There are actually several ways to get to the asset pricing formula. I will begin with the one that requires the fewest assumptions and gradually build upon it with more perspectives and assumptions. 
+In its most general form, **Law of One Price** (LOOP later in the blog) garuantees the pricing formula. As long as portfolios with the same payoff have the same price, there exists such a random variable of stochastic discount factor that prices all payoffs. 
 
-In its most general form, **Law of One Price** (LOOP later in the blog) can garuantee the pricing formula. As long as portfolios with the same payoff have the same price, there exists such a random variable of stochastic discount factor that prices all payoffs. 
+To gain some intuition, let's swtich to the state space view of random variable. Remember that up to time t, the payoff $$x_{t+1}$$ of a security is a random variable with different potential realizations in future scenarios. We can express it explicitly in state space with a vector $$x = [x^{1},...x^{i}...x^{k}]$$, where each element in the vector represents a possible realized payoff in the corresponding scenario. Here we assume finite (k) number of scenarios while all of this can extend to the continuous world as well(Riez Theorem).
 
-To gain some intuition, let's swtich to the state space of random variable. Remember that up to time t, the payoff $$x_{t+1}$$ of a security is a random variable with different potential realizations in future scenarios. We can express it explicitly in state space with a vector $$x = [x^{1},...x^{i}...x^{k}]$$, where each element in the vector represents a possible realized payoff in the corresponding scenario. 
+Stacking all securities (1...n) in the market at time t, we get a matrix $$X = [x_1, ... , x_n]^T$$ (rank(X) = K <= n), whose row space is the payoff space for time t+1. Any payoffs availble in the market lie in this row space. We can put LOOP in the same context as well: any two portfolios $$w_1$$ and $$w_2$$ with same payoff at t+1 ($$Xw_1 = Xw_2$$) should have the same price at time t ($$Pw_1 = Pw_2$$). 
 
-Stacking all securities (1...n) in the market at time t, we get a matrix $$X = [x_1, ... , x_n]^T$$, whose row space is the payoff space for time t+1. Any payoffs availble in the market lie in this row space. We can put LOOP in the same context as well: any two portfolios $$w_1$$ and $$w_2$$ with same payoff at t+1 ($$Xw_1 = Xw_2$$) should have the same price at time t ($$Pw_1 = Pw_2$$). 
-
-It's equivalent to saying that $$X(w_1 - w_2) = 0$$ leads to $$p (w_1 - w_2)$$ for any two portfolios $$w_1$$ and $$w_2$$. With a bit of linear algebra we know that price p has to be a member of the payoff space for such condition to hold. Hence there exists a vector $$q = (XX^T)^{-1}XP$$ such that $$P = Xq$$. We link the price at time t ($$p$$) and payoff at time t+1 ($$X$$) with a vector ($$q \in Row(X)$$). Random variable q is all we need to price any securites in the market. 
+It's equivalent to saying that $$X(w_1 - w_2) = 0$$ leads to $$p (w_1 - w_2)$$ for any two portfolios $$w_1$$ and $$w_2$$. With a bit of linear algebra we know that price p has to be a member of the payoff space for such condition to hold. Hence there exists a vector $$q = (XX^T)^{-1}XP$$ such that $$P = Xq$$. Random variable q is all we need to price any securites in the market. We link the price at time t ($$p$$) and payoff at time t+1 ($$X$$) with a vector ($$q \in Row(X)$$) in the state space.
 
 Technically, q is still not the stochastic discount factor m we have in the the pricing formula. A few modifications are required to bring in the expecatation calculation. We can continue the reasoning with an arbitrary probability measure $$\pi$$. Let's look into one security (one row of the $$P = Xq$$).
 
@@ -54,12 +54,21 @@ It is worth noting that this SDF may not be the only one available. In cases whe
 
 Let's take a moment to consider the equation at hand and explore various representations that can be derived from it.
 
-One representation you may find familiar is in terms of gross returns. We can simply divide both sides by p and transform the payoff into gross return:
+You may find the price equation familiar in terms of gross returns and excess return. We can simply divide both sides by p and transform the payoff into gross return ($$R$$):
 
 $$
 \begin{aligned}
 1 &= E(m\dfrac{x}{p}) \\
 1 &= E(mR) \\
+\end{aligned}
+$$
+
+While excess return ($$R^{e}$$) is simply the difference of two returns, which provide a purer view on difference of risk.
+
+$$
+\begin{alinged}
+1 - 1 & = E(m(R^{i} - R^{j})) \\
+0 &= E(mR^{e})
 \end{aligned}
 $$
 
@@ -82,9 +91,9 @@ E(R) &= R^{f} - R^{f}cov(m, R)
 \end{aligned}
 $$
 
-Here, the expected return is comprised of two distinct components. The first component is the risk-free rate, which accounts for the time value of investing. The second component is a risk adjustment that accounts for uncertainty regarding future returns. Notably, risk is measured as a covariance with the SDF. Any volatility that does not correlate with the SDF does not receive a reward in expected return.
+Here, the expected return is comprised of two distinct components. The first component is the risk-free rate, which accounts for the time value of investing. The second component is a risk adjustment that accounts for uncertainty regarding future returns. Notably, risk is measured as a covariance with the SDF. Any volatility that does not correlate with the SDF recevie no reward in expected return.
 
-By taking one step of transformation, we arrive at a single factor model representation that enhances the notion of systematic risk. The exposure of risk is measured in terms of covariance with SDF while the risk premium, on the other hand depend on the volatility of SDF.
+By taking one step of transformation, we arrive at a **single factor model representation** that enhances the notion of systematic risk. The exposure of risk is measured in terms of covariance with SDF while the risk premium, on the other hand depend on the volatility of SDF.
 
 $$
 \begin{aligned}
@@ -93,7 +102,7 @@ E(R^{i}) &= R^{f} + \beta_{R^{i}, m} \lambda_{m}
 \end{aligned}
 $$
 
-We can also obtain a portfolio perspecitive via the Sharpe ratio bound. It tells us that investors can obtain the maximum Sharpe ratio portfolio only when it is perfectly correlated with the SDF. This is because the Sharpe ratio depends on the covariance between the asset return and the SDF, and the maximum Sharpe ratio is achieved when this covariance is maximized. 
+We can also obtain a **portfolio perspecitive** via the Sharpe ratio bound. The powerful insight is that the maximum Sharpe ratio portfolios investors can obtain are perfectly correlated with the SDF. Hence it contains every bit of information in pricing as SDF does.
 
 $$
 \begin{aligned}
@@ -103,7 +112,19 @@ E(R^{i}) - R^{f} &= -R^{f}cov(m, R^{i}R)\\
 \end{aligned}
 $$
 
-Isn't it incredibly that without further assumption we can already extend the pricing equation to important notiosn that we care like risk premium, factor mdoels and efficient portfolio.
+Last but not least, in a complete market free of arbitrage opportunities. SDF is also equivalent to the unique **Risk Free Probability Measure**, where $$\pi^{\star} = \dfrac{m \pi}{E(m)}$$. Hence we extend the pricing formula to financial derivatives as well. 
+
+$$
+\begin{aligned}
+p &= Xq \\
+p_j &= \sum_{i}^k x_j^{i} q^{i} \\
+&= \sum_{i}^k x_j^{i} \dfrac{q^{i}}{\pi^{i}} \pi^{i}\\
+&= E^{\pi^{\star}}(x)
+\end{aligned}
+$$
+
+It is truly remarkable that wihout much modeling yet, we can extend the pricing equation to these useful concepts already. Having access to different representations with different focuses is incredibly convenient in application. We can choose the representation that best suits our application and continue with further modeling. Moreover, the insights gained from one representation can be extended to all other representations since they are equivalent in the first place.
+
 
 ### The modeling <a name="model"></a>
 
@@ -122,7 +143,7 @@ $$
 
 
 
-#### Beta Representation <a name="beta"></a>
+#### Factor Models <a name="beta"></a>
 
 
 #### Portfolio Representation <a name="port"></a>
