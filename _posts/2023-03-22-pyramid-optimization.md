@@ -2,7 +2,7 @@
 
 ## Conviction Pyramid of Portfolio Construction
 
-dfraft
+### dfraft
 
 - [Introduction](#introduction)
 
@@ -54,13 +54,3 @@ x_i &= x_j \\
 \end{aligned}
 $$
 
-
-
-
-- [Introduction](#introduction)
-- [The origin: as little as LOOP](#ma)
-- [P = E(mx)](#im)
-- [The modeling](#model)
-- [Summary](#summary)
-
-### Introduction <a name="introduction"></a>
