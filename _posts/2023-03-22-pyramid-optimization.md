@@ -1,6 +1,6 @@
 #
 
-## Conviction Pyramid of Portfolio Construction
+## The Conviction Pyramid of Portfolio Construction
 
 
 ![Image of Pyramid](asset/portfolio_pyramid.png)
