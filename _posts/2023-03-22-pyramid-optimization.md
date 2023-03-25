@@ -8,7 +8,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-![Image of Pyramid](asset/portfolio_pyramid.png)
+![Image of Pyramid]([asset/portfolio_pyramid.png](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/portfolio_pyramid.png))
 
 *Hallerbach(2015): Advances in Portfolio Risk Control*
 
@@ -19,10 +19,59 @@ Especially after tech bubble and financial crisis, investors take the hard way t
 
 Hallerbach(2015) introduced the decision pyramid of portfolio construction, which demonstrate the increasing requirments on estimation from when you can't predict anything up to you are full aware of mean and variance. The choice then remains how confident are we in the forecast.
 
+along the line discuss about intuition of each method via the marginal condition and compare with the benchmark of Mean Variance Optimization.
+
+
+estimation error.
+
+MSRP
+
+$$
+\begin{aligned}
+\dfrac{1}{r^{e}_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{r^{e}_j} \dfrac{\partial \sigma}{\partial w_j}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\dfrac{\partial \sigma}{\partial w_i} &= \beta_{i} \sigma \\
+\sum_i w_i \dfrac{\partial \sigma}{\partial w_i} &= \sigma
+\end{aligned}
+$$
+
+
+MV
+
+$$
+\begin{aligned}
+\dfrac{\partial \sigma}{\partial w_i} &= \dfrac{\partial \sigma}{\partial w_j}
+\end{aligned}
+$$
+
+
+ERCP
+
+$$
+\begin{aligned}
+w_i \dfrac{\partial \sigma}{\partial w_i} &= w_j \dfrac{\partial \sigma}{\partial w_j}
+\end{aligned}
+$$
 
 
 
+MDP
 
+$$
+\begin{aligned}
+\dfrac{1}{\sigma_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{\sigma_j} \dfrac{\partial \sigma}{\partial w_j}
+\end{aligned}
+$$
+
+### Reference
+- Hallerbach (2015): Advances in Portfolio Risk Control
+- Qian (2006): On the Financial Interpretation of Risk Contribution: Risk Budgets do add up
+- Choueifaty (2008): Torward maximum diversification
+- Kolm, Tutuncu & Fabozzi (2013): 60 Years of Portfolio Optimization: Practical Challenges and Current Trends
 
 
 
@@ -47,10 +96,6 @@ market cap.
 CAPM unharmful -> capacity, recalibility. No clear dominant way 
 idiosyncratic risk turn systematical
 
-$$
-\begin{aligned}
-x_i &= x_j \\
 
-\end{aligned}
-$$
+meaning of risk contribution
 
