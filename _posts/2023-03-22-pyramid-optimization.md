@@ -8,7 +8,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-![Image of Pyramid]([asset/portfolio_pyramid.png](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/portfolio_pyramid.png))
+![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/portfolio_pyramid.png)
 
 *Hallerbach(2015): Advances in Portfolio Risk Control*
 
@@ -31,6 +31,8 @@ $$
 \dfrac{1}{r^{e}_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{r^{e}_j} \dfrac{\partial \sigma}{\partial w_j}
 \end{aligned}
 $$
+
+beyond mathematical definition with solid financial interpretation. is percentage contribution to loss
 
 $$
 \begin{aligned}
