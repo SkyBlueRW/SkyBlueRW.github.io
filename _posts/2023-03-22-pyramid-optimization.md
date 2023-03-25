@@ -13,18 +13,17 @@
 *Hallerbach(2015): Advances in Portfolio Risk Control*
 
 
-Ever since the birth of Mordern Portfolio Theory, mean variance optimization is taking a significant presence in portfolio construction, making the mix of "science and art" in portfolio construction a bit toward science. While, mean variance optimization is almost "notoriously" sensitive to small estimations errors in expected return and covariance matrix. 
+Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, shifting the "science and art" blend in portfolio construction a bit more toward the science angle. However, mean variance optimization is almost "notoriously" sensitive to small estimations errors in expected return and covariance matrix. 
 
-Especially after tech bubble and financial crisis, investors take the hard way to learn that estimation of parameters are not that easy. In face of the questions "what if we can not reliably forecast expected return, or correlation or even volatility?" A lot of variants of portfolio optimization methods that are more risk centric such as risk weighted, risk parity, and maximum diversification are developed. 
+Especially following the dot-com and subprime crises, investors took the hard to way to realize that parameter estimations are not as reliable as once believed. In face of the questions "what if we can not reliably forecast expected return, or correlation or even volatility?" A lot of variants of portfolio construction methods that are more risk centric such as risk weighted, risk parity, and maximum diversification are developed. 
 
-Hallerbach(2015) introduced the decision pyramid of portfolio construction, which demonstrate the increasing requirments on estimation from when you can't predict anything up to you are full aware of mean and variance. The choice then remains how confident are we in the forecast.
+Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing requirments and difficulties on estimation. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. Ultimately, the choice of method depends on the level of confidence we have in our forecast.
 
-along the line discuss about intuition of each method via the marginal condition and compare with the benchmark of Mean Variance Optimization.
+In this blog post, I will try to delve into portfolio construction methods along Hallerbach's decision pyramid. The objective is to get an intuitive understanding of each method by examining their marginal conditions and aligning them with the mean variance efficient portfolio and each other.
+
+### Maximum Sharpe Ratio Portfolio
 
 
-estimation error.
-
-MSRP
 
 $$
 \begin{aligned}
