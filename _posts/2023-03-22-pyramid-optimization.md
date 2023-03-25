@@ -75,7 +75,7 @@ $$
 - Hallerbach (2015): Advances in Portfolio Risk Control
 - Qian (2006): On the Financial Interpretation of Risk Contribution: Risk Budgets do add up
 - Choueifaty (2008): Torward maximum diversification
-- Kolm, Tutuncu & Fabozzi (2013): 60 Years of Portfolio Optimization: Practical Challenges and Current Trends
+- Roncalli : Introduction to Risk Parity and Budgeting
 
 
 
