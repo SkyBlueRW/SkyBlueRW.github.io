@@ -15,23 +15,25 @@
 ### Introduction <a name="introduction"></a>
 
 
-Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, shifting the "science and art" blend in portfolio construction a bit more toward the science angle. However, mean variance optimization is almost "notoriously" sensitive to small estimations errors in inputs especially when estimations on return are risk are not well aligned. 
+Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, tilting the "science and art" blend a bit more toward the former. However, mean variance optimization is almost "notoriously" sensitive to small estimation errors in inputs, particularly when return and risk estimates are not well aligned.
 
-After the dot-com and subprime crises, investors took the hard to way to realize that parameter estimations are not as reliable as once believed. In face of questions like "what if we can not reliably forecast expected return, or correlation or even volatility?" A lot of risk centric portfolio construction methods that rely less on estimation such as risk weighted, risk parity, and maximum diversification ... are developed. 
+After the dot-com and subprime crises, investors took the hard way to realize that parameter estimations are not as reliable as once thought. Risk-centric portfolio construction techniques that rely less on accurate estimation, such as risk-weighted, risk parity, and maximum diversification, were created in response to questions like "what if we cannot reliably forecast expected return, correlation, or volatility?"
 
-Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing requirments and difficulties on input estimation. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. Ultimately, the choice of method depends on the level of confidence we have in our forecast.
+Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing input estimation requirements and difficulties. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. 
 
-In this blog post, I will try to delve into portfolio construction methods along Hallerbach's decision pyramid. The objective is to get an intuitive understanding of each method by examining their marginal conditions and aligning them with the mean variance efficient portfolio and each other.
+The choice among these portfolio construction methods then depends on how confident are we in our forecasts. On one hand, the more reliable information we can feed into the portfolio construction process, the better performance we can expect from the portfolio. While on the other hand, poor estimation often have a detrimental negative impact on the portfolio. 
+
+In this blog post, I will try to delve into portfolio construction methods along Hallerbach's decision pyramid. The objective is to gain some intuitive understanding of each method by examining their marginal conditions and aligning them with the mean variance efficient portfolio and each other.
 
 ### Maximum Sharpe Ratio Portfolio <a name="msrp"></a>
 
-To start, let's set the tough and benchmark with the Maximum Sharpe Ratio Portfolio (MSRP later). It is the tangent portfolio on the efficient frontier with highest sharpe ratio ($$\dfrac{R - R^{f}}{\sigma} = \dfrac{R^{e}}{\sigma}$$) across the opportunity set. Investors can adjust leverage on this portfolio to acheve the desired risk profile with the most efficient use of risk taking. 
+Let's begin by setting the benchmark with the Maximum Sharpe Ratio Portfolio (MSRP), which is the tangent portfolio on the efficient frontier with highest sharpe ratio ($$\dfrac{R - R^{f}}{\sigma} = \dfrac{R^{e}}{\sigma}$$) across the opportunity set. 
 
 ![Image of Tangency](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/Tangency%20portfolio.jpg)
 
 *Source: wikipedia*
 
-To obtain such a portfolio, the ratio of marginal excess return to marginal volatility from all constituents should align. 
+The portfolio's marginal condition offers additional insights. For such a portfolio, the ratio of the marginal contribution to excess return to the marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with a higher marginal ratio.
 
 $$
 \begin{aligned}
@@ -39,6 +41,7 @@ $$
 \end{aligned}
 $$
 
+The marginal contribution to excess return of a constituent is simply its excess return. Thus
 
 $$
 \begin{aligned}
@@ -47,15 +50,17 @@ $$
 \end{aligned}
 $$
 
-beyond mathematical definition with solid financial interpretation. is percentage contribution to loss
+It's also worth mentioning that marginal volatility also plays a crucial role in portfolio analytics. It's a useful way to attribute variances to various constituents or groups since the weighted sum of the marginal contribution to volatility equals the portfolio volatility. This conclusion can be extended to other first-order homogenous risk metrics. Qian (2006) links the marginal contribution volatility to conditional percentile contribution of loss, providing financial interpretations for the quantity as well.
 
 $$
 \begin{aligned}
-\dfrac{\partial \sigma}{\partial w_i} &= \beta_{i} \sigma \\
 \sum_i w_i \dfrac{\partial \sigma}{\partial w_i} &= \sigma
 \end{aligned}
 $$
 
+Theoretically, MSRP is the only portfolio that makes sense to all investors. Investors should scale their leverages on the portfolio to achieve a desried risk profile for the most efficient risk-taking. However, this requires good estimation of expected returns and the covariance matrix.
+
+Without additional constraints, MSRP will consider our inputs as truth with no uncertainty and attempt to arbitrage with small differences in estimation, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, it is not ideal to place a heavy bet based on such a small difference due to high standard error embedded in return estimation. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
 
 MV
 
