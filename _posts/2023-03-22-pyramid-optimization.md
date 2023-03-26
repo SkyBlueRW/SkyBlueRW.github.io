@@ -17,7 +17,7 @@
 
 Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, tilting the "science and art" blend a bit more toward the former. However, mean variance optimization is almost "notoriously" sensitive to small estimation errors in inputs, particularly when return and risk estimates are not well aligned.
 
-After the dot-com and subprime crises, investors took the hard way to realize that parameter estimations are not as reliable as once thought. Risk-centric portfolio construction techniques that rely less on accurate estimation, such as risk-weighted, risk parity, and maximum diversification, were created in response to questions like "what if we cannot reliably forecast expected return, correlation, or volatility?"
+It is especially true after the dot-com and subprime crises when investors took the hard way to realize that parameter estimations are not as reliable as once thought. In facing of questions like "what if we cannot reliably forecast expected return, correlation, or volatility?", risk-centric portfolio construction techniques that rely less on accurate estimation, such as risk-weighted, risk parity, and maximum diversification, were created.
 
 Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing input estimation requirements and difficulties. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. 
 
