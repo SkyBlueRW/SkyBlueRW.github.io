@@ -5,6 +5,7 @@
 ### dfraft
 
 - [Introduction](#introduction)
+- [Maximum Sharpe Ratio Portfolio](#msrp)
 
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/portfolio_pyramid.png)
@@ -16,15 +17,19 @@
 
 Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, shifting the "science and art" blend in portfolio construction a bit more toward the science angle. However, mean variance optimization is almost "notoriously" sensitive to small estimations errors in inputs especially when estimations on return are risk are not well aligned. 
 
-Following the dot-com and subprime crises, investors took the hard to way to realize that parameter estimations are not as reliable as once believed. In face of the questions like "what if we can not reliably forecast expected return, or correlation or even volatility?" A lot of variants of portfolio construction methods that are more risk centric such as risk weighted, risk parity, and maximum diversification are developed. 
+After the dot-com and subprime crises, investors took the hard to way to realize that parameter estimations are not as reliable as once believed. In face of questions like "what if we can not reliably forecast expected return, or correlation or even volatility?" A lot of risk centric portfolio construction methods that rely less on estimation such as risk weighted, risk parity, and maximum diversification ... are developed. 
 
-Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing requirments and difficulties on estimation. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. Ultimately, the choice of method depends on the level of confidence we have in our forecast.
+Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing requirments and difficulties on input estimation. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. Ultimately, the choice of method depends on the level of confidence we have in our forecast.
 
 In this blog post, I will try to delve into portfolio construction methods along Hallerbach's decision pyramid. The objective is to get an intuitive understanding of each method by examining their marginal conditions and aligning them with the mean variance efficient portfolio and each other.
 
-### 
+### Maximum Sharpe Ratio Portfolio <a name="msrp"></a>
 
+To start, let's set the tough and benchmark of the Maximum Sharpe Ratio Portfolio (MSRP later). It is the tangent portfolio on the efficient frontier with highest sharpe ratio across the opportunity set.
 
+![Image of Tangency](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/Tangency%20portfolio.jpg)
+
+*Source: wikipedia*
 
 $$
 \begin{aligned}
