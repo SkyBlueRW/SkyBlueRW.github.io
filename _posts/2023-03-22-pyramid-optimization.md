@@ -25,15 +25,23 @@ In this blog post, I will try to delve into portfolio construction methods along
 
 ### Maximum Sharpe Ratio Portfolio <a name="msrp"></a>
 
-To start, let's set the tough and benchmark of the Maximum Sharpe Ratio Portfolio (MSRP later). It is the tangent portfolio on the efficient frontier with highest sharpe ratio across the opportunity set.
+To start, let's set the tough and benchmark with the Maximum Sharpe Ratio Portfolio (MSRP later). It is the tangent portfolio on the efficient frontier with highest sharpe ratio ($$\dfrac{R - R^{f}}{\sigma} = \dfrac{R^{e}}{\sigma}$$) across the opportunity set. Investors can adjust leverage on this portfolio to acheve the desired risk profile with most efficient use of risk taking. 
 
 ![Image of Tangency](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/Tangency%20portfolio.jpg)
 
 *Source: wikipedia*
 
+To obtaina portfolio, it is necessary that 
+
 $$
 \begin{aligned}
 \dfrac{\partial R^{e}}{\partial w_i} / \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{\partial R^{e}}{\partial w_j} / \dfrac{\partial \sigma}{\partial w_j} \\
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
 \dfrac{\partial R^{e}}{\partial w_i} &= r^{e}_i \\
 \dfrac{1}{r^{e}_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{r^{e}_j} \dfrac{\partial \sigma}{\partial w_j} \\
 \end{aligned}
