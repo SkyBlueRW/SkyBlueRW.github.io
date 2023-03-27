@@ -17,7 +17,7 @@
 
 Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, tilting the "science and art" blend a bit more toward the former. However, mean variance optimization is almost "notoriously" sensitive to small estimation errors in inputs, particularly when return and risk estimates are not well aligned.
 
-It is especially true after the dot-com and subprime crises when investors took the hard way to realize that parameter estimations are not as reliable as once thought. In facing of questions like "what if we cannot reliably forecast expected return, correlation, or volatility?", risk-centric portfolio construction techniques that rely less on accurate estimation, such as risk-weighted, risk parity, and maximum diversification, were created.
+It is especially true after the dot-com and subprime crises when investors took the hard way to realize that parameter estimations are not as reliable as once thought. In facing of questions like "what if we cannot reliably forecast expected return, correlation, or volatility?", risk-centric portfolio construction techniques that rely less on estimation, such as risk-weighted, risk parity, and maximum diversification, were created.
 
 Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing input estimation requirements and difficulties. The pyramid starts from a scenario where nothing can be predicted, up to a situation where both mean and variance are well understood. 
 
@@ -27,13 +27,13 @@ In this blog post, I will try to delve into portfolio construction methods along
 
 ### Maximum Sharpe Ratio Portfolio <a name="msrp"></a>
 
-Let's begin by setting the benchmark with the Maximum Sharpe Ratio Portfolio (MSRP), which is the tangent portfolio on the efficient frontier with highest sharpe ratio ($$\dfrac{R - R^{f}}{\sigma} = \dfrac{R^{e}}{\sigma}$$) across the opportunity set. 
+Let's begin by setting the benchmark with the Maximum Sharpe Ratio Portfolio (MSRP). It is the tangent portfolio on the efficient frontier with highest sharpe ratio ($$\dfrac{R - R^{f}}{\sigma} = \dfrac{R^{e}}{\sigma}$$) across the opportunity set. 
 
 ![Image of Tangency](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/Tangency%20portfolio.jpg)
 
 *Source: wikipedia*
 
-The portfolio's marginal condition offers additional insights. For such a portfolio, the ratio of the marginal contribution to excess return to the marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with a higher marginal ratio.
+The portfolio's marginal condition offers nice insights. For a portfolio to be MSRP, the ratio of marginal contribution to excess return to marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with a higher marginal ratio.
 
 $$
 \begin{aligned}
@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-It's also worth mentioning that marginal volatility also plays a crucial role in portfolio analytics. It's a useful way to attribute variances to various constituents or groups since the weighted sum of the marginal contribution to volatility equals the portfolio volatility. This conclusion can be extended to other first-order homogenous risk metrics. Qian (2006) links the marginal contribution volatility to conditional percentile contribution of loss, providing financial interpretations for the quantity as well.
+It's worth mentioning that marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to a useful way to attribute variances to each constituent or futhur groups of constituents since the weighted sum of the marginal contribution to volatility equals the portfolio volatility. This conclusion leaves us an addible attribution of portfolio volatility. Qian (2006) links the contribution to volatility to conditional percentile contribution of loss, providing a nice financial interpretation for the quantity.
 
 $$
 \begin{aligned}
@@ -58,7 +58,7 @@ $$
 \end{aligned}
 $$
 
-Theoretically, MSRP is the only portfolio that makes sense to all investors. Investors should scale their leverages on the portfolio to achieve a desried risk profile for the most efficient risk-taking. However, this requires good estimation of expected returns and the covariance matrix.
+Theoretically, MSRP is the only portfolio that makes sense to all investors. Investors should scale their leverages on the portfolio to achieve a desried risk profile for the most efficient risk-taking. However, this requires good estimation of both expected returns and the covariance matrix.
 
 Without additional constraints, MSRP will consider our inputs as truth with no uncertainty and attempt to arbitrage with small differences in estimation, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, it is not ideal to place a heavy bet based on such a small difference due to high standard error embedded in return estimation. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
 
