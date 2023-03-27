@@ -6,6 +6,8 @@
 
 - [Introduction](#introduction)
 - [Maximum Sharpe Ratio Portfolio](#msrp)
+- [Risk Centric Portfolio Construction](#risk)
+
 
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/portfolio_pyramid.png)
@@ -58,9 +60,12 @@ $$
 \end{aligned}
 $$
 
-Theoretically, MSRP is the only portfolio that makes sense to all investors. Investors should scale their leverages on the portfolio to achieve a desried risk profile for the most efficient risk-taking. However, this requires good estimation of both expected returns and the covariance matrix.
+Theoretically, MSRP is the only portfolio that makes sense to all investors. Investors should scale their leverages on the portfolio to achieve a desried risk profile for the most efficient risk-taking. That is getting the most expected return for every bit of risk taken. However, this requires good estimation of both expected returns and the covariance matrix, which we do not always have.
 
-Without additional constraints, MSRP will consider our inputs as truth with no uncertainty and attempt to arbitrage with small differences in estimation, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, it is not ideal to place a heavy bet based on such a small difference due to high standard error embedded in return estimation. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
+Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences in estimation, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference due to high standard error embedded in return estimation. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
+
+### Risk centric Portfolio Construction <a name="risk"></a>
+
 
 MV
 
