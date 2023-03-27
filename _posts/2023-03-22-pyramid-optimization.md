@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-It's worth mentioning that marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to a useful way to attribute portfolio volatility to each constituent since the weighted sum of the marginal contribution to volatility equals the portfolio volatility. This conclusion leaves us an addible attribution of portfolio volatility. Qian (2006) links the contribution to volatility to conditional percentile contribution of loss, providing a nice financial interpretation for the quantity.
+It's worth mentioning that marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent. Qian (2006) further linked the marginal contribution to volatility to conditional percentile contribution of loss, providing a nice financial interpretation for the quantity.
 
 $$
 \begin{aligned}
