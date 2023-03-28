@@ -104,31 +104,6 @@ $$
 - Hallerbach (2015): Advances in Portfolio Risk Control
 - Qian (2006): On the Financial Interpretation of Risk Contribution: Risk Budgets do add up
 - Choueifaty (2008): Torward maximum diversification
-- Roncalli : Introduction to Risk Parity and Budgeting
+- Haesen, Hallerbach & Markwat (2017): Enhancing Risk Parity by Including Views
 
-
-
-
-conviction in forecasting future
-
-Marginal condition, equivalence
-
-Despite good of Mean Variance Optimization, reliable forecast. as a starting point.
-
-Based on forecasting
-Key line: how confident: expected return, correlation, variance. How confident in forecasting.
-Another line structure based on financial theory
-
-
-
-even estimate with overlapping
-
-1/n not easy to beat
-
-market cap. 
-CAPM unharmful -> capacity, recalibility. No clear dominant way 
-idiosyncratic risk turn systematical
-
-
-meaning of risk contribution
 
