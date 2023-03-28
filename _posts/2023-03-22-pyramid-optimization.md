@@ -71,7 +71,14 @@ Risk-centric portfolio construction methods can help address scenarios where rel
 
 **Equal Weighted Portfolio (EWP)**
 
+At the bottom of the pyrmid, when we can not indicate any meaningful difference among expected returns, standard deviations, and correlations. A naive diversification in terms of money allocated seems what we can do
+
 **Risk Weighted Portfolio (RWP)**
+
+Climing to the next ladder of the pyramid, when variance information, we can switch from diversification in terms of equal money to diversification in terms of risk weighted.
+
+
+When the full information of the covariance matrix availbale we have a lot at hand.
 
 **Minimum Variance Portfolio (MVP)**
 
