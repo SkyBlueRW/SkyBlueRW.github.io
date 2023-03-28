@@ -69,12 +69,11 @@ Without additional constraints, MSRP will consider our inputs as truth without a
 
 Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimation, portfolios generated using these methods can be robust and perform comparably well to the MSRP in certain market scenarios, as suggested by their marginal conditions. These portfolios are not dependent on full knowledge of return and risk, providing a conservative alternative with a solid bottom line and some upside potential for investors.
 
-**Equal-Weighting Portfolio (EWP)**
+**Equal Weighted Portfolio (EWP)**
 
-**Equal-Weighting Portfolio (EWP)**
+**Risk Weighted Portfolio (RWP)**
 
-
-MV
+**Minimum Variance Portfolio (MVP)**
 
 $$
 \begin{aligned}
@@ -82,8 +81,7 @@ $$
 \end{aligned}
 $$
 
-
-ERCP
+**Risk Parity Portfolio (RPP)**
 
 $$
 \begin{aligned}
@@ -92,14 +90,15 @@ w_i \dfrac{\partial \sigma}{\partial w_i} &= w_j \dfrac{\partial \sigma}{\partia
 $$
 
 
+**Maximum Diversification Portfolio (MDP)**
 
-MDP
 
 $$
 \begin{aligned}
 \dfrac{1}{\sigma_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{\sigma_j} \dfrac{\partial \sigma}{\partial w_j}
 \end{aligned}
 $$
+
 
 ### Reference
 - Hallerbach (2015): Advances in Portfolio Risk Control
