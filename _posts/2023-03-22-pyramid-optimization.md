@@ -43,7 +43,7 @@ $$
 \end{aligned}
 $$
 
-The marginal contribution to excess return of a constituent is simply its excess return. Thus
+The marginal contribution to excess return of a constituent is simply its excess return. Thus we have
 
 $$
 \begin{aligned}
@@ -60,11 +60,18 @@ $$
 \end{aligned}
 $$
 
-Theoretically, MSRP is the only portfolio that makes sense to all investors. Investors should scale their leverages on the portfolio to achieve a desried risk profile for the most efficient risk-taking. That is getting the most expected return for every bit of risk taken. However, this requires good estimation of both expected returns and the covariance matrix, which we do not always have.
+In theory, the Maximum Sharpe ratio Portfolio (MSRP) is the optimal portfolio for all investors, as it allows them to maximize expected returns for each unit of risk taken. Investors can adjust their leveage on MSRP to acheice a desired risk profile. However, accurate estimation of expected returns and the covariance matrix is crucial for achieving these results, and such estimations are not always readily available. When estimation errors occur, they can have a significant impact on the MSRP. 
 
-Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences in estimation, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference due to high standard error embedded in return estimation. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
+Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences within them, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
+
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
+
+Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimation, portfolios generated using these methods can be robust and perform comparably well to the MSRP in certain market scenarios, as suggested by their marginal conditions. These portfolios are not dependent on full knowledge of return and risk, providing a conservative alternative with a solid bottom line and some upside potential for investors.
+
+**Equal-Weighting Portfolio (EWP)**
+
+**Equal-Weighting Portfolio (EWP)**
 
 
 MV
