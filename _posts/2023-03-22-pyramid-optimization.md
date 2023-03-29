@@ -67,7 +67,9 @@ Without additional constraints, MSRP will consider our inputs as truth without a
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
 
-Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimation, portfolios generated using these methods can be robust and perform comparably well to the MSRP in certain market scenarios, as suggested by their marginal conditions. These portfolios are not dependent on full knowledge of return and risk, providing a conservative alternative with a solid bottom line and some upside potential for investors.
+Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimation, portfolios generated using these methods can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios, as suggested by their marginal conditions. 
+
+These portfolios are not dependent on full knowledge of return and risk, providing a conservative alternative with a solid bottom line and some upside potential for investors.
 
 **Equal Weighted Portfolio (EWP)**
 
