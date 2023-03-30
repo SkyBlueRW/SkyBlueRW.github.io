@@ -1,8 +1,6 @@
 #
 
-## Conviction Pyramid of Portfolio Construction
-
-### dfraft
+## The Conviction Pyramid of Portfolio Construction
 
 - [Introduction](#introduction)
 - [Maximum Sharpe Ratio Portfolio](#msrp)
@@ -17,9 +15,9 @@
 ### Introduction <a name="introduction"></a>
 
 
-Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, tilting the "science and art" blend a bit more toward the former. However, mean variance optimization is almost "notoriously" sensitive to small estimation errors in inputs, particularly when return and risk estimates are not well aligned.
+Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, tilting the "science and art" blend a bit more toward the former. However, mean variance optimization is almost "notorious" for its sensitivity to small estimation errors in inputs, particularly when return and risk estimates are not well aligned.
 
-It is especially true after the dot-com and subprime crises when investors took the hard way to realize that parameter estimations are not as reliable as once thought. In facing of questions like "what if we cannot reliably forecast expected return, correlation, or volatility?", risk-centric portfolio construction techniques that rely less on estimation, such as risk-weighted, risk parity, and maximum diversification, were created.
+It is especially the case during the dot-com and subprime crises when investors took the hard way to realize that parameter estimations are not as reliable as once thought. In facing of questions like "what if we cannot reliably forecast expected return, correlation, or volatility?", risk-centric portfolio construction techniques that rely less on estimation, such as risk-weighted, risk parity, and maximum diversification, were created.
 
 Hallerbach(2015) introduced a nice decision pyramid of portfolio construction, which links these portfolio construction methods with increasing input estimation requirements and difficulties. The pyramid starts from a scenario where nothing can be predicted reliably, up to a situation where both mean and variance are well understood. 
 
@@ -35,7 +33,7 @@ Let's begin by setting the benchmark with the Maximum Sharpe Ratio Portfolio (MS
 
 *Source: wikipedia*
 
-The portfolio's marginal condition offers nice insights. For a portfolio to be MSRP, the ratio of marginal contribution to excess return to marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with a higher marginal ratio.
+The portfolio's marginal condition offers nice insights. For a portfolio to be MSRP, the ratio of marginal contribution to excess return over marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with a higher marginal ratio.
 
 $$
 \begin{aligned}
@@ -52,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-It's worth mentioning that marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent. Qian (2006) further linked the marginal contribution to volatility to conditional percentile contribution of loss (under mild assumptions like normal distribution or 0 mean for short period), providing a nice financial interpretation for the quantity.
+It's worth mentioning that marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent. Qian (2006) further linked it to conditional percentile contribution of loss (under mild assumptions like normal distribution or 0 mean for short period), providing a nice financial interpretation for the quantity.
 
 $$
 \begin{aligned}
@@ -67,9 +65,9 @@ Without additional constraints, MSRP will consider our inputs as truth without a
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
 
-Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimation, portfolios generated using these methods can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios, as suggested by their marginal conditions. 
+Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimations, portfolios generated using these methods can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios, as suggested by their marginal conditions. 
 
-These portfolios are not dependent on full knowledge of return and risk, providing a conservative alternative with a solid bottom line and some upside potential for investors.
+With no requirement of full knowledge on return and risk, these portfolio construction methods provide a conservative alternative with a solid bottom line and some upside potential for investors.
 
 **Equal Weighted Portfolio (EWP)**
 
