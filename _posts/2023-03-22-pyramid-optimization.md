@@ -65,13 +65,17 @@ Without additional constraints, MSRP will consider our inputs as truth without a
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
 
-Risk-centric portfolio construction methods can help address scenarios where reliable estimation is not available for certain inputs. While these methods represent a compromise in the absence of reliable estimations, portfolios generated using these methods can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios, as suggested by their marginal conditions. 
+Risk-centric portfolio construction methods can help to address scenarios where reliable estimation is not available for certain inputs. Although these methods represent a compromise in the absence of reliable estimations, portfolios generated using them can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios (as suggested by their marginal conditions). 
 
-With no requirement of full knowledge on return and risk, these portfolio construction methods provide a conservative alternative with a solid bottom line and some upside potential for investors.
+With no requirement for full knowledge on return and risk, these portfolio construction methods provide a conservative alternative with a solid bottom line and some upside potential for investors.
 
-**Equal Weighted Portfolio (EWP)**
+**Market Weight Portfolio (MWP)**
 
-At the bottom of the pyrmid, when we can not indicate any meaningful difference among expected returns, standard deviations, and correlations. A naive diversification in terms of money allocated seems what we can do
+At the bottom of the pyramid are scenarios where return or risk cannot be meaningfully differentiated. Hallerbach includes the equal-weighted portfolio as a choice, which provides naive diversification based on money allocation. Although it can deliver decent returns, it heavily loads on small-sized securities, leading to limited capacity and high transaction costs.
+
+In practice, the market-weighted portfolio is a more common choice. It requires no input and provides the portfolio with the largest capacity and lowest turnover based on the current market value of each security. Additionally, it has a strong structure embedded in it. It is the MSRP portfolio as per CAPM (Though the assumptions of homogeneous expectation... are not that realistic)
+
+Neither the equal-weighted nor the market-weighted portfolio is easy to beat, as evidenced by Warren Buffet's famous bet with portfolio managers on whether they could beat the market. Upon the foundation of market value weighted portfolio built the first generation of passive invest industry.
 
 **Risk Weighted Portfolio (RWP)**
 
