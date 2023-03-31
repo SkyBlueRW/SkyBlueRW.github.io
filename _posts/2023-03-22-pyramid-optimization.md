@@ -33,7 +33,7 @@ Let's begin by setting the benchmark with the Maximum Sharpe Ratio Portfolio (MS
 
 *Source: wikipedia*
 
-The portfolio's marginal condition offers nice insights. For a portfolio to be MSRP, the ratio of marginal contribution to excess return over marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with a higher marginal ratio.
+The portfolio's marginal condition offers nice insights. For a portfolio to be MSRP, the ratio of marginal contribution to excess return over marginal contribution to volatility from all constituents should align. Otherwise, one can improve the Sharpe ratio further by overweighting constituents with higher marginal ratios.
 
 $$
 \begin{aligned}
@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-It's worth mentioning that marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent. Qian (2006) further linked it to conditional percentile contribution of loss (under mild assumptions like normal distribution or 0 mean for short period), providing a nice financial interpretation for the quantity.
+It's worth mentioning that, though not directly linked to a financial term, marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent, with which one can decompose portfolio volatility to factor exposures, group of securities and so on. Qian (2006) further linked it to conditional percentile contribution of loss (under mild assumptions like normal distribution or 0 mean for short period), providing a nice financial interpretation for the quantity.
 
 $$
 \begin{aligned}
@@ -58,9 +58,9 @@ $$
 \end{aligned}
 $$
 
-In theory, the Maximum Sharpe ratio Portfolio (MSRP) is the optimal portfolio for all investors, as it allows them to maximize expected returns for each unit of risk taken. Investors can adjust their leveage on MSRP to acheice a desired risk profile. However, accurate estimation of expected returns and the covariance matrix is crucial for achieving these results, and such estimations are not always readily available. When estimation errors occur, they can have a significant impact on the MSRP. 
+Maximum Sharpe Ratio Portfolio (MSRP) is kind of the holy grail. In theory, it is the optimal portfolio for all investors, as it allows them to maximize expected returns for each unit of risk taken. Investors can adjust their leveage on MSRP to acheice a desired risk profile. However, accurate estimation of expected returns and the covariance matrix is crucial for achieving these results, and such estimations are not always readily available. When estimation errors occur, they can have a significant impact on the MSRP. 
 
-Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences within them, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference. However, MSRP may view this as a serious arbitrage opportunity, especially if the two securities have a high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
+Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences within them, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference. However, MSRP may view this as a serious arbitrage opportunity in case of high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
 
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
@@ -71,11 +71,13 @@ With no requirement for full knowledge on return and risk, these portfolio const
 
 **Market Weight Portfolio (MWP)**
 
-At the bottom of the pyramid are scenarios where return or risk cannot be meaningfully differentiated. Hallerbach includes the equal-weighted portfolio as a choice, which provides naive diversification based on money allocation. Although it can deliver decent returns, it heavily loads on small-sized securities, leading to limited capacity and high transaction costs.
+At the bottom of the pyramid is the scenario neither return nor risk can be meaningfully differentiated. Hallerbach includes the equal-weighted portfolio (EWP) as a choice, which provides naive diversification based on money allocated. For sure it can deliver decent returns,  while it also heavily loads on small-sized securities, leading to limited capacity and high transaction costs.
 
-In practice, the market-weighted portfolio is a more common choice. It requires no input and provides the portfolio with the largest capacity and lowest turnover based on the current market value of each security. Additionally, it has a strong structure embedded in it. It is the MSRP portfolio as per CAPM (Though the assumptions of homogeneous expectation... are not that realistic)
+In practice, the market-weighted portfolio (MWP) is a more common choice (EWP as a backup for case that market value is not clearly defined. I.E derivative market). MWP is a very intersting portfolio with ascending information layers. For starter, it requires no input estimation and provides the portfolio with the largest capacity and lowest turnover based on the current market value. Additionally, if we are willing to take one step further with assumptions like homogenous expectation and all wealth in financial market. It is the MSRP portfolio as per CAPM.
 
-Neither the equal-weighted nor the market-weighted portfolio is easy to beat, as evidenced by Warren Buffet's famous bet with portfolio managers on whether they could beat the market. Upon the foundation of market value weighted portfolio built the first generation of passive invest industry.
+For sure those are not assumptions hold all the time and CAPM is not an empirical success unconditionally. The MWP is still reasonably good in the sense that it is higly investibale with huge capacity. The relationship between expected return and risk suggested by CAPM generally holds in an ambigous fashion. You might know about Warren Buffet's famous bet with portfolio managers on wehter they could beat the market. The MWP is not easy to beat in practice. There is a whole industry of passive investing around market value weighted portfolios.
+
+The fact that both EWP and MWP are not easy to beat in practice also demonstrated the difficulty in accurately estimate inputs.
 
 **Risk Weighted Portfolio (RWP)**
 
