@@ -62,10 +62,11 @@ Maximum Sharpe Ratio Portfolio (MSRP) is kind of the holy grail. In theory, it i
 
 Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences within them, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference. However, MSRP may view this as a serious arbitrage opportunity in case of high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
 
+The sad fact remains that under quite some scenarios our estimations do not dominant a naive assertion like "all security share the same expected return", "all asset classes share similar sharpe ratios"...
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
 
-Risk-centric portfolio construction methods can help to address scenarios where reliable estimation is not available for certain inputs. Although these methods represent a compromise in the absence of reliable estimations, portfolios generated using them can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios (as suggested by their marginal conditions). 
+That is when risk-centric portfolio can come into play. Risk-centric portfolio construction methods can help to address scenarios where reliable estimation is not available for certain inputs. Although these methods represent a compromise in the absence of reliable estimations, portfolios generated using them can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios (as suggested by their marginal conditions). 
 
 With no requirement for full knowledge on return and risk, these portfolio construction methods provide a conservative alternative with a solid bottom line and some upside potential for investors.
 
@@ -81,9 +82,9 @@ The fact that both EWP ([DeMiguel, Garlappi & Uppal (2009)](https://academic.oup
 
 **Risk Weighted Portfolio (RWP)**
 
-Fortunately, volatility is usually much easier to estimate than other inputs with its consistent patterns of short-term clustering and long-term mean reversion. As we move up the portfolio pyramid to the case when estimation on volatility is available, we gain access to methods that can help us understand and manage risk. 
+It is fortunate that volatility is usually much easier to estimate than other inputs with its consistent patterns of short-term clustering and long-term mean reversion. As we move up the portfolio pyramid to the case when estimation on volatility is available, we gain access to methods that can help us understand and manage risk better. 
 
-One such tool is the Risk Weighted Portfolio (RWP), which goes beyond naive diversification in terms of money invested. Instead, it diversifies based on the volatility involved with every security's weight inversely related to its volatility (I.E: $$w_i = \dfrac{\dfrac{1}{\sigma_i}}{\sum_j \dfrac{1}{\sigma_j}}$$). This approach leads to a more informative decision compared to the EWP and can help investors benefit from the well-known low-risk anomaly. Securities or asset clasess with low risk tend to have higher expected returns than originally expected due to rationales like institutional constraints. RWP implicitly help investors to exploit such market anomaly and lead to more efficient risk-taking.
+One such method is the Risk Weighted Portfolio (RWP), which goes beyond naive diversification in terms of money invested. Instead, it diversifies based on the volatility involved with securities' weights inversely related to their volatility (I.E: $$w_i = \dfrac{\dfrac{1}{\sigma_i}}{\sum_j \dfrac{1}{\sigma_j}}$$). This approach leads to a more risk aware decision compared to the EWP and can help investors benefit from the well-known low-risk anomaly. Securities with low risk tend to have higher expected returns than originally expected due to rationales like institutional constraints. RWP implicitly help investors to exploit such market anomaly and lead to more efficient risk-taking.
 
 
 
