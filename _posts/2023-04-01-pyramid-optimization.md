@@ -5,7 +5,6 @@
 - [Introduction](#introduction)
 - [Maximum Sharpe Ratio Portfolio](#msrp)
 - [Risk Centric Portfolio Construction](#risk)
-- [Summary](#summary)
 
 
 
@@ -140,7 +139,7 @@ $$
 
 In my experience, what makes MDP particularly handy is the availability of multiple MDPs corresponding to different risk targets, which provides investors with flexibility in achieving a desired risk profile without relying heavily on leverage.  MDP with risk targets is one reasonable implementation of the idea to determine the absolute risk level first, and then allocate it to each asset class in a way that maximizes diversification. It seems to be a solid reasoning when reliable return estimation is not available.
 
-Furthermore, the marginal condition where each side of the equation is scaled by volatility reveals that correlation, rather than volatility, plays a more critical role in determining the MDP. This avoids the RPP scenario with large volatility gaps in constituents, but also makes the portfolio sensitive to changes in correlation, which is not an invariant quantity.
+Furthermore, the marginal condition where each side of the equation is scaled by volatility reveals that correlation, rather than volatility, plays a more critical role in determining the MDP. This avoids the RPP scenario with large volatility gaps in constituents, but also makes the portfolio sensitive to changes in correlation, which for sure is not an invariant quantity.
 
 
 ### Reference
