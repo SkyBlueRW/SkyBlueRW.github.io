@@ -62,7 +62,7 @@ Maximum Sharpe Ratio Portfolio (MSRP) is kind of the holy grail. In theory, it i
 
 Without additional constraints, MSRP will consider our inputs as truth without any uncertainty and attempt to arbitrage with small differences within them, often unrealistically. For instance, if we estimate two securities with expected return of 10.5% and 10.7%, respectively, we do not want to place a heavy bet based on such a small difference. However, MSRP may view this as a serious arbitrage opportunity in case of high correlation. Such kind of unreasonable bets can result in a highly concentrated and unrealistic portfolio, which performs badly out of sample.
 
-The sad fact remains that under quite some scenarios our estimations do not dominant a naive assertion like "all security share the same expected return", "all asset classes share similar sharpe ratios"...
+The sad fact remains that under quite some scenarios our estimations are no better than assertions like "all security share the same expected return", "all asset classes share similar sharpe ratios", "CAPM generally holds" ...
 
 ### Risk centric Portfolio Construction <a name="risk"></a>
 
