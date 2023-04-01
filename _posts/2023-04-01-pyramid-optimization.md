@@ -117,7 +117,7 @@ However, RPP heavily depends on volatility, and for some emerging markets, the g
 
 **Maximum Diversification Portfolio (MDP)**
 
-Maximum Diversification direct optimized the diversification ratio defined as $$\dfrac{\sum_i w_i \sigma_i}{\sigma}$$. The ratio has a mixumum of 1 in the case all securities are all perfectly correlation. A direct implementation of the quote that diversification is the only free lunch in finance.
+Maximum Diversification Portfolio (MDP) directly optimizes the diversification ratio, which is defined as the ratio of the weighted sum of individual asset risks to the portfolio risk. The ratio has a maximum of 1 when all securities are perfectly correlated, and MDP seeks to achieve this maximum level of diversification. MDP is less sensitive to volatility and can be applied well with volatility targeting, in which we seek maximum diversification for a given targeted general volatility level.
 
 $$
 \begin{aligned}
@@ -125,10 +125,7 @@ $$
 \end{aligned}
 $$
 
-With the marginal condition, MDP is less sensitive to volatility. Also it can be applied well with volatility targeting. In terms that we seek maximum diversification for given targeted general volatility level.
-
-It is especially helpful in some EM countries where there is a huge gap of volatility between equity and treasury market.
-
+MDP is especially helpful in some emerging markets where there is a significant gap in volatility between the equity and treasury markets. The portfolio is constructed by setting the weight of each constituent proportional to its contribution to the overall diversification ratio. MDP's objective is to create a portfolio that is maximally diversified, rather than one that is optimally balanced between risk and return. Investors should consider the suitability of MDP based on their investment objectives and risk tolerance.
 
 
 ### Reference
