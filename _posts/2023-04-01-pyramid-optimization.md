@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Maximum Sharpe Ratio Portfolio](#msrp)
 - [Risk Centric Portfolio Construction](#risk)
+- [Summary](#summary)
 
 
 
@@ -102,7 +103,7 @@ $$
 
 **Risk Parity Portfolio (RPP)**
 
-Risk Parity Portfolio (RPP) is another popular choice that seeks to allocate risk equally among all constituents of a portfolio. It can be applied to risk metrics other than volatility, and can also consider other concepts like macroeconomic factors as constituents. The idea behind RPP is to create a diversified portfolio where every constituent contributes equally to the overall risk of the portfolio. This is achieved by setting the weight of each constituent proportional to its contribution to the total portfolio risk.
+Risk Parity Portfolio (RPP) is another popular choice that seeks to allocate risk equally among all constituents of a portfolio. It can be applied to risk metrics other than volatility, and can also consider other concepts like macroeconomic scenarios as constituents. The idea behind RPP is to create a diversified portfolio where every constituent contributes equally to the overall risk of the portfolio. This is achieved by setting the weight of each constituent proportional to its contribution to the total portfolio risk.
 
 $$
 \begin{aligned}
@@ -110,13 +111,13 @@ w_i \dfrac{\partial \sigma}{\partial w_i} &= w_j \dfrac{\partial \sigma}{\partia
 \end{aligned}
 $$
 
-When all constituents have the same Sharpe ratio, RPP becomes return risk efficient (MSRP), making it actually a good starting point for asset allocation. From a long-run equilibrium perspective, the Sharpe ratio (price of risk) is expected to be relatively stable across different asset classes, avoiding one or some becoming dominant over others. Empirically RPP did  perform well in the low-interest-rate environment of the last few decades. When coupled with leverage, RPP deliver reasonable return with a high sharpe ratio historically. 
+When all constituents have the same ratio of excess return over its risk contribution, RPP becomes return risk efficient (MSRP), making it actually a good starting point for asset allocation. As from a long-run equilibrium perspective the ratio of return to systematic risk is expected to be relatively stable across different asset classes, avoiding arbitrages on one or some becoming dominant over others. Empirically RPP did perform well in the low-interest-rate environment of the last few decades. When coupled with leverage, RPP deliver reasonable return with a high sharpe ratio historically. 
 
 However, in its nature, RPP is sensitive to volatility (whether it originates from reality or estimation error). That will become a problem if gap in volatility between equity and fixed income is huge as RPP is overly concentrated in low risk assets. Take the Chinese financial market as an example, the historical realized volatility of equity and treasury are around 30% and 5% respectively. A typical RPP in the case would generally lead to a portfolio with more than 95% of weight in treasury, a extremly conservative portfolio that do not fit most investors' objective.
 
 The difference in volatility is much more balanced in the Developed Market. While still, RPP generally leads to a portfolio that comes with high sharpe ratio but low risk profile. It requires high leverage to achieve the desried level of risk and return. Those leverage can be hard to achieve or bring further risk and cost in marketing to market. There are quite some research calling into questions about the good historical performance of RPP from pespectives of interest rate environment, futhre information, cost and so on.
 
-It's also important to notice that, unlike MVP, RPP is sensitive to how we define asset class. It is completely different thing to conduct RPP among two classes of equity and fixed income or among a different grouping of DM equity, EM equity, fixed income and alternatives. While in practice, financial markets are grouped into different sub groups due to all kinds of business considerations hence not all asset classes should come with the same importantce. In that case risk budget that assign certain proportion of risk to each asset class makes more sense.
+It's also important to notice that, unlike MVP, RPP is sensitive to the definition of asset classes. It is completely different thing to conduct RPP among two classes of equity and fixed income or among a different grouping of DM equity, EM equity, fixed income and alternatives. While in practice, financial markets are grouped into different sub groups due to all kinds of business considerations hence not all asset classes should come with the same importantce. In that case risk budget that assign subjective proportion of risk to each asset class makes more sense. 
 
 $$
 \begin{aligned}
@@ -127,9 +128,9 @@ $$
 
 **Maximum Diversification Portfolio (MDP)**
 
-Maximum Diversification Portfolio (MDP) directly optimizes the diversification ratio, which is defined as the ratio of the weighted sum of individual asset risks to the portfolio risk. The ratio has a maximum of 1 when all securities are perfectly correlated, and MDP seeks to achieve this maximum level of diversification. 
+Last but not least, we have the maximum diversification portfolio (MDP) that maximize the diversification ratio ($$\dfrac{\sum_i \sigma_i}{\sigma}$$). It is a direct implemention of the concept that "diversification is the only free lunch in finance".
 
-MDP is less sensitive to volatility and can be applied well with volatility targeting, in which we seek maximum diversification for a given targeted general volatility level.
+Taking its marginal condition, it is clear that MDP is equivalent to MSRP when the sharpe ratio of all constituents align, which is something can be expected every once a while.
 
 $$
 \begin{aligned}
@@ -137,7 +138,9 @@ $$
 \end{aligned}
 $$
 
-MDP is especially helpful in some emerging markets where there is a significant gap in volatility between the equity and treasury markets. The portfolio is constructed by setting the weight of each constituent proportional to its contribution to the overall diversification ratio. MDP's objective is to create a portfolio that is maximally diversified, rather than one that is optimally balanced between risk and return. Investors should consider the suitability of MDP based on their investment objectives and risk tolerance.
+In my experience, what makes MDP particularly handy is the availability of multiple MDPs corresponding to different risk targets, which provides investors with flexibility in achieving a desired risk profile without relying heavily on leverage.  MDP with risk targets is one reasonable implementation of the idea to determine the absolute risk level first, and then allocate it to each asset class in a way that maximizes diversification. It seems to be a solid reasoning when reliable return estimation is not available.
+
+Furthermore, the marginal condition where each side of the equation is scaled by volatility reveals that correlation, rather than volatility, plays a more critical role in determining the MDP. This avoids the RPP scenario with large volatility gaps in constituents, but also makes the portfolio sensitive to changes in correlation, which is not an invariant quantity.
 
 
 ### Reference
