@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-It's worth mentioning that, though not directly linked to a financial term, marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent, with which one can decompose portfolio volatility to factor exposures, group of securities and so on. Qian (2006) further linked it to conditional percentile contribution of loss (under mild assumptions like normal distribution or 0 mean for short period), providing a nice financial interpretation for the quantity.
+It's worth mentioning that, though not directly linked to a financial term, marginal contribution to volatility also plays a crucial role in portfolio analytics. It leads to an addible attribution of portfolio volatility to each constituent, with which one can decompose portfolio volatility to factor exposures, group of securities and so on. [Qian (2006)](https://faculty.washington.edu/ezivot/econ589/ssrn-id684221.pdf) further linked it to conditional percentile contribution of loss (under mild assumptions like normal distribution or 0 mean for short period), providing a nice financial interpretation for the quantity.
 
 $$
 \begin{aligned}
@@ -69,22 +69,21 @@ Risk-centric portfolio construction methods can help to address scenarios where 
 
 With no requirement for full knowledge on return and risk, these portfolio construction methods provide a conservative alternative with a solid bottom line and some upside potential for investors.
 
-**Market Weight Portfolio (MWP)**
+**Equal Weight Portfolio (EWP) and Market Weight Portfolio (MWP)**
 
 At the bottom of the pyramid is the scenario neither return nor risk can be meaningfully differentiated. Hallerbach includes the equal-weighted portfolio (EWP) as a choice, which provides naive diversification based on money allocated. For sure it can deliver decent returns,  while it also heavily loads on small-sized securities, leading to limited capacity and high transaction costs.
 
 In practice, the market-weighted portfolio (MWP) is a more common choice (EWP as a backup for case that market value is not clearly defined. I.E derivative market). MWP is a very intersting portfolio with ascending information layers. For starter, it requires no input estimation and provides the portfolio with the largest capacity and lowest turnover based on the current market value. Additionally, if we are willing to take one step further with assumptions like homogenous expectation and all wealth in financial market. It is the MSRP portfolio as per CAPM.
 
-For sure those are not assumptions hold all the time and CAPM is not an empirical success unconditionally. The MWP is still reasonably good in the sense that it is higly investibale with huge capacity. The relationship between expected return and risk suggested by CAPM generally holds in an ambigous fashion. You might know about Warren Buffet's famous bet with portfolio managers on wehter they could beat the market. The MWP is not easy to beat in practice. There is a whole industry of passive investing around market value weighted portfolios.
+For sure those are not assumptions hold all the time and CAPM is not an empirical success unconditionally. The MWP is still reasonably good in the sense that it is higly investibale with huge capacity. The relationship between expected return and market beta suggested by CAPM generally holds in an ambigous fashion. You might know about Warren Buffet's famous bet with portfolio managers on wehter they could beat the market. The MWP is not easy to beat in practice. There is a whole industry of passive investing around market value weighted portfolios.
 
-The fact that both EWP and MWP are not easy to beat in practice also demonstrated the difficulty in accurately estimate inputs.
+The fact that both EWP ([DeMiguel, Garlappi & Uppal (2009)](https://academic.oup.com/rfs/article-abstract/22/5/1915/1592901)) and MWP are not easy to beat in practice also demonstrated the difficulty in accurately estimate inputs.
 
 **Risk Weighted Portfolio (RWP)**
 
-Climing to the next ladder of the pyramid, when variance information, we can switch from diversification in terms of equal money to diversification in terms of risk weighted.
+Moving up the investment pyramid, we come to a point where volatility estimation is available, providing investors with a better understanding of the risk involved. Volatility is usually easier to estimate than other inputs, as it has a consistent pattern of short-term clustering and long-term mean reversion.
 
-
-When the full information of the covariance matrix availbale we have a lot at hand.
+One option available at this stage is the risk-weighted portfolio (RWP). Instead of just allocating money, diversification is done based on volatility involved, making it a more informative approach. Moreover, the RWP can help investors benefit from the well-documented low-risk anomaly. Securities with lower risk have been observed to yield higher expected returns than expected due to reasons like institutional constraints. By using a RWP, investors can exploit this phenomenon and potentially achieve higher returns.
 
 **Minimum Variance Portfolio (MVP)**
 
@@ -118,5 +117,6 @@ $$
 - Qian (2006): On the Financial Interpretation of Risk Contribution: Risk Budgets do add up
 - Choueifaty (2008): Torward maximum diversification
 - Haesen, Hallerbach & Markwat (2017): Enhancing Risk Parity by Including Views
+- DeMiguel, Garlappi & Uppal (2009): Optimal Versus Naive Diversification: How Inefficient is the 1/N Portfolio Strategy?
 
 
