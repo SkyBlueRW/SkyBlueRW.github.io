@@ -86,23 +86,23 @@ It is fortunate that volatility is usually much easier to estimate than other in
 
 One such method is the Risk Weighted Portfolio (RWP), which goes beyond naive diversification in terms of money invested. Instead, it diversifies based on the volatility involved with securities' weights inversely related to their volatility (I.E: $$w_i = \dfrac{\dfrac{1}{\sigma_i}}{\sum_j \dfrac{1}{\sigma_j}}$$). This approach leads to a more risk aware decision compared to the EWP and can help investors benefit from the well-known low-risk anomaly. Securities with low risk tend to have higher expected returns than originally expected due to rationales like institutional constraints. RWP implicitly help investors to exploit such market anomaly and lead to more efficient risk-taking.
 
-
-
-Adding correlation completes a relative full disclosure on the risk front, with which much more methods are at our disposal. Mean Variance (MVP), risk parity portfolio (RPP) and Maximum diversification portfolio (MDP) are among the popular choices in the case. Each with differnt justifications. 
+Incorporating correlation estimation moves us higher up the portfolio pyramid and provides a relative full disclosure on the risk front. This in turn allows us to leverage a range of sophisticated methods to manage risk, such as Mean Variance (MVP), risk parity portfolio (RPP), and Maximum diversification portfolio (MDP). Each of these methods has its own unique philosophy and approach, and is justified based on the goals and preferences of the investor.
 
 **Minimum Variance Portfolio (MVP)**
 
-minimum variances is the only portfolio on efficient frontier without dependency on expected return estimation. 
+The Minimum Variance Portfolio (MVP) is a portfolio optimization method that seeks to minimize overall portfolio volatility. Like the RWP, MVP benefits from the low volatility anomaly. What sets MVP apart is that it is the only portfolio on the efficient frontier that does not depend on expected return estimation.
 
-The marginal condition for MVP is the equal contribution to volatility of all securities. It is equivalent to MSRP when excess return are the same for all securities
+To construct a MVP, the marginal contribution to volatility must be equal for every security, which makes it equivalent to MSRP if every security share the same excess return. In general, MVP puts more weights on securities with smaller volatility and lower correlation to others.
 
-
+$$
+\begin{aligned}
+\dfrac{\partial \sigma}{\partial w_i} &= \dfrac{\partial \sigma}{\partial w_j}
+\end{aligned}
+$$
 
 **Risk Parity Portfolio (RPP)**
 
-Risk parity is another popular choice as the "all weather" streategy an improved version on the RWP in the sense that risk allocated uniformly for securities or asset classes for diversitication. It is the MSRP when sharpe ratio is the same for all constituents. 
-
-volatility playes a vital role in the determination of portfolio weight. For one hand, it leads to highly concentrate portfolio when the variance difference is large. Also RPP is kindly dependent on the use of leverage. Take asset allocation an example .A lot of research attribute the good performance of RRP to the good performance of treasury in a low interest environment and argue it might not remain the case. 
+Risk Parity Portfolio (RPP) is another popular choice that seeks to allocate risk equally among all constituents of a portfolio. This approach can be applied to risk metrics other than volatility, and can also consider other concepts like macroeconomic factors as constituents. The idea behind RPP is to create a diversified portfolio where every constituent contributes equally to the overall risk of the portfolio. This is achieved by setting the weight of each constituent proportional to its contribution to the total portfolio risk.
 
 $$
 \begin{aligned}
@@ -110,7 +110,9 @@ w_i \dfrac{\partial \sigma}{\partial w_i} &= w_j \dfrac{\partial \sigma}{\partia
 \end{aligned}
 $$
 
-Can also extend to risk budget. 
+When all constituents have the same Sharpe ratio, RPP becomes return risk efficient (MSRP), making it actually a good starting point for asset allocation. From a long-run equilibrium perspective, the Sharpe ratio (price of risk) is expected to be relatively stable across different asset classes, avoiding one or some becoming dominant over others. Empirically RPP did  perform well in the low-interest-rate environment of the last few decades. When coupled with leverage RPP deliver reasonable return with a high sharpe ratio. 
+
+However, RPP heavily depends on volatility, and for some emerging markets, the gap in volatility between equity and fixed income can lead to an overly concentrated portfolio in low-risk assets. RPP also requires the use of leverage, which can introduce additional risks and costs. It is important to note that RPP's performance is heavily dependent on the use of leverage, and research suggests that its good performance in the past may not continue in the future. Therefore, investors should consider the suitability of RPP based on their investment objectives and risk tolerance. 
 
 
 **Maximum Diversification Portfolio (MDP)**
