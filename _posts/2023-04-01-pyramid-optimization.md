@@ -81,19 +81,27 @@ The fact that both EWP ([DeMiguel, Garlappi & Uppal (2009)](https://academic.oup
 
 **Risk Weighted Portfolio (RWP)**
 
-Moving up the investment pyramid, we come to a point where volatility estimation is available, providing investors with a better understanding of the risk involved. Volatility is usually easier to estimate than other inputs, as it has a consistent pattern of short-term clustering and long-term mean reversion.
+Fortunately, volatility is usually much easier to estimate than other inputs with its consistent patterns of short-term clustering and long-term mean reversion. As we move up the portfolio pyramid to the case when estimation on volatility is available, we gain access to methods that can help us understand and manage risk. 
 
-One option available at this stage is the risk-weighted portfolio (RWP). Instead of just allocating money, diversification is done based on volatility involved, making it a more informative approach. Moreover, the RWP can help investors benefit from the well-documented low-risk anomaly. Securities with lower risk have been observed to yield higher expected returns than expected due to reasons like institutional constraints. By using a RWP, investors can exploit this phenomenon and potentially achieve higher returns.
+One such tool is the Risk Weighted Portfolio (RWP), which goes beyond naive diversification in terms of money invested. Instead, it diversifies based on the volatility involved with every security's weight inversely related to its volatility (I.E: $$w_i = \dfrac{\dfrac{1}{\sigma_i}}{\sum_j \dfrac{1}{\sigma_j}}$$). This approach leads to a more informative decision compared to the EWP and can help investors benefit from the well-known low-risk anomaly. Securities or asset clasess with low risk tend to have higher expected returns than originally expected due to rationales like institutional constraints. RWP implicitly help investors to exploit such market anomaly and lead to more efficient risk-taking.
+
+
+
+Adding correlation completes a relative full disclosure on the risk front, with which much more methods are at our disposal. Mean Variance (MVP), risk parity portfolio (RPP) and Maximum diversification portfolio (MDP) are among the popular choices in the case. Each with differnt justifications. 
 
 **Minimum Variance Portfolio (MVP)**
 
-$$
-\begin{aligned}
-\dfrac{\partial \sigma}{\partial w_i} &= \dfrac{\partial \sigma}{\partial w_j}
-\end{aligned}
-$$
+minimum variances is the only portfolio on efficient frontier without dependency on expected return estimation. 
+
+The marginal condition for MVP is the equal contribution to volatility of all securities. It is equivalent to MSRP when excess return are the same for all securities
+
+
 
 **Risk Parity Portfolio (RPP)**
+
+Risk parity is another popular choice as the "all weather" streategy an improved version on the RWP in the sense that risk allocated uniformly for securities or asset classes for diversitication. It is the MSRP when sharpe ratio is the same for all constituents. 
+
+volatility playes a vital role in the determination of portfolio weight. For one hand, it leads to highly concentrate portfolio when the variance difference is large. Also RPP is kindly dependent on the use of leverage. Take asset allocation an example .A lot of research attribute the good performance of RRP to the good performance of treasury in a low interest environment and argue it might not remain the case. 
 
 $$
 \begin{aligned}
@@ -101,15 +109,23 @@ w_i \dfrac{\partial \sigma}{\partial w_i} &= w_j \dfrac{\partial \sigma}{\partia
 \end{aligned}
 $$
 
+Can also extend to risk budget. 
+
 
 **Maximum Diversification Portfolio (MDP)**
 
+Maximum Diversification direct optimized the diversification ratio defined as $$\dfrac{\sum_i w_i \sigma_i}{\sigma}$$. The ratio has a mixumum of 1 in the case all securities are all perfectly correlation. A direct implementation of the quote that diversification is the only free lunch in finance.
 
 $$
 \begin{aligned}
 \dfrac{1}{\sigma_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{\sigma_j} \dfrac{\partial \sigma}{\partial w_j}
 \end{aligned}
 $$
+
+With the marginal condition, MDP is less sensitive to volatility. Also it can be applied well with volatility targeting. In terms that we seek maximum diversification for given targeted general volatility level.
+
+It is especially helpful in some EM countries where there is a huge gap of volatility between equity and treasury market.
+
 
 
 ### Reference
