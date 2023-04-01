@@ -112,9 +112,17 @@ $$
 
 When all constituents have the same Sharpe ratio, RPP becomes return risk efficient (MSRP), making it actually a good starting point for asset allocation. From a long-run equilibrium perspective, the Sharpe ratio (price of risk) is expected to be relatively stable across different asset classes, avoiding one or some becoming dominant over others. Empirically RPP did  perform well in the low-interest-rate environment of the last few decades. When coupled with leverage, RPP deliver reasonable return with a high sharpe ratio historically. 
 
-However, in its nature, RPP is sensitive to volatility (whether it originates from reality or estimation error). That will become a problem if gap in volatility between equity and fixed income is huge and result in a overly concentrated portfolio. Take the Chinese financial market as an example. The historical realized volatility of equity and treasury are around 30% and 5% respectively. A RPP in the case would generally lead to a portfolio with more than 95% of weight in treasury, a extremly conservative portfolio that do not fit most investors' objective.
+However, in its nature, RPP is sensitive to volatility (whether it originates from reality or estimation error). That will become a problem if gap in volatility between equity and fixed income is huge as RPP is overly concentrated in low risk assets. Take the Chinese financial market as an example, the historical realized volatility of equity and treasury are around 30% and 5% respectively. A typical RPP in the case would generally lead to a portfolio with more than 95% of weight in treasury, a extremly conservative portfolio that do not fit most investors' objective.
 
-The difference in volatility is much more balanced in the Developed Market. While still, RPP generally leads to a portfolio that comes with high sharpe ratio but low risk profile. It requires high leverage to achieve the desried level of risk and return. Those leverage can be hard to achieve or bring further risk and cost in marketing to market.  
+The difference in volatility is much more balanced in the Developed Market. While still, RPP generally leads to a portfolio that comes with high sharpe ratio but low risk profile. It requires high leverage to achieve the desried level of risk and return. Those leverage can be hard to achieve or bring further risk and cost in marketing to market. There are quite some research calling into questions about the good historical performance of RPP from pespectives of interest rate environment, futhre information, cost and so on.
+
+It's also important to notice that, unlike MVP, RPP is sensitive to how we define asset class. It is completely different thing to conduct RPP among two classes of equity and fixed income or among a different grouping of DM equity, EM equity, fixed income and alternatives. While in practice, financial markets are grouped into different sub groups due to all kinds of business considerations hence not all asset classes should come with the same importantce. In that case risk budget that assign certain proportion of risk to each asset class makes more sense.
+
+$$
+\begin{aligned}
+\dfrac{w_i}{budget_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{w_j}{budget_j} \dfrac{\partial \sigma}{\partial w_j}
+\end{aligned}
+$$
 
 
 **Maximum Diversification Portfolio (MDP)**
