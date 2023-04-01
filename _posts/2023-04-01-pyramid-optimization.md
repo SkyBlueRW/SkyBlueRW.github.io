@@ -76,7 +76,7 @@ At the bottom of the pyramid is the scenario neither return nor risk can be mean
 
 In practice, the market-weighted portfolio (MWP) is a more common choice (EWP as a backup for case that market value is not clearly defined. I.E derivative market). MWP is a very intersting portfolio with ascending information layers. For starter, it requires no input estimation and provides the portfolio with the largest capacity and lowest turnover based on the current market value. Additionally, if we are willing to take one step further with assumptions like homogenous expectation and all wealth in financial market. It is the MSRP portfolio as per CAPM.
 
-For sure those are not assumptions hold all the time and CAPM is not an empirical success unconditionally. The MWP is still reasonably good in the sense that it is higly investibale with huge capacity. The relationship between expected return and market beta suggested by CAPM generally holds in an ambigous fashion. You might know about Warren Buffet's famous bet with portfolio managers on wehter they could beat the market. The MWP is not easy to beat in practice. There is a whole industry of passive investing around market value weighted portfolios.
+For sure those are not assumptions hold all the time and CAPM is not an empirical success unconditionally. The MWP is still reasonably good in the sense that it is higly investibale with huge capacity. The relationship between expected return and market beta suggested by CAPM generally holds in an ambigous fashion. You might know about [Warren Buffet's famous bet with portfolio managers](https://www.investopedia.com/articles/investing/030916/buffetts-bet-hedge-funds-year-eight-brka-brkb.asp) on wehter they could beat the market. The MWP is not easy to beat in practice. There is a whole industry of passive investing around market value weighted portfolios.
 
 The fact that both EWP ([DeMiguel, Garlappi & Uppal (2009)](https://academic.oup.com/rfs/article-abstract/22/5/1915/1592901)) and MWP are not easy to beat in practice also demonstrated the difficulty in accurately estimate inputs.
 
@@ -86,7 +86,7 @@ It is fortunate that volatility is usually much easier to estimate than other in
 
 One such method is the Risk Weighted Portfolio (RWP), which goes beyond naive diversification in terms of money invested. Instead, it diversifies based on the volatility involved with securities' weights inversely related to their volatility (I.E: $$w_i = \dfrac{\dfrac{1}{\sigma_i}}{\sum_j \dfrac{1}{\sigma_j}}$$). This approach leads to a more risk aware decision compared to the EWP and can help investors benefit from the well-known low-risk anomaly. Securities with low risk tend to have higher expected returns than originally expected due to rationales like institutional constraints. RWP implicitly help investors to exploit such market anomaly and lead to more efficient risk-taking.
 
-Incorporating correlation estimation moves us higher up the portfolio pyramid and provides a relative full disclosure on the risk front. This in turn allows us to leverage a range of sophisticated methods to manage risk, such as Mean Variance (MVP), risk parity portfolio (RPP), and Maximum diversification portfolio (MDP). Each of these methods has its own unique philosophy and approach, and is justified based on the goals and preferences of the investor.
+Incorporating correlation estimation moves us higher up the portfolio pyramid and provides a relative comprehensive disclosure on the risk front. This in turn allows us to leverage a range of sophisticated methods, such as Mean Variance (MVP), risk parity portfolio (RPP), and Maximum diversification portfolio (MDP) to better manage risk and take advantage of the benefit in diversification. Each of these methods has its own unique philosophy and approach, and is justified based on the goals and preferences of the investor.
 
 **Minimum Variance Portfolio (MVP)**
 
@@ -102,7 +102,7 @@ $$
 
 **Risk Parity Portfolio (RPP)**
 
-Risk Parity Portfolio (RPP) is another popular choice that seeks to allocate risk equally among all constituents of a portfolio. This approach can be applied to risk metrics other than volatility, and can also consider other concepts like macroeconomic factors as constituents. The idea behind RPP is to create a diversified portfolio where every constituent contributes equally to the overall risk of the portfolio. This is achieved by setting the weight of each constituent proportional to its contribution to the total portfolio risk.
+Risk Parity Portfolio (RPP) is another popular choice that seeks to allocate risk equally among all constituents of a portfolio. It can be applied to risk metrics other than volatility, and can also consider other concepts like macroeconomic factors as constituents. The idea behind RPP is to create a diversified portfolio where every constituent contributes equally to the overall risk of the portfolio. This is achieved by setting the weight of each constituent proportional to its contribution to the total portfolio risk.
 
 $$
 \begin{aligned}
@@ -110,14 +110,18 @@ w_i \dfrac{\partial \sigma}{\partial w_i} &= w_j \dfrac{\partial \sigma}{\partia
 \end{aligned}
 $$
 
-When all constituents have the same Sharpe ratio, RPP becomes return risk efficient (MSRP), making it actually a good starting point for asset allocation. From a long-run equilibrium perspective, the Sharpe ratio (price of risk) is expected to be relatively stable across different asset classes, avoiding one or some becoming dominant over others. Empirically RPP did  perform well in the low-interest-rate environment of the last few decades. When coupled with leverage RPP deliver reasonable return with a high sharpe ratio. 
+When all constituents have the same Sharpe ratio, RPP becomes return risk efficient (MSRP), making it actually a good starting point for asset allocation. From a long-run equilibrium perspective, the Sharpe ratio (price of risk) is expected to be relatively stable across different asset classes, avoiding one or some becoming dominant over others. Empirically RPP did  perform well in the low-interest-rate environment of the last few decades. When coupled with leverage, RPP deliver reasonable return with a high sharpe ratio historically. 
 
-However, RPP heavily depends on volatility, and for some emerging markets, the gap in volatility between equity and fixed income can lead to an overly concentrated portfolio in low-risk assets. RPP also requires the use of leverage, which can introduce additional risks and costs. It is important to note that RPP's performance is heavily dependent on the use of leverage, and research suggests that its good performance in the past may not continue in the future. Therefore, investors should consider the suitability of RPP based on their investment objectives and risk tolerance. 
+However, in its nature, RPP is sensitive to volatility (whether it originates from reality or estimation error). That will become a problem if gap in volatility between equity and fixed income is huge and result in a overly concentrated portfolio. Take the Chinese financial market as an example. The historical realized volatility of equity and treasury are around 30% and 5% respectively. A RPP in the case would generally lead to a portfolio with more than 95% of weight in treasury, a extremly conservative portfolio that do not fit most investors' objective.
+
+The difference in volatility is much more balanced in the Developed Market. While still, RPP generally leads to a portfolio that comes with high sharpe ratio but low risk profile. It requires high leverage to achieve the desried level of risk and return. Those leverage can be hard to achieve or bring further risk and cost in marketing to market.  
 
 
 **Maximum Diversification Portfolio (MDP)**
 
-Maximum Diversification Portfolio (MDP) directly optimizes the diversification ratio, which is defined as the ratio of the weighted sum of individual asset risks to the portfolio risk. The ratio has a maximum of 1 when all securities are perfectly correlated, and MDP seeks to achieve this maximum level of diversification. MDP is less sensitive to volatility and can be applied well with volatility targeting, in which we seek maximum diversification for a given targeted general volatility level.
+Maximum Diversification Portfolio (MDP) directly optimizes the diversification ratio, which is defined as the ratio of the weighted sum of individual asset risks to the portfolio risk. The ratio has a maximum of 1 when all securities are perfectly correlated, and MDP seeks to achieve this maximum level of diversification. 
+
+MDP is less sensitive to volatility and can be applied well with volatility targeting, in which we seek maximum diversification for a given targeted general volatility level.
 
 $$
 \begin{aligned}
