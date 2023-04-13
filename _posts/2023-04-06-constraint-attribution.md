@@ -49,6 +49,16 @@ $$
 Tutuncu (2012): weight decomposition not intuitive due to correlation.
 
 
+When the standard deviation constraint is binding. We can perform similar decomposition.
+
+$$
+\begin{aligned}
+\frac{\pi^{r}Qx^{\star}}{\sqrt{x^{\star T}Qx^{\star}}} &= \alpha + \sum \bigtriangledown f_i(x^{\star}) - \sum \pi_i \bigtriangledown g_i(x^{\star}) \\
+x^{\star} &= \frac{vQ^{-1}}{\pi^r} \alpha + \sum \frac{vQ^{-1}}{\pi^r}\bigtriangledown f_i(x^{\star}) - \sum \pi_i \frac{vQ^{-1}}{\pi^r} \bigtriangledown g_i(x^{\star})
+\end{aligned}
+$$
+
+
 ### Reference <a name="ref"></a>
 - Scherer & Xu (2007): The Impact of Constraints on Value-Added
 - Bender, Lee & Stefek (2009): Decomposing the Impact of Portfolio Constraints
