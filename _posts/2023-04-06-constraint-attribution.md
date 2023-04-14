@@ -10,6 +10,13 @@
 
 ### Introduction? <a name="introduction"></a>
 
+It's time to face the reality. Though perhaps the most import discovery in modern portfolio theory, Mean Variance Optimization (MVO) often work like a black box in practice. Even the slightest adjustment in an existing MVO can lead to a counterintuitive change in the optimal portfolio, leading to blockers for further insight of the portfolio.
+
+This complexity of MVO, in my understanding, arises from the use of variance as a risk measure. Working with MVO with variance as risk is like working in the "reversed covariance matrix space" instead of the "plain vanilla space" that we are used to. Even a small binding constraint on a single security can impact all other securities in a convoluted way through the covariance matrix. This complexity is further magnified in a full-sized MVO model with a large number of constraints for regulation, risk management, or even investment betting.
+
+
+
+
 
 shadow price weighted characteristic portfolio of each constraint
 
