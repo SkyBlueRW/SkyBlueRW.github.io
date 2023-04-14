@@ -10,12 +10,19 @@
 
 ### Introduction? <a name="introduction"></a>
 
-It's time to face the reality. Though perhaps the most import discovery in modern portfolio theory, Mean Variance Optimization (MVO) often work like a black box in practice. Even the slightest adjustment in an existing MVO can lead to a counterintuitive change in the optimal portfolio, leading to blockers for further insight of the portfolio.
+It's time to face the reality. Though perhaps the most import discovery in modern portfolio theory, Mean Variance Optimization (MVO) often work like a black box in practice. Even the slightest adjustment in an existing MVO can lead to a counterintuitive change in the optimal portfolio, leading to blockers for further insight on the portfolio.
 
-This complexity of MVO, in my understanding, arises from the use of variance as a risk measure. Working with MVO with variance as risk is like working in the "reversed covariance matrix space" instead of the "plain vanilla space" that we are used to. Even a small binding constraint on a single security can impact all other securities in a convoluted way through the covariance matrix. This complexity is further magnified in a full-sized MVO model with a large number of constraints for regulation, risk management, or even investment betting.
+This complexity of MVO, in my understanding, arises from the use of variance. Working with MVO where variance is the risk measure is like working in the "reversed covariance matrix space" instead of the "plain vanilla space" that we are used to. Even a small binding constraint on a single security can impact all other securities in a convoluted way through the covariance matrix. This complexity is further magnified in a full-sized MVO model with a large number of constraints for regulation, risk management, or even investment betting.
 
+The constraint attribution can shed light on the situation. Essentially the constraint attribution method can decompose an optimal portfolio obtained from a full sized optimization into the most basic unconstraint MVO portfolio and various overlays representing constraints or additional terms in utility function.
 
+With this holding decomposition, we can extend decomposition of risk, return, and utility to every constraint placed from the perspective of both ex-ante and ex-post.
 
+$$
+\begin{aligned}
+x^{\star} &= x_u + \sum_j x_j + \sum_i x_i
+\end{aligned}
+$$
 
 
 shadow price weighted characteristic portfolio of each constraint
