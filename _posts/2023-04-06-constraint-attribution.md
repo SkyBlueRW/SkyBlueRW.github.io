@@ -30,6 +30,45 @@ For this blog, I would like to breifly introduce this powerful technique of cons
 
 ### The Lagrangian Dual Decomposition of MVO <a name="lagrangian"></a>
 
+The optimization constraint decomposition roots in the first order dual condition that we briefly talked about in the [post](https://skybluerw.github.io/2023/02/28/convex-optimization-basic.html#dual). 
+
+Without loss of generality, for a MVO in the following form where $$f_j$$ refers to addtional terms in the objective function representing penalty on transaction cost, preferrence for ESG ... and $$g_i$$ refers to direct constraint for risk managment, regulation ... etc
+
+$$
+\begin{aligned}
+\max_x \quad &{\alpha^Tx - \frac{1}{2} \lambda x^TQx + \sum f_i(x)} \\
+g_i(x) &<=0
+\end{aligned}
+$$
+
+One of the necessary conditions that optimal portfolio $$x^{\star}$$ always meet is ($$\pi_i$$ is the shadow cost / Lagrangian Multiplier of the i-th constraint placed on the MVO)
+
+$$
+\begin{aligned}
+\lambda Qx^{\star} &= \alpha + \sum \bigtriangledown f_j(x^{\star}) - \sum \pi_i \bigtriangledown g_i(x^{\star}) \\
+\end{aligned}
+$$
+
+Keeping only the optimal portfolio at the left hand side gives us
+
+$$
+\begin{aligned}
+x^{\star} &= \frac{1}{\lambda} Q^{-1}\alpha + \sum \frac{1}{\lambda} Q^{-1} \bigtriangledown f_j(x^{\star}) - \sum \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star}) \\
+x^{\star} &= x_u + \sum_j x_j + \sum_i x_i \\
+\end{aligned}
+$$
+
+where
+
+$$
+\begin{aligned}
+x_u &= \frac{1}{\lambda} Q^{-1}\alpha \\
+x_j &= \frac{1}{\lambda} Q^{-1} \bigtriangledown f_j(x^{\star}) \\
+x_i &= -\sum \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star})
+\end{aligned}
+$$
+
+
 
 ### Reference <a name="ref"></a>
 - Scherer & Xu (2007): The Impact of Constraints on Value-Added
