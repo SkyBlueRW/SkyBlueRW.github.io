@@ -79,7 +79,19 @@ Now the question remains: does such a decomposition make economic sense from the
 
 ### Shadow price weighted Characteristic Portfolio <a name="meaning"></a>
 
-Yes it does make sense in the context of portfolio construction.
+Yes it does make sense in the context of portfolio construction. The economic meaning of the decomposition will become clear as we look into the content of each of the 3 component.
+
+**Xu**
+
+$$
+\begin{aligned}
+\max_x \quad &{\alpha^Tx - \frac{1}{2} \lambda x^TQx} \\
+&\Updownarrow \\ 	
+x_u &= \frac{1}{\lambda} Q^{-1}\alpha \\
+\end{aligned}
+$$
+
+
 
 
 
