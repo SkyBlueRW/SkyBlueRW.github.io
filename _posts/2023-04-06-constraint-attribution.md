@@ -5,6 +5,7 @@
 
 - [Introduction](#introduction)
 - [The Lagrangian Dual Decomposition of MVO](#lagrangian)
+- [Shadow price weighted Characteristic Portfolio](#meaning)
 - [Reference](#ref)
 
 
@@ -30,7 +31,7 @@ For this blog, I would like to breifly introduce this powerful technique of cons
 
 ### The Lagrangian Dual Decomposition of MVO <a name="lagrangian"></a>
 
-The optimization constraint decomposition roots in the first order dual condition that we briefly talked about in the [post](https://skybluerw.github.io/2023/02/28/convex-optimization-basic.html#dual). 
+The optimization constraint decomposition stems from the first order dual condition that we talked about in the [post](https://skybluerw.github.io/2023/02/28/convex-optimization-basic.html#dual). 
 
 Without loss of generality, for a MVO in the following form where $$f_j$$ refers to addtional terms in the objective function representing penalty on transaction cost, preferrence for ESG ... and $$g_i$$ refers to direct constraint for risk managment, regulation ... etc
 
@@ -41,7 +42,7 @@ g_i(x) &<=0
 \end{aligned}
 $$
 
-One of the necessary conditions that optimal portfolio $$x^{\star}$$ always meet is ($$\pi_i$$ is the shadow cost / Lagrangian Multiplier of the i-th constraint placed on the MVO)
+One of the necessary conditions that optimal portfolio $$x^{\star}$$ always meet is given by:
 
 $$
 \begin{aligned}
@@ -49,7 +50,9 @@ $$
 \end{aligned}
 $$
 
-Keeping only the optimal portfolio at the left hand side gives us
+where $$\pi_i$$ is the shadow cost / Lagrangian Multiplier of the i-th constraint placed on the MVO.
+
+By isolating the optimal portfolio on the left-hand side, we obtain:
 
 $$
 \begin{aligned}
@@ -67,6 +70,16 @@ x_j &= \frac{1}{\lambda} Q^{-1} \bigtriangledown f_j(x^{\star}) \\
 x_i &= -\sum \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star})
 \end{aligned}
 $$
+
+The optimal portfolio is now the addition of 3 distinct components. The first component ($$x_u$$) is determined by expected return and variance. The second component ($$x_j$$) is determined by the gradient of the additional term in the objective function while the last component ($$x_i$$) is determined by shadow price, covariance and derivative of constraint function. 
+
+
+Now the question remains: does such a decomposition make economic sense from the perspecitve of portfolio construction?
+
+
+### Shadow price weighted Characteristic Portfolio <a name="meaning"></a>
+
+Yes it does make sense in the context of portfolio construction.
 
 
 
