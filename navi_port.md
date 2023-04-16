@@ -8,6 +8,10 @@ title: Portfolio Construction
 
 [Numerical Optimization: a 101 refersh and further](https://skybluerw.github.io/2023/02/28/convex-optimization-basic.html)
 
+[The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)
+
+[Not (entirely) a BlackBox: Optimization Constraint Attribution](https://skybluerw.github.io/2023/04/15/constraint-attribution.html)
+
 
 ## Asset Allocation
 
