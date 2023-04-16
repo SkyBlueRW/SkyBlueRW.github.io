@@ -6,6 +6,7 @@
 - [Introduction](#introduction)
 - [The Lagrangian Dual Decomposition of MVO](#lagrangian)
 - [Benchmark of Oppotunity Set + Overlay of Investment Decission](#meaning)
+- [Application](#app)
 - [Reference](#ref)
 
 
@@ -139,16 +140,33 @@ x_i &= - \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star}) \\
 \end{aligned}
 $$ 
 
-$$\dfrac{1}{\lambda} Q^{-1}A_i$$ is a scaled version of the characteristic portfolio for $$A_i$$. A characteristic portfolio is the minimum variance portfolio with unit exposure to corresponding characteristic. It contains all relavant information of $$A_i$$ in portfolio construction.
+$$\dfrac{1}{\lambda} Q^{-1}A_i$$ is a scaled version of the characteristic portfolio for characteristic $$A_i$$. A characteristic portfolio is the minimum variance portfolio with unit exposure to corresponding characteristic. It contains all relavant information of $$A_i$$ in portfolio construction.
 
 $$
 \begin{aligned}
 \min_x \quad &{ \lambda x^TQx} \\
-s.t & A_i^T x_i = 1 \\
+s.t & A_i^T x = 1 \\
 &\Updownarrow \\ 	
 x &= \dfrac{1}{A_i^T Q^{-1}A_i} Q^{-1}A_i
 \end{aligned}
 $$
+
+
+### Application <a name="app"></a>
+
+The linear decomposition of the optimal portfolio into benchmark and overlay portfolios enables a wide range of portfolio analyses. 
+
+For instance, we can easily examine the impact of our investment decisions on the portfolio return. The following formula allows a deeper into key drivers of return from the perspective of both ex-ante and ex-post.
+
+$$
+\begin{aligned}
+x^{\star} &= x_u + \sum_j x_j + \sum_i x_i \\ 
+R^T x^{\star} &= R^T x_u + \sum_j R^T x_j + \sum_i R^T x_i \\ 
+\end{aligned}
+$$
+
+Similarly, this decomposition can provide insights into other areas, such as how changes in constraints can affect portfolio concentration or exposure to credit. By utilizing the linear decomposition approach, we can gain a better understanding of the optimization process in portfolio construction, which can help to demystify it and make it less like a black box.
+
 
 ### Reference <a name="ref"></a>
 - Scherer & Xu (2007): The Impact of Constraints on Value-Added
