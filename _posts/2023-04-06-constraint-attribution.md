@@ -67,7 +67,7 @@ $$
 \begin{aligned}
 x_u &= \frac{1}{\lambda} Q^{-1}\alpha \\
 x_j &= \frac{1}{\lambda} Q^{-1} \bigtriangledown f_j(x^{\star}) \\
-x_i &= -\sum \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star})
+x_i &= - \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star})
 \end{aligned}
 $$
 
@@ -120,13 +120,25 @@ Another handy way to place investment decisions on MVO is to impose optimization
 
 Such constraints will twist the optimal portfolio as an overlay ($$x_i$$) also. The overlay portfolio is determined by the shadow cost of the constraint and the gradient of the constraint function where the shadow price represetns the sensitivity of objective value to constraint value (price of resources) and gradient of constraint function span that to the change of weight. Together, the product of these two measures determine the sensitivity of the objective value to the weight in a given constraint.
 
-It is important to note that, due to slack completeness, the shadow cost of an unbinding constraint is always 0. This means that for a unbinding constraint, a small change in the constraint value will not affect the optimal portfolio or the objective value. This makes sense, as an unbinding constraint refers to abundant resources, and staying within this abundant area ensures that changes in the objective value have no impact on opportimization.
+Due to slack completeness, the shadow cost of an unbinding constraint is always 0. This means that for a unbinding constraint, a small change in the constraint value will not affect the optimal portfolio or the objective value. This makes sense, as an unbinding constraint refers to abundant resources, and staying within this abundant area ensures that changes in the objective value have no impact on opportimization.
 
 $$
 \begin{aligned}
-x_i &= -\sum \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star})
+x_i &= - \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star})
 \end{aligned}
 $$
+
+It should be note that for linear constraints, the corresponding overlay $$x_i$$ bears further economic interpretation as **shadow price weighted characteristic portfolios**
+
+$$
+\begin{aligned}
+g(x) &= Ax <= 0 \\
+&\Updownarrow \\ 	
+x_i &= - \pi_i  \frac{1}{\lambda} Q^{-1}\bigtriangledown g_i(x^{\star}) \\
+&= \pi_i \dfrac{1}{\lambda} Q^{-1}A_i
+\end{aligned}
+$$ 
+
 
 
 
