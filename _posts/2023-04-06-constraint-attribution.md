@@ -156,7 +156,7 @@ $$
 
 The linear decomposition of the optimal portfolio into benchmark and overlay portfolios enables a wide range of portfolio analyses. 
 
-For instance, we can easily examine the impact of our investment decisions on the portfolio return. The following formula allows a deeper into key drivers of return from the perspective of both ex-ante and ex-post.
+For instance, we can easily examine the impact of our investment decisions on the portfolio return. The following formula allows a deeper look into key drivers of return from the perspective of both ex-ante and ex-post.
 
 $$
 \begin{aligned}
