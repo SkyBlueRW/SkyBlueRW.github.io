@@ -1,7 +1,7 @@
 
 #
 
-## The "news" from ragged economic data
+## The news from ragged economic data
 
 economic data special
 ragged
