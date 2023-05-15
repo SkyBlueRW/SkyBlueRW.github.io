@@ -26,7 +26,7 @@ info arrive in an incremental manner
 
 $$
 \begin{aligned}
-\Omega_v &:\_{i, t_i}, t_i=1,2,...,T_{i,v}, i = 1,...,n} \\
+\Omega_v &:\{x_{i, t_i}, t_i=1,2,...,T_{i,v}, i = 1,...,n \} \\
 P[x_{i,t}|\Omega_v] &= E[x_{i,t}|\Omega_v] \\ 
 \end{aligned}
 $$
