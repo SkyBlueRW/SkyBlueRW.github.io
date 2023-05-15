@@ -45,7 +45,18 @@ E[x_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1}} - E[x_j,T_{j
 \end{aligned}
 $$
 
+
+$$
+\begin{aligned}
+x_t &= \mu + \Lambda f_t + \epsilon_t \\
+f_t &= A_1 f_{t-1} + ... + A_p f_{t-p} + u_t \\ 
+\epsilon_{i,t} &= \alpha_i \epsilon_{i, t-1} + e_{i,t} \\ 
+\end{aligned}
+$$
+
+
 ### Reference <a name="ref"></a>
 
 
 - Banbura, Giannone & Reichlin(2010): Nowcasting
+- Banbura & Modugno (2010): Maximum Likelihood Estimation of Factor Models on Datasets with Arbitrary Pattern of Missing Data
