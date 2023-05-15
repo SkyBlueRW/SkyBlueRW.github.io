@@ -38,9 +38,10 @@ unexpected news
 
 Gaussian
 
+
 $$
 \begin{aligned}
-E[x_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1)
+E[x_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1} - E[x_j,T_{j, v+1}|\Omega_v]) \\ 
 \end{aligned}
 $$
 
