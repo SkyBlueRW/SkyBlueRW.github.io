@@ -28,6 +28,19 @@ $$
 \begin{aligned}
 \Omega_v &:\{x_{i, t_i}, t_i=1,2,...,T_{i,v}, i = 1,...,n \} \\
 P[x_{i,t}|\Omega_v] &= E[x_{i,t}|\Omega_v] \\ 
+E[x_{i,t}|\Omega_{v+1}] &= E[x_{i,t}|\Omega_v] + E[x_{i,t}|I_{v+1}] \\ 
+I_{v+1, j} &= x_{j, T_{j, v+1}} - E[x_{j, T_{j, v+1}} | \Omega_v] \\
+E[x_t|I_{v+1}] &= E[x_t I_{v+1}^T]{E[I_{v+1} I_{v+1}^T]}^{-1} I_{v+1}
+\end{aligned}
+$$
+
+unexpected news
+
+Gaussian
+
+$$
+\begin{aligned}
+E[x_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1)
 \end{aligned}
 $$
 
