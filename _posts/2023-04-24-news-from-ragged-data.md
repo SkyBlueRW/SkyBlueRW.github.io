@@ -7,6 +7,12 @@ economic data special
 ragged
 different frequency
 
+#### Economic Data Flow: Ragged and Mixed Frequency
+
+![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/ragged_economic_indicator.png)
+
+*Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
+
 nowcast 
 one side a cohesive stat framework to handle this raged different frequency
 
