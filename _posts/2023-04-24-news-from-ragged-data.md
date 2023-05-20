@@ -10,21 +10,25 @@
 - [EM Estimation](#em)
 - [Reference](#ref)
 
-economic data special
-ragged
-different frequency
 
 ### Economic Indicator: the informative and nerve-wracking data flow <a name="data"></a>
 
 
-Economic indicators are quite useful in managing an investment portfolio. Tons of research in academia and industry has documented how asset class, yield curve, credit spread, sector, styles are impacted by one or multiple aspects of the economic conditions. 
+Financial market is like a bustling abstraction of economic activities, where people jump into the bus for economic objects such as sharing income from others' business and mitigating risk. Therefore, it is not surprising to see that economic conditions are quite relavant in managing investment within the financial markets.
 
+Empirical research has also validated this notion. Scholars and industry experts have dedicated significant efforts to conducting extensive studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, credit spreads, sectors, styles, and so on. These research findings underline the interconnectedness between economic conditions and investment outcomes, underscoring the importance of considering economic indicators when making informed investment decisions.
+
+While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of indicators, which are released in an unstructured manner. Just like the chart below shows.
 
 #### Economic Data Flow: Ragged and Mixed Frequency
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/ragged_economic_indicator.png)
 
 *Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
+
+On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is released on a quarterly basis, PMI (Purchasing Managers' Index), which is released monthly, electricity usage data, which is released weekly. 
+
+On the other hand, the release schedule can vary significantly for different indicators. For instance, GDP and Industrial Production data are typically released more than a month after the reporting period, while PMI is usually released immediately. This variation in release schedules further complicates our task at hand.
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
