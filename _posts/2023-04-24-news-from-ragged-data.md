@@ -2,7 +2,7 @@
 #
 
 
-## The News From Ragged Economic Data 
+## Nowcast: The News From Ragged Economic Data 
 
 - [Economic Indicator: the informative and nerve-wracking data flow](#data)
 - [The Dynamic Factor modeling of Economic Indicators](#dfm)
@@ -14,9 +14,9 @@
 ### Economic Indicator: the informative and nerve-wracking data flow <a name="data"></a>
 
 
-Financial market is like a bustling abstraction of economic activities, where people jump into the bus for economic objects such as sharing income from others' business and mitigating risk. Therefore, it is not surprising to see that economic conditions are quite relavant in managing investment within the financial markets.
+Financial market is like a bustling abstraction of economic activities, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it is not surprising to see that economic conditions are quite relavant in managing investment within the financial markets.
 
-Empirical research has also validated this notion. Scholars and industry experts have dedicated significant efforts to conducting extensive studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, credit spreads, sectors, styles, and so on. These research findings underline the interconnectedness between economic conditions and investment outcomes, underscoring the importance of considering economic indicators when making informed investment decisions.
+Empirical research has also validated this notion. Scholars and industry experts have dedicated significant efforts to conducting studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic indicators when making informed investment decisions.
 
 While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of indicators, which are released in an unstructured manner. Just like the chart below shows.
 
@@ -26,9 +26,9 @@ While it is not a straghtforward task to incorporate the data flow of economic i
 
 *Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
 
-On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is released on a quarterly basis, PMI (Purchasing Managers' Index), which is released monthly, electricity usage data, which is released weekly. 
+On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is released on a quarterly basis, PMI (Purchasing Managers' Index), which is released monthly, or even indicators released at higher frequencies like electricity usage, market data and so on. On the other hand, the release schedule can vary significantly for different indicators. For instance, GDP and Industrial Production  are typically released more than one month after the reporting period, while PMI is usually released immediately after the reporting period. 
 
-On the other hand, the release schedule can vary significantly for different indicators. For instance, GDP and Industrial Production data are typically released more than a month after the reporting period, while PMI is usually released immediately. This variation in release schedules further complicates our task at hand.
+How to handle such a complex data flow? Here it comes the nowcast model. Orginally developed with the main focus to monitor GDP growth, the nowcast model provide a cohesive statatistical framework to handdle this mixed frequency and ragged economic data flow.
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
