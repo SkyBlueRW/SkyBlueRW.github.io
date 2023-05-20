@@ -6,7 +6,7 @@
 
 - [Economic Indicator: the informative and nerve-wracking data flow](#data)
 - [The Dynamic Factor modeling of Economic Indicators](#dfm)
-- [The News from the economic Data](#news)
+- [The insights from DFM](#news)
 - [EM Estimation](#em)
 - [Reference](#ref)
 
@@ -16,6 +16,8 @@ different frequency
 
 ### Economic Indicator: the informative and nerve-wracking data flow <a name="data"></a>
 
+
+Economic indicators are quite useful in managing an investment portfolio. Tons of research in academia and industry has documented how asset class, yield curve, credit spread, sector, styles are impacted by one or multiple aspects of the economic conditions. 
 
 
 #### Economic Data Flow: Ragged and Mixed Frequency
