@@ -7,6 +7,7 @@
 - [Economic Indicator: the informative and nerve-wracking data flow](#data)
 - [The Dynamic Factor modeling of Economic Indicators](#dfm)
 - [The News from the economic Data](#news)
+- [EM Estimation](#em)
 - [Reference](#ref)
 
 economic data special
@@ -28,7 +29,7 @@ different frequency
 
 ### The News from the economic Data <a name="news"></a>
 
-
+### EM estimation <a name="em"></a>
 
 
 nowcast 
@@ -41,11 +42,6 @@ present forecast in an insightful way such that forecast of variable of interest
 info arrive in an incremental manner
 
 
-- [Introduction](#introduction)
-- [Reference](#ref)
-
-
-### Introduction <a name="introduction"></a>
 
 
 $$
