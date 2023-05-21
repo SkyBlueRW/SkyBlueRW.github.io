@@ -26,15 +26,18 @@ While it is not a straghtforward task to incorporate the data flow of economic i
 
 *Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
 
-On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is released on a quarterly basis, PMI (Purchasing Managers' Index), which is released monthly, or even indicators released at higher frequencies like electricity usage, market data and so on. On the other hand, the release schedule can vary significantly for different indicators. For instance, GDP and Industrial Production  are typically released more than one month after the reporting period, while PMI is usually released immediately after the reporting period. 
+On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is published on a quarterly basis, PMI (Purchasing Managers' Index), which is published monthly, or even indicators released at higher frequencies like electricity usage, market data and so on. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production  are typically published more than one month after the reporting period, while PMI is usually published immediately after the reporting period. 
 
-Fortunately, we have the nowcast model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth, the nowcast model provides a cohesive statistical framework to effectively handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
+Fortunately, we have the nowcast model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to effectively handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
 
-
+In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on how to effectively incorporate this model into the decision-making process through illustrative toy examples.
 
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
+To begin, we will unravel the underlying principles of the nowcasting model, shedding light on its inner workings. We will explore the methodologies employed in modeling and estimation, demystifying the process and making it accessible to both experts and novices alike. By understanding the foundation of the nowcasting model, we can better appreciate its value and the insights it offers.
+
+At its heart
 
 ### The News from the economic Data <a name="news"></a>
 
