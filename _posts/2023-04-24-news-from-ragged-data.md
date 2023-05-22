@@ -34,6 +34,8 @@ In this blog, we will explore the remarkable capabilities of the nowcasting mode
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
+**Dynamic Factor Model**
+
 Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nowcast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
 
 As the foundation of a nowcast model, the DFM aim to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
@@ -79,11 +81,18 @@ Q = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+**Handling of Mixed Frequency**
 
+
+
+**Handling of jagged publish**
+
+
+
+### EM estimation <a name="news"></a>
 
 ### The News from the economic Data <a name="news"></a>
 
-### EM estimation <a name="em"></a>
 
 
 nowcast 
