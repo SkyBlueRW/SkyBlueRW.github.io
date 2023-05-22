@@ -86,7 +86,7 @@ $$
 
 **Handling of mixed frequency**
 
-Given that the model operates at the highest frequencies of all economic indicators, it is necessary to establish the link to handle and incorporate indicators published at lower frequencies. To illustrate this, let's consider the integration of GDP into a monthly model. 
+Given that the model operates at the highest frequencies of all economic indicators, it is necessary to establish a link to handle and incorporate indicators published at lower frequencies. To illustrate this, let's consider the integration of GDP into a monthly model. 
 
 Suppose $$GDP_t$$ represents the unobservable monthly GDP amount. To integrate the observable QOQ GDP growth ($$x_t^{Q} = log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}})$$), we need to align it to the unobserved MOM GDP growth ($$x_t^{M} = log(\dfrac{GDP_t}{GDP_{t-1}})$$) to ensure a meaninful comparison with other monthly indicators and then incorporate the quarterly series through the established link.
 
@@ -100,7 +100,7 @@ x_t^{Q} &\approx x_{t}^M + 2x_{t-1}^M + 3x_{t-2}^M + 2x_{t-3}^M + x_{t-4}^M
 \end{aligned}
 $$
 
-If we assume the MOM GDP growth follows the same factor model structure as other monthly indicators, $$x_t^Q$$ can be modeled with lagged latent factors.
+Assuming the MOM GDP growth follows the same factor model structure as other monthly indicators, we can model $$x_t^Q$$ with lagged latent factors without messing around the relationship between QOQ growth and MOM growth.
 
 $$
 \begin{aligned}
@@ -110,7 +110,7 @@ x_t^Q &= 9 \mu_Q + \Lambda_Q f_{t} + 2\Lambda_Q f_{t-1} + \Lambda_Q f_{t-2} + \L
 \end{aligned}
 $$
 
-We can extend the DFM to following form to incorporate the quarterly QOQ GDP growth. 
+The following extended DFM can be used to incorporate the quarterly QOQ GDP growth. 
 
 $$
 \begin{bmatrix}
