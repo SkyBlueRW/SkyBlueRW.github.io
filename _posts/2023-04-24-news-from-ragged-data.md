@@ -2,7 +2,7 @@
 #
 
 
-## Nowcast: The News From Jagged Economic Data 
+## Nowcasting: The News From Jagged Economic Data 
 
 - [Economic Indicators: the informative and nerve-wracking data flow](#data)
 - [The Dynamic Factor modeling of Economic Indicators](#dfm)
@@ -34,9 +34,10 @@ In this blog, we will explore the remarkable capabilities of the nowcasting mode
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
+Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nowcast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
+
 **Dynamic Factor Model**
 
-Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nowcast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
 
 As the foundation of a nowcast model, the DFM aim to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
 
@@ -54,7 +55,7 @@ e_{i, t} &\sim N(0, I)
 \end{aligned}
 $$
 
-It's also quite easy to impose further structures in the model to represent the reality. For example,  Banbura, Giannone & Reichlin(2010) partitioned $$f_t$$ into 3 factors: A global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
+It's also quite easy to impose further structures in the model to represent the reality. For example, Banbura, Giannone & Reichlin(2010) partitioned $$f_t$$ into 3 factors: A global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
 
 Such a formation can be easily achieved via restrictions on the loading matrix, the transition matrix and the covariance matrix.
 
@@ -81,7 +82,56 @@ Q = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-**Handling of Mixed Frequency**
+**Handling of mixed frequency**
+
+Since the DFM is at the highest frequencies of all economic indicators, an equation to align indicators at lower frequency would be required. Let's take the case of integrating GDP into a monthly model as an example. Suppose $$GDP_t$$ refers to the unobserved monthly GDP series. 
+
+The goal is to align the observed QOQ GDP growth ($$x_t^{Q} = log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}})$$) and the unobserved MOM GDP growth ($$x_t^{M} = log(\dfrac{GDP_t}{GDP_{t-1}})$$)
+
+$$
+\begin{aligned}
+x_t^M &= \mu_Q + \Lambda_Q f_t + \epsilon_t^Q \\ 
+\downarrow
+x_t^Q = 9 \mu_Q + \Lambda_Q f_{t} + 2\Lambda_Q f_{t-1} + \Lambda_Q f_{t-2} + \Lambda_Q f_{t-3} + \Lambda_Q f_{t-4} + \epsilon_{t}^Q + 2\epsilon_{t-1}^Q + 3\epsilon_{t-2}^Q + 2\epsilon_{t-3}^Q + \epsilon_{t-4}^Q 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}}) &\approx  log(\dfrac{GDP_t}{GDP_{t-1}} (\dfrac{GDP_t-1}{GDP_{t-2}})^2 (\dfrac{GDP_t-2}{GDP_{t-3}})^3 (\dfrac{GDP_t-3}{GDP_{t-4}})^2 \dfrac{GDP_4}{GDP_{t-5}}) \\
+&\downarrow \\
+x_t^{Q} &\approx x_{t}^M + 2x_{t-1}^M + 3x_{t-2}^M + 2x_{t-3}^M + x_{t-4}^M
+\end{aligned}
+$$
+
+With the linking equation, we can include the quarterly GDP growth in a monthly model 
+
+$$
+\begin{bmatrix}
+  y_t \\
+  x_t^Q
+\end{bmatrix} = \begin{bmatrix}
+  \mu \\
+  \mu_Q
+\end{bmatrix} +  \begin{bmatrix}
+  \Lambda &0 &0 &0 &0 &I_n &0 &0 &0 &0 &0 \\
+  \Lambda_Q &2\Lambda_Q &3\Lambda_Q &2\Lambda_Q &\Lambda_Q &0 &1 &2 &3 &2 &1
+\end{bmatrix}  \begin{bmatrix}
+  f_t \\
+  f_{t-1} \\
+  f_{t-2} \\ 
+  f_{t-3} \\
+  f_{t-4} \\
+  \epsilon_{t} \\
+  \epsilon_{t}^Q \\
+  \epsilon_{t-1}^Q \\
+  \epsilon_{t-2}^Q \\
+  \epsilon_{t-3}^Q \\
+  \epsilon_{t-4}^Q \\
+\end{bmatrix}
+$$
+
+
 
 
 
