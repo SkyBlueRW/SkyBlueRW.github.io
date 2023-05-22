@@ -2,7 +2,7 @@
 #
 
 
-## Nowcast: The News From Ragged Economic Data 
+## Nowcast: The News From Jagged Economic Data 
 
 - [Economic Indicators: the informative and nerve-wracking data flow](#data)
 - [The Dynamic Factor modeling of Economic Indicators](#dfm)
@@ -16,28 +16,45 @@
 
 Financial market is like a bustling abstraction of economic activities, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it is not surprising to see that economic conditions are quite relavant in managing investment within the financial markets.
 
-Empirical research has also validated this notion. Scholars and industry experts have dedicated significant efforts to conducting studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic indicators when making informed investment decisions.
+Empirical research has also validated this notion. Scholars and industry experts have dedicated significant efforts to conduct studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic indicators when making informed investment decisions.
 
 While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of indicators, which are unstructured in their natures. Just like the chart below shows.
 
-#### Economic Data Flow: Ragged and Mixed Frequency
+#### Economic Data Flow: Jagged and Mixed Frequency
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/ragged_economic_indicator.png)
 
 *Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
 
-On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is published on a quarterly basis, PMI (Purchasing Managers' Index), which is published monthly, or even indicators released at higher frequencies like electricity usage, market data and so on. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production  are typically published more than one month after the reporting period, while PMI is usually published immediately after the reporting period. 
+On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is published on a quarterly basis, PMI, which is published monthly, or even indicators released at higher frequencies like electricity usage, market data and so on. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production  are typically published more than one month after the reporting period, while PMI is usually published immediately after the reporting period. 
 
-Fortunately, we have the nowcast model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to effectively handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
+Fortunately, we have the nowcast model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
 
 In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on how to effectively incorporate this model into the decision-making process through illustrative toy examples.
 
-
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
-To begin, we will unravel the underlying principles of the nowcasting model, shedding light on its inner workings. We will explore the methodologies employed in modeling and estimation, demystifying the process and making it accessible to both experts and novices alike. By understanding the foundation of the nowcasting model, we can better appreciate its value and the insights it offers.
+Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and a customized EM (Expectation-Maximization) algorithm, the nocast model effectively handles the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet been published as missing values via Kalman filter.
 
-At its heart
+As the foundation of a nowcast model, the DFM aim to find a small number of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What distinguishes the DFM as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
+
+In the nowcast model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are modeled using a vector autoregressive (VAR) process.
+
+A typical DFM representation of nocast model are as follows where $$\Lambda$$ is the loading matrix that determins how a economic indicator impacted by lattent factors and matrix $$A_p$$ governs the transition of the lattent factor. 
+
+$$
+\begin{aligned}
+y_t &= \mu + \Lambda f_t + \epsilon_t \\
+f_t &= A_1 f_{t-1} + ... + A_p f_{t-p} + u_t \\ 
+\epsilon_{i,t} &= \alpha_i \epsilon_{i, t-1} + ... + e_{i,t} \\ 
+u_t &\sim N(0, Q) \\
+e_{i, t} &\sim N(0, I)
+\end{aligned}
+$$
+
+
+
+
 
 ### The News from the economic Data <a name="news"></a>
 
