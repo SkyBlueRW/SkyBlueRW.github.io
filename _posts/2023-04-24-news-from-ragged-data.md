@@ -30,11 +30,11 @@ On one hand, these indicators are published at different frequencies. For exampl
 
 Fortunately, we have the nowcast model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
 
-In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on how to effectively incorporate this model into the decision-making process through illustrative toy examples.
+In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on ways to incorporate this model into the decision-making process through illustrative toy examples.
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
-Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nocast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
+Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nowcast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
 
 As the foundation of a nowcast model, the DFM aim to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
 
@@ -54,7 +54,7 @@ $$
 
 It's also quite easy to impose further structures in the model to represent the reality. For example,  Banbura, Giannone & Reichlin(2010) partitioned $$f_t$$ into 3 factors: A global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
 
-Such a formation can be easily achieved via restrictions on the loading matrix and transition matrix.
+Such a formation can be easily achieved via restrictions on the loading matrix, the transition matrix and the covariance matrix.
 
 $$
 \Lambda = \begin{bmatrix}
@@ -71,6 +71,13 @@ A_i = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+$$
+Q = \begin{bmatrix}
+    Q_G & 0 & 0 \\
+    0 & Q_N & 0 \\
+    0 & 0 & Q_R
+\end{bmatrix}
+$$
 
 
 
