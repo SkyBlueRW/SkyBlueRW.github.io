@@ -34,13 +34,13 @@ In this blog, we will explore the remarkable capabilities of the nowcasting mode
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
-Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and a customized EM (Expectation-Maximization) algorithm, the nocast model effectively handles the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet been published as missing values via Kalman filter.
+Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nocast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
 
-As the foundation of a nowcast model, the DFM aim to find a small number of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What distinguishes the DFM as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
+As the foundation of a nowcast model, the DFM aim to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
 
 In the nowcast model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are modeled using a vector autoregressive (VAR) process.
 
-A typical DFM representation of nocast model are as follows where $$\Lambda$$ is the loading matrix that determins how a economic indicator impacted by lattent factors and matrix $$A_p$$ governs the transition of the lattent factor. 
+A typical DFM representation of nocast model are as follows where $$\Lambda$$ is the loading matrix that determins how a economic indicator impacted by lattent factors and matrix $$A_p$$ governs the evolve of the lattent factor. 
 
 $$
 \begin{aligned}
@@ -52,6 +52,24 @@ e_{i, t} &\sim N(0, I)
 \end{aligned}
 $$
 
+It's also quite easy to impose further structures in the model to represent the reality. For example,  Banbura, Giannone & Reichlin(2010) partitioned $$f_t$$ into 3 factors: A global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
+
+Such a formation can be easily achieved via restrictions on the loading matrix and transition matrix.
+
+$$
+\Lambda = \begin{bmatrix}
+    \Lambda_{N,G} & \Lambda_{N,N} & 0 \\
+    \Lambda_{R,G} & 0 & \Lambda_{R,R}
+\end{bmatrix}
+$$
+
+$$
+A_i = \begin{bmatrix}
+    A_{i,G} & 0 & 0 \\
+    0 & A_{i, N} & 0 \\
+    0 & 0 & A_{i,R}
+\end{bmatrix}
+$$
 
 
 
