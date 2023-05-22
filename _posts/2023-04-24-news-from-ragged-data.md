@@ -14,11 +14,11 @@
 ### Economic Indicators: the informative and nerve-wracking data flow <a name="data"></a>
 
 
-Financial market is like a bustling abstraction of economic activities, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it is not surprising to see that economic conditions are quite relavant in managing investment within the financial markets.
+Financial market is like a bustling abstraction of the economic world, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it comes as no surprise that economic conditions are quite relavant in managing investment within the financial market.
 
-Empirical research has also validated this notion. Scholars and industry experts have dedicated significant efforts to conduct studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic indicators when making informed investment decisions.
+This notion finds its support in empirical research as well. Scholars and industry experts have dedicated considerable efforts to conduct studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic conditions when making informed investment decisions.
 
-While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of indicators, which are unstructured in their natures. Just like the chart below shows.
+While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of economic indicators that are unstructured in their natures. Just as the chart below glimpses.
 
 #### Economic Data Flow: Jagged and Mixed Frequency
 
@@ -34,16 +34,18 @@ In this blog, we will explore the remarkable capabilities of the nowcasting mode
 
 ### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
 
-Embarking on our exploration, let's delve into the inner workings of the nowcast model to gain some intuition. At its core, the nowcast model is built on the foundation of a dynamic factor model (DFM). By incorporating equations to link indicators at different frequencies and utilizing a customized EM (Expectation-Maximization) algorithm, the nowcast model effectively addresses the challenges posed by mixed-frequency and irregular data flow by treating indicators not yet published as missing values via Kalman filter.
+Embarking on our exploration, let's delve into the inner workings of the nowcasting model. 
+
+At its core, the nowcasting model is built on the foundation of a dynamic factor model (DFM). This powerful framework is further enhanced by incorporating equations that link economic indicators at different frequencies and leveraging a customized EM (Expectation-Maximization) algorithm. By doing so, the nowcasting model effectively tackles the challenges posed by mixed-frequency and irregular data flow. It treats indicators not yet published as missing values and handle them seamlessly via the Kalman filter, ensuring robust and up-to-date insights into economic conditions.
 
 **Dynamic Factor Model**
 
 
-As the foundation of a nowcast model, the DFM aim to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
+As the foundation of a nowcast model, the DFM aims to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
 
-In the nowcast model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are modeled using a vector autoregressive (VAR) process.
+In the nowcast model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. 
 
-A typical DFM representation of nocast model are as follows where $$\Lambda$$ is the loading matrix that determins how a economic indicator impacted by lattent factors and matrix $$A_p$$ governs the evolve of the lattent factor. 
+A typical DFM representation of nocasting model is as follows. $$\Lambda$$ is the loading matrix that determines how each economic indicator is impacted by the latent factors and matrix $$A_p$$ governs the evolution of the latent factors themselves. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are captured via vector autoregressive process (VAR).
 
 $$
 \begin{aligned}
@@ -55,9 +57,9 @@ e_{i, t} &\sim N(0, I)
 \end{aligned}
 $$
 
-It's also quite easy to impose further structures in the model to represent the reality. For example, Banbura, Giannone & Reichlin(2010) partitioned $$f_t$$ into 3 factors: A global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
+It's also quite easy to impose further structures in the model. For instance, Banbura, Giannone & Reichlin(2010) partitioned the lattent factors into 3: One global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
 
-Such a formation can be easily achieved via restrictions on the loading matrix, the transition matrix and the covariance matrix.
+Such a formation can be easily implemented by imposing restrictions on the loading matrix, the transition matrix, and the covariance matrix as below.
 
 $$
 \Lambda = \begin{bmatrix}
@@ -84,17 +86,11 @@ $$
 
 **Handling of mixed frequency**
 
-Since the DFM is at the highest frequencies of all economic indicators, an equation to align indicators at lower frequency would be required. Let's take the case of integrating GDP into a monthly model as an example. Suppose $$GDP_t$$ refers to the unobserved monthly GDP series. 
+Given that the model operates at the highest frequencies of all economic indicators, it is necessary to establish the link to handle and incorporate indicators published at lower frequencies. To illustrate this, let's consider the integration of GDP into a monthly model. 
 
-The goal is to align the observed QOQ GDP growth ($$x_t^{Q} = log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}})$$) and the unobserved MOM GDP growth ($$x_t^{M} = log(\dfrac{GDP_t}{GDP_{t-1}})$$)
+Suppose $$GDP_t$$ represents the unobservable monthly GDP amount. To integrate the observable QOQ GDP growth ($$x_t^{Q} = log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}})$$), we need to align it to the unobserved MOM GDP growth ($$x_t^{M} = log(\dfrac{GDP_t}{GDP_{t-1}})$$) to ensure a meaninful comparison with other monthly indicators and then incorporate the quarterly series through the established link.
 
-$$
-\begin{aligned}
-x_t^M &= \mu_Q + \Lambda_Q f_t + \epsilon_t^Q \\ 
-&\downarrow \\ 
-x_t^Q &= 9 \mu_Q + \Lambda_Q f_{t} + 2\Lambda_Q f_{t-1} + \Lambda_Q f_{t-2} + \Lambda_Q f_{t-3} + \Lambda_Q f_{t-4} + \epsilon_{t}^Q + 2\epsilon_{t-1}^Q + 3\epsilon_{t-2}^Q + 2\epsilon_{t-3}^Q + \epsilon_{t-4}^Q 
-\end{aligned}
-$$
+Mariano and Murasawa (2003) introduced the following linking function as one way to do the work.
 
 $$
 \begin{aligned}
@@ -104,7 +100,17 @@ x_t^{Q} &\approx x_{t}^M + 2x_{t-1}^M + 3x_{t-2}^M + 2x_{t-3}^M + x_{t-4}^M
 \end{aligned}
 $$
 
-With the linking equation, we can include the quarterly GDP growth in a monthly model 
+If we assume the MOM GDP growth follows the same factor model structure as other monthly indicators, $$x_t^Q$$ can be modeled with lagged latent factors.
+
+$$
+\begin{aligned}
+x_t^M &= \mu_Q + \Lambda_Q f_t + \epsilon_t^Q \\ 
+&\downarrow \\ 
+x_t^Q &= 9 \mu_Q + \Lambda_Q f_{t} + 2\Lambda_Q f_{t-1} + \Lambda_Q f_{t-2} + \Lambda_Q f_{t-3} + \Lambda_Q f_{t-4} + \epsilon_{t}^Q + 2\epsilon_{t-1}^Q + 3\epsilon_{t-2}^Q + 2\epsilon_{t-3}^Q + \epsilon_{t-4}^Q 
+\end{aligned}
+$$
+
+We can extend the DFM to following form to incorporate the quarterly QOQ GDP growth. 
 
 $$
 \begin{bmatrix}
