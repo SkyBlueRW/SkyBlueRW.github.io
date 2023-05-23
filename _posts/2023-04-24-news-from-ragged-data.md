@@ -148,8 +148,9 @@ We are faced with such dilemmas not only with variables at lower frequencies but
 The nowcasting model handdle economic indicators not yet published via Kalman filter. Kalman filter would treat indicators not published as missing values and fill in the place with conditional mean. The following release can be then incorporated in the existing nowcasing model via Kalman filter updates easily providing a comprehensive and up-to-date info.
 
 
-### EM estimation <a name="news"></a>
+### EM estimation <a name="em"></a>
 
+Now we finished setting up the model. After all a model can be as fancy as possible but if if comes no reliable way for estimation, it is useless. 
 
 ### The Practical Aspect <a name="news"></a>
 
