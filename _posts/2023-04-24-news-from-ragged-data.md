@@ -6,8 +6,8 @@
 
 - [Economic Indicators: the informative and nerve-wracking data flow](#data)
 - [The Dynamic Factor modeling of Economic Indicators](#dfm)
-- [The insights from DFM](#news)
 - [EM Estimation](#em)
+- [The Practical Aspect](#news)
 - [Reference](#ref)
 
 
@@ -139,24 +139,23 @@ $$
 $$
 
 
-
-
-
 **Handling of jagged publish**
 
+The abovementioned equations can incorporate variables at lower frequencies in the model. Similar tricks can be deduced to mimick other relationships among indicators of differnt frequencies. Wile the job is not finished yet. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
+
+We are faced with such dilemmas not only with variables at lower frequencies but also with those indicators not yet published as well. As mentioned at the beginning the publish date of economic indicators can be as late as 2 months after the reporting period. It is for sure one option to wait for all indicators to be available and then resume the estimation while it likely to bring out dated info.
+
+The nowcasting model handdle economic indicators not yet published via Kalman filter. Kalman filter would treat indicators not published as missing values and fill in the place with conditional mean. The following release can be then incorporated in the existing nowcasing model via Kalman filter updates easily providing a comprehensive and up-to-date info.
 
 
 ### EM estimation <a name="news"></a>
 
 
-### The News from the economic Data <a name="news"></a>
+### The Practical Aspect <a name="news"></a>
 
 
 
-nowcast 
-one side a cohesive stat framework to handle this raged different frequency
 
-joint modeling of the dynamics of data with different frequency.
 
 present forecast in an insightful way such that forecast of variable of interest is updated as weighted sum of news measured as different between realization and forcast of other variables. Formalization of work process hence easy to fit into investment decision process.
 
