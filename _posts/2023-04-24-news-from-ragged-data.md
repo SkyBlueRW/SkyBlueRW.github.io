@@ -59,7 +59,7 @@ $$
 
 What's worth metioning is that it's also quite easy to impose further structures in the model. For instance, Banbura, Giannone & Reichlin(2010) partitioned the lattent factors into 3: One global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
 
-Such a formation can be easily implemented by imposing restrictions on the loading matrix, the transition matrix, and the covariance matrix as below. 
+Such a formation can be easily implemented by imposing restrictions on the loading matrix, the transition matrix, and the covariance matrix as below. The adoption of a customized EM algorithm (more detials later) ensures that such restriction does not pose much problem during estimation. 
 
 $$
 \Lambda = \begin{bmatrix}
@@ -138,14 +138,16 @@ $$
 \end{bmatrix}
 $$
 
+Similar tricks can be deduced easily to mimic other mixed-frequencies dynamics.
 
 **Handling of jagged publish**
 
-The abovementioned equations can incorporate variables at lower frequencies in the model. Similar tricks can be deduced to mimick other relationships among indicators of differnt frequencies. Wile the job is not finished yet. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
+Incorporating data with mixed frequencies into the DFM is a definitely a milestone, but there are further challenges to address with the economic indicator data flow. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
 
-We are faced with such dilemmas not only with variables at lower frequencies but also with those indicators not yet published as well. As mentioned at the beginning the publish date of economic indicators can be as late as 2 months after the reporting period. It is for sure one option to wait for all indicators to be available and then resume the estimation while it likely to bring out dated info.
+This dilemma of jagged data arise not only with variables at lower frequencies but also with indicators that are yet to be published. As mentioned earlier, economic indicators can have a reporting delay ranging from 0 up to 60 days after the reporting period. For sure we can wait for all indicators to become available before resuming the modeling and estimation. While it comes with significant cost of losing up to date insights.
 
-The nowcasting model handdle economic indicators not yet published via Kalman filter. Kalman filter would treat indicators not published as missing values and fill in the place with conditional mean. The following release can be then incorporated in the existing nowcasing model via Kalman filter updates easily providing a comprehensive and up-to-date info.
+To tackle this challenge, nowcasting models utilize a powerful tool called the Kalman filter. The Kalman filter treats unpublished indicators as missing values and fills in the gaps with estimated conditional means. When the missing data becomes available, it can be seamlessly integrated into the existing nowcasting model through Kalman filter updates. This ensures that the model remains comprehensive and up-to-date, providing valuable insights into the current economic landscape.
+
 
 
 ### EM estimation <a name="em"></a>
