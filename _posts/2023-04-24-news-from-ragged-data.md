@@ -14,11 +14,11 @@
 ### Economic Indicators: the informative and nerve-wracking data flow <a name="data"></a>
 
 
-Financial market is like a bustling abstraction of the economic world, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it comes as no surprise that economic conditions are quite relavant in managing investment within the financial market.
+Financial market is like a bustling abstraction of the economic world, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it comes as no surprise that economic conditions are quite relavant in participating in the market.
 
 This notion finds its support in empirical research as well. Scholars and industry experts have dedicated considerable efforts to conduct studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic conditions when making informed investment decisions.
 
-While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of economic indicators that are unstructured in their natures. Just as the chart below glimpses.
+While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of economic indicators that are unstructured in their natures. 
 
 #### Economic Data Flow: Jagged and Mixed Frequency
 
@@ -26,9 +26,9 @@ While it is not a straghtforward task to incorporate the data flow of economic i
 
 *Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
 
-On one hand, these indicators are published at different frequencies. For example, we have indicators such as GDP, which is published on a quarterly basis, PMI, which is published monthly, or even indicators released at higher frequencies like electricity usage, market data and so on. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production  are typically published more than one month after the reporting period, while PMI is usually published immediately after the reporting period. 
+Just as the chart below glimpses, the complexity arises mostly from two aspects. On one hand, these indicators are published at different frequencies. For example, GDP is published quarterly, PMI is published monthly, railroad traffic is published weekly... etc. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production are typically published less than two months after the reporting period, while PMI is usually published immediately after the reporting period. Regular econometrical method can't deal with such jagged data efficiently!
 
-Fortunately, we have the nowcast model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
+Fortunately, we have the nowcasting model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
 
 In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on ways to incorporate this model into the decision-making process through illustrative toy examples.
 
