@@ -142,11 +142,11 @@ Similar tricks can be deduced easily to mimic other mixed-frequencies dynamics.
 
 **Handling of jagged publish**
 
-Incorporating data with mixed frequencies into the DFM is a definitely a milestone, but there are further challenges to address with the economic indicator data flow. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
+Incorporating data with mixed frequencies into the DFM is a definitely a milestone, but there are still challenges to overcome when it comes to the flow of economic indicator data. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
 
-This dilemma of jagged data arise not only with variables at lower frequencies but also with indicators that are yet to be published. As mentioned earlier, economic indicators can have a reporting delay ranging from 0 up to 60 days after the reporting period. For sure we can wait for all indicators to become available before resuming the modeling and estimation. While it comes with significant cost of losing up to date insights.
+This dilemma of uneven data availability arise not only with variables at lower frequencies but also with indicators that are yet to be published. As mentioned earlier, economic indicators can have reporting delays ranging from 0 up to 60 days after the reporting period. While one option is to wait for all indicators to become available before resuming the modeling and estimation process, this approach comes at the significant cost of losing up-to-date insights.
 
-To tackle this challenge, nowcasting models utilize a powerful tool called the Kalman filter. The Kalman filter treats unpublished indicators as missing values and fills in the gaps with estimated conditional means. When the missing data becomes available, it can be seamlessly integrated into the existing nowcasting model through Kalman filter updates. This ensures that the model remains comprehensive and up-to-date, providing valuable insights into the current economic landscape.
+To address this challenge, nowcasting models make effective use of the Kalman filter in the estimation process. With Kalman filter the nowcasting model can treat unpublished indicators as missing values and fills in the gaps with estimated conditional means during the initial estimations. When the economic indicator eventually becomes available upon later publish, it can be seamlessly integrated into the existing nowcasting model through Kalman filter updates. This ensures that the model remains comprehensive and up-to-date, providing valuable insights into the current economic landscape.
 
 
 
