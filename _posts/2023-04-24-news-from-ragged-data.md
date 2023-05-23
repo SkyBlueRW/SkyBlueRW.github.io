@@ -26,9 +26,9 @@ While it is not a straghtforward task to incorporate the data flow of economic i
 
 *Lucrezia Reichlin's [Presentation on Nowcast](https://www.oecd.org/naec/new-economic-policymaking/NAEC_2019_Nowcasting_L_Reichlin.pdf)*
 
-Just as the chart below glimpses, the complexity arises mostly from two aspects. On one hand, these indicators are published at different frequencies. For example, GDP is published quarterly, PMI is published monthly, railroad traffic is published weekly... etc. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production are typically published less than two months after the reporting period, while PMI is usually published immediately after the reporting period. Regular econometrical method can't deal with such jagged data efficiently!
+Just as the chart above glimpses, the complexity arises generally from two aspects. On one hand, these indicators are published at different frequencies. For example, GDP is published quarterly, PMI is published monthly, railroad traffic is published weekly... etc. On the other hand, the publish schedule can vary significantly for different indicators. For instance, GDP and Industrial Production are typically published less than two months after the reporting period, while PMI is usually published immediately after the reporting period. Regular econometrical method like OLS can't deal with such jagged data efficiently!
 
-Fortunately, we have the nowcasting model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to handle the irregular and mixed-frequency nature of economic data. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
+Fortunately, we have the nowcasting model at our disposal to navigate this complex data flow. Originally developed with a primary focus on monitoring GDP growth at central banks, the nowcast model provides a cohesive statistical framework to handle the irregular and mixed-frequency nature of economic data flow. This model empowers us to establish a robust system that continually updates our insights on economies based on the incremental release of data, regardless of its irregular frequency and release schedule.
 
 In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on ways to incorporate this model into the decision-making process through illustrative toy examples.
 
@@ -43,7 +43,7 @@ At its core, the nowcasting model is built on the foundation of a dynamic factor
 
 As the foundation of a nowcast model, the DFM aims to find a concise set of latent factors that drive a significant portion of the variation across a wide array of observed economic indicators. What set the DFM apart as "dynamic" is that it jointly model and estimate both the observed economic indicators and the transition dynamics of the latent factors. 
 
-In the nowcast model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. 
+In the nowcasting model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. 
 
 A typical DFM representation of nocasting model is as follows. $$\Lambda$$ is the loading matrix that determines how each economic indicator is impacted by the latent factors and matrix $$A_p$$ governs the evolution of the latent factors themselves. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are captured via vector autoregressive process (VAR).
 
@@ -57,9 +57,9 @@ e_{i, t} &\sim N(0, I)
 \end{aligned}
 $$
 
-It's also quite easy to impose further structures in the model. For instance, Banbura, Giannone & Reichlin(2010) partitioned the lattent factors into 3: One global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
+What's worth metioning is that it's also quite easy to impose further structures in the model. For instance, Banbura, Giannone & Reichlin(2010) partitioned the lattent factors into 3: One global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
 
-Such a formation can be easily implemented by imposing restrictions on the loading matrix, the transition matrix, and the covariance matrix as below.
+Such a formation can be easily implemented by imposing restrictions on the loading matrix, the transition matrix, and the covariance matrix as below. 
 
 $$
 \Lambda = \begin{bmatrix}
@@ -86,7 +86,7 @@ $$
 
 **Handling of mixed frequency**
 
-Given that the model operates at the highest frequencies of all economic indicators, it is necessary to establish a link to handle and incorporate indicators published at lower frequencies. To illustrate this, let's consider the integration of GDP into a monthly model. 
+Given that the model operates at the highest frequencies of all economic indicators, it is necessary to establish a link to handle and incorporate indicators published at lower frequencies. To illustrate, let's consider the integration of GDP into a monthly model as an example. 
 
 Suppose $$GDP_t$$ represents the unobservable monthly GDP amount. To integrate the observable QOQ GDP growth ($$x_t^{Q} = log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}})$$), we need to align it to the unobserved MOM GDP growth ($$x_t^{M} = log(\dfrac{GDP_t}{GDP_{t-1}})$$) to ensure a meaninful comparison with other monthly indicators and then incorporate the quarterly series through the established link.
 
@@ -95,12 +95,13 @@ Mariano and Murasawa (2003) introduced the following linking function as one way
 $$
 \begin{aligned}
 log(\dfrac{GDP_{t-2} + GDP_{t-1} + GDP_t}{GDP_{t-5} + GDP_{t-4} + GDP_{t-3}}) &\approx  log(\dfrac{GDP_t}{GDP_{t-1}} (\dfrac{GDP_t-1}{GDP_{t-2}})^2 (\dfrac{GDP_t-2}{GDP_{t-3}})^3 (\dfrac{GDP_t-3}{GDP_{t-4}})^2 \dfrac{GDP_4}{GDP_{t-5}}) \\
+&= log(\dfrac{GDP_t * GDP_{t-1} * GDP_{t-2}}{GDP_{t-3} * GDP_{t-4} * GDP_{t-5}})\\
 &\downarrow \\
 x_t^{Q} &\approx x_{t}^M + 2x_{t-1}^M + 3x_{t-2}^M + 2x_{t-3}^M + x_{t-4}^M
 \end{aligned}
 $$
 
-Assuming the MOM GDP growth follows the same factor model structure as other monthly indicators, we can model $$x_t^Q$$ with lagged latent factors without messing around the relationship between QOQ growth and MOM growth.
+Assuming the MOM GDP growth $$x_t^M$$ follows the same factor model structure as other monthly indicators, we can model $$x_t^Q$$ with lagged latent factors without messing around the relationship between QOQ growth and MOM growth.
 
 $$
 \begin{aligned}
@@ -110,7 +111,7 @@ x_t^Q &= 9 \mu_Q + \Lambda_Q f_{t} + 2\Lambda_Q f_{t-1} + \Lambda_Q f_{t-2} + \L
 \end{aligned}
 $$
 
-The following extended DFM can be used to incorporate the quarterly QOQ GDP growth. 
+The following extended DFM can be used to incorporate the quarterly QOQ GDP growth. Still within the same DFM framework :)
 
 $$
 \begin{bmatrix}
