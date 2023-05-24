@@ -172,14 +172,17 @@ With the utilization of linking functions and Kalman filters, we finally obtaine
 
 For a regular (DFM) where all variables $$y_t$$ are observed, an EM algorithm involving Kalman smoother and two multivariate regressions can be used for estimation. For each iteration of the algorithm:
 
-In the **E (Expectation) step** the Kalman smoother is utilized to esimiate the conditional moments of latent factors $$E_j(f_t | \Omega_{t_i})$$, $$E_j(f_t f_t^{'}| \Omega_{t_i})$$, $$E_j(f_{t-1} f_{t-1}^{'} | \Omega_{t_i})$$, $$E_j(f_{t} f_{t-1}^{'} | \Omega_{t_i})$$. Additionaly, the conditional moments of observed indicators can be estimated as follows:
+In the **E (Expectation) step** the Kalman smoother is utilized to esimiate the conditional moments of latent factors $$E_j(f_t|\Omega_{t_i})$$, $$E_j(f_t f_t^{'}|\Omega_{t_i})$$, $$E_j(f_{t-1} f_{t-1}^{'}|\Omega_{t_i})$$, $$E_j(f_{t} f_{t-1}^{'}|\Omega_{t_i})$$. Additionaly, the conditional moments of observed indicators can be estimated as follows:
+
 
 $$
 \begin{aligned}
-E_j(y_t y_t^{'}| \Omega_{t_i}) &= y_t y_t^{'} \\
-E_j(y_t f_t^{'}| \Omega_{t_i}) &= y_t E_j(f_t^{'}| \Omega_{t_i})
+E_j(y_t y_t^{'}|\Omega_{t_i}) &= y_t y_t^{'} \\
+E_j(y_t f_t^{'}|\Omega_{t_i}) &= y_t E_j(f_t^{'}| \Omega_{t_i})
 \end{aligned}
 $$
+
+
 
 In the **M (Maximization) step** two regressions are used to estimate the loading matrix and transition matrix respectively. Completing one iteration of the EM involves plugging in the conditional moments from the E step in the slope of both regressions.
 
@@ -190,7 +193,7 @@ A(j+1) &= (\sum_{t=1}^{t_i}E_j(f_t f_{t-1}^{'}|\Omega_{t_i}))(\sum_{t=1}^{t_i}E_
 \end{aligned}
 $$
 
-However, in casese where $$y_t$$ contains missing value as is in our modeling, a full estimation of $$E_j(y_t f_t^{'}| \Omega_{t_i})$$ is no longer feasible. To address this, a design matrix $$w_t$$ is introducted to update parameters based on selective $$y_t$$, where $$w_t$$ is a diagonal matrix with zeros on the diagonal for missing indicators. Each column of the loading matrix can be updated in case of missing values as follows:
+However, in casese where $$y_t$$ contains missing value as is in our modeling, a full estimation of $$E_j(y_t f_t^{'}|\Omega_{t_i})$$ is no longer feasible. To address this, a design matrix $$w_t$$ is introducted to update parameters based on selective $$y_t$$, where $$w_t$$ is a diagonal matrix with zeros on the diagonal for missing indicators. Each column of the loading matrix can be updated in case of missing values as follows:
 
 $$
 vec(\Lambda(j+1)) = (\sum_{t=1}^{t_i}E_j(f_t f_t^{'}|\Omega_{t_i})\bigotimes w_t)^{-1} vec((\sum_{t=1}^{t_i}E_j(y_t f_t^{'}|\Omega_{t_i})))
