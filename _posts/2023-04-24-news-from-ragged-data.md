@@ -172,8 +172,18 @@ With the utilization of linking functions and Kalman filters, we finally obtaine
 
 For a regular (DFM) where all variables $$y_t$$ are observed, an EM algorithm involving Kalman smoother and two multivariate regressions can be used for estimation. For each iteration of the algorithm:
 
-In the **E (Expectation) step** the Kalman smoother is utilized to esimiate the conditional moments of latent factors $$E_j(f_t|\Omega_{t_i})$$, $$E_j(f_t f_t^{'}|\Omega_{t_i})$$, $$E_j(f_{t-1} f_{t-1}^{'}|\Omega_{t_i})$$, $$E_j(f_{t} f_{t-1}^{'}|\Omega_{t_i})$$. Additionaly, the conditional moments of observed indicators can be estimated as follows:
+In the **E (Expectation) step** the Kalman smoother is utilized to esimiate the conditional moments of latent factors:
 
+$$
+\begin{aligned}
+&E_j(f_t|\Omega_{t_i})
+&E_j(f_t f_t^{'}|\Omega_{t_i}) \\
+&E_j(f_{t-1} f_{t-1}^{'}|\Omega_{t_i})
+&E_j(f_{t} f_{t-1}^{'}|\Omega_{t_i})
+\end{aligned}
+$$ 
+
+Additionaly, the conditional moments of observed indicators can be estimated as follows:
 
 $$
 \begin{aligned}
