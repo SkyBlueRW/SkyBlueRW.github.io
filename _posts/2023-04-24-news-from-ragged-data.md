@@ -144,7 +144,7 @@ Similar tricks can be deduced easily to mimic other mixed-frequencies dynamics.
 
 Incorporating data with mixed frequencies into the DFM is definitely a milestone for our quest, but there are still challenges to overcome when it comes to the flow of economic indicator data. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
 
-This dilemma of uneven data availability arise not only with indicators at lower frequencies but also with indicators that are yet to be published. As mentioned earlier, economic indicators can have reporting delays ranging from 0 up to 60 days after the reporting period. While options remain to wait for all indicators to become available before resuming the modeling and estimation process or simply select indicators with short reporting period, these approaches comes at the significant cost of losing comprehensive up-to-date insights.
+This dilemma of uneven data availability arise not only with indicators at lower frequencies but also with indicators that are yet to be published. As mentioned earlier, economic indicators can have reporting delays ranging from 0 up to 60 days after the reporting period. While options remain to wait for all indicators to become available before resuming the modeling and estimation process or simply select indicators with short delays, these approaches comes at the significant cost of losing comprehensive up-to-date insights.
 
 To address this challenge, nowcasting models make effective use of the Kalman filter in the estimation process. With Kalman filter used in the E step of EM algorithm, the nowcasting model can treat unpublished indicators as missing values and fills in the gaps with estimated conditional means during the initial estimations. $$\Omega_{t_i}$$ below refers to all information published up to point $$t_i$$
 
@@ -172,7 +172,7 @@ With the utilization of linking functions and Kalman filters, we finally obtaine
 
 For a regular (DFM) where all variables $$y_t$$ are observed, an EM algorithm involving Kalman smoother and two multivariate regressions can be used for estimation. For each iteration of the algorithm:
 
-In the **E (Expectation) step** the Kalman smoother is utilized to esimiate the conditional moments of latent factors:
+In the **E (Expectation) step** the Kalman smoother is utilized to estimate the conditional moments of latent factors:
 
 $$
 \begin{aligned}
@@ -211,9 +211,9 @@ $$
 
 ### The Practical Aspect <a name="news"></a>
 
-Finally, we set up the model and estimate the parameter accordingly. We should get a fair robust system capturing the economic indicator data flow. What kinds of insights are available through the journey.
+Finally, we have set up the model and estimate the parameter accordingly. We should get a fair robust system capturing the economic indicator data flow. How
 
-**Economic Indicator Tracking**
+**Economic Indicator**
 
 **Economic Indeces**
 
