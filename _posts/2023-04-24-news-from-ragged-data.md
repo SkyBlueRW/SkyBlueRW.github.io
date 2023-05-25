@@ -203,7 +203,7 @@ A(j+1) &= (\sum_{t=1}^{t_i}E_j(f_t f_{t-1}^{'}|\Omega_{t_i}))(\sum_{t=1}^{t_i}E_
 \end{aligned}
 $$
 
-However, in casese where $$y_t$$ contains missing value as is in our modeling, a full estimation of $$E_j(y_t f_t^{'} \| \Omega_{t_i})$$ is no longer feasible. To address this, a design matrix $$w_t$$ is introducted to update parameters based on selective $$y_t$$, where $$w_t$$ is a diagonal matrix with zeros on the diagonal for missing indicators. Each column of the loading matrix can be updated in case of missing values as follows:
+However, in case where $$y_t$$ contains missing value as is in our modeling, a full estimation of $$E_j(y_t f_t^{'} \| \Omega_{t_i})$$ is no longer feasible. To address this, a design matrix $$w_t$$ is introducted to update parameters based on selective $$y_t$$, where $$w_t$$ is a diagonal matrix with zeros on the diagonal for missing indicators. Each column of the loading matrix can be updated in case of missing values as follows:
 
 $$
 vec(\Lambda(j+1)) = (\sum_{t=1}^{t_i}E_j(f_t f_t^{'}|\Omega_{t_i})\bigotimes w_t)^{-1} vec((\sum_{t=1}^{t_i}E_j(y_t f_t^{'}|\Omega_{t_i})))
@@ -211,9 +211,11 @@ $$
 
 ### The Practical Aspect <a name="news"></a>
 
+Finally, we set up the model and estimate the parameter accordingly. We should get a fair robust system capturing the economic indicator data flow. What kinds of insights are available through the journey.
 
+**Economic Indicator Tracking**
 
-
+**Economic Indeces**
 
 present forecast in an insightful way such that forecast of variable of interest is updated as weighted sum of news measured as different between realization and forcast of other variables. Formalization of work process hence easy to fit into investment decision process.
 
