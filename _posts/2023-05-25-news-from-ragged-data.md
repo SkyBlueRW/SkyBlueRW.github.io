@@ -250,12 +250,13 @@ We have the opportunity to design a suitable structure for extracting investment
 
 These latent factors can be transformed into economic condition indexes that represent the overall movements of specific aspects of the economy that we believe relavant in investment. A thoughtfully designed economic index that effectively summarizes a particular aspect can serve us well in our investment endeavors.
 
-In the chat below, I have plotted two indexes from a toy example for illustrations. The global factor represents a general condition of the economic operation as it loads on all economic indicators. On the other hand, the Labor Market factor specifically loads on labor-related indicators such as the unemployment rate.
+In the chat below, I have plotted two indexes from the previous toy example for illustrations. The global factor represents a general condition of the economic operation as it loads on all economic indicators. On the other hand, the Labor Market factor specifically loads on labor-related indicators such as the unemployment rate.
 
 ![Factor](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/lattent_factor.png)
 
+With these economic condition indexes at our disposal, it remains our choice to directly use them to forecast the performance of certain securities or  exercise caution and categorize market regimes based on the index, leading to further research opportunities etc... 
 
-Our discussion ends here. Hopefully you find it interesting :) 
+The possibilities are abundant while falls beyond the scope of our current discussion. For now, our discussion comes to a conclusion. Hopefully you find it interesting :) 
 
 ### Reference <a name="ref"></a>
 
