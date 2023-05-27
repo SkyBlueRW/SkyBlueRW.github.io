@@ -211,28 +211,35 @@ $$
 
 ### The Practical Aspect <a name="news"></a>
 
-Finally, we have set up the model and estimate the parameter accordingly. We should get a fair robust system capturing the economic indicator data flow. How
+At last, we got the nowcasting model that can handdle jagged data flow and comes with reliable estimation. The quest now remains what can we get from it? 
 
-**Economic Indicator**
+**Forecast of Every Modeled Economic Indicator**
 
-**Economic Indeces**
+Firstly, as the original purpose, the nowcasting model can help to forecast key economic indicators based on the comovement of other economic indicators. As a matter of fact, equipped with the Kalman Filter, the model is able to provide forecast for every economic indicators $$y_t$$ for the peirod when they are not published yet.
 
-present forecast in an insightful way such that forecast of variable of interest is updated as weighted sum of news measured as different between realization and forcast of other variables. Formalization of work process hence easy to fit into investment decision process.
-
-info arrive in an incremental manner
-
-
-
+What's even better is that the model present forecast in an insightful way such that forecast of variable of interest is updated as weighted sum of news measured as different between realization and forcast of other variables. It's quite a similar logic to what an economist would do, making the model easily fit into an existing process.
 
 $$
 \begin{aligned}
-\Omega_v &:\{x_{i, t_i}, t_i=1,2,...,T_{i,v}, i = 1,...,n \} \\
-P[x_{i,t}|\Omega_v] &= E[x_{i,t}|\Omega_v] \\ 
-E[x_{i,t}|\Omega_{v+1}] &= E[x_{i,t}|\Omega_v] + E[x_{i,t}|I_{v+1}] \\ 
-I_{v+1, j} &= x_{j, T_{j, v+1}} - E[x_{j, T_{j, v+1}} | \Omega_v] \\
-E[x_t|I_{v+1}] &= E[x_t I_{v+1}^T]{E[I_{v+1} I_{v+1}^T]}^{-1} I_{v+1}
+P[y_{i,t}|\Omega_v] &= E[y_{i,t}|\Omega_v] \\ 
+E[y_{i,t}|\Omega_{v+1}] &= E[y_{i,t}|\Omega_v] + E[y_{i,t}|I_{v+1}] \\ 
+I_{v+1, j} &= y_{j, T_{j, v+1}} - E[y_{j, T_{j, v+1}} | \Omega_v] \\
+E[y_t|I_{v+1}] &= E[y_t I_{v+1}^T]{E[I_{v+1} I_{v+1}^T]}^{-1} I_{v+1} \\
+&\downarrow  Gaussian\\
+E[y_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1}} - E[y_j,T_{j, v+1}|\Omega_v]) \\ 
 \end{aligned}
 $$
+
+Hence we can construct the model upon the end of reporting period with relatively small set of indicators. Update the model gradually as more and more data got published. For each publish, we got to update indicators of our interest yet not published linearlly.
+
+Below is an illustration with a toy nowcasting model 
+
+
+**Lattent Factor for Economic Condition Indeces**
+
+
+
+
 
 unexpected news
 
