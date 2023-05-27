@@ -243,31 +243,17 @@ It is evident that among the eight categories of variables, the labor market and
 
 **Lattent Factor for Economic Condition Indeces**
 
-Another stuff we can have (as I can see probably even more useful) is the latent factor under the large number of economic variables. Economic variables comes with high noise hence hinders the the insight from it on asset performance. While extracing the common 
+Another stuff we can have (as I can see probably even more useful) is the latent factor under the large number of economic variables. It's definitely great for us to have forecast on every economic indicator with the model. While it is not directly transformed into investment decision makings. For one hand, economic indicators contains much noise also most indicators focuses mostly on a single aspect of the economy. 
+
+In the case, the lattent factors is a pretty useful tool. For one hand it is based on the common movement instead of idiosyncratic movements of the economic indicators. On the other hand, with the DFM we can easily design the structure of factors for a spefici direction so that it is better linked to the performance of financial instruments. 
+
+or even lead, lagg effect to explore leading economic indexes and coincident economic indexes
+
+All the features of the update of variables can also be extended to the lattent facor
 
 ![Factor](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/lattent_factor.png)
 
-
-unexpected news
-
-Gaussian
-
-
-$$
-\begin{aligned}
-E[x_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1}} - E[x_j,T_{j, v+1}|\Omega_v]) \\ 
-\end{aligned}
-$$
-
-
-$$
-\begin{aligned}
-x_t &= \mu + \Lambda f_t + \epsilon_t \\
-f_t &= A_1 f_{t-1} + ... + A_p f_{t-p} + u_t \\ 
-\epsilon_{i,t} &= \alpha_i \epsilon_{i, t-1} + e_{i,t} \\ 
-\end{aligned}
-$$
-
+The chart above provide the two factors: global and sss. We can model the model we want to best connected to financial instrument performance. It is easy for us to study the link between a certain economic aspect and a certain category instrument. Like one way to identify economic regimes with HP filter and so on.
 
 ### Reference <a name="ref"></a>
 
