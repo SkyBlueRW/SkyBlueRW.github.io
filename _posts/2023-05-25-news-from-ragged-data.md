@@ -245,6 +245,7 @@ It is evident that among the eight categories of variables, the labor market and
 
 Another stuff we can have (as I can see probably even more useful) is the latent factor under the large number of economic variables. Economic variables comes with high noise hence hinders the the insight from it on asset performance. While extracing the common 
 
+![Factor](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/lattent_factor.png)
 
 
 unexpected news
