@@ -5,7 +5,7 @@
 ## Nowcasting: The News From Jagged Economic Data 
 
 - [Economic Indicators: the informative and nerve-wracking data flow](#data)
-- [The Dynamic Factor modeling of Economic Indicators](#dfm)
+- [The Nowcasting modeling of Economic Indicators](#dfm)
 - [EM Estimation](#em)
 - [The Practical Aspect](#news)
 - [Reference](#ref)
@@ -18,7 +18,7 @@ Financial market is like a bustling abstraction of the economic world, where peo
 
 This notion finds its support in empirical research as well. Scholars and industry experts have dedicated considerable efforts to conduct studies, revealing the profound influence of various economic factors on the performance of asset classes, yield curves, sectors, styles, and so on. It hilighted the importance of considering economic conditions when making informed investment decisions.
 
-While it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of economic indicators that are unstructured in their natures. 
+However, it is not a straghtforward task to incorporate the data flow of economic indicators into a regular investment decision process. We are faced with an overwhelming number of economic indicators that are unstructured in their natures. 
 
 #### Economic Data Flow: Jagged and Mixed Frequency
 
@@ -32,7 +32,7 @@ Fortunately, we have the nowcasting model at our disposal to navigate this compl
 
 In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on ways to incorporate this model into the decision-making process through illustrative toy examples.
 
-### The Dynamic Factor modeling of Economic Indicators <a name="dfm"></a>
+### The Nowcasting modeling of Economic Indicators <a name="dfm"></a>
 
 Embarking on our exploration, let's delve into the inner workings of the nowcasting model. 
 
@@ -45,7 +45,7 @@ As the foundation of a nowcast model, the DFM aims to find a concise set of late
 
 In the nowcasting model, all economic indicators are modeled at their highest frequency. The observed economic indicators, denoted as $$y_t$$, are governed by a small set of latent factors, denoted as $$f_t$$. Each latent factor represents a specific aspect of the economy. 
 
-A typical DFM representation of nocasting model is as follows. $$\Lambda$$ is the loading matrix that determines how each economic indicator is impacted by the latent factors and matrix $$A_p$$ governs the evolution of the latent factors themselves. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are captured via vector autoregressive process (VAR).
+A typical DFM representation of nocasting model is as follows. $$\Lambda$$ is the loading matrix that determines how each economic indicator is driven by the latent factors and matrix $$A_p$$ governs the evolution of the latent factors themselves. The dynamics of the latent factors and the idiosyncratic components $$\epsilon_t$$ are captured via vector autoregressive process (VAR).
 
 $$
 \begin{aligned}
@@ -142,7 +142,7 @@ Similar tricks can be deduced easily to mimic other mixed-frequencies dynamics.
 
 **Handling of jagged publish**
 
-Incorporating data with mixed frequencies into the DFM is definitely a milestone for our quest, but there are still challenges to overcome when it comes to the flow of economic indicator data. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three month. How can we haddle months when GDP release is not available? 
+Incorporating data with mixed frequencies into the DFM is definitely a milestone for our quest, but there are still challenges to overcome. As in the GDP example, we have a model with all indicators intervaled at 1 month while GDP is published every three months. How can we haddle months when GDP release is not available? 
 
 This dilemma of uneven data availability arise not only with indicators at lower frequencies but also with indicators that are yet to be published. As mentioned earlier, economic indicators can have reporting delays ranging from 0 up to 60 days after the reporting period. While options remain to wait for all indicators to become available before resuming the modeling and estimation process or simply select indicators with short delays, these approaches comes at the significant cost of losing comprehensive up-to-date insights.
 
@@ -211,13 +211,13 @@ $$
 
 ### The Practical Aspect <a name="news"></a>
 
-At last, we got the nowcasting model that can handdle jagged data flow and comes with reliable estimation. The quest now remains what can we get from it? 
+Finally, we have developed a nowcasting model capable of handling jagged data flow, along with a reliable method for estimating it. Now the question arises: what can we gain from it?
 
-**Forecast of Every Modeled Economic Indicator**
+**Forecast of Every Economic Indicator**
 
-Firstly, as the original purpose, the nowcasting model can help to forecast key economic indicators based on the comovement of other economic indicators. As a matter of fact, equipped with the Kalman Filter, the model is able to provide forecast for every economic indicators $$y_t$$ for the peirod when they are not published yet.
+Let's begin with the original purpose of the nowcasting model: forecast key economic indicators based on co-movement and lead/lag effect of other economics indicators via the DFM structure. As a matter of fact, equipped with the Kalman Filter, the model can provide forecast for every single economic indicator $$y_t$$ we include before their publish.
 
-What's even better is that the model present forecast in an insightful way such that forecast of variable of interest is updated as weighted sum of news measured as different between realization and forcast of other variables. It's quite a similar logic to what an economist would do, making the model easily fit into an existing process.
+The nowcasting model is able to update its forecasts on a variable of interest continuously as new data becomes available, offering consistent and updated insights. As illustrated belowm the forecast for the variable of interest is updated as a weighted sum of news, which are measured as the difference between actual realization of our forecast of all other variables. The approach allows us to identify the suprising news that essentially changes our forecast. It aligns with the logical reasoning of economic research, making the model intuive and easily adaptable to an existing process.
 
 $$
 \begin{aligned}
@@ -230,12 +230,15 @@ E[y_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1}} - E[y_j,T_{j
 \end{aligned}
 $$
 
-Hence we can construct the model upon the end of reporting period with relatively small set of indicators. Update the model gradually as more and more data got published. For each publish, we got to update indicators of our interest yet not published linearlly.
+Let's demonstrate the forecast update process dudring a reporting cycle (or even beyond) using a toy example. In the example I have utilized a similar set up as in Chad Fultons' [blog](http://www.chadfulton.com/topics/statespace_large_dynamic_factor_models.html) where 126 montlhy indicators from 8 groups along with the quarterly GDP are included.
 
-Below is an illustration with a toy nowcasting model 
+As depicted below, we are tracking the forecast for the 2023 Q2 GDP over the past four months. Initially, based on data prior to January 2023, our GDP estimate stood at 2.25%. As we gathered more information over time, our GDP forecast reached its peak in February 2023 and subsequently declined in March and April. Once a new batch of data is released, the difference between our previous forecast and the published value is linearly aggregated to update our GDP forecast.
+
+It is evident that among the eight categories of variables, the labor market and output and income exert the greatest influence on the variation in GDP growth during the period. Essentially, this means that we observed positive surprises within the variables of these two groups in February, followed by significant negative surprises in March and April. With all available information as of the end of April, our forecast for 2023 Q2 GDP growth stands at 1.55% QOQ.
 
 ![Asset](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/GDP.png)
 
+**Data Srouce: FRED database**
 
 
 **Lattent Factor for Economic Condition Indeces**
