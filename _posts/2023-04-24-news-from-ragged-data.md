@@ -234,6 +234,9 @@ Hence we can construct the model upon the end of reporting period with relativel
 
 Below is an illustration with a toy nowcasting model 
 
+![Asset](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/GDP.png)
+
+
 
 **Lattent Factor for Economic Condition Indeces**
 
