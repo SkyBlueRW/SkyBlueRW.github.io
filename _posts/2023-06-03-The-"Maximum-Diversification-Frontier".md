@@ -9,11 +9,11 @@
 - [The holy grail: too good to be true]
 
 
-
+theoretical underpinnings consistent long-term relationship between risk and return. 
 
 ### Introduction <a name="introduction"></a>
 
-
+https://www.blackrock.com/institutions/en-us/insights/charts/capital-market-assumptions
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/historical_perf.png)
 
