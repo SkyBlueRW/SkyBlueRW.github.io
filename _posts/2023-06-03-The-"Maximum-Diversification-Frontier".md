@@ -12,7 +12,7 @@ In the previous blog [The Conviction Pyramid of Portfolio Construction](https://
 
 In this blog, I'd like to elaborate more about MD in the context of strategic asset allocation. We will talk more about MD's theoretical underpins and assumptions in consistent long-term balance between risk and return. With this rationale, we will take one step further to combine the maximum diversification with risk target to construct an achievable "Maximum Diversification Frontier" for the strategic asset allocation application and see how it performs in various markets of US, Eurozone, Japan and China.
 
-Spoil alert! This is it looks like for the past decades in the 4 markets.
+Spoil alert! This is what it looks like for the past decades in the 4 markets.
 
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
