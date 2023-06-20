@@ -5,7 +5,7 @@
 ## The "Maximum Diversification Frontier"
 
 - [Introduction](#introduction)
-- [MD Portfolio: ]
+- [MD Portfolio: it's theoretical underpings](#why)
 - [Reference](#ref)
 
 In the previous blog [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we have talked about various portfolio construction methods under different availability of market information. Specifically, we have talked about one ituitive method called Maximum Diversification (Latter as MD). It is a method that aims to achieve maximum diversification in terms of correlation and provides much more flexibility of optimization constraint integration compared to its closely related counterparty of Risk Parity (Latter as RP).
@@ -17,7 +17,7 @@ Spoil alert! This is what it looks like for the past decades in the 4 markets.
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
 
-### MD Portfolio: Why a reasonable choice <a name="why"></a>
+### MD Portfolio: it's theoretical underpings <a name="why"></a>
 
 
 theoretical underpinnings consistent long-term relationship between risk and return. 
