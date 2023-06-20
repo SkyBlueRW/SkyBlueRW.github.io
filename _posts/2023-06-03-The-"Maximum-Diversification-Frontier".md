@@ -7,7 +7,8 @@
 Markowitz : "Diversification is the only free lunch"
 
 - [Introduction](#introduction)
-- [The holy grail: too good to be true]
+- [Reference](#ref)
+
 
 
 theoretical underpinnings consistent long-term relationship between risk and return. 
@@ -30,3 +31,7 @@ theoretical underpinnings consistent long-term relationship between risk and ret
 
 
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
+
+
+### Reference <a name="ref"></a>
+- Choueifaty & Coignard (2008): Toward Maximum Diversification
