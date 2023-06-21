@@ -15,7 +15,7 @@ In the previous blog post [The Conviction Pyramid of Portfolio Construction](htt
 
 Further diving into MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will explore the theoretical foundations and assumptions of consistent long-term balance between risk and return that underpin MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
 
-Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" unveils an ascending line,  illustrating the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect under some makret conditions), I have the blog named as "Maximum Diversification Frontier".
+Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" unveils an ascending line,  illustrating the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect under some makret conditions), I have the blog named as "Maximum Diversification Frontier". Hope we all find joy in it :)
 
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
@@ -23,8 +23,13 @@ Prepare to be intrigued as we reveal the fascinating interplay between MD and ri
 ### MD Portfolio: the theoretical underpings <a name="why"></a>
 
 
-theoretical underpinnings consistent long-term relationship between risk and return. 
+def of diversification ratio
 
+def of md
+
+equivalence
+
+with rp
 
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/historical_perf.png)
