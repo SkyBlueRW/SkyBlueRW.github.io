@@ -8,11 +8,14 @@
 - [MD Portfolio: it's theoretical underpings](#why)
 - [Reference](#ref)
 
-In the previous blog [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we have talked about various portfolio construction methods under different availability of market information. Specifically, we have talked about one ituitive method called Maximum Diversification (Latter as MD). It is a method that aims to achieve maximum diversification in terms of correlation and provides much more flexibility of optimization constraint integration compared to its closely related counterparty of Risk Parity (Latter as RP).
+  ### Introduction <a name="introduction"></a>
 
-In this blog, I'd like to elaborate more about MD in the context of strategic asset allocation. We will talk more about MD's theoretical underpins and assumptions in consistent long-term balance between risk and return. With this rationale, we will take one step further to combine the maximum diversification with risk target to construct an achievable "Maximum Diversification Frontier" for the strategic asset allocation application and see how it performs in various markets of US, Eurozone, Japan and China.
 
-Spoil alert! This is what it looks like for the past decades in the 4 markets.
+In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we explored different portfolio construction methods based on various availability of market information. One such method we discussed (and I found very handy in quite some applications) was Maximum Diversification (MD), which aims to achieve maximum diversification in terms of correlation. Such a method is an direct application of diversification for efficient risk premium harvesting and provides much more flexibility in integrating optimization constraint compared to its closely related friends Risk Parity (RP). 
+
+Expanding on the topic of MD, this blog post will delve into its application within the context of strategic asset allocation. We will explore the theoretical foundations and assumptions in consistent long-term balance between risk and return that underpin MD. More importantly, we will combine maximum diversification with risk targets to construct an achievable "Maximum Diversification Frontier." We'll examine the performance of this approach in various markets, including the US, Eurozone, Japan, and China.
+
+Prepare to be intrigued as we reveal the fascinating interplay between maximum diversification and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" showcases an ascending line, illustrating increasing realized risk and return for our chosen portfolios and forming the basis of our blog post's title, "The Maximum Diversification Frontier."
 
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
@@ -22,7 +25,6 @@ Spoil alert! This is what it looks like for the past decades in the 4 markets.
 
 theoretical underpinnings consistent long-term relationship between risk and return. 
 
-### Introduction <a name="introduction"></a>
 
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/historical_perf.png)
