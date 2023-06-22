@@ -6,6 +6,9 @@
 
 - [Introduction](#introduction)
 - [MD Portfolio: the theoretical underpings](#why)
+  - [Let's go for diversification](#subparagraph1)
+  - [Anything special for strategic asset allocation?](#subparagraph2)
+  - [The frontier part](#subparagraph3)
 - [Reference](#ref)
 
   ### Introduction <a name="introduction"></a>
@@ -22,7 +25,8 @@ Prepare to be intrigued as we reveal the fascinating interplay between MD and ri
 
 ### MD Portfolio: the theoretical underpings <a name="why"></a>
 
-**Let's go for diversification !**
+#### Let's go for diversification ! <a name="subparagraph1"></a>
+
 
 Diversification is the old wisdom since the begining of the modern portfolio theory. As Nobel Prize laureate Harry Markowitz is reported to have said, “diversification is the only free lunch” in investing. It is believed that in a rational market under long term perspective, only the non-diversifiable systematical risk (those covaries with stochastic discount factor, consumption, etc...) is rewarded with expected return. Hence efficient diversification reducing idiosyncratic risk (at least in a unconditional context without further information) is deemed as granted to improve risk adjusted return.
 
@@ -35,7 +39,8 @@ w^T 1 &= 1
 \end{aligned}
 $$
 
-**Anything special for strategic asset allocation?**
+#### Anything special for strategic asset allocation? <a name="subparagraph2"></a>
+
 
 Is there any futher rationale other than the fact that MD is a result of direct implementation of diversification? For sure there is, especially in the context of strategic asset allocation. In our previous [discusion](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we noted that for a portfolio to be MD, every pair of securities within the portfolio should hold for the following conditions
 
@@ -71,7 +76,9 @@ It is also the case in the capital market expectation forecast for institutional
 
 In both charts, asset classes clustered around a straight line.
 
-**The frontier part**
+
+#### The frontier part <a name="subparagraph3"></a>
+
 
 What about the frontier part in the blog title?
 
