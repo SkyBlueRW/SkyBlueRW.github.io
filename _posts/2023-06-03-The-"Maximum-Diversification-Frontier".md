@@ -57,7 +57,7 @@ Combining the two, it is essentially saying that MD is the Maximum Sharpe Ratio 
 
 Believe me, this balance relationship between return and volatility is not some crazy illution in the allocation of asset classes. There is not a definitive conclusion if asset classes should share the same sharpe ratio. While the assumption that asset classes have comparable return volatility ratio is generally recogonized for good making MD at least a reasonable choice in asset allocation. Asset classes (equity, fixed income, commodity, etc ...) are generally well diversified. In a long term horizon, investors would flush into the asset class with extraodinary return compared to its volatility as risk adjusted return is what they commonly look for. The capital flow would simply hike price of the asset class hence reducing its risk adjusted return to a comparable level of other asset classes.
 
-It is the case for the past 20 years (bear with the poor drawing of the red line)
+It is the case for the past 20 years (bear with the poor drawing of the green line)
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/historical_perf.png)
 
@@ -71,7 +71,7 @@ It is also the case in the capital market expectation forecast for institutional
 
 In both chart, asset classes clustered around a straight line.
 
-
+**The frontier part**
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/asset_class_history.png)
 
