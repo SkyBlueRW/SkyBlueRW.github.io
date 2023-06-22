@@ -55,32 +55,27 @@ $$
 
 Combining the two, it is essentially saying that MD is the Maximum Sharpe Ratio portfolio if expected return is linearly proportional to its volatility for every security in the universe. We grab the holy grail with MD! 
 
-Believe me, this balance relationship between return and volatility is not some crazy illution in the allocation of asset classes. Asset classes (equity, fixed income, commodity, etc ...) themselves are usually well diversified. In a long term horizon, investors would flush into the asset class with extraodinary return compared to its volatility as risk adjusted return is what they commonly look for. The capital flow would simply hike price of the asset class hence reducing its risk adjusted return to a comparable level of other asset classes.
+Believe me, this balance relationship between return and volatility is not some crazy illution in the allocation of asset classes. There is not a definitive conclusion if asset classes should share the same sharpe ratio. While the assumption that asset classes have comparable return volatility ratio is generally recogonized for good making MD at least a reasonable choice in asset allocation. Asset classes (equity, fixed income, commodity, etc ...) are generally well diversified. In a long term horizon, investors would flush into the asset class with extraodinary return compared to its volatility as risk adjusted return is what they commonly look for. The capital flow would simply hike price of the asset class hence reducing its risk adjusted return to a comparable level of other asset classes.
 
-
-
-
-The diversification that MD try to maximize
-
-
-def of diversification ratio
-
-def of md
-
-equivalence
-
-with rp
-
+It is the case for the past 20 years (bear with the poor drawing of the red line)
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/historical_perf.png)
 
 *Source: [Bankeronwheels.com](https://www.bankeronwheels.com/the-long-game-historical-market-returns-2022-expectations/)*
 
+It is also the case in the capital market expectation forecast for institutional investors for future 30 years
+
+![CMA](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/BLK_CMA.png)
+
+*Source: [www.blackrock.com](https://www.blackrock.com/institutions/en-us/insights/charts/capital-market-assumptions)*
+
+In both chart, asset classes clustered around a straight line.
+
+
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/asset_class_history.png)
 
-![CMA](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/BLK_CMA.png)
-*Source: [www.blackrock.com](https://www.blackrock.com/institutions/en-us/insights/charts/capital-market-assumptions)*
+
 
 
 <table border="1" class="dataframe">  <thead>    <tr>      <th></th>      <th colspan="2" halign="left">US</th>      <th colspan="2" halign="left">Eurozone</th>      <th colspan="2" halign="left">Japan</th>      <th colspan="2" halign="left">China</th>    </tr>    <tr>      <th></th>      <th>Annualized STD</th>      <th>Annualized Ret</th>      <th>Annualized STD</th>      <th>Annualized Ret</th>      <th>Annualized STD</th>      <th>Annualized Ret</th>      <th>Annualized STD</th>      <th>Annualized Ret</th>    </tr>  </thead>  <tbody>    <tr>      <th>MD @ 3% Risk</th>      <td>3.59</td>      <td>2.61</td>      <td>3.47</td>      <td>0.74</td>      <td>3.19</td>      <td>1.55</td>      <td>3.08</td>      <td>3.77</td>    </tr>    <tr>      <th>MD @ 4% Risk</th>      <td>4.77</td>      <td>3.01</td>      <td>4.52</td>      <td>1.06</td>      <td>4.20</td>      <td>2.13</td>      <td>4.10</td>      <td>4.17</td>    </tr>    <tr>      <th>MD @ 5% Risk</th>      <td>5.89</td>      <td>3.66</td>      <td>5.55</td>      <td>1.43</td>      <td>5.22</td>      <td>2.57</td>      <td>5.11</td>      <td>4.54</td>    </tr>    <tr>      <th>MD @ 6% Risk</th>      <td>7.01</td>      <td>4.13</td>      <td>6.57</td>      <td>1.83</td>      <td>6.25</td>      <td>2.97</td>      <td>6.12</td>      <td>4.89</td>    </tr>    <tr>      <th>MD @ 7% Risk</th>      <td>8.06</td>      <td>4.81</td>      <td>7.59</td>      <td>2.25</td>      <td>7.29</td>      <td>3.34</td>      <td>7.13</td>      <td>5.18</td>    </tr>    <tr>      <th>MD @ 8% Risk</th>      <td>9.01</td>      <td>5.32</td>      <td>8.61</td>      <td>2.64</td>      <td>8.34</td>      <td>3.68</td>      <td>8.14</td>      <td>5.43</td>    </tr>    <tr>      <th>MD @ 9% Risk</th>      <td>10.17</td>      <td>5.55</td>      <td>9.57</td>      <td>3.19</td>      <td>9.40</td>      <td>4.00</td>      <td>9.16</td>      <td>5.56</td>    </tr>    <tr>      <th>MD @ 10% Risk</th>      <td>11.29</td>      <td>6.10</td>      <td>10.63</td>      <td>3.45</td>      <td>10.52</td>      <td>4.27</td>      <td>10.16</td>      <td>5.64</td>    </tr>    <tr>      <th>MD @ 11% Risk</th>      <td>12.49</td>      <td>6.91</td>      <td>11.67</td>      <td>3.97</td>      <td>11.49</td>      <td>5.42</td>      <td>11.11</td>      <td>5.90</td>    </tr>    <tr>      <th>MD @ 12% Risk</th>      <td>13.44</td>      <td>7.86</td>      <td>12.60</td>      <td>4.55</td>      <td>12.37</td>      <td>6.46</td>      <td>12.03</td>      <td>6.21</td>    </tr>    <tr>      <th>MD @ 13% Risk</th>      <td>14.35</td>      <td>8.77</td>      <td>13.29</td>      <td>4.76</td>      <td>13.20</td>      <td>7.33</td>      <td>12.92</td>      <td>6.50</td>    </tr>    <tr>      <th>RP</th>      <td>4.27</td>      <td>2.50</td>      <td>4.15</td>      <td>0.57</td>      <td>2.16</td>      <td>0.89</td>      <td>1.60</td>      <td>4.78</td>    </tr>    <tr>      <th>60/40-Equity/Bond</th>      <td>11.16</td>      <td>7.24</td>      <td>10.92</td>      <td>3.71</td>      <td>10.02</td>      <td>4.12</td>      <td>15.10</td>      <td>6.50</td>    </tr>  </tbody></table>
