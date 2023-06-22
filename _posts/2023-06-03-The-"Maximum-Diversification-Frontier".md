@@ -22,6 +22,46 @@ Prepare to be intrigued as we reveal the fascinating interplay between MD and ri
 
 ### MD Portfolio: the theoretical underpings <a name="why"></a>
 
+**Let's go for diversification !**
+
+Diversification is the old wisdom since the begining of the modern portfolio theory. As Nobel Prize laureate Harry Markowitz is reported to have said, “diversification is the only free lunch” in investing. It is believed that in a rational market under long term perspective, only the non-diversifiable systematical risk (those covaries with stochastic discount factor, consumption, etc...) is rewarded with expected return. Hence efficient diversification reducing idiosyncratic risk (at least in a unconditional context without further information) is deemed as granted to improve risk adjusted return.
+
+Bearing such notion, MD is introduced to explore the un-perfect correlation of securities in the universe. More formally, it maximize the diversification ratio defined as weighted average volatility over the portfolio volatility. The ratio can be as large as 1 in the case all securities move exactly. With diversification ratio as optimization object, MD portfolio overweight securities having low correlation with others leading to a quite intuitive and direct implementation of diversification.
+
+$$
+\begin{aligned}
+Max_{w} & \dfrac{w^T \sigma}{\sqrt{w^T \Sigma w}} \\
+w^T 1 &= 1
+\end{aligned}
+$$
+
+**Anything special for strategic asset allocation?**
+
+Is there any futher rationale other than the fact that MD is a result of direct implementation of diversification? For sure there is, especially in the context of strategic asset allocation. In our previous [discusion](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we noted that for a portfolio to be MD, every pair of securities within the portfolio should hold for the following conditions
+
+$$
+\begin{aligned}
+\dfrac{1}{\sigma_i} \dfrac{\partial \sigma_p}{\partial w_i} &= \dfrac{1}{\sigma_j} \dfrac{\partial \sigma_p}{\partial w_j}
+\end{aligned}
+$$
+
+as a contrast, the maximum sharpe ratio diversification requires the following conditions
+
+$$
+\begin{aligned}
+\dfrac{1}{r^{e}_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{r^{e}_j} \dfrac{\partial \sigma}{\partial w_j} \\
+\end{aligned}
+$$
+
+Combining the two, it is essentially saying that MD is the Maximum Sharpe Ratio portfolio if expected return is linearly proportional to its volatility for every security in the universe. We grab the holy grail with MD! 
+
+Believe me, this balance relationship between return and volatility is not some crazy illution in the allocation of asset classes. Asset classes (equity, fixed income, commodity, etc ...) themselves are usually well diversified. In a long term horizon, investors would flush into the asset class with extraodinary return compared to its volatility as risk adjusted return is what they commonly look for. The capital flow would simply hike price of the asset class hence reducing its risk adjusted return to a comparable level of other asset classes.
+
+
+
+
+The diversification that MD try to maximize
+
 
 def of diversification ratio
 
