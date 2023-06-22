@@ -69,7 +69,7 @@ It is also the case in the capital market expectation forecast for institutional
 
 *Source: [www.blackrock.com](https://www.blackrock.com/institutions/en-us/insights/charts/capital-market-assumptions)*
 
-In both chart, asset classes clustered around a straight line.
+In both charts, asset classes clustered around a straight line.
 
 **The frontier part**
 
