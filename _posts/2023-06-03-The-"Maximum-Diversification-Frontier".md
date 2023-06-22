@@ -73,6 +73,9 @@ In both charts, asset classes clustered around a straight line.
 
 **The frontier part**
 
+What about the frontier part in the blog title?
+
+
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/asset_class_history.png)
 
 
