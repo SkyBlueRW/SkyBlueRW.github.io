@@ -19,7 +19,7 @@ In the previous blog post [The Conviction Pyramid of Portfolio Construction](htt
 
 Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying theoretical foundations and assumptions that contribute to the maintenance of a consistent long-term balance between risk and return within MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
 
-Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" showcases an upward trajectory, depicting the escalating realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect at some points), I have the blog named as "Maximum Diversification Frontier". 
+Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" showcases an upward frontier, depicting the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect at some points), I have the blog named as "Maximum Diversification Frontier". 
 
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
