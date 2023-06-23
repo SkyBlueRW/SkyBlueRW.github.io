@@ -14,11 +14,11 @@
   ### Introduction <a name="introduction"></a>
 
 
-In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we explored different portfolio construction methods based on various availability of market information. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to achieve maximum diversification in terms of correlation. Such a method is a direct application of the notion of diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraint compared to its closely related friend Risk Parity (RP). 
+In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we explored different portfolio construction methods based on various availability of market information. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to achieve maximum diversification in terms of correlation. Such a method is a direct application of the notion of diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related friend Risk Parity (RP). 
 
 Further diving into MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will explore the theoretical foundations and assumptions of consistent long-term balance between risk and return that underpin MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
 
-Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" unveils an ascending line,  illustrating the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect under some makret conditions), I have the blog named as "Maximum Diversification Frontier". Hope we all find joy in it :)
+Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" unveils an ascending line,  illustrating the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect at some points), I have the blog named as "Maximum Diversification Frontier". Hope we all find joy in it.
 
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
@@ -80,7 +80,7 @@ In both charts, asset classes clustered around a straight line.
 #### The frontier part <a name="subparagraph3"></a>
 
 
-What about the frontier part in the blog title?
+What about the frontier part in the title? It originates from the great flexibility that MD optimization can incorporate. For any given feasible set of the universe, there should be at least one 
 
 
 ![Historical Perf](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/asset_class_history.png)
