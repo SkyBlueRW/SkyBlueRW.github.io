@@ -80,19 +80,23 @@ In both charts, asset classes cluster around a straight line, indicating that th
 
 #### The frontier part <a name="subparagraph3"></a>
 
+What about the "frontier" aspect mentioned in the title? 
 
-What about the "frontier" aspect mentioned in the title? It stems from the remarkable flexibility of MD optimization. For any given feasible set of the universe, there should be at least one portfolio with maximized diversification ratio as it's a relative metric. With such a feature, we can easily incorporate other optimization constraints in the MD optimization, of which I found the risk target optimization as a great match. 
+It stems from the remarkable flexibility of MD optimization. For any given feasible set of the universe, there should be at least one portfolio with maximized diversification ratio as it's a relative metric. With such a feature, we can easily incorporate other optimization constraints in the MD optimization, of which I found the risk target optimization as a great match. This is the freedom we gain by chossing MD over its perhaps more popular counterpart RP.
 
-In my view, the combination of MD optimization with risk targets provides an intuitive implementation of the concept. It begins by positioning us within the realm where risk is tolerable, and then proceeds to make efficient use of the risk taken in pursuit of rewards. This approach allows for a thoughtful balance between risk and return, offering a practical and effective way to construct portfolios.
+In my view, the combination of MD optimization with risk targets provides an intuitive implementation of the concept. It begins by positioning us within the realm where risk is tolerable, and then proceeds to make efficient use of the risk taken in pursuit of rewards. 
 
 ### How's the performance for the past decade <a name="perf"></a>
 
 Let's cut further words and examine its performance in major markets such as the US, Eurozone, Japan, and China.
 
+In the following bactkest analysis, market value weighted equity indexes, aggreagate bond indexes and commodity indexes from S&P are used to represent each asset class. All index levels are stated in the local currencies in corresponding markets to avoid FX turbulence. 
 
-The market value weighted equity indexes, aggreagate bond indexes and commodity indexes from S&P are used throughout the following backtest analysis.These indexes are selected because their level data is freely available on S&P's [website](https://www.spglobal.com/spdji/en/index-family/equity/). However, it is unfortunate that their data covers only the past decade, which may be considered a 'short blink' in terms of strategic asset allocation.
+It is worth mentioning that these indexes are selected because their return data is freely available on S&P's [website](https://www.spglobal.com/spdji/en/index-family/equity/). However, it is unfortunate that their data covers only the past decade, which may be considered a 'short blink' in terms of strategic asset allocation. Should be fine just to brief on the idea.
 
-In each market, the MD portfolio is optimized with volatility targets ranging from 3% to 13% using the following setup. Of course, other constraints related to risk and regulation can also be incorporated. However, for the purpose of illustration, I will keep it concise.
+In each market, I have optimized multiple MD portfolios with volatility targets ranging from 3% to 13%
+
+the MD portfolio is optimized with volatility targets ranging from 3% to 13% using the following setup. Of course, other constraints related to risk and regulation can also be incorporated. However, for the purpose of illustration, I will keep it concise.
 
 $$
 \begin{aligned}
