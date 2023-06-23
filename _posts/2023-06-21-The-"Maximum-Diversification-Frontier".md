@@ -15,9 +15,9 @@
   ### Introduction <a name="introduction"></a>
 
 
-In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we embarked on an exploration of diverse portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to achieve maximum diversification in terms of correlation. Such a method is a direct application of the notion of diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
+In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to achieve maximum diversification in terms of correlation. It is a direct application of the notion of diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
 
-Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying theoretical foundations and assumptions that contribute to the maintenance of a consistent long-term balance between risk and return within MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
+Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying assumption of consistent long-term balance between risk and return that underpins MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
 
 Prepare to be intrigued as we reveal the fascinating interplay between MD and risk targets across the past decades in these four markets. The resulting "Maximum Diversification Frontier" showcases an upward frontier, depicting the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect at some points), I have the blog named as "Maximum Diversification Frontier". 
 
@@ -28,10 +28,9 @@ Prepare to be intrigued as we reveal the fascinating interplay between MD and ri
 
 #### Let's go for diversification ! <a name="subparagraph1"></a>
 
+Diversification has long been regarded as a fundamental principle since the advent of modern portfolio theory. The renowned Nobel Prize laureate Harry Markowitz is reported to have said "diversification is the only free lunch" in investing. The prevailing belief is that in a rational market over long term, only non-diversifiable systematic risks (those covary with stochastic discount factor, consumption...etc) are rewarded with expected returns. Therefore, efficient diversification, which reduces idiosyncratic risk, is considered crucial for enhancing risk-adjusted returns (at least in an unconditional context without additional information).
 
-Diversification has long been regarded as a fundamental principle since the advent of modern portfolio theory. Renowned Nobel Prize laureate Harry Markowitz once famously stated that "diversification is the only free lunch" in investing. The prevailing belief is that in a rational market over long term, only non-diversifiable systematic risks (those covary with stochastic discount factor, consumption...etc) are rewarded with expected returns. Therefore, efficient diversification, which reduces idiosyncratic risk (at least in an unconditional context without additional information), is considered crucial for enhancing risk-adjusted returns.
-
-In line with this concept, Maximum Diversification (MD) is introduced to exploit the imperfect correlations among securities within the investment universe. More formally, MD seeks to maximize the diversification ratio, which is defined as the weighted average volatility over the portfolio volatility. In cases where all securities move in perfect harmony, this ratio can reach a maximum value of 1. By targeting the diversification ratio as the optimization objective, MD overweights securities that exhibit low correlations with others, resulting in a straightforward and intuitive implementation of the diversification principle.
+In line with this concept, Maximum Diversification (MD) is introduced to exploit the imperfect correlations among securities within the investment universe. More formally, MD seeks to maximize the diversification ratio, which is defined as the weighted average volatility over the portfolio volatility. In cases where all securities move in perfect harmony, this ratio can reach a maximum value of 1. 
 
 $$
 \begin{aligned}
@@ -39,6 +38,8 @@ Max_{w} & \dfrac{w^T \sigma}{\sqrt{w^T \Sigma w}} \\
 w^T 1 &= 1
 \end{aligned}
 $$
+
+By targeting the diversification ratio as the optimization objective, MD overweights securities that exhibit low correlations with others, resulting in a straightforward and intuitive implementation of the diversification principle.
 
 #### Anything special for strategic asset allocation? <a name="subparagraph2"></a>
 
