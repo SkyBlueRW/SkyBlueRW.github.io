@@ -7,7 +7,7 @@
 - [Introduction](#introduction)
 - [MD Portfolio: the theoretical underpings](#why)
   - [Let's go for diversification](#subparagraph1)
-  - [Anything special for strategic asset allocation?](#subparagraph2)
+  - [The optimal assmuption of risk return consistency](#subparagraph2)
   - [The frontier part](#subparagraph3)
 - [How's the performance for the past decade](#perf)
 - [Reference](#ref)
@@ -15,7 +15,7 @@
   ### Introduction <a name="introduction"></a>
 
 
-In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to achieve maximum diversification in terms of correlation. It is a direct application of the notion of diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
+In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to maximize diversification in terms of correlation. It is a direct application of the notion of diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
 
 Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying assumption of consistent long-term balance between risk and return that underpins MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
 
@@ -41,7 +41,7 @@ $$
 
 By targeting the diversification ratio as the optimization objective, MD overweights securities that exhibit low correlations with others, resulting in a straightforward and intuitive implementation of the diversification principle.
 
-#### Anything special for strategic asset allocation? <a name="subparagraph2"></a>
+#### The optimal assmuption of risk return consistency? <a name="subparagraph2"></a>
 
 
 Is there any further rationale behind MD beyond its direct implementation of diversification? Absolutely! Particularly in the context of strategic asset allocation. In our previous [discusion](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we observed that for a portfolio to be MD, the following conditions must hold for every pair of securities within the portfolio:
@@ -56,13 +56,15 @@ As a contrast, the maximum sharpe ratio portfolio requires the following conditi
 
 $$
 \begin{aligned}
-\dfrac{1}{r^{e}_i} \dfrac{\partial \sigma}{\partial w_i} &= \dfrac{1}{r^{e}_j} \dfrac{\partial \sigma}{\partial w_j} \\
+\dfrac{1}{r^{e}_i} \dfrac{\partial \sigma_p}{\partial w_i} &= \dfrac{1}{r^{e}_j} \dfrac{\partial \sigma_p}{\partial w_j} \\
 \end{aligned}
 $$
 
-Combining the two, we can see that MD is essentially equivalent to the Maximum Sharpe Ratio portfolio when the expected return is linearly proportional to volatility for every security in the investment universe. With MD, we've touched the holy grail (at least in some degree)!
+Combining the two, we can see that MD is essentially equivalent to the Maximum Sharpe Ratio portfolio if the expected return is linearly proportional to volatility for every security in the investment universe. With MD, we've touched the holy grail (at least in some degree)!
 
-Believe me, this balance relationship between return and volatility is not some crazy illution in the allocation of asset classes. While there is not a definitive conclusion if asset classes should share the same sharpe ratio. The assumption that asset classes have comparable return volatility ratio is generally recogonized as sound, making MD at least a reasonable choice in asset allocation. Asset classes (equity, fixed income, commodity, etc ...) are generally well diversified. Over the long term, investors tend to flock to asset classes with extraordinary returns compared to their volatility, as they seek risk-adjusted returns. This influx of capital drives up the price of the asset class, thereby reducing its risk-adjusted return to a comparable level with other asset classes.
+Believe me, this balance relationship between return and volatility is not some crazy illution within asset classes. While there is not a definitive conclusion if asset classes should share the same sharpe ratio. The assumption that asset classes have comparable return volatility ratio is generally recogonized as sound, making MD a reasonable choice in asset allocation. 
+
+Asset classes (equity, fixed income, commodity, etc ...) are generally represented as well diversified portfolios. Over the long term, investors tend to flock to asset classes with extraordinary returns compared to their volatility, as they seek risk-adjusted returns. This influx of capital drives up the price of the asset class, thereby reducing its risk-adjusted return to a comparable level with other asset classes.
 
 It is generally the case for the past 20 years (bear with the poor drawing of the green line)
 
@@ -70,17 +72,17 @@ It is generally the case for the past 20 years (bear with the poor drawing of th
 
 *Source: [Bankeronwheels.com](https://www.bankeronwheels.com/the-long-game-historical-market-returns-2022-expectations/)*
 
-It also aligns with the long term capital market expectation forecast for institutional investors, such as the one below from BlackRock.
+It also aligns with the long term capital market expectation forecast from institutional investors, such as the one below from BlackRock.
 
 ![CMA](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/BLK_CMA.png)
 
 *Source: [www.blackrock.com](https://www.blackrock.com/institutions/en-us/insights/charts/capital-market-assumptions)*
 
-In both charts, asset classes cluster around a straight line, indicating that they share a comparable return-to-volatility ratio. 
+In both charts, asset classes cluster around a straight line,  indicating that they share a comparable return-to-volatility ratio.
 
 #### The frontier part <a name="subparagraph3"></a>
 
-What about the "frontier" aspect mentioned in the title? 
+So MD seems to be a reasonable act. What about the "frontier" aspect mentioned in the title? 
 
 It stems from the remarkable flexibility of MD optimization. For any given feasible set of the universe, there should be at least one portfolio with maximized diversification ratio as it's a relative metric. With such a feature, we can easily incorporate other optimization constraints in the MD optimization, of which I found the risk target optimization as a great match. This is the freedom we gain by chossing MD over its perhaps more popular counterpart RP.
 
