@@ -17,7 +17,7 @@
 
 In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to maximize diversification in terms of correlation. It is a direct application of the notion diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
 
-Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying assumption of consistent long-term balance between risk and return that underpins MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance in the markets of US, Eurozone, Japan, and China.
+Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying assumption of consistent long-term balance between risk and return that underpins MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance at major markets like US, Eurozone, Japan, and China.
 
 The resulting "Maximum Diversification Frontier" showcases an upward frontier, depicting the increasing realized risk and return at corresponding risk targets. Hence as a parrallel of the efficient frontier (probably also intersect at some points), I have the blog named as "Maximum Diversification Frontier". 
 
@@ -62,7 +62,7 @@ $$
 
 Combining the two, we can see that MD is essentially equivalent to the Maximum Sharpe Ratio portfolio if the expected return is linearly proportional to volatility for every security in the investment universe. With MD, we've touched the holy grail (at least in some degree)!
 
-Believe me, this balance relationship between return and volatility is not some crazy illution within asset classes. While there is not a definitive conclusion if asset classes should share the same sharpe ratio. The assumption that asset classes have comparable return volatility ratio is generally recogonized as sound, making MD a reasonable choice in asset allocation. 
+This balance relationship between return and volatility is not some crazy illution within asset classes. While there is not a definitive conclusion if asset classes should share the same sharpe ratio. The assumption that asset classes have comparable return volatility ratio is generally recogonized as sound, making MD a reasonable choice in asset allocation. 
 
 Asset classes (equity, fixed income, commodity, etc ...) are generally represented as well diversified portfolios. Over the long term, investors tend to flock to asset classes with extraordinary returns compared to their volatility, as they seek risk-adjusted returns. This influx of capital drives up the price of the asset class, thereby reducing its risk-adjusted return to a comparable level with other asset classes.
 
@@ -72,21 +72,23 @@ It is generally the case for the past 20 years (bear with the poor drawing of th
 
 *Source: [Bankeronwheels.com](https://www.bankeronwheels.com/the-long-game-historical-market-returns-2022-expectations/)*
 
-It also aligns with the long term capital market expectation forecast from institutional investors, such as the one below from BlackRock.
+It also aligns with the long term capital market expectation forecast from institutional investors, such as the one below from BlackRock. 
 
 ![CMA](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/BLK_CMA.png)
 
 *Source: [www.blackrock.com](https://www.blackrock.com/institutions/en-us/insights/charts/capital-market-assumptions)*
 
-In both charts, asset classes cluster around a straight line,  indicating that they share a comparable return-to-volatility ratio.
+In both cases, asset classes cluster around a straight line,  indicating that they share a comparable return-to-volatility ratio.
 
 #### The frontier part <a name="subparagraph3"></a>
 
-So MD seems to be a reasonable act. What about the "frontier" aspect mentioned in the title? 
+So MD is a good choice in asset allocation. What about the "frontier" aspect mentioned in the blog title? 
 
-It stems from the remarkable flexibility of MD optimization. For any given feasible set of the universe, there should be at least one portfolio with maximized diversification ratio as it's a relative metric. With such a feature, we can easily incorporate other optimization constraints in the MD optimization, of which I found the risk target optimization as a great match. This is the freedom we gain by chossing MD over its perhaps more popular counterpart RP.
+It stems from the remarkable flexibility of MD optimization. Within any feasible set of the universe, there will always be at least one portfolio that maximizes the diversification ratio, given that it is a relative metric. This inherent feature allows us to easily incorporate various optimization constraints into MD optimization.
 
-In my view, the combination of MD optimization with risk targets provides an intuitive implementation of the concept. It begins by positioning us within the realm where risk is tolerable, and then proceeds to make efficient use of the risk taken in pursuit of rewards. 
+Among these constraints, the volatility target aligns particularly well with MD optimization. This portfolio construction approach is rooted in the idea of first positioning ourselves within the realm of acceptable risk and then effectively utilizing that risk through diversification.
+
+By applying MD optimization with volatility targets, we can generate a set of well-diversified portfolios for any given volatility target, thereby forming a "Maximum Diversification Frontier," as demonstrated in the chart at the beginning of the blog post. From my perspective, this frontier offers tremendous convenience in providing a comprehensive range of options that can align with the utility function of client or specific product madates
 
 ### How's the performance for the past decade <a name="perf"></a>
 
