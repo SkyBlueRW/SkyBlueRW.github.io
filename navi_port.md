@@ -15,5 +15,5 @@ title: Portfolio Construction
 
 ## Asset Allocation
 
-[The "Maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/21/The-Maximum-Diversification-Frontier.html)
+[The "Maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/22/The-Maximum-Diversification-Frontier.html)
 
