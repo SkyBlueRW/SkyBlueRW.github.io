@@ -1,7 +1,7 @@
 
 #
 
-## Black-Litterman: Tilt Portfolio the Bayesian Way
+## Tilt Your Portfolio the Bayesian Way
 
 - [Introduction](#introduction)
 - [MD Portfolio: the theoretical underpings](#why)
@@ -11,7 +11,10 @@
 
   ### Introduction <a name="introduction"></a>
 
+It is not a news BL is a bayesian model. State the intuition. for the next expand on the application of asset allocation with OECD in US market.
 
 
+
+magnitude of tilt
 
 ![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/bl.png)
