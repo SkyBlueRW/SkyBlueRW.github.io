@@ -17,8 +17,12 @@
 
 It is not a news BL is a bayesian model. State the intuition. for the next expand on the application of asset allocation with OECD in US market.
 
-
+set to 0 as portable alpha
 
 magnitude of tilt
 
 ![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/bl.png)
+
+
+  ### Reference <a name="ref"></a>
+  - Kolm, Ritter & Simonian (2021): Black-Litterman and Beyond: The Bayesian Paradigm in Investment Management
