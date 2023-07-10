@@ -25,4 +25,5 @@ magnitude of tilt
 
 
   ### Reference <a name="ref"></a>
+  - Kolm & Ritter (2017): On the Bayesian interpretation of Black-Litterman
   - Kolm, Ritter & Simonian (2021): Black-Litterman and Beyond: The Bayesian Paradigm in Investment Management
