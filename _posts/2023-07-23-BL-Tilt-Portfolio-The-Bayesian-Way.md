@@ -21,9 +21,17 @@ set to 0 as portable alpha
 
 magnitude of tilt
 
+
+decision is benchmarked. A scientific way. 
+
+tau: 1/T or 1/T-k if unbiased
+
 ![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/bl.png)
 
 
   ### Reference <a name="ref"></a>
+  - Black & Litterman (1991): Global Asset Allocation: combining investors views with market equilibrium
+  - Idzorek (2007): A Step-By-Step Guide to Black-Litterman Model: Incorporating user-specified confidence level
   - Kolm & Ritter (2017): On the Bayesian interpretation of Black-Litterman
   - Kolm, Ritter & Simonian (2021): Black-Litterman and Beyond: The Bayesian Paradigm in Investment Management
+  - Walters (2007): The Black-Litterman Model in Detail
