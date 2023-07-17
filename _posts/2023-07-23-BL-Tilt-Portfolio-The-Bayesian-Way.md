@@ -11,18 +11,11 @@
 
   ### Introduction <a name="introduction"></a>
 
-- intuitive and sound prior from makret portfolio. use reverse optimization to generate a stable distribution of returns from the equilibrium market portfolio as a strting point for shrinkage.
-- clear way to specify investor views on returns and prior information. views can span arbitrary and overlapping sets of assets. can be partial or complete
+Though not directly mentioned initially, it is no longer a secret that the famous optimization model Black-Litterman is a Bayesian model. The model takes investor views as observations with uncertainties and further combine it with prior extracted from the market portfolio in a genius way. Specifically, it provides a consistent Bayesian framework to overlay investor views on top of a neutral portfolio. Definitely worth knowing.
+
+In this blog, we will try to delve into the Bayesian intuitions that underpin the Black-Litterman model. Upon the process of Black-Litterman from a 
 
 
-It is not a news BL is a bayesian model. State the intuition. for the next expand on the application of asset allocation with OECD in US market.
-
-set to 0 as portable alpha
-
-magnitude of tilt
-
-
-decision is benchmarked. A scientific way. 
 
 tau: 1/T or 1/T-k if unbiased
 
