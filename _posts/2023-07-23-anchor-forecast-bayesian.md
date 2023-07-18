@@ -9,7 +9,16 @@
 - [How's the performance for the past decade](#perf)
 - [Reference](#ref)
 
-  ### Introduction <a name="introduction"></a>
+### Introduction <a name="introduction"></a>
+
+Intro
+
+Bayesian
+Also a shrink
+WLS 
+shrink on portfolio also
+
+  
 
 bayesian/shrink
 
