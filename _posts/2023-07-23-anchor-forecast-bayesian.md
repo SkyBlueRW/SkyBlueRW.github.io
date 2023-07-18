@@ -34,6 +34,21 @@ Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
 \end{aligned}
 $$
 
+$$
+\begin{aligned}
+\begin{pmatrix}
+\pi \\
+Q 
+\end{pmatrix} &= \begin{pmatrix}
+I\\
+P
+\end{pmatrix}\mu + e \\
+e &\thicksim N(0, \begin{pmatrix}
+\Sigma_{\pi} & 0 \\
+0 & \Omega
+\end{pmatrix})
+\end{aligned}
+$$
 
 $$
 \begin{aligned}
