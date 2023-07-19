@@ -11,6 +11,12 @@
 
 ### Introduction <a name="introduction"></a>
 
+So, Mean Variance Optimization (MVO) is the genius foundation of everything built in the name of modern portfolio theory while can perform quite bizzare with estimation errors! 
+
+In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on expected return! 
+
+Specifically, I would like to discuss about the Bayesian framework initially introduced as Black-Litterman model.
+.
 Intro
 
 Bayesian
