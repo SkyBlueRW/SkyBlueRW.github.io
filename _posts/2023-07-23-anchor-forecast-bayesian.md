@@ -4,22 +4,47 @@
 ## Anchor Your Forecast the Bayesian Way
 
 - [Introduction](#introduction)
-- [MD Portfolio: the theoretical underpings](#why)
-  - [Let's go for diversification](#subparagraph1)
-- [How's the performance for the past decade](#perf)
+- [The Bayesian Taste of Black Litterman](#bay)
+  - [The Prior](#subparagraph1)
+  - [The Investment View (Likelihood)](#subparagraph2)
+  - [The Posterior](#subparagraph1)
+- [The Shrinkage Perspective](#shrink)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
 
-So, Mean Variance Optimization (MVO) is the genius foundation of everything built in the name of modern portfolio theory while can perform quite bizzare with estimation errors! 
+So, Mean Variance Optimization (MVO) is the genius foundation of almost everything built in the name of modern portfolio theory. While it can perform quite bizzare with estimation errors! 
 
-In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on expected return! 
+In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on expected return.
 
-Specifically, I would like to discuss about the Bayesian framework initially introduced as Black-Litterman model.
-.
-Intro
+Attaining a somewhat reliable estimate on expected return might be the most challenging task in the modern world of finance. While it is probably the reason why it is such an intersting topic. There is not one universally guaranteed or recoganized method for it. We have all the room to explore and wander. In this blog, let's start the journey with the Bayesian framework initially introduced as Black-Litterman model. 
 
-Bayesian
+### The Bayesian Taste of Black-Litterman <a name="bay"></a>
+
+Essentially, we start from a neutral point and deviate away from it based on the magnitued and uncertainty around our forecast.
+
+
+To counter the great volitility and unstationary embedded in security return, the model takes investors' forecast on expected returns as observations with uncertainties and further anchors it to a robust prior extracted from benchmark portfolio. Bayesian helps us to combine the prior and likelihood (investor forecast) to a more informed posterior. 
+Let's delve into the details from a Bayesian perspective.
+
+**The Bayesian Framework within Black-Litterman**
+
+![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/bl.png)
+
+
+#### The Prior <a name="subparagraph1"></a>
+
+what should this neutral point. BL's answer ...
+
+
+#### The Investment View (Likelihood) <a name="subparagraph2"></a>
+
+#### The Posterior <a name="subparagraph3"></a>
+
+
+### The Shrinkage Perspective <a name="shrink"></a>
+
+
 Also a shrink
 WLS 
 shrink on portfolio also
@@ -38,7 +63,6 @@ https://palomar.home.ece.ust.hk/MAFS6010R_lectures/slides_shrinkage_n_BL.pdf
 
 tau: step by step 0.01 to 0.05, 1/T or 1/T-k if unbiased
 
-![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/bl.png)
 
 $$
 \begin{aligned}
