@@ -13,19 +13,17 @@
 
 ### Introduction <a name="introduction"></a>
 
-So, Mean Variance Optimization (MVO) is the genius foundation of almost everything built in the name of modern portfolio theory. While it can perform quite bizzare with estimation errors! 
+Mean Variance Optimization is the genius foundation of almost everything built in the name of modern portfolio theory (Dr. Markowitz passed away last month. RIP sir). While it can perform quite bizzare with estimation errors on expected returns! 
 
 In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on expected return.
 
-Attaining a somewhat reliable estimate on expected return might be the most challenging task in the modern world of finance. While it is probably the reason why it is such an intersting topic. There is not one universally guaranteed or recoganized method for it. We have all the room to explore and wander. In this blog, let's start the journey with the Bayesian framework initially introduced as Black-Litterman model. 
+Attaining a somewhat reliable estimate on expected return might be the most challenging task in the modern world of finance. While probably, it is exactly the reason why it is such an intersting topic. There is not one universally guaranteed or recoganized method for it. We have all the room to explore and wander. In this blog, let's start the journey with the Bayesian framework initially introduced as Black-Litterman model. 
+
+Broadly, this framework can be summarized in one line as starting from a neutral point and deviate away based on the magnitued and uncertainty around our forecast.
 
 ### The Bayesian Taste of Black-Litterman <a name="bay"></a>
 
-Essentially, we start from a neutral point and deviate away from it based on the magnitued and uncertainty around our forecast.
-
-
-To counter the great volitility and unstationary embedded in security return, the model takes investors' forecast on expected returns as observations with uncertainties and further anchors it to a robust prior extracted from benchmark portfolio. Bayesian helps us to combine the prior and likelihood (investor forecast) to a more informed posterior. 
-Let's delve into the details from a Bayesian perspective.
+To work with the volatile and often unstationary security return, the model takes investors' forecast on expected returns as observations with uncertainties (likelihood) and further anchors it to a robust prior extracted from benchmark portfolio with the Bayes formula. In such a way, a more informed estimate based on our original estimate but anchored to the prior arise as the posterior as shown in the chart below.
 
 **The Bayesian Framework within Black-Litterman**
 
@@ -33,6 +31,8 @@ Let's delve into the details from a Bayesian perspective.
 
 
 #### The Prior <a name="subparagraph1"></a>
+
+The immediate question might be that what should this neutral point of poit be so that we can rest aassured to anchor our forecast to it?
 
 what should this neutral point. BL's answer ...
 
