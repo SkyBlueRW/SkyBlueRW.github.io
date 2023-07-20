@@ -32,8 +32,6 @@ To work with the volatile and often unstationary security return, the model take
 
 #### The Prior <a name="subparagraph1"></a>
 
-
-
 Immediately you might ask. What should this neutral point be? Can we trust any kind of return information to be our neutral start point if there is so much volatiltiy and unstationariness in the security return? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
 
 $$
@@ -46,9 +44,9 @@ $$
 
 Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to estimate the expected return of every security. with the Mean Variance Optimization we can easily switch from market weight ($$x_M$$) to the impled return ($$\pi$$). 
 
-Vice versa, the mean variance optimization with implied return lead us to the market portfolio, which makes it a great neutral point especially when you are benchmarked to the market portfolio. With this prior extracted from reversed optimization of market portfolio, we will stay at the market portfolio until there is a strong enough expected return forecast to deviate.
+Vice versa, the mean variance optimization with implied return lead us to the market portfolio, making it a great neutral point especially when you are benchmarked to the market portfolio. With this prior extracted from reversed optimization of market portfolio, we will stay at the market portfolio until there is a strong enough expected return forecast to deviate. 
 
-It is worth to mention that we do have other option in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can easily switch to other portfolios as benchmark. Similarly as the case of the market portfolio, we will get the prior consistent with the corresponding benchmarke portfolio and start from it for further tilting.
+It is worth to mention that we do have other option in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can easily switch to other portfolios as benchmark. Similarly as the case of the market portfolio, we will get the prior consistent with the corresponding benchmarke portfolio and start from it for further tilting. Such a prior consistent with benchmark portfolio act nicely as the neutral start point. After all we will stay at our natural start point of the benchmark portfolio.
 
 $$
 \begin{aligned}
@@ -57,7 +55,12 @@ $$
 \end{aligned}
 $$
 
+Put it more formally in mathematic as above. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance.
+
+
 #### The Investment View (Likelihood) <a name="subparagraph2"></a>
+
+partial, restriction
 
 #### The Posterior <a name="subparagraph3"></a>
 
