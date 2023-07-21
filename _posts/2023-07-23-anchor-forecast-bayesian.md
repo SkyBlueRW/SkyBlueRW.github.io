@@ -49,19 +49,81 @@ Such an implied return is MVO consistent with the market portfolio in the sense 
 
 It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can easily switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
 
-Put the prior more formally in mathematics, we get a prior distribution as below. The mean of the distribution is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
+Put the prior more formally in mathematics leads to the distribution as below. The mean of the distribution is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
 
 $$
 \begin{aligned}
 \mu &\sim N(\pi, \Sigma_{\pi}) \\
-\mu &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) \\
+\end{aligned}
+$$
+
+#### The Investment View (Likelihood) <a name="subparagraph2"></a>
+
+With a reasonable neutral point to start with. We now turn to the incorporation of investmentt views. 
+
+BL come up with the genius way to do that.
+
+$$
+\begin{aligned}
+Q &= P \mu + \epsilon \\
+\epsilon &\sim N(0, \Omega) \\
+\end{aligned}
+$$
+
+In the sense either a partial and absolute view such as security a and b's expected return are 5% and 10% 
+
+$$
+\begin{aligned}
+\begin{pmatrix}
+0.05 \\
+0.1
+\end{pmatrix} &=
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+\mu_1 \\
+\mu_2
+\end{pmatrix} + 
+\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix}
+\end{aligned}
+$$
+
+or a bunch of relative forecast such as average expected return of a and b is around c's. a's expected return shold be lower than b's
+
+$$
+\begin{aligned}
+\begin{pmatrix}
+0 \\
+0.05
+\end{pmatrix} &=
+\begin{pmatrix}
+0.5 & 0.5 & -1\\
+-1 & 1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+\mu_1 \\
+\mu_2 \\
+\mu_3
+\end{pmatrix} + 
+\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2 \\
+\epsilon_3
+\end{pmatrix}
 \end{aligned}
 $$
 
 
-#### The Investment View (Likelihood) <a name="subparagraph2"></a>
-
-partial, restriction
+$$
+\begin{aligned}
+Q|\mu &\sim N(P\mu, \Omega)
+\end{aligned}
+$$
 
 #### The Posterior <a name="subparagraph3"></a>
 
