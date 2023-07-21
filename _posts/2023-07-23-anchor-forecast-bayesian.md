@@ -17,9 +17,9 @@ Mean Variance Optimization is the genius foundation of almost everything built i
 
 In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on expected return.
 
-Attaining a reliable estimate on expected return might be the most challenging task in the modern world of finance. While probably, it is exactly the reason why it is such an intersting topic. There is no one universally guaranteed or recoganized method for it. We have all the room to explore and wander. In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model. 
+Attaining a reliable estimate on expected return is probably be the most challenging task in the modern world of finance, which also makes a quite interesting topic. There is no  universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
 
-Such a framework enables us to start from a neutral point and deviate away based on the magnitued and uncertainty around our forecast.
+In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model. Such a framework enables us to start from a neutral point and deviate away based on the magnitued and uncertainty around our forecast.
 
 ### The Bayesian Taste of Black-Litterman <a name="bay"></a>
 
