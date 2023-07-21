@@ -19,11 +19,12 @@ In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://s
 
 Attaining a reliable estimate on expected return is probably be the most challenging task in the modern world of finance, which also makes a quite interesting topic. There is no  universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
 
-In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model. Such a framework enables us to start from a neutral point and deviate away based on the magnitued and uncertainty around our forecast.
+In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model (BL). Such a framework enables us to start from a neutral point and deviate away based on the magnitued and uncertainty around our forecast.
 
 ### The Bayesian Taste of Black-Litterman <a name="bay"></a>
 
-To work with the volatile and often unstationary security return, the model takes investors' forecast on expected returns as observations with uncertainties (likelihood) and further anchors it to a robust prior with the Bayes formula. In such a way, a more informed estimate anchored to the prior arise in the form of posterior as shown in the chart below.
+To work with the volatile and often unstationary security return, BL takes investors' original forecast on expected returns as observations with uncertainties (likelihood) and further anchors it to a robust prior with the Bayes formula. In such a way, a more informed estimate anchored to the prior arise in the form of posterior as shown in the chart below.
+
 
 **The Bayesian Framework within Black-Litterman**
 
@@ -34,6 +35,8 @@ To work with the volatile and often unstationary security return, the model take
 
 Immediately you might ask. What should this neutral point be? Can we trust any kind of return information to be our neutral start point if there is so much volatiltiy and unstationariness in the security return? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
 
+Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security. with the reversed optimization below we can easily turn he market weight ($$x_M$$) to its impled return ($$\pi$$). 
+
 $$
 \begin{aligned}
 max_x & x^T \mu - \dfrac{1}{2}\lambda x^T\Sigma x \\
@@ -42,11 +45,11 @@ x_M = (\lambda \Sigma)^{-1} \pi &\leftrightarrow \pi = \lambda \Sigma x_M
 \end{aligned}
 $$
 
-Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to estimate the expected return of every security. with the Mean Variance Optimization we can easily switch from market weight ($$x_M$$) to the impled return ($$\pi$$). 
+Such an implied return is MVO consistent with the market portfolio in the sense that an optimization with the implied return would lead exactly to the market portfolio. This feature makes the implied return a great neutral point especially when you are benchmarked to the market portfolio as we will stay at the market portfolio until there is a strong enough expected return forecast to make us deviate. 
 
-Vice versa, the mean variance optimization with implied return lead us to the market portfolio, making it a great neutral point especially when you are benchmarked to the market portfolio. With this prior extracted from reversed optimization of market portfolio, we will stay at the market portfolio until there is a strong enough expected return forecast to deviate. 
+It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can easily switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
 
-It is worth to mention that we do have other option in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can easily switch to other portfolios as benchmark. Similarly as the case of the market portfolio, we will get the prior consistent with the corresponding benchmarke portfolio and start from it for further tilting. Such a prior consistent with benchmark portfolio act nicely as the neutral start point. After all we will stay at our natural start point of the benchmark portfolio.
+Put the prior more formally in mathematics, we get a prior distribution as below. The mean of the distribution is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
 
 $$
 \begin{aligned}
@@ -54,8 +57,6 @@ $$
 \mu &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) \\
 \end{aligned}
 $$
-
-Put it more formally in mathematic as above. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance.
 
 
 #### The Investment View (Likelihood) <a name="subparagraph2"></a>
