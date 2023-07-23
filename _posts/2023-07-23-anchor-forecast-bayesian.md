@@ -7,7 +7,8 @@
 - [The Bayesian Taste of Black Litterman](#bay)
   - [The Prior](#subparagraph1)
   - [The Investment View (Likelihood)](#subparagraph2)
-  - [The Posterior](#subparagraph1)
+  - [The Posterior](#subparagraph3)
+  - [The Conditional r](#subparagraph4)
 - [Another perspective of shrinkage](#shrink)
 - [Reference](#ref)
 
@@ -145,7 +146,7 @@ Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
 \end{aligned}
 $$
 
-It takes just a few lines of algebra to pin down the posterior $$\mu|Q$$
+It takes just a few lines of algebra to pin down the posterior $$\mu|Q$$. The posterior is conditional on our expected return forecast combined from the prior.
 
 $$
 \begin{aligned}
@@ -153,9 +154,14 @@ $$
 \mu|Q, \Omega &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) * exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
       &\propto exp((\mu - \mu^{\star}) ^T M^{-1}(\mu - \mu^{\star})) \\
 \mu^{\star} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}Q) \\
-M &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}
+M &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} \\
+&\downarrow \\
+\mu|Q, \Omega \sim N(\mu^{\star}, M)
 \end{aligned}
 $$
+
+#### The conditional r <a name="subparagraph4"></a>
+
 
 ### Another perspective of shrinkage <a name="shrink"></a>
 
@@ -164,19 +170,7 @@ Also a shrink
 WLS 
 shrink on portfolio also
 
-  
 
-
-
-
-$$
-\begin{aligned}
-\mu &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) \\
-Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
-\mu|Q, \Omega &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) * exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
-      &\propto exp((\mu - \mu^{\star}) ^T M^{-1}(\mu - \mu^{\star}))
-\end{aligned}
-$$
 
 $$
 \begin{aligned}
