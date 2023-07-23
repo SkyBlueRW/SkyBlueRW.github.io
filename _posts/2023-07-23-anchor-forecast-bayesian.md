@@ -156,7 +156,7 @@ $$
 \mu^{\star} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}Q) \\
 M &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} \\
 &\downarrow \\
-\mu|Q, \Omega \sim N(\mu^{\star}, M)
+\mu|Q, \Omega &\sim N(\mu^{\star}, M)
 \end{aligned}
 $$
 
