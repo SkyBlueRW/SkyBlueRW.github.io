@@ -9,7 +9,7 @@
   - [The Investment View (Likelihood)](#subparagraph2)
   - [The Posterior](#subparagraph3)
   - [The Conditional r](#subparagraph4)
-- [Another perspective of shrinkage](#shrink)
+- [Deviating From a Neutral Point!](#dev)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
@@ -163,7 +163,7 @@ $$
 #### The conditional r <a name="subparagraph4"></a>
 
 
-### Another perspective of shrinkage <a name="shrink"></a>
+### Deviating From a Neutral Point! <a name="dev"></a>
 
 
 Also a shrink
@@ -171,6 +171,19 @@ WLS
 shrink on portfolio also
 
 
+
+$$
+\begin{aligned}
+\mu^{\star} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}Q) \\
+ &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}P\mu_{view}) \\
+ &= W_0 \pi + W_{view} \mu_{view} \\
+ W_0 &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} (\Sigma_{\pi})^{-1} \\
+ W_{view} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} P^T\Omega^{-1}P \\
+  W_0 + W_{view} &= I 
+\end{aligned}
+$$
+
+regression, adding restriction
 
 $$
 \begin{aligned}
@@ -185,17 +198,6 @@ e &\thicksim N(0, \begin{pmatrix}
 \Sigma_{\pi} & 0 \\
 0 & \Omega
 \end{pmatrix})
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\mu^{\star} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}Q) \\
- &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}P\mu_{view}) \\
- &= W_0 \pi + W_{view} \mu_{view} \\
- W_0 &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} (\Sigma_{\pi})^{-1} \\
- W_{view} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} P^T\Omega^{-1}P \\
-  W_0 + W_{view} &= I 
 \end{aligned}
 $$
 
