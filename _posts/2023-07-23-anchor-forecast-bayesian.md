@@ -17,7 +17,7 @@ Mean Variance Optimization is the genius foundation of almost everything built i
 
 In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on expected return.
 
-Attaining a reliable estimate on expected return is probably be the most challenging task in the modern world of finance, which also makes a quite interesting topic. There is no  universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
+Attaining a reliable estimate on expected return is probably the most challenging task in the modern world of finance, which is also exactly the point making it a quite interesting topic. There is no universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
 
 In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model (BL). Such a framework enables us to start from a neutral point and deviate away based on the magnitued and uncertainty around our forecast.
 
@@ -35,7 +35,7 @@ To work with the volatile and often unstationary security return, BL takes inves
 
 Immediately you might ask. What should this neutral point be? Can we trust any kind of return information to be our neutral start point if there is so much volatiltiy and unstationariness in the security return? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
 
-Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security. with the reversed optimization below we can easily turn he market weight ($$x_M$$) to its impled return ($$\pi$$). 
+Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security. with the reversed optimization below we can easily turn the market weight ($$x_M$$) to its impled return ($$\pi$$). 
 
 $$
 \begin{aligned}
@@ -47,7 +47,7 @@ $$
 
 Such an implied return is MVO consistent with the market portfolio in the sense that an optimization with the implied return would lead exactly to the market portfolio. This feature makes the implied return a great neutral point especially when you are benchmarked to the market portfolio as we will stay at the market portfolio until there is a strong enough expected return forecast to make us deviate. 
 
-It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can easily switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
+It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
 
 Put the prior more formally in mathematics leads to the distribution as below. The mean of the distribution is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
 
@@ -59,9 +59,9 @@ $$
 
 #### The Investment View (Likelihood) <a name="subparagraph2"></a>
 
-With a reasonable neutral point to start with. We now turn to the incorporation of investmentt views. 
+With a reasonable neutral point to start with. We cab now turn to the incorporation of investment views/forecast. 
 
-BL come up with the genius way to do that.
+As I see, this is the most innovative part of the Black-Litterman model. BL model takes the investment view as obersavations with uncentainties ($$\epsilon$$) and further use it as likelihood in a Bayes formula for the next step. Additionaly, they propose to express all views (absolute or relative) in linear equations with Gaussian noise. Under such a paradigm, we can easily express our invesment views via modifying the design matrix P.
 
 $$
 \begin{aligned}
@@ -70,7 +70,7 @@ Q &= P \mu + \epsilon \\
 \end{aligned}
 $$
 
-In the sense either a partial and absolute view such as security a and b's expected return are 5% and 10% 
+It is direct to have an absolute view on a subset of the security universe (a and b's expected return are 5% and 10%)
 
 $$
 \begin{aligned}
@@ -93,7 +93,7 @@ $$
 \end{aligned}
 $$
 
-or a bunch of relative forecast such as average expected return of a and b is around c's. a's expected return shold be lower than b's
+It is also easily to incorporate a bunch of relative forecast such as average expected return of a and b is around c's. a's expected return shold be lower than b's
 
 $$
 \begin{aligned}
@@ -137,17 +137,7 @@ shrink on portfolio also
 
   
 
-bayesian/shrink
 
-factor model as a way to include piror information
-
-Though not directly mentioned initially, it is no longer a secret that the famous optimization model Black-Litterman is a Bayesian model. The model takes investor views as observations with uncertainties and further combine it with prior extracted from the market portfolio in a genius way. Specifically, it provides a consistent Bayesian framework to overlay investor views on top of a neutral portfolio. Definitely worth knowing.
-
-In this blog, we will try to delve into the Bayesian intuitions that underpin the Black-Litterman model. Upon the process of Black-Litterman from a 
-
-https://palomar.home.ece.ust.hk/MAFS6010R_lectures/slides_shrinkage_n_BL.pdf
-
-tau: step by step 0.01 to 0.05, 1/T or 1/T-k if unbiased
 
 
 $$
