@@ -8,7 +8,7 @@
   - [The Prior](#subparagraph1)
   - [The Investment View (Likelihood)](#subparagraph2)
   - [The Posterior](#subparagraph1)
-- [The Shrinkage Perspective](#shrink)
+- [Another perspective of shrinkage](#shrink)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
@@ -59,18 +59,26 @@ $$
 
 #### The Investment View (Likelihood) <a name="subparagraph2"></a>
 
-With a reasonable neutral point to start with. We cab now turn to the incorporation of investment views/forecast. 
+With a reasonable neutral point to start with. We can now turn to the incorporation of investment views/forecast. As I see, this is the most innovative part of the Black-Litterman model. 
 
-As I see, this is the most innovative part of the Black-Litterman model. BL model takes the investment view as obersavations with uncentainties ($$\epsilon$$) and further use it as likelihood in a Bayes formula for the next step. Additionaly, they propose to express all views (absolute or relative) in linear equations with Gaussian noise. Under such a paradigm, we can easily express our invesment views via modifying the design matrix P.
+The BL model takes the investment view as obersavations with uncentainties ($$\epsilon$$) and further use it as likelihood in a Bayes formula for the next step. Additionaly, they propose to express all views (absolute or relative) in linear equations with Gaussian noise. The diagonal $$\Omega$$ measures the uncertainty around Q and is inverse to investors' confidence on the their views.Under such a paradigm, we can easily express our invesment views via modifying the design matrix P. 
+
+It's definitely possible to expand it to more general probalistic expressions (I.E. [Kolm, Ritter & Simonian (2021)](https://www.pm-research.com/content/iijpormgmt/47/5/91) proposed such an expression that can incorporate views on hidden factors) while that generally comes with cost of tractbillity and computational burden.
 
 $$
 \begin{aligned}
 Q &= P \mu + \epsilon \\
 \epsilon &\sim N(0, \Omega) \\
+\Omega &= \begin{pmatrix}
+\omega_1 & 0 & ... & 0 \\
+0 & \omega_2 & ... & 0 \\
+... & ... & ... & ... \\
+0 & 0 & ... & \omega_k \\
+\end{pmatrix}
 \end{aligned}
 $$
 
-It is direct to have an absolute view on a subset of the security universe (a and b's expected return are 5% and 10%)
+Back to the traditional linear expression! It is easy to have an absolute view on a subset of the security universe (a and b's expected return are 5% and 10%)
 
 $$
 \begin{aligned}
@@ -93,7 +101,7 @@ $$
 \end{aligned}
 $$
 
-It is also easily to incorporate a bunch of relative forecast such as average expected return of a and b is around c's. a's expected return shold be lower than b's
+It is also quite intuitive to incorporate a bunch of relative forecast such as average expected return of a and b is around c's. a's expected return shold be lower than b's
 
 $$
 \begin{aligned}
@@ -118,6 +126,7 @@ $$
 \end{aligned}
 $$
 
+$$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Thus conditioning on $$\mu$$ we can have a likelihood in terms of investment Q as shown below. 
 
 $$
 \begin{aligned}
@@ -127,8 +136,28 @@ $$
 
 #### The Posterior <a name="subparagraph3"></a>
 
+Now we have both prior ($$\mu$$) and likelihood and likelihood ($$Q|\mu$$)
 
-### The Shrinkage Perspective <a name="shrink"></a>
+$$
+\begin{aligned}
+\mu &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) \\
+Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
+\end{aligned}
+$$
+
+It takes just a few lines of algebra to pin down the posterior $$\mu|Q$$
+
+$$
+\begin{aligned}
+\mu|Q, \Omega &\propto \mu * Q|\mu, \Omega \\
+\mu|Q, \Omega &\propto exp((\mu - \pi)^T \Sigma_{\pi}^{-1} (\mu - \pi)) * exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
+      &\propto exp((\mu - \mu^{\star}) ^T M^{-1}(\mu - \mu^{\star})) \\
+\mu^{\star} &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}((\Sigma_{\pi})^{-1} \pi + P^T\Omega^{-1}Q) \\
+M &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1}
+\end{aligned}
+$$
+
+### Another perspective of shrinkage <a name="shrink"></a>
 
 
 Also a shrink
