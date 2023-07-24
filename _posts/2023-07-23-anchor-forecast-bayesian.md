@@ -137,7 +137,7 @@ $$
 
 #### The Posterior <a name="subparagraph3"></a>
 
-Now we have both prior ($$\mu$$) and likelihood and likelihood ($$Q|\mu$$)
+Now we have both prior ($$\mu$$) and likelihood and likelihood ($$Q\|\mu$$)
 
 $$
 \begin{aligned}
@@ -146,7 +146,7 @@ Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
 \end{aligned}
 $$
 
-It takes just a few lines of algebra to pin down the posterior $$\mu|Q$$. The posterior is conditional on our expected return forecast combined from the prior.
+It takes just a few lines of algebra to pin down the posterior $$\mu\|Q$$. The posterior is conditional on our expected return forecast combined from the prior.
 
 $$
 \begin{aligned}
