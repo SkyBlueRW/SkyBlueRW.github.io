@@ -8,7 +8,6 @@
   - [The Prior](#subparagraph1)
   - [The Investment View (Likelihood)](#subparagraph2)
   - [The Posterior](#subparagraph3)
-  - [The Conditional r](#subparagraph4)
 - [Deviating From a Neutral Point!](#dev)
 - [Reference](#ref)
 
@@ -36,7 +35,7 @@ To work with the volatile and often unstationary security return, BL takes inves
 
 Immediately you might ask. What should this neutral point be? Can we trust any kind of return information to be our neutral start point if there is so much volatiltiy and unstationariness in the security return? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
 
-Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security. with the reversed optimization below we can easily turn the market weight ($$x_M$$) to its impled return ($$\pi$$). 
+Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security ($$E(r) - r_f=  r_f + \beta(E(r_M) - r_f)$$). with the reversed optimization below we can easily turn the insight embedded market weight ($$x_M$$) to its impled return ($$\pi$$). 
 
 $$
 \begin{aligned}
@@ -48,9 +47,9 @@ $$
 
 Such an implied return is MVO consistent with the market portfolio in the sense that an optimization with the implied return would lead exactly to the market portfolio. This feature makes the implied return a great neutral point especially when you are benchmarked to the market portfolio as we will stay at the market portfolio until there is a strong enough expected return forecast to make us deviate. 
 
-It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
+It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can switch to other becnmark portfolios for prior extraction maintaining the idea. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
 
-Put the prior more formally in mathematics leads to the distribution as below. The mean of the distribution is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
+Put the prior more formally in mathematics leads to the distribution below. The mean of the distribution is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
 
 $$
 \begin{aligned}
@@ -127,7 +126,7 @@ $$
 \end{aligned}
 $$
 
-$$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Thus conditioning on $$\mu$$ we can have a likelihood in terms of investment Q as shown below. 
+Since $$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Once we condition the distribution on $$\mu$$, we can have a likelihood in terms of investment Q as shown below. 
 
 $$
 \begin{aligned}
@@ -136,6 +135,8 @@ Q|\mu &\sim N(P\mu, \Omega)
 $$
 
 #### The Posterior <a name="subparagraph3"></a>
+
+**Posterio for $$\mu$$**
 
 Now we have both prior ($$\mu$$) and likelihood and likelihood ($$Q\|\mu$$)
 
@@ -146,7 +147,7 @@ Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
 \end{aligned}
 $$
 
-It takes just a few lines of algebra to pin down the posterior $$\mu\|Q$$. The posterior is conditional on our expected return forecast combined from the prior.
+It takes just a few lines of algebra to pin down the posterior for the expected return $$\mu\|Q$$. The posterior is conditional on our expected return forecast combined from the prior.
 
 $$
 \begin{aligned}
@@ -160,10 +161,26 @@ M &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} \\
 \end{aligned}
 $$
 
-#### The conditional r <a name="subparagraph4"></a>
+**Posterio for r**
+
+What we really need in practice is actually the posterior for the return  $$r\|Q, \Omega$$, which is not also easily available.
+
+$$
+\begin{aligned}
+r|Q, \Omega &\sim N(\mu^{\star}, \Sigma + M)
+\end{aligned}
+$$
+
 
 
 ### Deviating From a Neutral Point! <a name="dev"></a>
+
+$$
+\begin{aligned}
+\mu^{\star} &= \pi + \Sigma_{\pi}P^T(\Omega + P\Sigma_{\pi}P^T)^{-1} (Q-P\pi) \\
+\Sigma + M &= (\Sigma + \Sigma_{\pi}) - \Sigma_{\pi} P^T (\Omega + P\Sigma_{\pi}P^T)^{-1}P\Sigma_{\pi}
+\end{aligned}
+$$
 
 
 Also a shrink
