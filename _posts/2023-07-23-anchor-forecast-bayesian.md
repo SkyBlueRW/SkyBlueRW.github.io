@@ -8,7 +8,7 @@
   - [The Prior](#subparagraph1)
   - [The Investment View (Likelihood)](#subparagraph2)
   - [The Posterior](#subparagraph3)
-- [Deviating From a Neutral Point!](#dev)
+- [Deviate From a Neutral Point!](#dev)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
@@ -149,7 +149,7 @@ We get our 'skill' information on the expexted return.
 
 #### The Posterior <a name="subparagraph3"></a>
 
-**Posterio for $$\mu$$**
+**Posterior for $$\mu$$**
 
 With both prior ($$\mu$$) and likelihood and likelihood ($$Q\|\mu$$), a more educated estimate of posterior is almost there.
 
@@ -174,9 +174,9 @@ M &= ((\Sigma_{\pi})^{-1} + P^T\Omega^{-1}P)^{-1} \\
 \end{aligned}
 $$
 
-**Posterio for r**
+**Posterior for r**
 
-Turning back to the the security return. We arrive at the distribution of security return based on expected return information available to us.
+With a new estimate of $$\mu$$, we can finally circle back to the return distribution. Based on the information we provided (prior for neutral point and likelihood for investometn views), we get the following distribution. 
 
 $$
 \begin{aligned}
@@ -186,23 +186,29 @@ r|Q, \Omega &\sim N(\mu^{\star}, \Sigma + M) \\
 \end{aligned}
 $$
 
-Compared to the original $$r|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our estimation $$\mu^{\star}$$. Simultaneously, the variance increased to $$\Sigma + M$$ accounting for volatility around both security return and our forecast on expected return. 
+Compared to the original $$r\|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our estimation $$\mu^{\star}$$. Simultaneously, the variance increased to $$\Sigma + M$$ accounting for volatility around both security return and our forecast on expected return. 
 
 
+### Deviate From a Neutral Point! <a name="dev"></a>
 
-### Deviating From a Neutral Point! <a name="dev"></a>
+With all the work up to the point, what do we finally get? Is it consistent with the idea of deviating from a neutral point based on investment views as allerged? 
 
-With all the work up to the point, what do we finally get? Is it consistent with the idea of deviating from a neutral point based on investment views as allerged? A closer into our estimate $$\mu^{\star}$$ can help to clarify.
+It becomes much clearer after a few more algebra transformations. The BL estimation $$\mu^{\star}$$ is a summation of prior mean return and an adjustment of investors' view deviating from the prior. $$(Q-P\pi)$$ is simply the difference between investors' view and prior mean. The difference is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
+
+Quite clearly, two factors jointly decide the magnitude of our deviation. Other than the difference between prior mean and investment view, the comparison between prior variance and investment view variance also play a critical part. In an extreme case of infinity variance on investment view or zero variance on prior, the BL estimation is exactly the prior mean estimation. Starting from this point, as variance on prior becomes larger compared to variance on investment view, the BL estimation gradually move torward to a blend with higher emphasis on investors' views. This is an estimation error awared forecast!
 
 $$
 \begin{aligned}
 \mu^{\star} &= \pi + \Sigma_{\pi}P^T(\Omega + P\Sigma_{\pi}P^T)^{-1} (Q-P\pi) \\
-\Sigma + M &= (\Sigma + \Sigma_{\pi}) - \Sigma_{\pi} P^T (\Omega + P\Sigma_{\pi}P^T)^{-1}P\Sigma_{\pi}
 \end{aligned}
 $$
 
-
 **The Shrinkage Perspective**
+
+Another representation providing great intuition can be gained from the shrinkage perspective as well. The BL estimation $$\mu^{\star}$$ can be decomposed in to weighted average of prior mean and the return mean estimation implied from investment views $$P\mu_{view} = Q$$. Though $$\mu_{view}$$ is not uniquely defined in case of partial investment views (P is not invertible in the case), it does not hinder us from using it for further intuitions.
+
+As shown below the summation of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies between the the prior mean and mean forecast from investment views. 
+
 
 $$
 \begin{aligned}
@@ -215,7 +221,7 @@ $$
 \end{aligned}
 $$
 
-regression, adding restriction
+Can be interpreted in a weighted least square where 
 
 $$
 \begin{aligned}
