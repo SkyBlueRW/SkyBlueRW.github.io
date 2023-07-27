@@ -9,6 +9,7 @@
   - [The Investment View (Likelihood)](#subparagraph2)
   - [The Posterior](#subparagraph3)
 - [Deviate From a Neutral Point!](#dev)
+- [Summary](#summary)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
@@ -17,7 +18,7 @@ Mean Variance Optimization is the genius foundation of almost everything built i
 
 In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. While the idea of having a nice forecast on expected return and gain from it is just so attractive! A slight improvement on expected return estimation can bring tremendous reward financially! Now it's the time to turn to this trail of thought to improve our estimation on expected return.
 
-Attaining a reliable estimate on expected return is probably the most challenging task in the modern world of finance. In the meanwhile it is also exactly the point making it quite an interesting topic. There is no universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
+Attaining a reliable estimate on expected return is probably the most challenging task in the modern world of finance. There is just so much volatility and unstationariness within the security return hidering the task. In the meanwhile it is also exactly the point making it quite an interesting topic. There is no universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
 
 In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model (BL). Such a framework enables us to start from a neutral point and incorporate investors' views/forecast on expected return to deviate from it.
 
@@ -222,7 +223,7 @@ $$
 \end{aligned}
 $$
 
-What is amazing is that such an BL estimation can be obtained from a Weighted Least Square (WLS) regression as below.
+What is amazing is that such an BL estimation can be obtained from a Weighted Least Square (WLS) regression as below. 
 
 $$
 \begin{aligned}
@@ -240,7 +241,12 @@ e &\thicksim N(0, \begin{pmatrix}
 \end{aligned}
 $$
 
+In such setting, both prior and investment views are taken as noisy obversations. We count on a WLS to get new estimation on expected return based on all such information. 
 
+
+### Summary <a name="summary"></a>
+
+In the blog we have discussed the BL model from the Bayesian angle. I hope you find it a useful tool for expected return estimation as me. The BL model is particularly suit for this task. Looking into the challenges arised from wild estimation error on forecast of expected return. BL provided a way to anchor it to implied return from benchmark. From a investment product perspective, there can hardly any much neutral or safe point as this return. As most if not all portfolio managers are benchmarked to some portfolio (Even hedge fund should be benchmarked to case or zero portfolio?). Even with this anchor, we still need to evaluate the uncertainty around our estimate. The Bayesian framework within the BL model is definitly good for that purpose as well.
 
 ### Reference <a name="ref"></a>
   
