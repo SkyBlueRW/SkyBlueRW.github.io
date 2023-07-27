@@ -13,17 +13,17 @@
 
 ### Introduction <a name="introduction"></a>
 
-Mean Variance Optimization is the genius foundation of almost everything built in the name of modern portfolio theory (Dr. Markowitz passed away last month. RIP sir). While it can perform quite bizzare with estimation errors on expected return! 
+Mean Variance Optimization is the genius foundation of almost everything built in the name of modern portfolio theory (Dr. Markowitz, the genius behind this foundation  passed away last month. RIP sir). While it can perform quite bizzare with estimation errors on expected return! 
 
-In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. Now it's the time to turn to another trail of thought to improve our estimation on return mean.
+In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we have discussed one trail of thought to alleviate such issue by reducing dependency on estimation of expected return. While the idea of having a nice forecast on expected return and gain from it is just so attractive! A slight improvement on expected return estimation can bring tremendous reward financially! Now it's the time to turn to this trail of thought to improve our estimation on expected return.
 
-Attaining a reliable estimate on expected return is probably the most challenging task in the modern world of finance. In the meanwhile it is also exactly the point making it a quite interesting topic. There is no universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
+Attaining a reliable estimate on expected return is probably the most challenging task in the modern world of finance. In the meanwhile it is also exactly the point making it quite an interesting topic. There is no universally guaranteed or recoganized method for it. We have all the room to explore and wander. 
 
 In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model (BL). Such a framework enables us to start from a neutral point and incorporate investors' views/forecast on expected return to deviate from it.
 
 ### The Bayesian Taste of Black-Litterman <a name="bay"></a>
 
-Looking into the ingredints of security return distributions. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/22/The-Maximum-Diversification-Frontier.html)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainy. What's more, an mean variance optimization is often more prone to estimtion errors in the estimate of expected return. 
+Looking into the ingredints of security return distribution. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/22/The-Maximum-Diversification-Frontier.html)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainy. What's more, an mean variance optimization is often more prone to estimtion errors in the estimate of expected return. 
 
 $$
 \begin{aligned}
@@ -31,7 +31,7 @@ r|\mu \sim N(\mu, \Sigma)
 \end{aligned}
 $$
 
-For such an important but 'dangerous' exercise on forecast of expected return, we will need to circle around with every bit of information we have while also account for the significant uncertainty around it. Aligning this idea, BL takes investors' original forecast on expected returns as noisy observations (essentially a partial likelihood) and further anchors it to a robust prior with the Bayes formula. In such a way, a more informed estimate anchored to the neutral prior arise in the form of posterior as shown in the chart below.
+For such an important but 'dangerous' exercise on forecast of expected return, we will need to grid with every bit of information we have while also account for the significant uncertainty around it. Aligning this idea, BL takes investors' original forecast on expected returns as noisy observations (essentially a partial likelihood) and further anchors it to a robust prior with the Bayes formula. In such a way, a more informed estimate anchored to the neutral prior arise in the form of posterior as shown in the chart below.
 
 
 **The Bayesian Framework within Black-Litterman**
@@ -39,13 +39,13 @@ For such an important but 'dangerous' exercise on forecast of expected return, w
 ![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/bl.png)
 
 
-One last word before looking in details. It's definitely possible  to expand the framework to a more general probalistic expressions (I.E. [Kolm, Ritter & Simonian (2021)](https://www.pm-research.com/content/iijpormgmt/47/5/91) proposed such an expression with much less assumptions that can even incorporate views on hidden factors) while this kind of expansion generally comes with cost of tractbillity and computational burden. Let's stick to the Gaussian world with the traditional BL models. For this blog, let's focus on the traditional Black Litterman.
+One last word before diving into details. It's definitely possible  to expand the framework to a more general probalistic expressions (I.E. [Kolm, Ritter & Simonian (2021)](https://www.pm-research.com/content/iijpormgmt/47/5/91) proposed such an expression with much less assumptions that can even incorporate views on hidden factors) while this kind of expansion generally comes with cost of tractbillity and computational burden. Let's stick to the Gaussian world with the traditional BL models in this blog. 
 
 #### The Prior <a name="subparagraph1"></a>
 
-Immediately you might ask. What should this neutral point be? Can we trust any kind of return information to be our neutral start point if there is so much volatiltiy and unstationariness in the security return? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
+Immediately you might ask. You mentioned we are starting from a neutral point for starter. What should this neutral point be? Can we trust any kind of return information to be our neutral start point if there is so much volatiltiy and unstationariness in the security return? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
 
-Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security ($$E(r) - r_f=  r_f + \beta(E(r_M) - r_f)$$). With reversed optimization below we can easily turn the pricing information embedded market weight ($$x_M$$) to its impled return ($$\pi$$). 
+Under CAPM, market portfolio is the tagent portfolio containing all the information reqruied to price expected return of every security ($$E(r) - r_f=  r_f + \beta(E(r_M) - r_f)$$). With reversed optimization below we can easily turn the pricing information embedded in market weight ($$x_M$$) to its impled return ($$\pi$$). 
 
 $$
 \begin{aligned}
@@ -55,13 +55,13 @@ x_M = (\lambda \Sigma)^{-1} \pi &\leftrightarrow \pi = \lambda \Sigma x_M
 \end{aligned}
 $$
 
-Such an implied return is MVO consistent with the market portfolio in the sense that an optimization with the implied return would lead exactly to the market portfolio. This feature makes the implied return a great neutral point especially when you are benchmarked to the market portfolio as we will stay at the market portfolio until there is a strong enough expected return forecast to make us deviate. 
+Such an implied return is MVO consistent with the market portfolio in the sense that an optimization with this implied return would lead exactly to market portfolio. This feature makes the implied return a great neutral point especially when you are benchmarked to the market portfolio. We will stay at the market portfolio until there is strong enough evidence to deviate.
 
-It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some portfolio, the technique is of great help.
+It is also worth to mention that we have other options in addition to the market portfolio. Though losing that bit of theoretical support from CAPM, we can switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmarke portfolio. In the financial market where most portfolio managers are benchmarked to some reference portfolios, the technique is of great help.
 
-Put the prior more formally in mathematics leads to the distribution below. The prior mean $$\pi$$ is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are observing the mean via the security return.
+Put the prior more formally in mathematics leads to the distribution below. The prior mean $$\pi$$ is set to be the implied return extracted from benchmark portfolio. As to the variance around the prior, a covariance matrix proportional to the unconditional covariance matrix is often used $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are logging the expected return via the security return.
 
-We get our information on the expexted return from the 'conservative' side.
+We get our information on the expexted return from the 'conservative' side for a starting point.
 
 $$
 \begin{aligned}
@@ -71,9 +71,9 @@ $$
 
 #### The Investment View (Likelihood) <a name="subparagraph2"></a>
 
-With a reasonable neutral point to start with. We can now turn to the incorporation of investment views/forecast. As I see, this is the most innovative part of the Black-Litterman model. 
+With a reasonable neutral point to start with. We can now turn to the incorporation of investment views/forecast. That is how we make abnormal returns (also probably loss :) ).As I see, this is the most innovative part of the Black-Litterman model. 
 
-The BL model takes the investment view as obersavations with uncentainties ($$\epsilon$$) and further use it as likelihood in a Bayes formula for information combination in the next step. Additionaly, they propose to express all views (absolute or relative) in linear equations with Gaussian noise, which help to expand usage in scenarios of partial views. The diagonal $$\Omega$$ measures the uncertainty around Q and is inverse to investors' confidence on the their views.Under such a paradigm, we can easily express our invesment views via modifying the design matrix P. 
+The BL model takes the investment view as obersavations with uncentainties ($$\epsilon$$) and further use it as likelihood in a Bayes formula for information combination in the next step. Additionaly, they propose to express all views (absolute or relative) in linear equations with Gaussian noise, which help to expand usage in scenarios of partial views. The diagonal $$\Omega$$ measures the uncertainty around Q and is inverse to investors' confidence on the their views. Under such a paradigm, we can easily express our invesment views via modifying the design matrix P. 
 
 
 $$
@@ -89,7 +89,7 @@ Q &= P \mu + \epsilon \\
 \end{aligned}
 $$
 
-It is easy to have an absolute view on a subset of the security universe (a and b's expected return are 5% and 10%)
+For example, for a universe of security a, b, c. It is easy to have an absolute view on a subset of the security universe (like a and b's expected return are 5% and 10%)
 
 $$
 \begin{aligned}
@@ -112,7 +112,7 @@ $$
 \end{aligned}
 $$
 
-It is also quite intuitive to incorporate a bunch of relative forecast such as average expected return of a and b is around c's and a's expected return shold be lower than b's
+It is also quite intuitive to incorporate a bunch of relative forecast (such as average expected return of a and b is around c's and a's expected return shold be lower than b's)
 
 $$
 \begin{aligned}
@@ -137,7 +137,7 @@ $$
 \end{aligned}
 $$
 
-Since $$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Once we condition the distribution on $$\mu$$, we can have a likelihood in terms of investment Q as shown below. 
+Since $$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Once we condition on the distribution on $$\mu$$, we can get a partial likelihood in terms of Q as shown below. 
 
 $$
 \begin{aligned}
@@ -145,13 +145,13 @@ Q|\mu &\sim N(P\mu, \Omega)
 \end{aligned}
 $$
 
-We get our information on the expexted return from the 'adventurous' side.
+This is our information on the expexted return from the 'adventurous' side. 
 
 #### The Posterior <a name="subparagraph3"></a>
 
 **Posterior for $$\mu$$**
 
-With both prior ($$\mu$$) and likelihood and likelihood ($$Q\|\mu$$), a more educated estimate of posterior mean is almost there.
+With both prior ($$\mu$$) and likelihood ($$Q\|\mu$$), a more educated estimate of posterior mean is alomst there.
 
 $$
 \begin{aligned}
@@ -160,7 +160,7 @@ Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
 \end{aligned}
 $$
 
-It takes a few more lines of algebra to pin down the posterior for the mean return $$\mu\|Q$$.
+It takes the standard Bayes formular along side a few more lines of algebra to pin down the posterior for the mean return $$\mu\|Q$$.
 
 $$
 \begin{aligned}
@@ -176,7 +176,7 @@ $$
 
 **Posterior for r**
 
-With the new BL estimate of $$\mu$$, we can finally circle back to the return distribution. 
+With the new BL estimate of $$\mu$$, we can finally circle back to the return distribution, which we cares most. 
 
 $$
 \begin{aligned}
@@ -186,22 +186,23 @@ r|Q, \Omega &\sim N(\mu^{\star}, \Sigma + M) \\
 \end{aligned}
 $$
 
-Compared to the original $$r\|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our estimation $$\mu^{\star}$$. Simultaneously, the variance increased to $$\Sigma + M$$ accounting for volatility around both security return and our forecast on expected return. 
+Compared to the original $$r\|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our estimation $$\mu^{\star}$$. Simultaneously, the variance increased to $$\Sigma + M$$ accounting for our forecast on expected return as well. 
 
 
 ### Deviate From a Neutral Point! <a name="dev"></a>
 
-With all the work up to the point, what do we finally get? Is it consistent with the idea of deviating from a neutral point based on investment views as allerged? 
-
-It would become much clearer after a few more algebra transformations. The BL estimation $$\mu^{\star}$$ is a summation of prior mean return and an adjustment term for investors' view deviating from the prior. $$(Q-P\pi)$$ is simply the difference between investors' view and prior mean. The difference is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
-
-Quite clearly, two factors jointly decide the magnitude of our deviation. Other than the difference between prior mean and investment view, the comparison between prior variance and investment view variance also play a critical part. In an extreme case of infinity variance on investment view or zero variance on prior, the BL estimation is exactly the prior mean estimation. Starting from this point, as variance on prior becomes larger compared to variance on investment view, the BL estimation gradually move torward to a blend with higher emphasis on investors' views. This is an estimation error awared forecast!
+With all the work up to the point, what do we finally get? Is it consistent with the idea of deviating from a neutral point based on investment views as allerged? It would become much clearer after a few more algebra transformations. 
 
 $$
 \begin{aligned}
 \mu^{\star} &= \pi + \Sigma_{\pi}P^T(\Omega + P\Sigma_{\pi}P^T)^{-1} (Q-P\pi) \\
 \end{aligned}
 $$
+
+The BL estimation $$\mu^{\star}$$ can also be represented as the summation of prior mean return and an adjustment term accounting for investors' view to take active risk. $$(Q-P\pi)$$ is simply the difference between investors' view and prior mean. The difference is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
+
+Quite clearly, two factors jointly decide the magnitude of our deviation. Other than the difference between prior mean and investment view, the comparison between prior variance and investment view variance also play a critical part. In an extreme case of infinity variance on investment view or zero variance on prior, the BL estimation is exactly the prior mean estimation. Starting from this point, as variance on prior becomes larger compared to variance on investment view, the BL estimation gradually move torward to a blend with higher emphasis on investors' views. This is an estimation error awared forecast!
+
 
 **The Shrinkage Perspective**
 
@@ -239,7 +240,7 @@ e &\thicksim N(0, \begin{pmatrix}
 \end{aligned}
 $$
 
-ss
+
 
 ### Reference <a name="ref"></a>
   
