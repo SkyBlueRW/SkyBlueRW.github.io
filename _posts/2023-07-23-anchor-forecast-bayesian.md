@@ -239,9 +239,9 @@ e &\thicksim N(0, \begin{pmatrix}
 \end{aligned}
 $$
 
+ss
 
-
-  ### Reference <a name="ref"></a>
+### Reference <a name="ref"></a>
   
   - Black & Litterman (1991): Global Asset Allocation: combining investors views with market equilibrium
   - Idzorek (2007): A Step-By-Step Guide to Black-Litterman Model: Incorporating user-specified confidence level
