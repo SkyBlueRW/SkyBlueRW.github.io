@@ -153,7 +153,7 @@ This represents our valuable information on expected returns from the "adventuro
 
 **Posterior for $$\mu$$**
 
-With both prior ($$\mu$$) and likelihood ($$Q\|\mu$$), a more educated estimate of posterior mean is alomst there.
+With both prior ($$\mu$$) and likelihood ($$Q\|\mu$$) at our disposal, we are on the verge of obtaining a more refined estimate of the posterior mean. 
 
 $$
 \begin{aligned}
@@ -162,7 +162,7 @@ Q|\mu, \Omega &\propto exp((Q - P\mu)^T \Omega^{-1} (Q - P\mu)) \\
 \end{aligned}
 $$
 
-It takes the standard Bayes formular along side a few more lines of algebra to pin down the posterior for the mean return $$\mu\|Q$$.
+It takes the standard Bayes formular along side a few more lines of algebra to derive the posterior for the mean return $$\mu\|Q$$.
 
 $$
 \begin{aligned}
@@ -178,7 +178,7 @@ $$
 
 **Posterior for r**
 
-With the new BL estimate of $$\mu$$, we can finally circle back to the return distribution, which we cares most. 
+Having obtained the new BL estimate of $$\mu$$, we can now revist teh return distribution, which is of utmost importance in application.
 
 $$
 \begin{aligned}
@@ -188,30 +188,42 @@ r|Q, \Omega &\sim N(\mu^{\star}, \Sigma + M) \\
 \end{aligned}
 $$
 
-Compared to the original $$r\|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our estimation $$\mu^{\star}$$. Simultaneously, the variance increased to $$\Sigma + M$$ accounting for our forecast on expected return as well. 
+In comparison to the original $$r\|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our refined estimation $$\mu^{\star}$$. Simultaneously, the variance expands to $$\Sigma + M$$ accounting for uncerntainty around our forecast on expected return as well. 
 
 
 ### Deviate From a Neutral Point! <a name="dev"></a>
 
-With all the work up to the point, what do we finally get? Is it consistent with the idea of deviating from a neutral point based on investment views as allerged? It would become much clearer after a few more algebra transformations. 
+After all the groundwork laid out, the moment of revelation has arrived. Does our final result align with the concept of deviating from a neutral point based on investment views, as proposed? The clarity we seek will unfold through a few more algebraic steps.
 
 $$
 \begin{aligned}
 \mu^{\star} &= \pi + \Sigma_{\pi}P^T(\Omega + P\Sigma_{\pi}P^T)^{-1} (Q-P\pi) \\
+\mu^{\star} &= \pi + Mean Adjustment From View
 \end{aligned}
 $$
 
-The BL estimation $$\mu^{\star}$$ can also be represented as the summation of prior mean return and an adjustment term accounting for investors' view to take active risk. $$(Q-P\pi)$$ is simply the difference between investors' view and prior mean. The difference is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
+The Black-Litterman estimation $$\mu^{\star}$$ can be perceived as sum of prior mean return and an adjustment term accounting for investors' view to active risk-taking. The difference $$(Q-P\pi)$$ reflects the disparity between investors' view and prior mean. The difference is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
 
-Quite clearly, two factors jointly decide the magnitude of our deviation. Other than the difference between prior mean and investment view, the comparison between prior variance and investment view variance also play a critical part. In an extreme case of infinity variance on investment view or zero variance on prior, the BL estimation is exactly the prior mean estimation. Starting from this point, as variance on prior becomes larger compared to variance on investment view, the BL estimation gradually move torward to a blend with higher emphasis on investors' views. This is an estimation error awared forecast!
+Evidently, two factors collaboratively influence the extent of our deviation from prior.In addition to the distinction between the prior mean and the investment view, the comparison between prior variance and investment view variance also play a pivotal part. 
+
+In extreme cases where investment view variance is infinite or prior variance is zero, the BL estimation aligns exactly with the prior mean estimation. Starting from this point, as the investment view variance becomes smaller relative to the prior variance, the BL estimation gradually shifts torward to a blend with higher emphasis on investors' views. This is an estimation error awared forecast!
+
+Feeding this refined estimation into an unconstraint Mean Variance Optimization also results in a deviation from the benchmark portfolio. The investment views are added on top of the benchmark portfolio.
+
+$$
+\begin{aligned}
+x^{\star} &= (\lambda \Sigma)^{-1} \mu^{\star} \\
+&= (\lambda \Sigma)^{-1} (\pi + Mean Adjustment From View) \\
+&= x_0 + x_{Mean Adjustment From view}
+\end{aligned}
+$$
 
 
 **The Shrinkage Perspective**
 
-Another representation providing great intuition can be gained from the shrinkage perspective as well. The BL estimation $$\mu^{\star}$$ can be decomposed into weighted average of prior mean and the return mean estimation implied from investment views $$P\mu_{view} = Q$$. Though $$\mu_{view}$$ is not uniquely defined in case of partial investment views (P is not invertible in the case), it does not hinder us from using it for further intuitions.
+Another representation that offers intuitive insights can be derived from the shrinkage perspective. The BL estimation $$\mu^{\star}$$ can be decomposed into weighted average of prior mean and the return mean estimation implied from investment views $$P\mu_{view} = Q$$. Though $$\mu_{view}$$ is not uniquely defined in case of partial investment views (P is not invertible in the case), it does not hinder us from using it for further insights.
 
-As shown below the summation of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies between the the prior mean and mean forecast from investment views. 
-
+As illustrated below, the sum of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies within the range spanned by the prior mean and the mean forecast derived from investment views.
 
 $$
 \begin{aligned}
@@ -224,7 +236,7 @@ $$
 \end{aligned}
 $$
 
-What is amazing is that such an BL estimation can be obtained from a Weighted Least Square (WLS) regression as below. 
+What is amazing is that such an BL estimation can be obtained from a Weighted Least Square (WLS) regression with variance depiced in noise term. In this context, both prior and investment views are represented as noisy observation. The regression estimator is exactly the BL estimation.
 
 $$
 \begin{aligned}
@@ -242,12 +254,17 @@ e &\thicksim N(0, \begin{pmatrix}
 \end{aligned}
 $$
 
-In such setting, both prior and investment views are taken as noisy obversations. We count on a WLS to get new estimation on expected return based on all such information. 
+
 
 
 ### Summary <a name="summary"></a>
 
-In the blog we have discussed the BL model from the Bayesian angle. I hope you find it a useful tool for expected return estimation as me. The BL model is particularly suit for this task. Looking into the challenges arised from wild estimation error on forecast of expected return. BL provided a way to anchor it to implied return from benchmark. From a investment product perspective, there can hardly any much neutral or safe point as this return. As most if not all portfolio managers are benchmarked to some portfolio (Even hedge fund should be benchmarked to case or zero portfolio?). Even with this anchor, we still need to evaluate the uncertainty around our estimate. The Bayesian framework within the BL model is definitly good for that purpose as well.
+In the blog, we have delved into the Black-Litterman (BL) model from a Bayesian perspective, and I trust you have found it as valuable a tool for expected return estimation as I have. 
+
+The BL model stands out for its exceptional ability to address challenges posed by wild estimation errors when forecasting expected returns. By anchoring the estimation to the implied return from a benchmark, it lays the foundation for a sensible and reliable starting point. Indeed, there can hardly be a better neutral point for mean return than the one implied from a benchmark portfolio. After all, most portfolio managers are benchmarked against specific indices (even hedge funds often have their benchmarks, which can be cash or even a simple zero portfolio).
+
+Even with this anchoring mechanism, we recognize the importance of assessing the uncertainty surrounding our ivesment views/forecast. Here is where the brilliance of the Bayesian framework within the BL model shines through. It empowers us to rigorously evaluate uncertainty and make informed decisions, leveraging the available information in a risk-aware manner.
+
 
 ### Reference <a name="ref"></a>
   
