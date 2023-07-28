@@ -24,7 +24,7 @@ In this blog, let's start the journey with the Bayesian framework initially brou
 
 ### The Bayesian Taste of Black-Litterman <a name="bay"></a>
 
-Looking into the ingredints of security return distribution. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/22/The-Maximum-Diversification-Frontier.html)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainy. 
+Looking into the ingredints of security return distribution. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/22/The-Maximum-Diversification-Frontier.html)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainty. 
 
 $$
 \begin{aligned}
@@ -139,7 +139,7 @@ $$
 \end{aligned}
 $$
 
-Since $$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Conditioning on the distribution on $$\mu$$ allows us to derive a partial likelihood in terms of Q, as demonstrated below:
+Since $$\mu$$ and $$\Omega$$ are the only two source of randomness in the equation. Conditioning on $$\mu$$ allows us to derive a partial likelihood in terms of Q, as demonstrated below:
 
 $$
 \begin{aligned}
@@ -223,7 +223,7 @@ $$
 
 Another representation that offers intuitive insights can be derived from the shrinkage perspective. The BL estimation $$\mu^{\star}$$ can be decomposed into weighted average of prior mean and the return mean estimation implied from investment views $$P\mu_{view} = Q$$. Though $$\mu_{view}$$ is not uniquely defined in case of partial investment views (P is not invertible in the case), it does not hinder us from using it for further insights.
 
-As illustrated below, the sum of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies within the range spanned by the prior mean and the mean forecast derived from investment views. It is a shrinked estimator based on both parts.
+As illustrated below, the sum of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies within the range spanned by the prior mean and the mean forecast derived from investment views. It is a shrinked estimator, which is commonly used statistical technique to trade accuracy with bias.
 
 $$
 \begin{aligned}
