@@ -16,7 +16,7 @@
 
 Mean Variance Optimization stands as the brilliant foundation of almost everything built in the name of modern portfolio theory (Dr. Markowitz, the genius behind this foundation sadly passed away last month. RIP sir). While it can perform quite peculiar confronted with estimation errors on expected return! 
 
-In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we explored the trail of thought aimed at alleviating this issue by reducing our reliance on expected return estimates. While the allure of better forecasting expected returns and reaping the rewards is truly irresistible. Even a slight improvement in estimating expected returns can lead to tremendous financial rewards! Now, the time has come to delve deeper into this line of thinking and enhance our approach to estimating expected returns.
+In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we explored the trail of thought aimed at alleviating this issue by reducing reliance on expected return estimates. While the allure of better forecasting expected returns and reaping the rewards is truly irresistible. Even a slight improvement in estimating expected returns can lead to tremendous financial rewards! Now, the time has come to delve deeper into this line of thinking to enhance our approach for expected return estimation.
 
 Obtaining a reliable estimate of expected returns ranks among the most formidable challenges in the modern world of finance. The volatility and ever-changing nature of security returns create a complex puzzle that hinders the task. In the meanwhile, it is probably this complexity that makes it an intriguing and captivating topic. In this ever-evolving landscape, there is no universally guaranteed or recognized method for accurate estimation, leaving us with ample room for exploration and hang out.
 
@@ -62,7 +62,7 @@ This implied return is MVO consistent with the market portfolio in the sense tha
 
 It is also worth to mention we have other choices of portfolios. Though losing that bit of theoretical support from CAPM, we can switch to other becnmark portfolios for prior extraction. Similarly as the case of the market portfolio, we will get the prior consistent with its corresponding benchmark portfolio. In the financial market where most portfolio managers are benchmarked to some reference portfolios, the technique is of great help.
 
-Formally expressing the prior in mathematics, the prior mean $$\pi$$ is set to be the implied return extracted from benchmark portfolio. As for the variance around the prior, a covariance matrix proportional to the unconditional covariance matrix is often employed $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are logging the expected return via the security return.
+Formally expressing the prior in mathematics, the prior mean $$\pi$$ is set to be the implied return extracted from benchmark portfolio. As for the variance around the prior, a covariance matrix proportional to the return covariance matrix is often employed $$\Sigma_{\pi} = \tau \Sigma$$. $$\tau$$ is generally set to be $$\dfrac{1}{T}$$ or $$\dfrac{1}{T-k}$$ making $$\tau \Sigma$$ the sampling variance when we are logging the expected return via the security return.
 
 By gathering information from the "conservative" side, we establish a robust starting point in the form of the prior distribution.
 
@@ -178,7 +178,7 @@ $$
 
 **Posterior for r**
 
-Having obtained the new BL estimate of $$\mu$$, we can now revist teh return distribution, which is of utmost importance in application.
+Having obtained the new BL estimate of $$\mu$$, we can now revist the return distribution, which is of utmost importance in application.
 
 $$
 \begin{aligned}
@@ -202,11 +202,11 @@ $$
 \end{aligned}
 $$
 
-The Black-Litterman estimation $$\mu^{\star}$$ can be perceived as sum of prior mean return and an adjustment term accounting for investors' view to active risk-taking. The difference $$(Q-P\pi)$$ reflects the disparity between investors' view and prior mean. The difference is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
+The Black-Litterman estimation $$\mu^{\star}$$ can be perceived as sum of prior mean return and an adjustment term accounting for investors' view to active risk-taking. The difference $$(Q-P\pi)$$ reflects the disparity between investors' view and prior mean. It is further scaled by a ratio roughly in the form of $$\dfrac{Prior Variance}{Investment View Variance + Prior Variance}$$ adjusted to the return space.
 
 Evidently, two factors collaboratively influence the extent of our deviation from prior.In addition to the distinction between the prior mean and the investment view, the comparison between prior variance and investment view variance also play a pivotal part. 
 
-In extreme cases where investment view variance is infinite or prior variance is zero, the BL estimation aligns exactly with the prior mean estimation. Starting from this point, as the investment view variance becomes smaller relative to the prior variance, the BL estimation gradually shifts torward to a blend with higher emphasis on investors' views. This is an estimation error awared forecast!
+In extreme cases where investment view variance is infinite or prior variance is zero, the BL estimation aligns exactly with the prior mean estimation. Starting from this point, as the investment view variance becomes smaller relative to the prior variance, the BL estimation gradually shifts torward to a blend with higher emphasis on investors' views. This is an estimation uncertainty awared forecast!
 
 Feeding this refined estimation into an unconstraint Mean Variance Optimization also results in a deviation from the benchmark portfolio. The investment views are added on top of the benchmark portfolio.
 
@@ -223,7 +223,7 @@ $$
 
 Another representation that offers intuitive insights can be derived from the shrinkage perspective. The BL estimation $$\mu^{\star}$$ can be decomposed into weighted average of prior mean and the return mean estimation implied from investment views $$P\mu_{view} = Q$$. Though $$\mu_{view}$$ is not uniquely defined in case of partial investment views (P is not invertible in the case), it does not hinder us from using it for further insights.
 
-As illustrated below, the sum of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies within the range spanned by the prior mean and the mean forecast derived from investment views.
+As illustrated below, the sum of the two weights equal to an identity matrix ($$  W_0 + W_{view} = I $$). The BL estimation lies within the range spanned by the prior mean and the mean forecast derived from investment views. It is a shrinked estimator based on both parts.
 
 $$
 \begin{aligned}
@@ -259,9 +259,9 @@ $$
 
 ### Summary <a name="summary"></a>
 
-In the blog, we have delved into the Black-Litterman (BL) model from a Bayesian perspective, and I trust you have found it as valuable a tool for expected return estimation as I have. 
+In the blog, we have delved into the Black-Litterman (BL) model from a Bayesian perspective, and I trust you will found it as valuable a tool for expected return estimation as I have. 
 
-The BL model stands out for its exceptional ability to address challenges posed by wild estimation errors when forecasting expected returns. By anchoring the estimation to the implied return from a benchmark, it lays the foundation for a sensible and reliable starting point. Indeed, there can hardly be a better neutral point for mean return than the one implied from a benchmark portfolio. After all, most portfolio managers are benchmarked against specific indices (even hedge funds often have their benchmarks, which can be cash or even a simple zero portfolio).
+The BL model stands out for its exceptional ability to address challenges posed by wild estimation errors when forecasting expected returns. By anchoring the estimation to the implied return from a benchmark, it lays the foundation for a sensible and reliable starting point. Indeed, there can hardly be a better neutral point for mean return than the one implied from a benchmark portfolio. After all, most portfolio managers are benchmarked against specific portfolios (even hedge funds often have their benchmarks, which can be cash or even a simple zero portfolio).
 
 Even with this anchoring mechanism, we recognize the importance of assessing the uncertainty surrounding our ivesment views/forecast. Here is where the brilliance of the Bayesian framework within the BL model shines through. It empowers us to rigorously evaluate uncertainty and make informed decisions, leveraging the available information in a risk-aware manner.
 
