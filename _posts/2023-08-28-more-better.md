@@ -4,7 +4,7 @@
 
 
 - [Introduction](#introduction)
-- [Maximum Sharpe Ratio Portfolio](#msrp)
+- [Reference](#ref)
 
 
 
@@ -16,3 +16,11 @@
 - statistical: high variance/ diversified information bagging/ensemble .....
 - finance: different information for different horizon
 - variance calibration for BL tau/ omega / other implementation
+
+
+
+
+### Reference <a name="ref"></a>
+
+- Walters (2013): The Factor Tau in the Black-Litterman Model
+- Idzorek (2007): A step-by-step guide to the Black-Litterman model
