@@ -12,6 +12,7 @@ title: Portfolio Construction
 
 [Not (entirely) a BlackBox: Optimization Constraint Attribution](https://skybluerw.github.io/2023/04/15/constraint-attribution.html)
 
+[Anchor Your Forecast the Bayesian Way](https://skybluerw.github.io/2023/07/27/anchor-forecast-bayesian.html)
 
 ## Asset Allocation
 
