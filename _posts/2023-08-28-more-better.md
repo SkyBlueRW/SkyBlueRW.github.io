@@ -11,8 +11,8 @@
 ### Introduction <a name="introduction"></a>
 
 
-
-- variance calibration for BL tau/ omega
+- more variance
 - strategy of combine more information
 - statistical: high variance/ diversified information bagging/ensemble .....
 - finance: different information for different horizon
+- variance calibration for BL tau/ omega / other implementation
