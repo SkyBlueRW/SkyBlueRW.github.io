@@ -1,6 +1,6 @@
 #
 
-## The more the better?
+## Combine Information for return forecast: The more the better?
 
 
 - [Introduction](#introduction)
