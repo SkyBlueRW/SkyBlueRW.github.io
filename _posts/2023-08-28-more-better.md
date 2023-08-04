@@ -18,7 +18,11 @@
 - variance calibration for BL tau/ omega / other implementation
 
 
+special forecast: the one consistent with benchmark/market portfolio
 
+tau
+
+BL think uncertainty in mean return is much smaller than uncertainty in return. tau should be small
 
 ### Reference <a name="ref"></a>
 
