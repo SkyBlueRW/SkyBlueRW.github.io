@@ -18,6 +18,12 @@
 - variance calibration for BL tau/ omega / other implementation
 
 
+$$
+\begin{aligned}
+\mu^{\star}_{100} &= \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi)
+\end{aligned}
+$$
+
 special forecast: the one consistent with benchmark/market portfolio
 
 tau
