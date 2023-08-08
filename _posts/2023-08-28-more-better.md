@@ -42,4 +42,6 @@ BL think uncertainty in mean return is much smaller than uncertainty in return. 
 ### Reference <a name="ref"></a>
 
 - Walters (2013): The Factor Tau in the Black-Litterman Model
+- Walters (2007): The Black-Litterman Model in Details
 - Idzorek (2007): A step-by-step guide to the Black-Litterman model
+- Haesen, Hallerbach, Markwat & Molenaar (2017): Enhancing Risk Parity By Including Views
