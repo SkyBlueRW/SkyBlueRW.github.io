@@ -11,11 +11,20 @@
 ### Introduction <a name="introduction"></a>
 
 
-- more variance
-- strategy of combine more information
-- statistical: high variance/ diversified information bagging/ensemble .....
-- finance: different information for different horizon
-- variance calibration for BL tau/ omega / other implementation
+last BL, not mention calibration of variance related parameters. this blog talks about the calibration in practice. furthermore, this strategy of combine information underlying BL.
+
+
+calibration
+
+- tau
+- specifically omega
+- specify omega in terms of tau for subjective view / Idozek. Active risk proportional
+- boils down to shrink / with risk parity
+
+
+strategy a challenge task, the hope rely on combine multiple information source. from a finance perspective, different information for different horizon. from a statistical perspective, return for high variance, diversified information bagging/ensemble. 
+
+prior a special one 
 
 
 $$
