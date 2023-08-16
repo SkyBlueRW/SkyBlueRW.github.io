@@ -26,10 +26,16 @@ strategy a challenge task, the hope rely on combine multiple information source.
 
 prior a special one 
 
+implied confidence level
+
+$$
+\tau \Sigma
+$$
+as standard error of estimate of the implied equilibrium return 
 
 $$
 \begin{aligned}
-\mu^{\star}_{100} &= \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi)
+\mu^{\star}_{100} &= \pi + \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi)
 \end{aligned}
 $$
 
