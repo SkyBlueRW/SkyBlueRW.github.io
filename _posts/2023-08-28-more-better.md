@@ -45,7 +45,7 @@ $$
 
 $$
 \begin{aligned}
-x^{\star}_{100} &= (\lambda \Sigma)^{-1} \mu^{\star}\\
+x^{\star}_{100} &= (\lambda \Sigma)^{-1} \mu^{\star}_{100}\\
 x^{\star}_0 &= (\lambda \Sigma)^{-1} \pi = x_0\\
 \end{aligned}
 $$
