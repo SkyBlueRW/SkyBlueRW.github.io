@@ -33,15 +33,24 @@ implied confidence level
 $$
 \tau \Sigma
 $$
+
 as standard error of estimate of the implied equilibrium return 
 
 $$
 \begin{aligned}
-\mu^{\star}_{100} &= \pi + \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi) \\
-\mu^{\star}_{0} &= \pi \\
-\w_{100} &= (\lambda \Sigma)^{-1} \mu^{\star}_{100}\\
+\mu^{\star}_{100} &= \pi + \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi)\\
+\mu^{\star}_0 &= \pi
 \end{aligned}
 $$
+
+$$
+\begin{aligned}
+x^{\star}_{100} &= (\lambda \Sigma)^{-1} \mu^{\star}\\
+x^{\star}_0 &= (\lambda \Sigma)^{-1} \pi = x_0\\
+\end{aligned}
+$$
+
+
 
 special forecast: the one consistent with benchmark/market portfolio
 
