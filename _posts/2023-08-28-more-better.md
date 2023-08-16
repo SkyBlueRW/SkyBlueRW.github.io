@@ -13,6 +13,8 @@
 
 last BL, not mention calibration of variance related parameters. this blog talks about the calibration in practice. furthermore, this strategy of combine information underlying BL.
 
+weighted average
+
 
 calibration
 
@@ -35,7 +37,9 @@ as standard error of estimate of the implied equilibrium return
 
 $$
 \begin{aligned}
-\mu^{\star}_{100} &= \pi + \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi)
+\mu^{\star}_{100} &= \pi + \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi) \\
+\mu^{\star}_{0} &= \pi \\
+\w_{100} &= (\lambda \Sigma)^{-1} \mu^{\star}_{100}\\
 \end{aligned}
 $$
 
