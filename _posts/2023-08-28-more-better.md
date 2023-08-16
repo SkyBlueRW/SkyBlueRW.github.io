@@ -38,6 +38,7 @@ as standard error of estimate of the implied equilibrium return
 
 $$
 \begin{aligned}
+\mu^{\star} &= \pi + \Sigma_{\pi}P^T(\Omega + P\Sigma_{\pi}P^T)^{-1} (Q-P\pi) \\
 \mu^{\star}_{100} &= \pi + \tau\Sigma P^T (P\tau \Sigma P^T)^{-1}(Q - P\pi)\\
 \mu^{\star}_0 &= \pi
 \end{aligned}
@@ -49,6 +50,21 @@ x^{\star}_{100} &= (\lambda \Sigma)^{-1} \mu^{\star}_{100}\\
 x^{\star}_0 &= (\lambda \Sigma)^{-1} \pi = x_0\\
 \end{aligned}
 $$
+
+Idzorek specify confidence in terms of weight. Also in terms of active risk. Back out w required for this deviation. solving for w with least squares method.
+
+idea
+
+$$
+\begin{aligned}
+confidence &= \dfrac{\hat{x} - x^{\star}_0}{x^{\star}_{100} - x^{\star}_0} \\
+\Omega &= \alpha P\SigmaP^T \\
+\downarrow & \mu^{\star} = \pi + \tau \SigmaP^T(\Omega + \tauP\SigmaP^T)^{-1} (Q-P\pi) \\
+\mu^{\star} &= \pi + \dfrac{1}{1 + \alpha}(P^{-1}Q - \pi)\\
+\hat{x} &= (\lambda \Sigma)^{-1} (\pi + \dfrac{1}{1 + \alpha}(P^{-1}Q - \pi))\\
+\end{aligned}
+$$
+
 
 
 
