@@ -1,6 +1,6 @@
 #
 
-## Combine Information for return forecast: The more the better?
+## The Practical Side of Black-Litterman and More
 
 
 - [Introduction](#introduction)
@@ -9,6 +9,7 @@
 
 
 ### Introduction <a name="introduction"></a>
+
 
 
 last BL, not mention calibration of variance related parameters. this blog talks about the calibration in practice. furthermore, this strategy of combine information underlying BL.
