@@ -6,11 +6,18 @@
 - [Introduction](#introduction)
 - [Reference](#ref)
 
+**flow**
 
+- open. very useful to combine forecast
+- look further. practical choice
+- no update on covariance -> \tau not necessary
+- strategy a challenge task, the hope rely on combine multiple information source. from a finance perspective, different information for different horizon. from a statistical perspective, return for high variance, diversified information bagging/ensemble. 
 
 ### Introduction <a name="introduction"></a>
 
+The forecast of expected return stands as the most critical and challenging task in the investment management. .
 
+In a previous blog ([Anchor Your Forecast the Bayesian Way](https://skybluerw.github.io/2023/07/27/anchor-forecast-bayesian.html)), we have discussed the bayesian framework underlying the Black-Litterman Model to combine various forecast on top of 
 
 last BL, not mention calibration of variance related parameters. this blog talks about the calibration in practice. furthermore, this strategy of combine information underlying BL.
 
