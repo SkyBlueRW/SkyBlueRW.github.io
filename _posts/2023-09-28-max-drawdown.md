@@ -11,6 +11,8 @@ worst case scenario: buying at peak and selling at bottom
 ### Introduction <a name="introduction"></a>
 
 
+non-normality and volatility clustering
+
 CPPI constant portion portfolio insurance
 
 
