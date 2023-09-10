@@ -1,6 +1,6 @@
 #
 
-## Combine Information for return forecast: The more the better?
+## From Volatility to Maximum Drawdown
 
 
 - [Introduction](#introduction)
