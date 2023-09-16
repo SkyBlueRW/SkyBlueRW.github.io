@@ -23,4 +23,4 @@ $$
 
 ### Reference <a name="ref"></a>
 
-- Grossman & Zhou (1993): Optimal Investment Strategies for Controlling Draw-downs
+- Jones & Pewsey (2009): Sinh-arcsinh distributions
