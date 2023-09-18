@@ -8,6 +8,11 @@
 
 worst case scenario: buying at peak and selling at bottom
 
+extremely sensitive. Normal distribution -> distribution of drawdown is function of variance. Effective handling of MDD with constraits on volatility itself. 
+
+penalize negative skew and positive kurtosis
+
+
 ### Introduction <a name="introduction"></a>
 
 
