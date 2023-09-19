@@ -35,8 +35,8 @@ $$
 
 $$
 \begin{aligned}
-Z &\sim N(0, 1) \\
-X &= \mu + \sigma * Sinh((Arcsinh(Z) + skewness) * tailweight) * \dfrac{2}{Sinh(Arcsinh(2) * tailweight)}
+Z_t &\sim N(0, 1) \\
+r_t &= \mu + \sigma * Sinh((Arcsinh(Z_t) + skewness) * tailweight) * \dfrac{2}{Sinh(Arcsinh(2) * tailweight)}
 \end{aligned}
 $$
 
