@@ -16,6 +16,10 @@ penalize negative skew and positive kurtosis
 ### Introduction <a name="introduction"></a>
 
 
+![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/ip.html)
+
+
+
 $$
 \begin{aligned}
 r_t &= \mu + \sigma_t e_t \\
