@@ -16,9 +16,10 @@ penalize negative skew and positive kurtosis
 ### Introduction <a name="introduction"></a>
 
 
-![BL](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/ip.html)
+![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_gaussian.png)
 
 
+**AR(1)**
 
 $$
 \begin{aligned}
