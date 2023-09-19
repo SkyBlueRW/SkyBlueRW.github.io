@@ -31,6 +31,16 @@ e_t &\sim N(0, 1) \\
 $$
 
 
+**skew kurt**
+
+$$
+\begin{aligned}
+Z &\sim N(0, 1) \\
+X &= \mu + \sigma * Sinh((Arcsinh(Z) + skewness) * tailweight) * \dfrac{2}{Sinh(Arcsinh(2) * tailweight)}
+\end{aligned}
+$$
+
+
 ### Reference <a name="ref"></a>
 
 - Jones & Pewsey (2009): Sinh-arcsinh distributions
