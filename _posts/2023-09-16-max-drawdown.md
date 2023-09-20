@@ -18,6 +18,7 @@ penalize negative skew and positive kurtosis
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_gaussian.png)
 
+https://en.wikipedia.org/wiki/Edgeworth_series
 
 **AR(1)**
 
