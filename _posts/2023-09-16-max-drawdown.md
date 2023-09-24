@@ -22,7 +22,7 @@ penalize negative skew and positive kurtosis
 ![Moment](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_moment.png)
 
 
-![Auto](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_ts.png)
+![Auto](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_tsc.png)
 
 https://en.wikipedia.org/wiki/Edgeworth_series
 
