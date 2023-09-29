@@ -50,5 +50,6 @@ $$
 
 ### Reference <a name="ref"></a>
 
-- Jones & Pewsey (2009): Sinh-arcsinh distributions
+- Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns
 - Magdon-Ismail, Atiya, Pratap & Abu-Mostafa (2004): On the Maximum Drawdown of a Brownian Motion
+  
