@@ -8,9 +8,9 @@
 
 ### Introduction <a name="introduction"></a>
 
-Among the large group of risk mearues, volatility seems to be the one that raides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties and can be extensively analyzed and efficeintly controlled in portfolio construction ...
+Among the large group of risk mearues, volatility seems to be the one that rides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties and can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
-The benefit of applying volatility to measure risk can goes on and on. While it is definitely not the perfect risk measure that summarizes all aspects of investment risk. It does not align well with how pepole would expect about risk in practice by recoganizing both unexpected loss and unexpected profit as risk, the latter is more likely to be called as "a nice surprise".
+The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole traditionally view risk. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is more seen as "a nice surprise". 
 
 
 
