@@ -13,10 +13,7 @@ Among the large group of risk mearues, volatility seems to be the one that rides
 
 The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole traditionally view risk. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is more seen as "a nice surprise". 
 
-In this blog, I'd like to start the discussion on one of the most widely used downside risk measures: the maximum drawdown. 
-
-### Maximum Drawdown: The Approach <a name="approach"></a>
-
+Maximum Drawdown pop out in the case as one of the most popular used risk measure that focuses specifically on the downsize risk. 
 
 $$
 \begin{aligned}
@@ -25,6 +22,9 @@ DD_t &= \dfrac{M_t - P_t}{M_t} \\
 MDD_t &= \max_{\mu \in [0, t]}{DD_{\mu}}
 \end{aligned}
 $$
+
+### Maximum Drawdown: The Approach <a name="approach"></a>
+
 
 
 
