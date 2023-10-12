@@ -13,7 +13,7 @@ Among the large group of risk mearues, volatility seems to be the one that rides
 
 The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole traditionally view risk. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is more seen as "a nice surprise". 
 
-Maximum Drawdown pop out in the case as one of the most popular used risk measure that focuses specifically on the downsize risk. 
+Maximum Drawdown pop out in the case as one of the most popular used risk measure that focuses specifically on the downsize risk. It represents the worst possible loss an investor can expect on one investment: buy at peak and exit at trough.
 
 $$
 \begin{aligned}
