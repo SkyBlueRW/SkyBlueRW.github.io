@@ -15,7 +15,7 @@ The benefit of using volatility to measure risk can goes on and on. While volati
 
 Maximum Drawdown pop out in the case as one of the most popular used risk measure focusing on downsize of investment. Investors pay close attention to maximum drawdown as it represents the worst possible loss one can expect on investment: buy at peak and exit at trough.
 
-In this blog, I'd like to kick off the discussion on this metric widely quoted in all kinds of investment reporting materials. We will discuss about potential strategies to approach such a path dependent measure in the first section and look into some key driving factors impacting maximum drawdown, strating from IID Gaussian and further expanding to the 'wild world' with time dependence and non-Gaussian distributions. It is also worth to mention that lots of the settings in the simulation are from this wonderful article (Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns)[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864]
+In this blog, I'd like to kick off the discussion on this metric widely quoted in all kinds of investment reporting materials. We will discuss about potential strategies to approach such a path dependent measure in the first section and look into some key driving factors impacting maximum drawdown, strating from IID Gaussian and further expanding to the 'wild world' with time dependence and non-Gaussian distributions. It is also worth to mention that lots of the settings in the simulation are from this wonderful article [Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864)
 
 
 
