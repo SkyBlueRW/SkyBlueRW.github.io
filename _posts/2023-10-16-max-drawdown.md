@@ -11,11 +11,11 @@
 
 Among the large group of risk mearues, volatility seems to be the one that rides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties and can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
-The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole traditionally view risk. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is more seen as "a nice surprise". 
+The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole traditionally view risk. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is usually seen as "a nice surprise". 
 
-Maximum Drawdown pop out in the case as one of the most popular used risk measure that focuses on the downsize of investment. Investors pay close attention to maximum drawdown as it represents the worst possible loss an one can expect on investment: buy at peak and exit at trough.
+Maximum Drawdown pop out in the case as one of the most popular used risk measure focusing on downsize of investment. Investors pay close attention to maximum drawdown as it represents the worst possible loss one can expect on investment: buy at peak and exit at trough.
 
-In this blog, I'd like to kick off the discussion on this metric widely quoted in .
+In this blog, I'd like to kick off the discussion on this metric widely quoted in all kinds of investment reporting materials. We will discuss about potential strategies to approach such a path dependent measure in the first section and look into some key driving factors impacting maximum drawdown, strating from IID Gaussian and further expanding to the 'wild world' with time dependence and non-Gaussian distributions. It is also worth to mention that lots of the settings in the simulation are from this wonderful article (Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns)[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864]
 
 
 
