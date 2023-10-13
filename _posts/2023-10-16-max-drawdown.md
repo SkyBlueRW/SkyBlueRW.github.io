@@ -12,11 +12,11 @@
 
 Among the large group of risk mearues, volatility seems to be the one that rides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties and can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
-The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole traditionally view risk. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is usually seen as "a nice surprise". 
+The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is usually seen as "a nice surprise". 
 
 Maximum Drawdown pop out in the case as one of the most popular used risk measure focusing on downside of an investment. Investors pay close attention to maximum drawdown as it represents the worst possible loss one can expect on investment: buy at peak and exit at trough.
 
-In this blog, I'd like to kick off the discussion on this metric widely quoted in all kinds of investment reporting materials. We will discuss potential strategies to approach such a path dependent measure in the first section and look into some key driving factors impacting maximum drawdown in the second section, strating from IID Gaussian and further expanding to the 'wild world' of time dependence and non-Gaussian distributions. Lots of the settings in the simulation of section 2 are from this wonderful article [Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864)
+In this blog, I'd like to kick off the discussion on this metric, which is widely quoted in all kinds of investment reporting materials. We will discuss one strategy to approach such a path dependent measure in the first section and look into some key driving factors impacting maximum drawdown in the second section, strating from IID Gaussian and further expanding to the 'wild world' of time dependence and non-Gaussian distributions. Lots of the settings in the simulation of section 2 are from this wonderful article [Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864)
 
 
 
@@ -32,11 +32,9 @@ MDD_t &= \min_{\mu \in [0, t]}{DD_{\mu}}
 \end{aligned}
 $$
 
-What poses some challenge is that maximum drawdown does not really bear nice analytical properties. It dependes on both return distribution and the realization sequence! Accounting for this time dependence nature, we would expect maximum drawdown is a random variable jointly governned by return distribution and investment horizon. 
+What poses challenges is that maximum drawdown does not really bear nice analytical properties. Other than return distribution, the sequence of the realized return also matters! Accounting for this time dependence nature, we would expect maximum drawdown is a random variable jointly governned by return distribution and investment horizon. 
 
-However, there is generally no closed form  solutions to describe the distribution of maximum drawdown even with the return distribution and investment horizon. 
-
-even intuitive discussion.
+There is generally no closed form  solutions to describe the distribution of maximum drawdown even with the return distribution and investment horizon clearly defined. Magdon-Ismail et al (2004) derived the cumulative distribution function of MDD under the assumption that the net value of investment follows Brownian motion with zero drift. While even this result under a quite ideal assumption is too complex to proceed with further intuitive discussions.
 
 
 
