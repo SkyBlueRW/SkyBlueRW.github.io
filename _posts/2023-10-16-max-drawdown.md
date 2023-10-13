@@ -5,7 +5,7 @@
 
 - [Introduction](#introduction)
 - [Maximum Drawdown: The Approach](#approach)
-- [Driving Factors: A Simulation View]
+- [MDD Greek: A Simulation View](#factor)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
