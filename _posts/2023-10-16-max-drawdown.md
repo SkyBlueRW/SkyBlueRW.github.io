@@ -41,7 +41,9 @@ What poses challenges is that maximum drawdown does not really bear nice analyti
 There is generally no closed form  solutions to describe the distribution of maximum drawdown even with the return distribution and investment horizon clearly defined. Magdon-Ismail et al (2004) derived the cumulative distribution function of MDD under the assumption that the net value of investment follows Brownian motion with zero drift. While even this result under a quite ideal assumption is too complex to proceed with further intuitive discussions.
 
 
+**Bottom Up**
 
+**Top Down**
 
 
 worst case scenario: buying at peak and selling at bottom
@@ -89,4 +91,5 @@ $$
 
 - Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns
 - Magdon-Ismail, Atiya, Pratap & Abu-Mostafa (2004): On the Maximum Drawdown of a Brownian Motion
+- Palomar's Slide on [Portfolio Optimization with Alternative Risk Measures](https://palomar.home.ece.ust.hk/MAFS5310_lectures/slides_CVaR_portfolio.html#1)
   
