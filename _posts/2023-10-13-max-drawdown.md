@@ -38,7 +38,7 @@ There is generally no closed form solutions to describe this distribution. Magdo
 
 Even we are able to forecast the maximum drawdown for each seucity rather confidently, the maximum drawdown of a portfolio takes more than maximum drawdown of each constituent to aggregate. To control the maximum drawdown explicitly in a portfolio constuction process, we actually need to forecast the return series for every constituent within the universe (N*T), which is obviously not realistic. 
 
-
+We will have to circle around and handle the maxdrawdown indirectly. In portfolio construction, we could include
 
 
 
