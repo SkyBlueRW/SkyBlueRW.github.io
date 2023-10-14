@@ -10,7 +10,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-Among the large group of risk mearues, volatility seems to be the one that rides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties hence can be extensively analyzed and efficeintly controlled in portfolio construction ...
+Among the large group of risk mearues, volatility seems to be the one that rides the wave, with good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties hence can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
 The benefit of using volatility to measure risk can go on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both abnormal loss and profit as risk, the latter of which is usually seen as "a nice surprise". 
 
@@ -86,6 +86,11 @@ r_t &= \mu + \sigma * Sinh((Arcsinh(Z_t) + skewness) * tailweight) * \dfrac{2}{S
 \end{aligned}
 $$
 
+
+
+sum
+
+take as much insights from IID Gaussian and be aware of ...
 
 ### Reference <a name="ref"></a>
 
