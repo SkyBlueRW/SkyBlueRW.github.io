@@ -12,16 +12,15 @@
 
 Among the large group of risk mearues, volatility seems to be the one that rides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties and can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
-The benefit of using volatility to measure risk can goes on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is usually seen as "a nice surprise". 
+The benefit of using volatility to measure risk can go on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is usually seen as "a nice surprise". 
 
-Maximum Drawdown pop out in the case as one of the most popular used risk measure focusing on downside of an investment. Investors pay close attention to maximum drawdown with all kinds of investment reporting materials quoting it.
+Maximum Drawdown pop out in the case as one of the most popular risk measure focusing on downside of an investment. It is quoted in all kinds of investment reporting materials. Investors pay close attention to it as it represents the worst possible scenario one can encounter on an investment: buy at peak and exit at trough.
 
 In this blog, I'd like to kick off the discussion on this metric. The first section would be devoted to ways to approch such measure with rather poor analytical properties. In the following section, we will look into some key driving factors impacting maximum drawdown, starting from the standard IID Gassuan and futher expanding to the 'wild world' of time dependence and non-Gaussian distribution. Lots of the settings in the simulation of section 2 are from this wonderful article [Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864)
 
 ### Maximum Drawdown: The Approach <a name="approach"></a>
 
-The calculation of Maximum Dradwon ($$MDD_t$$) is unambigious. Given the time series net value of a strategy/security ($$P_t$$), we can firstly identify the cumulative peak ($$M_t$$) and then easily calculate the drawdown ($$D_t$$) as the loss compared to that cumulative peak for each moment . The shapest drawdown has ever happend is the Maximum Drawdown.
-
+The definition and ex-post calculation of Maximum Dradwon ($$MDD_t$$) is unambigious. Given the time series of net value on a strategy/security ($$P_t$$), we can firstly identify the peak ($$M_t$$) up to the point t and then easily calculate the drawdown ($$D_t$$) as the loss compared to that cumulative peak for each moment. The shapest drawdown has ever happend is the Maximum Drawdown.
 
 $$
 \begin{aligned}
@@ -31,14 +30,17 @@ MDD_t &= \min_{\mu \in [0, t]}{DD_{\mu}}
 \end{aligned}
 $$
 
-Clearly the order of the return
+Clearly, not only the return distribution but also the time dependece and length of the return occurence matters. Longer investment horizon is more likely to trigger more severe drawdown, as is a stream of continous loss. We would expect maximum drawdown is a random variable jointly determined by the stochastic process of the return and the investment horizon. 
 
-hard to combine 
-hence the drawdown ($$DD_t$$) for each time on the investment (P). The sharpest drawdown ever happend is the Maximum Drawdown.
+Ideally, we should derive the distribution of the maximum drawdown in terms of the return process and horizon, study this distribution well and control it within acceptable range with this knowledge in portfolio construction and risk management. Unfortunately, this comprehensive approach is generally not viable for maximum drawdown. 
 
-What poses challenges is that maximum drawdown does not really bear nice analytical properties. Other than return distribution, the sequence of the realized return also matters! Accounting for this time dependence nature, we would expect maximum drawdown is a random variable jointly governned by return distribution and investment horizon. 
+There is generally no closed form solutions to describe this distribution. Magdon-Ismail et al (2004) derived the cumulative distribution function of maximum drawdown under the assumption that the net value of investment follows Brownian motion with zero drift. While even this result under quite ideal assumptions is too complex to proceed with further intuitive discussions or incorporation in portfolio optimization.
 
-There is generally no closed form  solutions to describe the distribution of maximum drawdown even with the return distribution and investment horizon clearly defined. Magdon-Ismail et al (2004) derived the cumulative distribution function of MDD under the assumption that the net value of investment follows Brownian motion with zero drift. While even this result under a quite ideal assumption is too complex to proceed with further intuitive discussions.
+Even we are able to forecast the maximum drawdown for each seucity rather confidently, the maximum drawdown of a portfolio takes more than maximum drawdown of each constituent to aggregate. To control the maximum drawdown explicitly in a portfolio constuction process, we actually need to forecast the return series for every constituent within the universe (N*T), which is obviously not realistic. 
+
+
+
+
 
 
 **Bottom Up**
