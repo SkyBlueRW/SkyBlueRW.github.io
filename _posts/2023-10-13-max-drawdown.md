@@ -14,7 +14,7 @@ Among the large group of risk mearues, volatility seems to be the one that rides
 
 The benefit of using volatility to measure risk can go on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both abnormal loss and profit as risk, the latter of which is usually seen as "a nice surprise". 
 
-Maximum Drawdown pops out in the case as one of the most popular risk measure focusing on downside of an investment. It is quoted in all kinds of investment reporting materials. Investors pay close attention to it as it represents the worst possible scenario one can encounter on an investment: buying at peak and exiting at trough.
+Maximum Drawdown pops out in the case as one of the most popular risk measures focusing on downside of an investment. It is quoted in all kinds of investment reporting materials. Investors pay close attention to it as it represents the worst possible scenario one can encounter on an investment: buying at peak and exiting at trough.
 
 In this blog, I'd like to kick off the discussion on maximum drawdown. The first section delves into ways to approch such a measure with rather poor analytical properties. Subsequently, we look into some pivotal factors influencing maximum drawdown via simulations, starting from the standard IID Gassuan and futher expanding to the 'wild world' of time dependence and non-Gaussian distribution. Many of the insights in the second section are drawn from the informative article [Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864)
 
