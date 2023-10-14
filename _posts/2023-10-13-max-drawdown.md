@@ -40,10 +40,12 @@ It comes with quite some challeges to work with maximum drawdown. While defintel
 
 For example, during the portfolio optimization, we can penalize other characteristics likely raising the magnitude of maximum drawdown at the same time much easier to incorporate (such as negative skewness, excessive kurtosis, etc...). Additionaly, though it is hard to get a closed form function to desrcibe the distribution of maximum drawdown, it is comparably easier to design risky investment policies to have maximum drawdown under control. Grossman & Zhou (1993) provides the optimal investment policy under the Gaussian assumption. Such an investment policy enables investors to achieve optimal expected utility growth with hard maximum drawdown constraint via dynamic adjustment on holding of risky assets. 
 
-To further elaborate this srategy to put it in application, we need to get more sense about maximum drawdown in absence of a distribution description. We need to know more about what factors impact the maximum drawdown in what way. That's what we are gonna to dig a little bit with simulation in the next section.
+To further elaborate this srategy to put it in application, we need to get more sense about maximum drawdown. We need to know more about what factors impact the maximum drawdown in what way. That's what we are gonna to dig a little bit with simulation in the next section.
 
 
 ### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
+
+In absence of a analytical description on the distribution of maximum drawdown. We can swing the hammer of simulation to get to know the driving factors and their 
 
 **The 'Good Old' IID Gaussian**
 
