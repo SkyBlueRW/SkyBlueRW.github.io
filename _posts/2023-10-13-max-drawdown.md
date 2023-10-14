@@ -4,15 +4,15 @@
 
 
 - [Introduction](#introduction)
-- [Maximum Drawdown: The Approach](#approach)
-- [MDD Greek: A Simulation View](#factor)
+- [Maximum Drawdown: The Way to Approach](#approach)
+- [Maximum Drawdown Greek: A Simulation View](#factor)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
 
 Among the large group of risk mearues, volatility seems to be the one that rides the wave. And it is for good reasons. It roots deeply in the asset pricing theories linking closely to the concept of both risk and reward. It can be estimated and forecasted rather reliably in application. It bears nice analytical properties and can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
-The benefit of using volatility to measure risk can go on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both unexpected loss and unexpected profit as risk, the latter of which is usually seen as "a nice surprise". 
+The benefit of using volatility to measure risk can go on and on. While volatility does not align exactly with how pepole view risk traditionally. It recoganize both abnormal loss and profit as risk, the latter of which is usually seen as "a nice surprise". 
 
 Maximum Drawdown pop out in the case as one of the most popular risk measure focusing on downside of an investment. It is quoted in all kinds of investment reporting materials. Investors pay close attention to it as it represents the worst possible scenario one can encounter on an investment: buy at peak and exit at trough.
 
@@ -30,15 +30,13 @@ MDD_t &= \min_{\mu \in [0, t]}{DD_{\mu}}
 \end{aligned}
 $$
 
-Clearly, not only the return distribution but also the time dependece and length of the return occurence matters. Longer investment horizon is more likely to trigger more severe drawdown, as is a stream of continous loss. We would expect maximum drawdown is a random variable jointly determined by the stochastic process of the return and the investment horizon. 
+Clearly, not only the return distribution but also the time dependece and length of the return occurence matter. Longer investment horizon is more likely to trigger more severe drawdown, as is a stream of continous loss. We would expect maximum drawdown is a random variable jointly determined by the stochastic process of the return and the investment horizon. 
 
-Ideally, we should derive the distribution of the maximum drawdown in terms of the return process and horizon, study this distribution well and control it within acceptable range with this knowledge in portfolio construction and risk management. Unfortunately, this comprehensive approach is generally not viable for maximum drawdown. 
+Ideally, we should derive the distribution of the maximum drawdown in terms of the return process and horizon, study this distribution thoroughly and restrict it within acceptable range with this knowledge in portfolio construction and risk management. Unfortunately, this comprehensive approach is generally not viable for maximum drawdown. 
 
-There is generally no closed form solutions to describe this distribution. Magdon-Ismail et al (2004) derived the cumulative distribution function of maximum drawdown under the assumption that the net value of investment follows Brownian motion with zero drift. While even this result under quite ideal assumptions is too complex to proceed with further intuitive discussions or incorporation in portfolio optimization.
+There is generally no closed form solutions to describe this distribution. Magdon-Ismail et al (2004) derived the cumulative distribution function of maximum drawdown under the assumption that the net value of investment follows Brownian motion with zero drift. While even this CDF function under quite ideal assumptions is too complex to proceed with further intuitive discussions or incorporation in portfolio optimization. Additionally, the maximum drawdown of a portfolio takes more than maximum drawdown of each constituent to aggregate. To control the maximum drawdown explicitly in a portfolio constuction process, we actually need to forecast the return series for every constituent within the universe (N*T), which is obviously not realistic. 
 
-Even we are able to forecast the maximum drawdown for each seucity rather confidently, the maximum drawdown of a portfolio takes more than maximum drawdown of each constituent to aggregate. To control the maximum drawdown explicitly in a portfolio constuction process, we actually need to forecast the return series for every constituent within the universe (N*T), which is obviously not realistic. 
-
-We will have to circle around and handle the maxdrawdown indirectly. In portfolio construction, we could include
+Rather we might try to circle around to handle the maximum drawdown indirectly. During portfolio optimization, we can penalize other measures closely linked to maximum drawdown but much easier to hanlde such as skewness and kurtosis. 
 
 
 
@@ -54,6 +52,7 @@ extremely sensitive. Normal distribution -> distribution of drawdown is function
 
 penalize negative skew and positive kurtosis
 
+### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
 
 
 
