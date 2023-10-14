@@ -36,21 +36,12 @@ Ideally, we should derive the distribution of the maximum drawdown in terms of t
 
 There is generally no closed form solutions to describe this distribution. Magdon-Ismail et al (2004) derived the cumulative distribution function of maximum drawdown under the assumption that the net value of investment follows Brownian motion with zero drift. While even this CDF function under quite ideal assumptions is too complex to proceed with further intuitive discussions or incorporation in portfolio optimization. Additionally, the maximum drawdown of a portfolio takes more than maximum drawdown of each constituent to aggregate. To control the maximum drawdown explicitly in a portfolio constuction process, we actually need to forecast the return series for every constituent within the universe (N*T), which is obviously not realistic. 
 
-Rather we might try to circle around to handle the maximum drawdown indirectly. During portfolio optimization, we can penalize other measures closely linked to maximum drawdown but much easier to hanlde such as skewness and kurtosis. 
+It comes with quite some challeges to analyze the maximum drawdown. While defintely it is not a desperate battle. Rather we might try to circle around and tacle the maximum drawdown indirectly. Like during the portfolio optimization, we can penalize other characteristics likely raising the magnitude of maximum drawdown at the same time much easier to incorporate (such as negative skewness, excessive kurtosis, etc...). Additionaly, though it is hard to get a closed form function to desrcibe the distribution of maximum drawdown, it is comparably easier to design risky investment policies to have maximum drawdown under control. Grossman & Zhou (1993) provides the optimal investment policy under the Gaussian assumption. Such an investment policy enables investors to achieve optimal expected utility growth with hard maximum drawdown constraint via dynamic adjustment on holding of risky assets. 
 
 
 
+We would like to know how does mean and variance impact maximum drawdown in the under Gaussian and how other key characteristics 
 
-**Bottom Up**
-
-**Top Down**
-
-
-worst case scenario: buying at peak and selling at bottom
-
-extremely sensitive. Normal distribution -> distribution of drawdown is function of variance. Effective handling of MDD with constraits on volatility itself. 
-
-penalize negative skew and positive kurtosis
 
 ### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
 
@@ -92,5 +83,6 @@ $$
 
 - Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns
 - Magdon-Ismail, Atiya, Pratap & Abu-Mostafa (2004): On the Maximum Drawdown of a Brownian Motion
+- Grossman & Zhou (1993): Optimal Investmetn Strategies For Controlling Drawdowns
 - Palomar's Slide on [Portfolio Optimization with Alternative Risk Measures](https://palomar.home.ece.ust.hk/MAFS5310_lectures/slides_CVaR_portfolio.html#1)
   
