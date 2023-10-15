@@ -45,19 +45,31 @@ To delve deeper into the practical application of these efforts, we must develop
 
 ### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
 
-In absence of an analytical description on the distribution of maximum drawdown. We can swing the hammer of simulation to identify relavant return characteritics and determine the sensitivity of the probability of reaching a specific maximum drawdown level given these characteristics. As Van Hemert et al (2020), the return series of an 10 year investment with 0.5 Shapre and 10% volatility is used as the baseline case. Such monthly return is simulated 100,000 times to get the empirical distribution of the maximum drawdown. 
+In absence of an analytical description on the distribution of maximum drawdown. We can swing the hammer of simulation to identify relavant return characteritics and determine the sensitivity of the probability of reaching a specific maximum drawdown level given these characteristics. 
 
-On top of this baseline case, we vary volatility, Shapre, time horizon, add time dependence and deviation in higher moments to measure the impact within and beyond IID Gaussian. The results are displayed in probabilities of breaching maximum drawdown of 1, 2, 3, 4 volatility for each case to show the sensitivity broadly. As shown below, lower sharpe ratio, longer investment horizon, higher auto-correlation in return/volatility and higher kurtosis would all raise the magnitude of the maximum drawdown.
+**The baseline**
+
+As Van Hemert et al (2020), we use the return series of an 10 year investment with 0.5 Shapre and 10% volatility as the baseline case. Such monthly return is simulated 100,000 times to get the empirical distribution of the maximum drawdown. The probability to breach maximum drawdown of 1, 2, 3, 4 (-10%, -20%, -30% and -40%) volatility are 97.%, 43%, 9.9% and 1.5% respectively.
+
+On top of this baseline case, we vary volatility, Shapre ratio, time horizon, add time dependence and deviation in higher moments to measure the impact within and beyond IID Gaussian. The results are also displayed in probabilities of breaching maximum drawdown of 1, 2, 3, 4 volatility for comparable view. As shown below, lower sharpe ratio, longer investment horizon, higher auto-correlation in return/volatility and higher kurtosis would all raise the magnitude of the maximum drawdown.
 
 **The 'Good Old' IID Gaussian**
 
+Starting within the 'Good Old World' of IID Gaussian where mean and variance uniquely define the return generation. The only 3 factors impacting maximum drawdown should be the two moments along with the investment horizon. In the 3 charts below, we have presented the change on the baseline case by varying volatility, shapre ratio (as mean) or time horizon and holding the other two constant.
+
+It is interesting to see that when epxressing maximum drawdown thresholds as multiples of the volatility, the change of volatility itself almost impose no impact on these thresholds. The slight downward slope is due to the geometrical compounding return aggregation.
+
+Otherwise, there is no surprise to see that as we decraese the sharpe ratio or increase the investment horizon, we expect increasing probabilitys breaching each threshold of the maximum drawdown. 
+
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_gaussian.png)
 
-**The non-Gaussian Perspect**
+**Higher Moments**
+
+
 
 ![Moment](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_moment.png)
 
-**The non-IID Perspective**
+****
 
 ![Auto](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_tsc.png)
 
