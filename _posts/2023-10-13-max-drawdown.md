@@ -65,7 +65,9 @@ Otherwise, there is no surprise to see that as we decraese the sharpe ratio or i
 
 **Higher Moments**
 
+It is quite rare to find one investment whose return follows the IID Gaussian. In most cases, we would expect more or less deviation in terms of distribution of time dependence. To mimick the difference in higher moments of the distribution, we have used the Gram-Charlier expansion to add deviation of skewness and kurtosis on top of the baseline case. 
 
+The good news is that such a expansion can help us to set skew and kurtosis locally wihout impacting the mean and variance leaving us room to compare apple with apples. While the bad news is that to have a well defined distribution, we can not deviate too much in terms of skew and kurtosis. As shown below, on our base case of 0.5 Sharpe ratio and 10% volatility, we are able varying the skewness from -0.3 to 0.3 and excess kurtosis from 0 to 6. During this range, the change of skewness does not pose much impact while the raise of kurtosis posese quite significant raise on the maximum drawdown. 
 
 ![Moment](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_moment.png)
 
