@@ -37,11 +37,11 @@ Ideally, we would derive the distribution of the Maximum Drawdown in terms of th
 
 There is generally no closed-form solutions to describe the distribution of Maximum Drawdown. [Magdon-Ismail et al (2004)](https://www.jstor.org/stable/3215821?typeAccessWorkflow=login) derived the cumulative distribution function of Maximum Drawdown under the assumption that the net value of investment follows a Brownian motion with zero drift. However, even this cumulative distribution function, under quite ideal assumptions, is too complex for intuitive discussions or inclusion in portfolio optimization. Moreover, calculating the ex-ante Maximum Drawdown of a portfolio requires more than the Maximum Drawdown of each constituent; it calls for forecasting the return series for every constituent within the universe (N*T), an impractical endeavor.
 
-Nevertheless, all hope is not lost. Despite these challenges, we can circle around and address Maximum Drawdown indirectly. For instance, during portfolio optimization, we can penalize other characteristics that tend to increase the magnitude of the Maximum Drawdown while being easier to incorporate, such as negative skewness or excessive kurtosis.
+Nevertheless, the hope is not lost. Despite these challenges, we can circle around and address Maximum Drawdown indirectly. For instance, during portfolio optimization, we can penalize other characteristics that tend to increase the magnitude of the Maximum Drawdown while being easier to incorporate, such as negative skewness or excessive kurtosis.
 
 Additionally, while obtaining a closed-form function to describe the distribution of the Maximum Drawdown is elusive, designing investment policies to control it is comparatively more attainable. [Grossman & Zhou (1993)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1993.tb00044.x) offered an optimal investment policy under Gaussian assumptions, allowing investors to achieve optimal expected utility growth with a hard constraint on Maximum Drawdown through dynamic adjustments in the holdings of risky assets.
 
-To delve deeper into the practical application of these efforts, we must develop a more profound understanding of the Maximum Drawdown and the factors that influence it. This is precisely what we aim to explore through simulations in the next section.
+To delve deeper into the practical application of these efforts. We would appreciate to have some impressions about relavant factors and their impact on Maximum Drawdown. This is precisely what we aim to explore through simulations in the next section.
 
 ### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
 
@@ -49,35 +49,30 @@ In absence of an analytical description on the distribution of maximum drawdown.
 
 **The baseline**
 
-As Van Hemert et al (2020), we use the return series of an 10 year investment with 0.5 Shapre and 10% volatility as the baseline case. Such monthly return is simulated 100,000 times to get the empirical distribution of the maximum drawdown. The probability to breach maximum drawdown of 1, 2, 3, 4 (-10%, -20%, -30% and -40%) volatility are 97.%, 43%, 9.9% and 1.5% respectively.
+As Van Hemert et al (2020), we have used the return series generated for 10 year investment with 0.5 Shapre and 10% volatility as the baseline case. Such monthly return is simulated 100,000 times to get the empirical distribution of the maximum drawdown. The probability to breach maximum drawdown thresholds of 1, 2, 3, 4 (-10%, -20%, -30% and -40%) volatility are 97.%, 43%, 9.9% and 1.5% respectively.
 
-On top of this baseline case, we vary volatility, Shapre ratio, time horizon, add time dependence and deviation in higher moments to measure the impact within and beyond IID Gaussian. The results are also displayed in probabilities of breaching maximum drawdown of 1, 2, 3, 4 volatility for comparable view. As shown below, lower sharpe ratio, longer investment horizon, higher auto-correlation in return/volatility and higher kurtosis would all raise the magnitude of the maximum drawdown.
+On top of this baseline case, we vary volatility, Shapre ratio, time horizon, add time dependence and deviation in higher moments to measure the impact within and beyond IID Gaussian. The results are also displayed in probabilities of breaching maximum drawdown of 1, 2, 3, 4 volatility for comparable view. As detailed below, lower sharpe ratio, longer investment horizon, higher auto-correlation in return and volatility and higher kurtosis would all raise the magnitude of the maximum drawdown.
 
 **The 'Good Old' IID Gaussian**
 
-Starting within the 'Good Old World' of IID Gaussian where mean and variance uniquely define the return generation. The only 3 factors impacting maximum drawdown should be the two moments along with the investment horizon. In the 3 charts below, we have presented the change on the baseline case by varying volatility, shapre ratio (as mean) or time horizon and holding the other two constant.
+Starting within the 'Good Old World' of IID Gaussian where mean and variance uniquely define the return generation. The only 3 factors impacting maximum drawdown should be mean, variance along with the investment horizon. In the 3 charts below, we have presented the change on the baseline case by varying volatility, shapre ratio (as mean) or time horizon and holding the other two constant.
 
-It is interesting to see that when epxressing maximum drawdown thresholds as multiples of the volatility, the change of volatility itself almost impose no impact on these thresholds. The slight downward slope is due to the geometrical compounding return aggregation.
+It is interesting to see that when epxressing maximum drawdown thresholds as multiples of the volatility, the change of volatility itself almost impose no impact on probabilities breaching these thresholds. The slight downward slope is due to the geometrical compounding return aggregation. Restriction on volatility alone should pose reasonable restrict on the maximum drawdown in the IID Gaussian case. It also justify Van Hermer et al (2020)'s choice to express maximum drawdown threshold in terms of multiple to volatility.
 
-Otherwise, there is no surprise to see that as we decraese the sharpe ratio or increase the investment horizon, we expect increasing probabilitys breaching each threshold of the maximum drawdown. 
+Otherwise, there is no surprise to see probabilities breaching maximum drawdown thresholds incerasing as the decrease of Sharpe ratio or the increase of the investment horizon.
+
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_gaussian.png)
 
 **Higher Moments**
 
-It is quite rare to find one investment whose return follows the IID Gaussian. In most cases, we would expect more or less deviation in terms of distribution of time dependence. To mimick the difference in higher moments of the distribution, we have used the Gram-Charlier expansion to add deviation of skewness and kurtosis on top of the baseline case. 
+It is quite rare to find one investment whose return follows the IID Gaussian. In most cases, we would expect more or less deviation in terms of distribution or time dependence. To mimick the difference in higher moments of the distribution, we have used the Gram-Charlier expansion to add deviation of skewness and kurtosis on top of the baseline case and examine their impact on the maximum drawdown.
 
-The good news is that such a expansion can help us to set skew and kurtosis locally wihout impacting the mean and variance leaving us room to compare apple with apples. While the bad news is that to have a well defined distribution, we can not deviate too much in terms of skew and kurtosis. As shown below, on our base case of 0.5 Sharpe ratio and 10% volatility, we are able varying the skewness from -0.3 to 0.3 and excess kurtosis from 0 to 6. During this range, the change of skewness does not pose much impact while the raise of kurtosis posese quite significant raise on the maximum drawdown. 
+To ensure a well defined distribution, we vary the skewness from -0.3 to 0.3 and excess kurtosis from 0 to 6 to ensure the mean and variance aligned with the baseline case for a fair comparison. During this range, the change of skewness does not pose much impact while the raise of kurtosis posese quite significant raise on the maximum drawdown. While it is not saying that skewness does not play a role in the determination of maximum drawdown after all we are restricted by the simulation methods to set it wihint a quite narrow range. 
 
 ![Moment](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_moment.png)
 
-****
-
-![Auto](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_tsc.png)
-
-https://en.wikipedia.org/wiki/Edgeworth_series
-
-**AR(1)**
+**Time Dependence**
 
 $$
 \begin{aligned}
@@ -88,15 +83,10 @@ e_t &\sim N(0, 1) \\
 \end{aligned}
 $$
 
+![Auto](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_tsc.png)
 
-**skew kurt**
 
-$$
-\begin{aligned}
-Z_t &\sim N(0, 1) \\
-r_t &= \mu + \sigma * Sinh((Arcsinh(Z_t) + skewness) * tailweight) * \dfrac{2}{Sinh(Arcsinh(2) * tailweight)}
-\end{aligned}
-$$
+
 
 
 
