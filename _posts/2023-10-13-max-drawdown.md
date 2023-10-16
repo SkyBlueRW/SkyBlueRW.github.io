@@ -45,45 +45,45 @@ To delve deeper into the practical application of these efforts. We would apprec
 
 ### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
 
-In absence of an analytical description on the distribution of maximum drawdown. We can swing the hammer of simulation to identify relavant return characteritics and determine the sensitivity of the probability of reaching a specific maximum drawdown level given these characteristics. 
+In the absence of an analytical description of the Maximum Drawdown distribution, we turn to the tool of simulation. Swinging the hammer of simulation, we can get a sense ofhow the probability of reaching a specific Maximum Drawdown level is influenced by some key relavant attributes.
 
-**The baseline**
+**Setting the Baseline**
 
-As Van Hemert et al (2020), we have used the return series generated for 10 year investment with 0.5 Shapre and 10% volatility as the baseline case. Such monthly return is simulated 100,000 times to get the empirical distribution of the maximum drawdown. The probability to breach maximum drawdown thresholds of 1, 2, 3, 4 (-10%, -20%, -30% and -40%) volatility are 97.%, 43%, 9.9% and 1.5% respectively.
+Following Van Hemert et al. (2020), we start with a baseline return generation process with 0.5 Shapre and 10% volatility. Such monthly return of 10 years is simulated 100,000 times to build the empirical distribution of the maximum drawdown. The probabilities of breaching Maximum Drawdown thresholds of 1, 2, 3, and 4 multiples of volatility (corresponding to -10%, -20%, -30%, and -40% volatility) are found to be 97.%, 43%, 9.9%, and 1.5%, respectively.
 
-On top of this baseline case, we vary volatility, Shapre ratio, time horizon, add time dependence and deviation in higher moments to measure the impact within and beyond IID Gaussian. The results are also displayed in probabilities of breaching maximum drawdown of 1, 2, 3, 4 volatility for comparable view. As detailed below, lower sharpe ratio, longer investment horizon, higher auto-correlation in return and volatility and higher kurtosis would all raise the magnitude of the maximum drawdown.
+Based on this baseline, we introduce variations in volatility, Sharpe ratio, time horizon, and incorporate time dependence, along with deviations in higher moments to assess their impact. We aim to get some sense on how these changes influence the probability of breaching Maximum Drawdown thresholds of 1, 2, 3, and 4 sigmas. As we delve into the details below, we discover that a lower Sharpe ratio, an extended investment horizon, higher auto-correlation in returns and volatility, and increased kurtosis all contribute to larger Maximum Drawdowns.
+
 
 **The 'Good Old' IID Gaussian**
 
-Starting within the 'Good Old World' of IID Gaussian where mean and variance uniquely define the return generation. The only 3 factors impacting maximum drawdown should be mean, variance along with the investment horizon. In the 3 charts below, we have presented the change on the baseline case by varying volatility, shapre ratio (as mean) or time horizon and holding the other two constant.
+Starting with the 'Good Old World' of IID Gaussian where mean and variance are the sole architects of return generation. Here, only three factors impact Maximum Drawdown: mean, variance, and investment horizon. In the three charts below, we explore the effect of changing volatility, Sharpe ratio (as a measure of mean), or time horizon while keeping the other two constant.
 
-It is interesting to see that when epxressing maximum drawdown thresholds as multiples of the volatility, the change of volatility itself almost impose no impact on probabilities breaching these thresholds. The slight downward slope is due to the geometrical compounding return aggregation. Restriction on volatility alone should pose reasonable restrict on the maximum drawdown in the IID Gaussian case. It also justify Van Hermer et al (2020)'s choice to express maximum drawdown threshold in terms of multiple to volatility.
+One intriguing observation is that when we express Maximum Drawdown thresholds as multiples of volatility, changes in volatility have almost no impact on the probabilities of breaching these thresholds. The slight downward slope can be attributed to the compounding nature of return aggregation. This suggests that imposing constraints on volatility alone can effectively limit Maximum Drawdown in the IID Gaussian scenario, also justify Van Hermer et al.'s (2020) choice to express Maximum Drawdown thresholds as multiples of volatility.
 
-Otherwise, there is no surprise to see probabilities breaching maximum drawdown thresholds incerasing as the decrease of Sharpe ratio or the increase of the investment horizon.
+On the other hand, it's no surprise to see that probabilities of breaching Maximum Drawdown thresholds increase as Sharpe ratio decreases or investment horizon lengthens.
 
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_gaussian.png)
 
 **Higher Moments**
 
-It is quite rare to find one investment whose return follows the IID Gaussian. In most cases, we would expect more or less deviation in terms of distribution or time dependence. To mimick the difference in higher moments of the distribution, we have used the Gram-Charlier expansion to add deviation of skewness and kurtosis on top of the baseline case and examine their impact on the maximum drawdown.
+In reality, it's quite rare to encounter an investment whose returns follow the IID Gaussian. In most cases, we expect some degree of deviation in terms of distribution or time dependence. To emulate these differences in higher moments of the distribution, we employ the Gram-Charlier expansion to introduce skewness and kurtosis deviations to the baseline case, examining their impact on Maximum Drawdown.
 
-To ensure a well defined distribution, we vary the skewness from -0.3 to 0.3 and excess kurtosis from 0 to 6 to ensure the mean and variance aligned with the baseline case for a fair comparison. During this range, the change of skewness does not pose much impact while the raise of kurtosis posese quite significant raise on the maximum drawdown. While it is not saying that skewness does not play a role in the determination of maximum drawdown after all we are restricted by the simulation methods to set it wihint a quite narrow range. 
+To ensure a well-defined distribution, we vary skewness from -0.3 to 0.3 and excess kurtosis from 0 to 6, aligning the mean and variance with the baseline case for a fair comparison. Within this range, changes in skewness don't significantly impact Maximum Drawdown, whereas increases in kurtosis lead to a substantial rise in Maximum Drawdown. However, this doesn't imply that skewness doesn't influence Maximum Drawdown. Our simulations are restricted to a relatively narrow range, making it challenging to explore the full range of skewness's impact.
 
 ![Moment](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_moment.png)
 
 **Time Dependence**
 
-Last but not least, we have added the time dependence of return and local volatility on the baseline case.
+Last but certainly not least, we introduce time dependence to return and local volatility in the baseline case.
 
-
-Specifically we have simulated the return with auto-correlation ranging from -0.5 to 0.5 with the following formular, the paramter $$\rho$$ is the auto-correlation added. As clearly shown in the first chart below, as we increase the autocorrelation, the probabilities of reaching corresponding maximum drawdown increase accordingly.
+Specifically, we simulate returns with auto-correlation ranging from -0.5 to 0.5 using the following formula, where the parameter $$\rho$$ represents the auto-correlation added. As shown in the first chart below, increasing the auto-correlation corresponds to an increase in the probabilities of reaching corresponding Maximum Drawdown thresholds.
 
 $$
 r_t = (1-\rho) \mu + \rho r_{t-1} + \sqrt{1 - \rho ^ 2} \sigma
 $$
 
-An ARCH(1) process is used to mimic the volatility clustering seen in lots of asset classes. The larger the paramter $$\alpha_1$$ the more volatility clustering was added to the case. Similarly, we can see the probability increase with more volatility clustering.
+To replicate the volatility clustering seen in many asset classes, we use an ARCH(1) process. The larger the parameter $$alpha_1$$, the more volatility clustering we introduce. Similarly, we observe an increase in probabilities with greater volatility clustering.
 
 $$
 \begin{aligned}
