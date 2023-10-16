@@ -74,6 +74,17 @@ To ensure a well defined distribution, we vary the skewness from -0.3 to 0.3 and
 
 **Time Dependence**
 
+Last but not least, we have added the time dependence of return and local volatility on the baseline case.
+
+
+Specifically we have simulated the return with auto-correlation ranging from -0.5 to 0.5 with the following formular, the paramter $$\rho$$ is the auto-correlation added. As clearly shown in the first chart below, as we increase the autocorrelation, the probabilities of reaching corresponding maximum drawdown increase accordingly.
+
+$$
+r_t = (1-\rho) \mu + \rho r_{t-1} + \sqrt{1 - \rho ^ 2} \sigma
+$$
+
+An ARCH(1) process is used to mimic the volatility clustering seen in lots of asset classes. The larger the paramter $$\alpha_1$$ the more volatility clustering was added to the case. Similarly, we can see the probability increase with more volatility clustering.
+
 $$
 \begin{aligned}
 r_t &= \mu + \sigma_t e_t \\
