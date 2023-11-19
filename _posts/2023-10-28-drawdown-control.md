@@ -26,9 +26,12 @@ $$
 \begin{aligned}
 dP_t &= P_t(\mu dt + \sigma dZ_t) \\
 dW_t &= X_t (\mu dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t ((\mu - r)dt + \sigma dZ_t)
+     &= r W_t dt + X_t ((\mu - r)dt + \sigma dZ_t) \\
+X_t &= dfrac{\mu - r}{\sigma^2} \drac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t)
 \end{aligned}
 $$
+
+
 
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
