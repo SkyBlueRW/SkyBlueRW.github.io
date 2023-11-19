@@ -12,6 +12,12 @@ For stochastic optimal control problems, the auxiliary optimal control problem i
 
 ### Introduction <a name="introduction"></a>
 
+$$
+\begin{aligned}
+U(W) &= \dfrac{W^{1-A}}{1-A} \\ 
+
+\end{aligned}
+$$
 
 
 
