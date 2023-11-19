@@ -16,4 +16,8 @@ For stochastic optimal control problems, the auxiliary optimal control problem i
 
 
 ### Reference <a name="ref"></a>
+- Grossman & Zhou (1993): Optimal Investment Strategies For Controlling Drawdowns
+- Cvitanic & Karatzas (1994): On Portfolio Optimization Under "Drawdown" Constraints
+- Vecer (2006): Maximum Drawdown and Directional Trading
+- Busseti, Ryu & Boyd (2016): Risk-Constrained Kelly Gambling
 
