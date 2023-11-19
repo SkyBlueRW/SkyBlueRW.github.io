@@ -19,7 +19,7 @@ U(W) &= \dfrac{W^{1-A}}{1-A} \\
 \end{aligned}
 $$
 
-
+![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
 ### Reference <a name="ref"></a>
 - Grossman & Zhou (1993): Optimal Investment Strategies For Controlling Drawdowns
