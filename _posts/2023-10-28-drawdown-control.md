@@ -15,7 +15,7 @@ For stochastic optimal control problems, the auxiliary optimal control problem i
 $$
 \begin{aligned}
 U(W) &= \dfrac{W^{1-A}}{1-A} \\ 
-
+W^{\pi}_t &= Max_{0\leq s\leq t}(W^{\pi}_s e^{-r(t-s)}) \\
 \end{aligned}
 $$
 
