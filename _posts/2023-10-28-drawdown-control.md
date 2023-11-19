@@ -17,6 +17,7 @@ $$
 U(W) &= \dfrac{W^{1-A}}{1-A} \\ 
 W^{\pi}_t &= Max_{0\leq s\leq t}(W^{\pi}_s e^{-r(t-s)}) \\
 & lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)] \\
+& lim_{T\to \infty} \dfrac{1}{T}lnE[W^{1-A}_T]
 \end{aligned}
 $$
 
