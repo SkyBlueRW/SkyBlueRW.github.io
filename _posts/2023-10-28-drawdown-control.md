@@ -24,10 +24,10 @@ $$
 
 $$
 \begin{aligned}
-dP_t &= P_t(\mu dt + \sigma dZ_t) \\
-dW_t &= X_t (\mu dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t ((\mu - r)dt + \sigma dZ_t) \\
-X_t &= \dfrac{\mu - r}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t)
+dP_t &= P_t((\mu + r) dt + \sigma dZ_t) \\
+dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
+     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
+X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t)
 \end{aligned}
 $$
 
