@@ -7,7 +7,7 @@
 - [More](#more)
 - [Reference](#ref)
 
-As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention when evaluating an investment, is not obvious to analyze or control in practice.  
+As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of an investment, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate drawdown risk in the portfolio construction process. 
 
 continuously reallocating wealth between a risk asset distributed with Geometric Brownian Motion and a riskless asset.
 
