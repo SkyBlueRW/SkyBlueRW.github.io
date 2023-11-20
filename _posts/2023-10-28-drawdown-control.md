@@ -7,6 +7,7 @@
 - [More](#more)
 - [Reference](#ref)
 
+As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention when evaluating an investment, is not obvious to analyze or control in practice.  
 
 continuously reallocating wealth between a risk asset distributed with Geometric Brownian Motion and a riskless asset.
 
