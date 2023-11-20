@@ -3,6 +3,8 @@
 ## Risk discipline for Drawdown Control
 
 - [Introduction](#introduction)
+- [Optimal Holding in Risky Asset](#optimal)
+- [More](#more)
 - [Reference](#ref)
 
 
@@ -11,6 +13,13 @@ continuously reallocating wealth between a risk asset distributed with Geometric
 For stochastic optimal control problems, the auxiliary optimal control problem is a convex relaxation of the original problem. In the case of stochastic minimization problems, the relaxation gives provable lower bounds on the true optimal value
 
 ### Introduction <a name="introduction"></a>
+
+
+### Optimal Holding in Risky Asset <a name="optimal"></a>
+
+
+### More <a name="more"></a>
+
 
 $$
 \begin{aligned}
