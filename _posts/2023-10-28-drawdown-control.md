@@ -46,6 +46,8 @@ $$
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
+source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
+
 ### Reference <a name="ref"></a>
 - Grossman & Zhou (1993): Optimal Investment Strategies For Controlling Drawdowns
 - Cvitanic & Karatzas (1994): On Portfolio Optimization Under "Drawdown" Constraints
