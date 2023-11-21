@@ -9,7 +9,7 @@
 
 As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of an investment, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate drawdown risk in the portfolio construction process. 
 
-continuously reallocating wealth between a risk asset distributed with Geometric Brownian Motion and a riskless asset.
+The content of this blog is strucutred around the Grossman & Zhou (1993) where they proposed to continuously reallocating wealth between a risk asset and a riskless asset to achieve largest possible expected utility growth .
 
 For stochastic optimal control problems, the auxiliary optimal control problem is a convex relaxation of the original problem. In the case of stochastic minimization problems, the relaxation gives provable lower bounds on the true optimal value
 
