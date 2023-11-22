@@ -9,7 +9,9 @@
 
 As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of an investment, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate drawdown risk in the portfolio construction process. 
 
-The content of this blog is strucutred around the Grossman & Zhou (1993) where they proposed to continuously reallocating wealth between a risk asset and a riskless asset to achieve largest possible expected utility growth .
+It is true that the judgement on market condition and strategy efficacy at critical point is what matters the most for the control of maximum drawdown. While handy tools is also critical to trasnlate the judgement into languanges of portfolios or even fill in the place in absence with strong judgement. 
+
+In this blog, we'd like to look into some useful tools for the mission of maximum drawdown control. Specifically, we looked into the discipline on risky asset holding that Grossman & Zhou (1993).
 
 For stochastic optimal control problems, the auxiliary optimal control problem is a convex relaxation of the original problem. In the case of stochastic minimization problems, the relaxation gives provable lower bounds on the true optimal value
 
