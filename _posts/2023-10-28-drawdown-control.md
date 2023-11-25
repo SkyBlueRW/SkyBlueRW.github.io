@@ -38,7 +38,7 @@ $$
 \begin{aligned}
 \mathop{Max}_{X_t} &
 \mathop{lim}_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)] \\
-& P[W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{r(t-s)}, 0\leq t\leq \infty] = 1 
+& P[W_t \geq \alpha e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs}, 0\leq t\leq \infty] = 1 
 \end{aligned}
 $$
 
