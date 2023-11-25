@@ -7,7 +7,7 @@
 - [More](#more)
 - [Reference](#ref)
 
-As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate drawdown risk in the portfolio construction process. 
+As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate explicit control on drawdown risk in the portfolio construction process. 
 
 It is true that the judgement on market condition and strategy efficacy at critical point is what matters the most for the control of maximum drawdown. While handy tools are also critical to link the judgement with drawdown risk, to trasnlate the judgement into languanges of portfolios or even to fill in the place in absence with confident judgement. 
 
