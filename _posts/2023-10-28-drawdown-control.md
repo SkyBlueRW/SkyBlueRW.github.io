@@ -21,7 +21,7 @@ The proportion is jointly determined by expected return, volatility of the risky
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
-To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$\alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value acounted for current wealth and previous high water, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
+To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$W_t$$ is the wealth at time t, $$\alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value acounted for current wealth and previous high water, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
 
 $$
@@ -32,6 +32,7 @@ $$
 \end{aligned}
 $$
 
+This is not an easy problem to solve. Luckily we are standing on the shoulder of the giants :) Grossman & Zhou (1993) and Cvitanic & Karatzas (1994) solved the abovementioned stochastic control problem and derived the optiomal holding.
 
 $$
 \begin{aligned}
@@ -40,7 +41,7 @@ M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-
+Despite the lenghThe optimal holding $$X_t$$ consists of two parts, $$W_t - \alpha M_t$$ measures how far is the current wealth from the largest acceptable drawdown level. A constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of this difference should be invested in risky asset for an optimal portfolio.
 
 
 
@@ -48,7 +49,11 @@ $$
 
 ### More <a name="more"></a>
 
+**Another Contigent Claim!**
+
 Assuming that the risk asset follows a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
+
+**Not Almost Sure**
 
 $$
 \begin{aligned}
