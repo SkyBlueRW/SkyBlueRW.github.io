@@ -7,20 +7,20 @@
 - [More](#more)
 - [Reference](#ref)
 
-As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate explicit control on drawdown risk in the portfolio construction process. 
-
-It is true that the judgement on market condition and strategy efficacy at critical point is what matters the most for the control of maximum drawdown. While handy tools are also critical to link the judgement with drawdown risk, to trasnlate the judgement into languanges of portfolios or even to fill in the place in absence with confident judgement. 
-
-In this blog, we'd like to look into some useful tools for the mission of maximum drawdown control. Specifically, we looked into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case with one riskless asset and one risky asset, a fixed proportion of the difference between current wealth and acceptable maximum drawdown should be spent on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
-
-Such a discipline can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and set the leverage on the risk asset mix with reference to the discipline. It can also be expanded to case of multiple risky assets with changing parameters for more deliberated adjustment.
-
 ### Introduction <a name="introduction"></a>
+
+As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention at evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate explicit control on drawdown risk in the portfolio construction process. 
+
+It is true that the judgement on market condition and strategy efficacy at critical point is what matters the most for the control of maximum drawdown. While handy and explicit tools that can help to translate these judgements into languages of portfolios or even to fill in the place in the absence of strong judgement are also critical. In this blog, we'd like to look into some useful tools with the aim. 
+
+Specifically, we will look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a fixed proportion of the difference between current wealth and acceptable maximum drawdown can be spent on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
+
+The proportion is determined by expected return, volatility and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risk asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi asset class hence supporting more delibrated management of strategies and asset classes.
 
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
-For stochastic optimal control problems, the auxiliary optimal control problem is a convex relaxation of the original problem. In the case of stochastic minimization problems, the relaxation gives provable lower bounds on the true optimal value
+
 
 ### More <a name="more"></a>
 
