@@ -35,7 +35,8 @@ To account for maximum drawdown explicitly, Grossman & Zhou (1993) set the quest
 
 $$
 \begin{aligned}
-\mathop{Max}_{X_t}{\mathop{lim}_{T\to \infty}}
+\mathop{Max}_{X_t}
+\mathop{lim}_{T\to \infty}
 \end{aligned}
 $$
 
