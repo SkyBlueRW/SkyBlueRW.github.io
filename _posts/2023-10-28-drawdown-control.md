@@ -29,7 +29,7 @@ dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
 \end{aligned}
 $$
 
-To account for maximum drawdown explicitly, Grossman & Zhou (1993) set the question by adding a hard constraint on maximum drawdown ($$W_t \geq \alpha Max_{0\leq s\leq t}(W^{\pi}_s)$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$\stackunder{lim}_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
+To account for maximum drawdown explicitly, Grossman & Zhou (1993) set the question by adding a hard constraint on maximum drawdown ($$W_t \geq \alpha Max_{0\leq s\leq t}(W^{\pi}_s)$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$\mathop{lim}_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
 
 The drawdown is defined to account for the time value since the the time of peak($$W^{\pi}_t = Max_{0\leq s\leq t}(W^{\pi}_s e^{r(t-s)}) $$)
 
