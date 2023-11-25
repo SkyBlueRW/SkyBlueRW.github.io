@@ -9,7 +9,6 @@
 
 ### Introduction <a name="introduction"></a>
 
-$$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$
 
 As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on factors impacting the maximum drawdown, we will explore some viable ways to incorporate controls on drawdown risk explicitly in the portfolio management process. 
 
@@ -22,16 +21,7 @@ The proportion is jointly determined by expected return, volatility of the risky
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
-The risky asset is assumed to follow a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$). With $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the following stochastic process:
-
-$$
-\begin{aligned}
-dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
-\end{aligned}
-$$
-
-To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$\alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value acounted for current wealth and previous high water, we are essentially conducting the following optimization problem.
+To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$\alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value acounted for current wealth and previous high water, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
 
 $$
@@ -43,10 +33,29 @@ $$
 $$
 
 
+$$
+\begin{aligned}
+X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t) \\
+M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
+\end{aligned}
+$$
+
+
+
+
 
 
 
 ### More <a name="more"></a>
+
+Assuming that the risk asset follows a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
+
+$$
+\begin{aligned}
+dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
+     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
+\end{aligned}
+$$
 
 
 $$
