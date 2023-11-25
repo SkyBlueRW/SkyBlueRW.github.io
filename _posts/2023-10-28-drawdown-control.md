@@ -9,6 +9,7 @@
 
 ### Introduction <a name="introduction"></a>
 
+$$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$
 
 As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on factors impacting the maximum drawdown, we will explore some viable ways to incorporate controls on drawdown risk explicitly in the portfolio management process. 
 
@@ -30,7 +31,7 @@ dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
 \end{aligned}
 $$
 
-To account for maximum drawdown explicitly, Grossman & Zhou (1993) set the question by adding a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}(W^{\pi}_s)$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$\mathop{lim}_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
+To account for maximum drawdown explicitly, Grossman & Zhou (1993) set the question by adding a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$\mathop{lim}_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
 
 The drawdown is defined to account for the time value since the the time of peak($$W^{\pi}_t = Max_{0\leq s\leq t}(W^{\pi}_s e^{r(t-s)}) $$)
 
