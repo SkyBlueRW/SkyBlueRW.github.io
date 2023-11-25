@@ -9,18 +9,20 @@
 
 ### Introduction <a name="introduction"></a>
 
-As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention at evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on the factors impacting the maximum drawdown, we will explore some viable ways to incorporate explicit control on drawdown risk in the portfolio construction process. 
+As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention at the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on factors impacting the maximum drawdown, we will explore some viable ways to incorporate control on drawdown risk explicitly in the portfolio management process. 
 
-It is true that the judgement on market condition and strategy efficacy at critical point is what matters the most for the control of maximum drawdown. While handy and explicit tools that can help to translate these judgements into languages of portfolios or even to fill in the place in the absence of strong judgement are also critical. In this blog, we'd like to look into some useful tools with the aim. 
+It's hard to disagree that the judgement of market condition at critical point is what ultimately matters for the control of maximum drawdown. Reasonable judgement about if the strategy is still working coupled with rule of thumbs of portfolio adjustment like risk off in case of x amount of realized loss can protect a portfolio reasonably from drawdown. While an explict incorporation into portfolio construction proces would add additional value. It would definitely help to translate these judgements into languages of portfolios or even to fill in the place in the absence of strong judgement.
 
-Specifically, we will look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a fixed proportion of the difference between current wealth and acceptable maximum drawdown can be spent on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
+
+In this blog, we'd like to look into some useful tools with the aim. Specifically, we will look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a fixed proportion of the difference between current wealth and acceptable maximum drawdown can be spent on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
 
 The optinal proportion is jointly determined by expected return, volatility of the risky asset and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risk asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi asset class hence supporting more delibrated management of strategies and asset classes.
 
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
-Grossman & Zhou (1993) sets a quite classical portfolio optimization problem: maximizing the long term expected utility growth ($$lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with hard constraint on maximum drawdown (W_t \geq \alpha M_t ) and power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
+To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha M_t$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
+
 
 ### More <a name="more"></a>
 
