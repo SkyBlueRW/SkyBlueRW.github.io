@@ -20,7 +20,7 @@ The optinal proportion is jointly determined by expected return, volatility of t
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
-Grossman & Zhou (1993) sets a quite classical portfolio optimization problem: maximizing the long term expected utility growth ($$lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with hard constraint on maximum drawdown (W_t \geq \alpha M_t ) and power utility ($$U(W) &= \dfrac{W^{1-A}}{1-A}$$).
+Grossman & Zhou (1993) sets a quite classical portfolio optimization problem: maximizing the long term expected utility growth ($$lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with hard constraint on maximum drawdown (W_t \geq \alpha M_t ) and power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
 
 ### More <a name="more"></a>
 
