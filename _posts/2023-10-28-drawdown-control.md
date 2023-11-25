@@ -15,10 +15,11 @@ It is true that the judgement on market condition and strategy efficacy at criti
 
 Specifically, we will look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a fixed proportion of the difference between current wealth and acceptable maximum drawdown can be spent on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
 
-The proportion is determined by expected return, volatility and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risk asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi asset class hence supporting more delibrated management of strategies and asset classes.
+The optinal proportion is jointly determined by expected return, volatility of the risky asset and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risk asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi asset class hence supporting more delibrated management of strategies and asset classes.
 
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
+
 
 
 
