@@ -20,7 +20,7 @@ The optinal proportion is jointly determined by expected return, volatility of t
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
-To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha M_t$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
+To account for maximum drawdown explicitly, Grossman & Zhou (1993) set the question by adding a hard constraint on maximum drawdown ($$W_t \geq \alpha M_t$$) upon the classical portfolio optimization problem of maximizing the long term expected utility growth ($$lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)]$$) with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$).
 
 The risky asset is assumed to follow a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$). With $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the following stochastic process:
 
@@ -31,7 +31,7 @@ dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
 \end{aligned}
 $$
 
-The drawdown is defined to account for the time value since the the time of peak($$W^{\pi}_t &= Max_{0\leq s\leq t}(W^{\pi}_s e^{-r(t-s)}) $$)
+The drawdown is defined to account for the time value since the the time of peak($$W^{\pi}_t = Max_{0\leq s\leq t}(W^{\pi}_s e^{-r(t-s)}) $$)
 
 
 ### More <a name="more"></a>
