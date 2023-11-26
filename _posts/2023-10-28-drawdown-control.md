@@ -21,6 +21,11 @@ The proportion is jointly determined by expected return, volatility of the risky
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
+
+Distribution
+
+**Stochastic Floor**
+
 To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$W_t$$ is the wealth at time t, $$1 - \alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value acounted for current wealth and previous high water, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
 
@@ -50,6 +55,7 @@ Obviously reducing the acceptable maximum drawdown ($$1 - \alpha$$) is at the co
 
 
 
+**Static Floor**
 
 ### Putting it in application <a name="more"></a>
 
