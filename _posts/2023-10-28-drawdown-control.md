@@ -44,7 +44,7 @@ $$
 
 Despite the lenghty deviation, the the result is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$ invested in risky asset, we can maximize expected power utility while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. 
 
-Larger 'safe cushion' ($$W_t - \alpha M_t$$) above the floor, better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) lead to higher amounts of wealth allocated to the risky asset. When $$\alpha$$ is 0, the maximum drawdown constraint placed is equivalent to the bankruptcy constraint ($$W_t \geq 0$$). 
+Larger 'safe cushion' ($$W_t - \alpha M_t$$) above the floor, better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. When $$\alpha$$ is 0, the maximum drawdown constraint placed is equivalent to the bankruptcy constraint ($$W_t \geq 0$$). 
 
 Obviously reducing the acceptable maximum drawdown ($$1 - \alpha$$) is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
 
