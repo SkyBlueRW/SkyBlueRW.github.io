@@ -37,11 +37,14 @@ This is not an easy problem to solve. Luckily we are standing on the shoulder of
 $$
 \begin{aligned}
 X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t) \\
+    &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (1 - \alpha\dfrac{M_t}{W_t})W_t \\
 M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-Despite the lenghThe optimal holding $$X_t$$ consists of two parts, $$W_t - \alpha M_t$$ measures how far is the current wealth from the largest acceptable drawdown level. A constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of this difference should be invested in risky asset for an optimal portfolio.
+Despite the lenghty deviation, the the result is quite intuitive. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the difference between current wealth and largest acceptable drawdown level $$W_t - \alpha M_t$$ invested in risky asset, we can maximize expected power utility while restrict maximum drawdown below ($$1 - \alpha$$) almost surely. Looking into the 
+
+
 
 
 
