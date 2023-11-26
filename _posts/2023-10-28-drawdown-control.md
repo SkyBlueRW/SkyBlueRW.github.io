@@ -42,15 +42,24 @@ M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-Despite the lenghty deviation, the the result is quite intuitive. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the difference between current wealth and largest acceptable drawdown level $$W_t - \alpha M_t$$ invested in risky asset, we can maximize expected power utility while restrict maximum drawdown below ($$1 - \alpha$$) almost surely. Looking into the 
+Despite the lenghty deviation, the the result is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the difference between current wealth and largest acceptable drawdown level $$W_t - \alpha M_t$$ invested in risky asset, we can maximize expected power utility while restrict maximum drawdown below ($$1 - \alpha$$) almost surely. 
 
+Larger 'safe cushion' ($$W_t - \alpha M_t$$) above the floor, better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) lead to higher amounts of wealth allocated to the risky asset. When $$\alpha$$ is 0, the maximum drawdown constraint placed is equivalent to the bankruptcy constraint ($$W_t > \geq 0$$). 
 
-
+Obviously reducing the acceptable maximum drawdown ($$1 - \alpha$$) is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ leads to the scale of long term rate of expected utility growth at $$1 - [1 + (\dfrac{1}{\alpha} -1)A] ^ (-1)$$
 
 
 
 
 ### More <a name="more"></a>
+
+Placing constraint on maximum drawdown is essentially setting a stochastic floor on the wealth defined by previous peak. It is also worth to mention that a similar optimal holding can also be derived for the case of static floor, in which case the wealth is not allowed to go below an absolute amount (K). The optimal holding then becomes
+
+$$
+\begin{aligned}
+X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(A} (W_t - K) \\
+\end{aligned}
+$$
 
 **Another Contigent Claim!**
 
