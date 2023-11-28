@@ -14,15 +14,22 @@ As discussed in a previous blog [From Volatility to Maximum Drawdown](https://sk
 
 It's hard to disagree that the judgement of market condition at critical point is usually what matters for the control of maximum drawdown. In a lot of times, reasonable judgement about if the strategy is still working coupled with rule of thumbs of portfolio adjustment like risk off in case of x amount of realized loss can protect a portfolio reasonably from drawdown. While the explict incorporation of drawdown control into portfolio construction process would add additional value, especially from the perspective of a systematic portfolio construction process. It would be befiniticial for ex-post attribution, it would also help to translate any judgements into languages of portfolios or even to fill in the place in the absence of strong judgement.
 
-In this blog, we'd like to look into some useful tools with the aim. Specifically, we will look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a fixed proportion of the difference between current wealth and acceptable maximum drawdown can be invested on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
+In this blog, we'd like to look into some useful tools with the aim. Specifically, we will look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a fixed proportion of the largest acceptable loss defined by maximum drawdown can be invested on risky asset to achieve largest expected utility growth while fulffilling the maximum drawdown threshold. 
 
-The proportion is jointly determined by expected return, volatility of the risky asset and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risk asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi risky asset hence supporting more delibrated management of strategies and asset classes.
+This constant proportion is jointly determined by expected return, volatility of the risky asset and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risk asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi risky asset hence supporting more delibrated management of strategies and asset classes.
 
 
 ### Optimal Holding in Risky Asset <a name="optimal"></a>
 
+Assuming that the risky asset follows a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
 
-Distribution
+$$
+\begin{aligned}
+dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
+     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
+\end{aligned}
+$$
+
 
 **Stochastic Floor**
 
@@ -72,8 +79,6 @@ $$
 **Another Contigent Claim!**
 
 Assuming that the risk asset follows a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
-
-**Not Almost Sure**
 
 $$
 \begin{aligned}
