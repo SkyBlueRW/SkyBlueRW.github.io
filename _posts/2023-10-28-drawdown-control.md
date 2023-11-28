@@ -31,7 +31,6 @@ dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
 $$
 
 
-**Stochastic Floor**
 
 To account for maximum drawdown explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$W_t$$ is the wealth at time t, $$1 - \alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value acounted for current wealth and previous high water, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
@@ -61,8 +60,6 @@ Larger 'safe cushion' ($$W_t - \alpha M_t$$) above the floor, better expected pe
 Obviously reducing the acceptable maximum drawdown ($$1 - \alpha$$) is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
 
 
-
-**Static Floor**
 
 ### Putting it in application <a name="more"></a>
 
