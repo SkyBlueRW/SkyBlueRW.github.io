@@ -60,9 +60,8 @@ $$
 X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
-
-
-When $$\alpha$$ is set to be 0, the maximum drawdown constraint is equivalent to the bankruptcy constraint ($$W_t \geq 0$$). Obviously reducing the  maximum drawdown ($$1 - \alpha$$) threshold is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
+ 
+The optimal  solution of stochastic and constant floor meet at the the bankruptcy constraint ($$W_t \geq 0$$) when $$\alpha$$ is set to be 0, which is likely the lowest bottom line for a lot of investors :). Obviously reducing the maximum drawdown ($$1 - \alpha$$) threshold is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
 
 
 ### Putting it in application <a name="more"></a>
