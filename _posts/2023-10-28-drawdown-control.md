@@ -63,11 +63,12 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
  
-The solutions of stochastic and constant floor meet at $$\alpha = 0$$. The constratint becomes a bankruptcy protection $$\W_t \geq 0$$, which is likely the lowest bottom line for a lot of investors :). Obviously reducing the maximum drawdown ($$1 - \alpha$$) threshold is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
+The two optimal solutions of stochastic and constant floor meet at $$\alpha = 0$$. The constratint becomes a bankruptcy protection $$W_t \geq 0$$, which is likely the lowest bottom line for a lot of investors :). Obviously reducing the maximum drawdown ($$1 - \alpha$$) threshold is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
 
 
 ### The application Side <a name="app"></a>
 
+Now we have the clearly defined optimal holding in risky asset. In presence of a risk free asset and a risky asset following a Geometric Brownian motion, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
 
 $$
 \begin{aligned}
@@ -75,6 +76,14 @@ X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t
 Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
+
+There are still a few more decisions to make to put it into a portfolio management process. For one hand, the optimal holding is a function of parameters and risk aversion. There are parameters to estimate. For the other hand 
+
+
+**The Parameter**
+
+
+**The frequency**
 
 
 
