@@ -77,13 +77,19 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-There are still a few more decisions to make to put it into a portfolio management process. For one hand, the optimal holding is a function of parameters and risk aversion. There are parameters to estimate. For the other hand 
+Obviously, there are still a few more gaps to fill to apply it in a portfolio management process.
+
+Firstly, we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the leverage on the risky asset mix.  
+
+Another way is simply to extend the optimal holding 
+
+
 
 
 **The Parameter**
 
 
-**The frequency**
+**The Discrete World**
 
 
 
