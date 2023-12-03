@@ -81,14 +81,17 @@ There are still a few more gaps to fill to apply it in a portfolio management pr
 
 Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the leverage on the risky asset mix.  
 
-Another way is to extend the optimal holding to support multi risky asset scenario as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type:
+Another way is to extend the optimal holding to support multi risky asset scenario as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This exnapsion enables us to adjust allocation within asset classes or strategy components rather then take them as a whole. Obvisouly, this flexibility comes at a cost of more parameters to estimate.
 
 $$
 \begin{aligned}
-X_t = \mu {\sigma^{-1}}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
+X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
 \end{aligned}
 $$
 
+In general, the incorporation of explicit control on drawdown as a regular portfolio manageemnt piece does not place additional burden on estimation. Current wealth level and previous peak wealth level are simply known and observable. As to expected performance and risk aversion, despite different assumption and faith we have, they are fundamental in a portfolio management process and should be there even wihout control on drawdown. 
+
+It is quite natural to have the allocation of wealth into risky asset and risk free asset as the second step right after the construction of the asset mix. Either it is to build a risky asset mix as a whole or it is to build multiple risky assets in terms of asset classses, component strategies.
 
 
 
