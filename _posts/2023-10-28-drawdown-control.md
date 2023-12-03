@@ -3,8 +3,8 @@
 ## Risk discipline for Drawdown Control
 
 - [Introduction](#introduction)
-- [Optimal Holding in Risky Asset](#optimal)
-- [The Application Side](#app)
+- [Optimal Holding for Drawdown Control](#optimal)
+- [The Practical Side](#practice)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
@@ -14,14 +14,14 @@ As discussed in a previous blog [From Volatility to Maximum Drawdown](https://sk
 
 It's hard to disagree that the judgement of market condition at critical point is usually what matters for the control of maximum drawdown. In a lot of times, reasonable judgement about if the strategy is still working coupled with rule of thumbs of portfolio adjustment like risk off in case of x amount of realized loss can protect a portfolio reasonably from drawdown. While the explict incorporation of drawdown control into portfolio construction process would add additional value, especially from the perspective of a systematic portfolio construction process. It would be befiniticial for ex-post attribution, it would also help to translate any judgements into languages of portfolios or even to fill in the place in the absence of strong judgement.
 
-In this blog, we'd like to look into some useful tools with the aim. Specifically, we will dig around the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed. In the case of one riskless asset and one risky asset, a constant proportion of the largest acceptable loss can be invested on risky asset to achieve largest expected utility growth while fulffilling drawdown threshold. 
+In this blog, we'd like to look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed with the aim. In the case of one riskless asset and one risky asset, a constant proportion of the largest acceptable loss can be invested on risky asset to achieve largest expected utility growth while fulffilling drawdown threshold. 
 
-This constant proportion is jointly determined by risk adjusted performance of the risky asset and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risky asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenario of multi risky asset hence supporting more delibrated management of strategies and asset classes.
+This constant proportion is jointly determined by risk adjusted performance of the risky asset and risk aversion. It can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risky asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenarios of multi risky assets hence supporting more delibrated management of strategies and asset classes.
 
 
-### Optimal Holding in Risky Asset <a name="optimal"></a>
+### Optimal Holding for Drawdown Control <a name="optimal"></a>
 
-Assuming that the risky asset follows a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
+Assuming the existence of one risk free asset ($$rdt$$) and one risky asset ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
 
 $$
 \begin{aligned}
@@ -66,9 +66,9 @@ $$
 The two optimal solutions of stochastic and constant floor meet at $$\alpha = 0$$. The constratint becomes a bankruptcy protection $$W_t \geq 0$$, which is likely the lowest bottom line for a lot of investors :). Obviously reducing the maximum drawdown ($$1 - \alpha$$) threshold is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
 
 
-### The application Side <a name="app"></a>
+### The practical Side <a name="practice"></a>
 
-Now we have the clearly defined optimal holding in risky asset. In presence of a risk free asset and a risky asset following a Geometric Brownian motion, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
+Here we are with a clearly defined optimal holding in risky asset. In presence of a risk free asset and a risky asset following a Geometric Brownian motion, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
 
 $$
 \begin{aligned}
@@ -77,11 +77,19 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-Obviously, there are still a few more gaps to fill to apply it in a portfolio management process.
+There are still a few more gaps to fill to apply it in a portfolio management process.
 
-Firstly, we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the leverage on the risky asset mix.  
+Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the leverage on the risky asset mix.  
 
-Another way is simply to extend the optimal holding 
+Another way is to extend the optimal holding to support multi risky asset scenario as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type:
+
+$$
+\begin{aligned}
+X_t = \mu {\sigma^{-1}}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
+\end{aligned}
+$$
+
+
 
 
 
