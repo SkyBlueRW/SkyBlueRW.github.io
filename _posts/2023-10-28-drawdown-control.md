@@ -12,21 +12,14 @@
 
 As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on factors closly linked to the maximum drawdown, we will explore some viable ways to incorporate controls on drawdown risk explicitly in the portfolio management process. 
 
-It's hard not to agree that judgements of market condition at critical point are usually what matter for the control of drawdown risk. In a lot of times, reasonable judgement about if the strategy is still working coupled with rule of thumbs of portfolio adjustment like risk off in case of x amount of realized loss can protect a portfolio reasonably from drawdown. While the explict incorporation of drawdown control into portfolio construction process would add additional value, especially from the perspective of a systematic portfolio construction process. It would be befiniticial for ex-post attribution, it would also help to keep a consistent languages of portfolios or even to fill in the place in the absence of strong judgement.
+It's hard not to agree that judgements of market condition at critical point are usually what matter for the control of drawdown risk. In a lot of times, reasonable judgement about if the efficacy of strategy coupled with rule of thumbs of portfolio adjustment can protect investors reasonably from unberable drawdown. While the explict incorporation of drawdown control into portfolio construction process would add additional value, especially from the perspective of a systematic portfolio construction process. It would be befiniticial for ex-post attribution, it would also help to keep a consistent languages of portfolios or even to fill in the place in the absence of strong judgement.
 
 In this blog, we'd like to look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed with the aim. In the case of one riskless asset and one risky asset, a constant proportion of the largest acceptable loss can be invested on risky asset to achieve largest expected utility growth while fulffilling drawdown threshold. The discipline generally does not place additional burden of estimation. Traditional inputs to the Markowitz optimization like expected return and risk of the risky asset along with risk aversion are required for the calculation of the constant proportion. Such a optimal holding in risky asset can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risky asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenarios of multi risky assets hence supporting more delibrated management of strategies and asset classes.
 
 
 ### Optimal Holding for Drawdown Control <a name="optimal"></a>
 
-Assume the existence of this risk free asset ($$rdt$$) and one risky asset ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$). With $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
-
-$$
-\begin{aligned}
-dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
-\end{aligned}
-$$
+Suppose $$W_t$$ stands for the value of wealth at t and $$M_t$$ stands for the higest ever wealth level prior to t.
 
 To incorporate drawdown control explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown in the form of a stochastic floor determined by previous peak value ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$1 - \alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value accounted for current wealth and previous peak value, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
@@ -51,7 +44,9 @@ $$
 
 Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$ invested in risky asset, we can maximize expected power utility while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. 
 
-Larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. 
+Larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. Obviously, this optimal holding is protecting the downside at the cost of slower wealth accumulation. 
+
+
 
 It is also worth to mention that similar to applying the constraint on maximum drawdown, which is essentially placing a stochastic floor on the wealth, we can also place a constant amount (K) as the lowest acceptable wealth, which is a constant floor. The optimal holding is still in the form of CPPI like. Essentially replacing the stochastic floor $$\alpha M_t$$ with a constant floor $$K$$ is equivalent to adjust the risk aversion from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
@@ -77,9 +72,9 @@ $$
 
 There are still a few more gaps to fill to apply it in a portfolio management process.
 
-Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the leverage on the risky asset mix.  
+Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the holding on the risky asset mix. In the sense, the optimal holding derived is used to restrict on the leverage of risky asset for the purpose of drawdown control. 
 
-Another way is to extend the optimal holding to support multi risky asset scenario as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This exnapsion enables us to adjust allocation within asset classes or strategy components rather then take them as a whole. Obvisouly, this flexibility comes at a cost of more parameters to estimate.
+It is worth mentioning that the one risky asset scenario can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This exnapsion enables us to adjust allocation within risky asset as well. 
 
 $$
 \begin{aligned}
@@ -100,6 +95,15 @@ It is quite natural to have the allocation of wealth into risky asset and risk f
 
 **The Discrete World**
 
+
+Assume the existence of this risk free asset ($$rdt$$) and one risky asset ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$). With $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
+
+$$
+\begin{aligned}
+dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
+     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
+\end{aligned}
+$$
 
 
 
