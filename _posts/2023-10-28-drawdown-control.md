@@ -9,13 +9,13 @@
 
 ### Introduction <a name="introduction"></a>
 
-In the prior blog post [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely quoted risk measure maximum drawdown, highlighting its complexity in analysis as well as control in practice. Building on the previous discussion, our journey now takes us to explore viable ways to explicitly manage drawdown risk within the portfolio management process.
+In the prior blog post [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely recognized risk measure maximum drawdown, highlighting its complexity in analysis as well as control in practice. Expanding on our previous discourse, let's explore practical approaches for the explicit management of drawdown risk within the portfolio management process.
 
-It generally hold true that the judgements about market conditions and strategies during pivotal moments play a paramount role in drawdown risk control. Often, sound judgement regarding the effectiveness of a strategy, even actioned with rudimentatry holding control, can shield investors reasonably from intolerable drawdowns. 
+It's generally true that judgements about market conditions and strategies during pivotal moments play a paramount role in drawdown risk control. Often, a well-founded judgement regarding the efficacy of a strategy, even when executed with rudimentary holding controls, can reasonably shield investors from intolerable drawdowns.
 
-While integrating explicit drawdown control into portfolio construction offers additional advantages, particularly within a systematic portfolio framework. It serves to translate into a consistent portfolio languages, faciliates ex-ante/post attribution crucial for correction and further improvement, or even proveds a fall back mechanism to addres gaps in instances where strong judgements are unavailable.
+While integrating explicit drawdown control into portfolio construction brings additional advantages, particularly within a systematic portfolio framework. It serves as a translator, converting judgments into a portfolio language consistent across the framework. It also facilitates both ex-ante/post attribution, crucial for decision making and continuous improvement. Even under a scenario with unavailable confident judgement, the explicit management of drawdown enable us to fill the gap with backup plans via clearly defined assumptions.
 
-In this blog, our focus turns to the risky asset holding discipline initially introduced by Grossman & Zhou (1993). The discipline proposes to invest a constant proportion of the largest acceptable loss in risy assets for the maximization of expected utility growth within desired drawdown range. The optimal holding derived can serve as a reference for determining the leverage of the risky asset mix, whether on a regular basis or in response to signigicant deviations.
+In this blog, our focus turns to the risky asset holding discipline initially introduced by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can be used as a benchmark for determining the leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
 
 
 ### Optimal Holding for Drawdown Control <a name="optimal"></a>
