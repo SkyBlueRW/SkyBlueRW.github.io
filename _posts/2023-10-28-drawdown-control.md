@@ -56,7 +56,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This expansion opens the door for us to choose whatever gragularities of risky asset classification that suit the usecase best.
+It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever gragularities of risky asset classification that suit the usecase best. For example we can allocate money to equity, credit bonds and riskless asset with the same objective and drawdown constraints.
 
 $$
 \begin{aligned}
@@ -76,7 +76,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-There are still a few more gaps to fill to apply it in a portfolio management process.
+There are still a few more gaps to fill to apply it in a portfolio management process. Specifically, we need to decide on how to use it and when to use it.
 
 Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the holding on the risky asset mix. In the sense, the optimal holding derived is used to restrict on the leverage of risky asset for the purpose of drawdown control. 
 
@@ -86,14 +86,6 @@ In general, the incorporation of explicit control on drawdown as a regular portf
 
 It is quite natural to have the allocation of wealth into risky asset and risk free asset as the second step right after the construction of the asset mix. Either it is to build a risky asset mix as a whole or it is to build multiple risky assets in terms of asset classses, component strategies.
 
-
-
-
-
-**The Parameter**
-
-
-**The Discrete World**
 
 
 Assume the existence of this risk free asset ($$rdt$$) and one risky asset ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$). With $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
