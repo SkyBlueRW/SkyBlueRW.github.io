@@ -42,11 +42,11 @@ $$
 
 Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection is at cost of lower rate of wealth accumulation. When raising the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
-Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of this risky asset holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables much flexible application.
+Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of this risky asset holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables much more flexible applications.
 
 **Two expansions**
 
-Two expansions on top of the optimal holding is defintely worth to mention before we jump into next part of discussion on application.
+Two expansions on top of this optimal holding is defintely worth to mention before we jump into the next discussion on application.
 
 Firstly, the optimal holding can be extended to the case of drawdown defined by absolute amount of wealth. It's a quite common scenario where investors want to obtain at least K dollars remaining despite all market turmoil. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
