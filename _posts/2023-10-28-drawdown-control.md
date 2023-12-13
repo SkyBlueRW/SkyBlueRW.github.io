@@ -44,7 +44,9 @@ Despite the lenghty derivation, the optimal holding is quite intuitive of the Co
 
 Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables a lot more ways to put it in practice.
 
-It can be extend to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the stochastic floor from the maximum drawdown to a constant k leading to the safe cusion changing from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
+**Two expansion**
+
+The optimal holding can be extended to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the stochastic floor from the maximum drawdown to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
 $$
 \begin{aligned}
@@ -52,7 +54,13 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
- 
+It is also worth to mention that the one risky asset scenario can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This exnapsion enables us to adjust allocation within risky asset as well. 
+
+$$
+\begin{aligned}
+X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
+\end{aligned}
+$$
 
 
 ### The practical Side <a name="practice"></a>
@@ -70,13 +78,7 @@ There are still a few more gaps to fill to apply it in a portfolio management pr
 
 Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the holding on the risky asset mix. In the sense, the optimal holding derived is used to restrict on the leverage of risky asset for the purpose of drawdown control. 
 
-It is worth mentioning that the one risky asset scenario can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This exnapsion enables us to adjust allocation within risky asset as well. 
 
-$$
-\begin{aligned}
-X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
-\end{aligned}
-$$
 
 In general, the incorporation of explicit control on drawdown as a regular portfolio manageemnt piece does not place additional burden on estimation. Current wealth level and previous peak wealth level are simply known and observable. As to expected performance and risk aversion, despite different assumption and faith we have, they are fundamental in a portfolio management process and should be there even wihout control on drawdown. 
 
