@@ -40,21 +40,19 @@ M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. 
+Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection is at a cost of lower rate of wealth accumulation. When we raise the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
-Larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. Obviously, the downside protection of the holding is at a cost of lower rate of wealth accumulation. When we raise the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
+Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables a lot more ways to put it in practice.
 
-
-
-It is also worth to mention that similar to applying the constraint on maximum drawdown, which is essentially placing a stochastic floor on the wealth, we can also place a constant amount (K) as the lowest acceptable wealth, which is a constant floor. The optimal holding is still in the form of CPPI like. Essentially replacing the stochastic floor $$\alpha M_t$$ with a constant floor $$K$$ is equivalent to adjust the risk aversion from $$(1 - \alpha)A + \alpha$$ to $$A$$.
+It can be extend to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the stochastic floor from the maximum drawdown to a constant k leading to the safe cusion changing from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
 $$
 \begin{aligned}
 Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
+
  
-The two optimal solutions of stochastic and constant floor meet at $$\alpha = 0$$. The constratint becomes a bankruptcy protection $$W_t \geq 0$$, which is likely the lowest bottom line for a lot of investors :). Obviously reducing the maximum drawdown ($$1 - \alpha$$) threshold is at the cost of lower rate of wealth accumulation. Rasing the value of $$\alpha$$ from 0 to $$\alpha_1$$ scalses the long term rate of expected utility growth down by a factor of $$1 - [1 + (\dfrac{1}{\alpha_0} -1)A] ^ {-1}$$. The loss in growth rate is smaller for investors that are more risk averse or when the degree of protection on drawdown is small. 
 
 
 ### The practical Side <a name="practice"></a>
