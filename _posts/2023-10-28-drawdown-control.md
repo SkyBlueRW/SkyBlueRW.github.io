@@ -12,17 +12,15 @@
 
 As discussed in a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), maximum drawdown, though attracts significant attention for the evaluation of investments, is not obvious to analyze or control in practice. Following on the previous discussion on factors closly linked to the maximum drawdown, we will explore some viable ways to incorporate controls on drawdown risk explicitly in the portfolio management process. 
 
-It's hard not to agree that judgements of market condition at critical point are usually what matter for the control of drawdown risk. In a lot of times, reasonable judgement about if the efficacy of strategy coupled with rule of thumbs of portfolio adjustment can protect investors reasonably from unberable drawdown. While the explict incorporation of drawdown control into portfolio construction process would add additional value, especially from the perspective of a systematic portfolio construction process. It would be befiniticial for ex-post attribution, it would also help to keep a consistent languages of portfolios or even to fill in the place in the absence of strong judgement.
+It's probably true that judgements of market condition and strategies at critical moments are what matter the most for the control of drawdown risk. In a lot of times, reasonable judgement about efficacy of strategy can protect investors reasonably well from unberable drawdown even with basic rule of thumbs in holding control. While the explict incorporation of drawdown control into portfolio construction bears additional merits, especially from the perspective of a systematic portfolio construction process. It helps to translate any judgement we have to a consistent portfolio languange, it facilitate ex-post attribution that are important to summarize hence improve, and it provides ways to fill in the gap in case strong judgement is not available.
 
-In this blog, we'd like to look into the discipline on risky asset holding that Grossman & Zhou (1993) initially proposed with the aim. In the case of one riskless asset and one risky asset, a constant proportion of the largest acceptable loss can be invested on risky asset to achieve largest expected utility growth while fulffilling drawdown threshold. The discipline generally does not place additional burden of estimation. Traditional inputs to the Markowitz optimization like expected return and risk of the risky asset along with risk aversion are required for the calculation of the constant proportion. Such a optimal holding in risky asset can be used as a reference in a two step portfolio construction process: determine the risky asset mix first and then set the leverage on the risky asset mix with reference to the discipline. It can aslo bear additional flexibility with expansion to the scenarios of multi risky assets hence supporting more delibrated management of strategies and asset classes.
-
+In this blog, let's look into the discipline of risky asset holding that Grossman & Zhou (1993) initially proposed for the aim. A constant proportion of the largest acceptable loss can be invested on risky assets to achieve largest expected utility growth while fulffilling drawdown threshold. The discipline generally does not place additional burden of estimation. Traditional inputs to the Markowitz optimization like expected return and risk along with risk aversion are required for the calculation. Such an optimal holding in risky asset can be used as a reference to determine the leverage/holding of risky asset mix, either regularly or in case of large deviation happens.
 
 ### Optimal Holding for Drawdown Control <a name="optimal"></a>
 
-Suppose $$W_t$$ stands for the value of wealth at t and $$M_t$$ stands for the higest ever wealth level prior to t.
+Let's firstly have a look at the discipline itself for what it is. 
 
-To incorporate drawdown control explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown in the form of a stochastic floor determined by previous peak value ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$1 - \alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected utility growth with power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With diferent time value accounted for current wealth and previous peak value, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
-
+Suppose $$W_t$$ stands for the value of wealth at t and $$M_t$$ stands for the higest ever wealth level achieved prior to t. To incorporate drawdown control in portfolio construction explicitly, Grossman & Zhou (1993) added a hard constraint on maximum drawdown in the form of a stochastic floor determined by previous peak value ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$1 - \alpha$$ is the maximum acceptable drawdown) upon the classical portfolio optimization problem of maximizing the long term expected growth of power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). With different time value accounted for current wealth and previous peak value, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
 $$
 \begin{aligned}
@@ -32,7 +30,7 @@ $$
 \end{aligned}
 $$
 
-The above stochastic control problem is definitely not easy to solve. Luckily we are standing on the shoulder of the giants :) Grossman & Zhou (1993) and Cvitanic & Karatzas (1994) solved the problem and derived the optiomal holding analytically.
+The abovementioned portfolio optimization is definitely not easy to solve. Luckily we are standing on the shoulder of the giants :) Grossman & Zhou (1993) and Cvitanic & Karatzas (1994) solved the problem and derived the optiomal holding in risky asset analytically.
 
 $$
 \begin{aligned}
@@ -42,9 +40,9 @@ M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$ invested in risky asset, we can maximize expected power utility while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. 
+Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. 
 
-Larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. Obviously, this optimal holding is protecting the downside at the cost of slower wealth accumulation. 
+Larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. Obviously, the downside protection of the holding is at a cost of lower rate of wealth accumulation. When we raise the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
 
 
