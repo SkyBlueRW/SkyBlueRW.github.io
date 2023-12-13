@@ -56,7 +56,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever granularity of risky asset classification that suit our use case best. For example we are free to choose to allocate money to equity, bonds and riskless asset or more detailed within large cap equity, small cap equity, government bonds, credit bonds and money market instruments. Such flexibility is of great help as our judgement may fall a partial space of the investment universe.
+It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever granularity of risky asset classification that suit our use case. For example we are free to choose to allocate money within equity, bonds and riskless asset or more detailed within large cap equity, small cap equity, government bonds, credit bonds and money market instruments, all under the same framework with constraint on drawdown. Such flexibility is of great considering that our judgement may fall partially on the investment universe.
 
 $$
 \begin{aligned}
