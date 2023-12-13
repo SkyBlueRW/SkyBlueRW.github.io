@@ -44,11 +44,11 @@ Despite the lenghty derivation, the optimal holding is quite intuitive of the Co
 
 Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of this risky asset holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables much flexible application.
 
-**Two expansion**
+**Two expansions**
 
 Two expansions on top of the optimal holding is defintely worth to mention before we jump into next part of discussion on application.
 
-Firstly, the optimal holding can be extended to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. It's also a quite common scenario where investors want to obtain at least K dollars remaining. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
+Firstly, the optimal holding can be extended to the case of drawdown defined by absolute amount of wealth. It's a quite common scenario where investors want to obtain at least K dollars remaining despite all market turmoil. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
 $$
 \begin{aligned}
@@ -56,7 +56,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever gragularities of risky asset classification that suit the use case best. For example we can allocate money to equity, credit bonds and riskless asset with the same objective and drawdown constraints.
+It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever granularity of risky asset classification that suit our use case best. For example we are free to choose to allocate money to equity, bonds and riskless asset or more detailed within large cap equity, small cap equity, government bonds, credit bonds and money market instruments. Such flexibility is of great help as our judgement may fall a partial space of the investment universe.
 
 $$
 \begin{aligned}
