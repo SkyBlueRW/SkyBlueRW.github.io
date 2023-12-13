@@ -14,7 +14,7 @@ As discussed in a previous blog [From Volatility to Maximum Drawdown](https://sk
 
 It's probably true that judgements of market condition and strategies at critical moments are what matter the most for the control of drawdown risk. In a lot of times, reasonable judgement about efficacy of strategy can protect investors reasonably well from unberable drawdown even with basic rule of thumbs in holding control. While the explict incorporation of drawdown control into portfolio construction bears additional merits, especially from the perspective of a systematic portfolio construction process. It helps to translate any judgement we have to a consistent portfolio languange, it facilitate ex-post attribution that are important to summarize hence improve, and it provides ways to fill in the gap in case strong judgement is not available.
 
-In this blog, let's look into the discipline of risky asset holding that Grossman & Zhou (1993) initially proposed for the aim. A constant proportion of the largest acceptable loss can be invested on risky assets to achieve largest expected utility growth while fulffilling drawdown threshold. The discipline generally does not place additional burden of estimation. Traditional inputs to the Markowitz optimization like expected return and risk along with risk aversion are required for the calculation. Such an optimal holding in risky asset can be used as a reference to determine the leverage/holding of risky asset mix, either regularly or in case of large deviation happens.
+In this blog, let's look into the discipline of risky asset holding that Grossman & Zhou (1993) initially proposed for the aim. A constant proportion of the largest acceptable loss can be invested on risky assets to achieve largest expected utility growth while fulffilling drawdown threshold. The discipline generally does not place additional burden of estimation. Traditional inputs to the Markowitz optimization like expected return and risk along with risk aversion are required for the calculation. Such an optimal holding in risky asset can be used as a reference to determine the leverage/holding of risky asset mix, either regularly or in case of large deviation.
 
 ### Optimal Holding for Drawdown Control <a name="optimal"></a>
 
@@ -42,13 +42,13 @@ $$
 
 Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection is at cost of lower rate of wealth accumulation. When raising the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
-Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables a lot more ways to put it in practice.
+Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of this risky asset holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables much flexible application.
 
 **Two expansion**
 
-Two expansions on top of the optimal holding is defintely worth to mention!
+Two expansions on top of the optimal holding is defintely worth to mention before we jump into next part of discussion on application.
 
-Firstly, the optimal holding can be extended to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the stochastic floor from the maximum drawdown to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
+Firstly, the optimal holding can be extended to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. It's also a quite common scenario where investors want to obtain at least K dollars remaining. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
 $$
 \begin{aligned}
@@ -56,7 +56,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever gragularities of risky asset classification that suit the usecase best. For example we can allocate money to equity, credit bonds and riskless asset with the same objective and drawdown constraints.
+It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type as shown below. This expansion opens the door for us to choose whatever gragularities of risky asset classification that suit the use case best. For example we can allocate money to equity, credit bonds and riskless asset with the same objective and drawdown constraints.
 
 $$
 \begin{aligned}
