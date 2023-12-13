@@ -67,7 +67,7 @@ $$
 
 ### The practical Side <a name="practice"></a>
 
-Here we are with a clearly defined optimal holding in risky asset. In presence of a risk free asset and a risky asset following a Geometric Brownian motion, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
+Here we are with a clearly defined optimal holding in risky asset. In the presence of one or a few risky assets following a Geometric Brownian motion and one riskless asset, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
 
 $$
 \begin{aligned}
@@ -76,7 +76,13 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-There are still a few more gaps to fill to apply it in a portfolio management process. Specifically, we need to decide on how to use it and when to use it.
+Now we can 
+
+- natural way to apply it directly and regularly. no estimation
+- only at large deriviation - option 
+- one of the constraints.
+
+There are still a few more gaps to fill to apply it in a portfolio management process. 
 
 Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the holding on the risky asset mix. In the sense, the optimal holding derived is used to restrict on the leverage of risky asset for the purpose of drawdown control. 
 
