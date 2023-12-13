@@ -30,7 +30,7 @@ $$
 \end{aligned}
 $$
 
-The abovementioned portfolio optimization is definitely not easy to solve. Luckily we are standing on the shoulder of the giants :) Grossman & Zhou (1993) and Cvitanic & Karatzas (1994) solved the problem and derived the optiomal holding in risky asset analytically.
+The abovementioned portfolio optimization is definitely not easy to solve. Luckily, we are standing on the shoulder of the giants :) Grossman & Zhou (1993) and Cvitanic & Karatzas (1994) solved the problem and derived the optiomal holding in risky asset analytically.
 
 $$
 \begin{aligned}
@@ -40,13 +40,15 @@ M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection is at a cost of lower rate of wealth accumulation. When we raise the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
+Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection is at cost of lower rate of wealth accumulation. When raising the largest acceptable maximum drawdown from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
 Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It should be noted that the optimality of holding pertains in case of deterministic changing paramters of $$\mu$$ and $$\sigma$$, which enables a lot more ways to put it in practice.
 
 **Two expansion**
 
-The optimal holding can be extended to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the stochastic floor from the maximum drawdown to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
+Two expansions on top of the optimal holding is defintely worth to mention!
+
+Firstly, the optimal holding can be extended to the case where investors want to refrain from drawdown dragging the wealth value below a constant treshold K as well. The resulting optimal holding is still in the form of CPPI like. Essentially it is equivalent to replace the stochastic floor from the maximum drawdown to a constant k, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
 $$
 \begin{aligned}
@@ -54,7 +56,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-It is also worth to mention that the one risky asset scenario can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This exnapsion enables us to adjust allocation within risky asset as well. 
+It is also worth to mention that the one risky asset scenario across Grossman & Zhou (1993) can be extended to multi risky assets as Cvitanic & Karatzas (1994) did. The optimal holding is still of the CPPI type. This expansion opens the door for us to choose whatever gragularities of risky asset classification that suit the usecase best.
 
 $$
 \begin{aligned}
