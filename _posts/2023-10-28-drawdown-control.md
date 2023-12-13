@@ -9,7 +9,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-In the prior blog post [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely acknowledged risk measure, maximum drawdown, unraveling its complexity in analysis and practical control. Expanding on the previous discussion, let's try to explore practical approaches for the explicit management of drawdown risk within the portfolio management process.
+In the prior blog post [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely acknowledged risk measure, maximum drawdown, unraveling its complexity in analysis and practical control. Expanding on the previous discussion on factors impacting drawdown risk, let's try to explore practical approaches for the explicit management of drawdown risk within the portfolio management process.
 
 It's generally true that judgements about market conditions and strategies during pivotal moments play a paramount role in drawdown control. Often, a well-founded judgement regarding the efficacy of a strategy, even executed with rudimentary holding controls, can reasonably shield investors from intolerable drawdowns.
 
