@@ -48,7 +48,7 @@ Looking into the optiomal holding in more details, larger 'safe cushion' above t
 
 **The Perspective of Contigent Claim**
 
-We can find support of such holding for maximum drawdown protection from other perspectives as well. You might already realize the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(real MDD - MDD threshold, 0)$$)
+We can find support of such holding for maximum drawdown protection from other perspectives as well. You might already realize the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(real MDD - MDD threshold, 0)$$) provides similar protection against predefined maximum drawdown treshold 100%!
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
