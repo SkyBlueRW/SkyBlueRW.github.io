@@ -71,15 +71,15 @@ $$
 
 You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
-Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown threshold as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
+Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides this drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown threshold (Though wihout any consideration on the reward side), hence providing a quantitative evaluation on current exposures to maximum drawdown.
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
 source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
 
-The delta plot provides a consistent story as our optimal holding derived. At times when wealth is close to peak value or current drawdown is far from previous maximum drawdown, the delta exposure is close to zero. The delta grows nonlinearly as drawdown increases. Such a quantitative evaluation on exposure is definitely helpful.
+This delta plot provides a consistent story as our optimal holding derived. At times when wealth is close to peak value or current drawdown is far from previous maximum drawdown, the delta exposure is close to zero. The delta grows nonlinearly as drawdown increases. Such a quantitative evaluation of exposure to maximum drawdown is definitely helpful for informed decision-making. It provides another angle focusing on drawdown itself free from risk aversion and considerations on profits. 
 
-The insights we can obtain from the perspective of contigent claim is not restricted to this delta plot only. Similar Monte Carlo simulation can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. A great deal of tools in the arsenal of derivative analysis become relavant via this angle.
+The insights we can obtain from the perspective of contigent claim is not restricted to this delta plot only. Similar Monte Carlo simulation can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. It can provide us a lot more insights in addition to an optimized portfolio. For this purpose, a great deal of tools in the arsenal of derivative analysis become relavant via this angle.
 
 
 ### The practical Side <a name="practice"></a>
