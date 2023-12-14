@@ -46,9 +46,9 @@ Despite the lenghty derivation, the optimal holding is quite intuitive of the ty
 
 Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It's crucial to note that the optimality of this risky asset holding applies in the case of deterministic changing parameters of $$\mu$$ and $$\sigma$$, allowing for more flexible applications.
 
-**Two expansions**
+**Two Expansions**
 
-This optimal holding can be further extend to variants suiting other demands in drawdown management as well.
+What's quite handy is that this optimal holding can be modified to variants expanding to other uses cases in drawdown management as well.
 
 Firstly, it can be extended to the case of drawdown defined by absolute amount of wealth. In scenarios where investors aim to retain at least K dolloars, the resulting optimal holding still follows the CPPI-like form. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant K, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
@@ -58,7 +58,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-What's also worth mentioning is that the one risky asset scenario extensively explored by Grossman & Zhou (1993) can be extended to multi risky assets as done by Cvitanic & Karatzas (1994). The optimal holding still follows the CPPI type, providing the flexibility to choose the granularity of risky asset classification. For instance, one can allocate funds within equities, bonds, and riskless assets or more specifically within large-cap equity, small-cap equity, government bonds, credit bonds, and money market instruments, all under the same framework with a constraint on drawdown. Such flexibility is would be quite helpful considering that our judgment may cover partially on the investment universe
+What's also worth mentioning is that the one risky asset scenario discussed so far can be extended to multi risky assets as done by Cvitanic & Karatzas (1994). The optimal holding vector still follows the CPPI type, providing the flexibility to choose the granularity of risky asset classification. For instance, one can allocate funds within equities, bonds, and riskless assets or more specifically within large-cap equity, small-cap equity, government bonds, credit bonds, and money market instruments, all under the same framework with a constraint on drawdown. Such flexibility is would be quite helpful considering that our judgment may cover partially on the investment universe
 
 $$
 \begin{aligned}
@@ -66,9 +66,11 @@ X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
 \end{aligned}
 $$
 
-**The Perspective of Contigent Claim**
+**Other Perspectives**
 
-We can find side check of such holding for maximum drawdown protection from other perspectives as well. You may already notice the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
+Before we jump into 
+
+You may already notice the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
 Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown gain as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
 
