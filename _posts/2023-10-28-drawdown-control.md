@@ -46,7 +46,7 @@ Despite the lenghty derivation, the optimal holding is quite intuitive of the ty
 
 Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It's crucial to note that the optimality of this risky asset holding applies in the case of deterministic changing parameters of $$\mu$$ and $$\sigma$$, allowing for more flexible applications.
 
-**Maximum Drawdown as a Contigent Claim**
+**Maximum Drawdown from the perspective of Contigent Claim**
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
