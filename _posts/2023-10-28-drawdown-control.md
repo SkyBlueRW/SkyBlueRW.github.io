@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Optimal Holding with Drawdown Control](#optimal)
+- [Other Perspectives](#perspective)
 - [The Practical Side](#practice)
 - [Reference](#ref)
 
@@ -15,7 +16,7 @@ It's generally true that judgements about market conditions and strategies durin
 
 While integrating explicit drawdown control into portfolio construction brings additional advantages, especially within a systematic portfolio management framework. It serves as a translator, converting judgments into a portfolio language consistent across the entire framework. It also facilitates ex-ante/post attribution, which is crucial for informed decision-making and continuous improvement. What's more, in scenarios where confident judgment is unavailable, the explicit incorporation enables us to fill the gap with backup plans grounded in clearly defined assumptions.
 
-With the benefits in mind, our focus in this blog turns to the risky asset holding discipline initially introduced by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can be used as a benchmark for determining the leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
+With the benefits in mind, our focus in this blog turns to via ways around the risky asset holding discipline initially introduced by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can be used as a benchmark for determining the leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
 
 
 ### Optimal Holding with Drawdown Control <a name="optimal"></a>
@@ -66,9 +67,11 @@ X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
 \end{aligned}
 $$
 
-**Other Perspectives**
+### Other Perspectives <a name="perspective"></a>
 
-Before we jump into 
+Before we jump into the application, I feel it de
+
+**Contigent Claim**
 
 You may already notice the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
@@ -80,6 +83,7 @@ source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat
 
 The delta plot provides a consistent story as our optimal holding derived. 
 
+**Compatible Constraints**
 
 ### The practical Side <a name="practice"></a>
 
