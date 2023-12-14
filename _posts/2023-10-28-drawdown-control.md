@@ -4,7 +4,7 @@
 
 - [Introduction](#introduction)
 - [Optimal Holding with Drawdown Control](#optimal)
-- [Other Perspectives](#perspective)
+- [The Perspective of Contigent Claim](#perspective)
 - [The Practical Side](#practice)
 - [Reference](#ref)
 
@@ -67,25 +67,20 @@ X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
 \end{aligned}
 $$
 
-### Other Perspectives <a name="perspective"></a>
-
-Now we have a powerful tool that can help to harvest wealth appreciation within desired drawdown range. Definitely it is not the only approach to deal with drawdown risk. It deserves to take a quick detour to some other promising ways. These additional aspects help to a diversified view on the situation, and serve as great supplement to the optimal holding discipline we discussed or even fill in the place where it is not fitted. 
-
-**Contigent Claim**
+### The Perspective of Contigent Claim <a name="perspective"></a>
 
 You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
-Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown gain as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
+Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown threshold as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
 source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
 
-The delta plot provides a consistent story as our optimal holding derived. At times when wealth is close to peak value or current drawdown is far from previous maximum drawdown, the delta exposure is close to zero. 
+The delta plot provides a consistent story as our optimal holding derived. At times when wealth is close to peak value or current drawdown is far from previous maximum drawdown, the delta exposure is close to zero. The delta grows nonlinearly as drawdown increases. Such a quantitative evaluation on exposure is definitely helpful.
 
-The insights we can obtain from a perspective of contigent claim is not restricted to this delta plot only. Similar Monte Carlo simulation can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. A great deal of tools in the arsenal of derivative analysis become relavant via this perspective.
+The insights we can obtain from the perspective of contigent claim is not restricted to this delta plot only. Similar Monte Carlo simulation can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. A great deal of tools in the arsenal of derivative analysis become relavant via this angle.
 
-**Compatible Constraints**
 
 ### The practical Side <a name="practice"></a>
 
@@ -155,7 +150,7 @@ X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t
 $$
 
 
-
+Now we have a powerful tool that can help to harvest wealth appreciation within desired drawdown range. Definitely it is not the only approach to deal with drawdown risk. It deserves to take a quick detour to some other promising ways. These additional aspects help to a diversified view on the situation, and serve as great supplement to the optimal holding discipline we discussed or even fill in the place where it is not fitted. 
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
