@@ -48,15 +48,15 @@ Looking into the optiomal holding in more details, larger 'safe cushion' above t
 
 **The Perspective of Contigent Claim**
 
-We can find support of such holding for maximum drawdown protection from other perspectives as well. You may already notice the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(real MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
+We can find side check of such holding for maximum drawdown protection from other perspectives as well. You may already notice the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
-Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown threshold (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown gain as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
+Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown gain as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
 source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
 
-The delta plot provides a consistent story as our optimal holding in risky asset. 
+The delta plot provides a consistent story as our optimal holding derived. 
 
 **Two expansions**
 
