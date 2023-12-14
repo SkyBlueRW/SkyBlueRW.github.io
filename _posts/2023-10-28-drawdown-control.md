@@ -69,11 +69,11 @@ $$
 
 ### Other Perspectives <a name="perspective"></a>
 
-Before we jump into the application, I feel it de
+Now we have a powerful tool that can help to harvest wealth appreciation within desired drawdown range. Definitely it is not the only approach to deal with drawdown risk. It deserves to take a quick detour to some other promising ways. These additional aspects help to a diversified view on the situation, and serve as great supplement to the optimal holding discipline we discussed or even fill in the place where it is not fitted. 
 
 **Contigent Claim**
 
-You may already notice the similarities and links between this dynamic holding on risky asset and option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
+You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
 Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown gain as well (Though wihout any consideration on the reward side), making it quite relavant in drawdown control.
 
@@ -81,7 +81,9 @@ Vercer (2006) simulated the below delta exposure of this option given different 
 
 source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
 
-The delta plot provides a consistent story as our optimal holding derived. 
+The delta plot provides a consistent story as our optimal holding derived. At times when wealth is close to peak value or current drawdown is far from previous maximum drawdown, the delta exposure is close to zero. 
+
+The insights we can obtain from a perspective of contigent claim is not restricted to this delta plot only. Similar Monte Carlo simulation can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. A great deal of tools in the arsenal of derivative analysis become relavant via this perspective.
 
 **Compatible Constraints**
 
@@ -105,8 +107,6 @@ Now we can
 There are still a few more gaps to fill to apply it in a portfolio management process. 
 
 Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the holding on the risky asset mix. In the sense, the optimal holding derived is used to restrict on the leverage of risky asset for the purpose of drawdown control. 
-
-
 
 In general, the incorporation of explicit control on drawdown as a regular portfolio manageemnt piece does not place additional burden on estimation. Current wealth level and previous peak wealth level are simply known and observable. As to expected performance and risk aversion, despite different assumption and faith we have, they are fundamental in a portfolio management process and should be there even wihout control on drawdown. 
 
