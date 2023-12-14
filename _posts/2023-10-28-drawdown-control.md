@@ -1,15 +1,15 @@
 #
 
-## Risk discipline for Drawdown Control
+## Holding Discipline for Drawdown Control
 
 - [Introduction](#introduction)
-- [Optimal Holding for Drawdown Control](#optimal)
+- [Optimal Holding with Drawdown Control](#optimal)
 - [The Practical Side](#practice)
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
 
-In the blog post [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely acknowledged risk measure, maximum drawdown, looking into factors impacting it while uncovering pain points in its analysis and control in practice. Expanding upon this foundation, let's explore some practical approaches to incorporate drawdown control explicitly within a portfolio management process.
+In the blog post [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely acknowledged risk measure, maximum drawdown, looking into factors impacting it while uncovering pain points in its analysis and control in practice. Expanding upon this foundation, let's explore some practical approaches to incorporate drawdown management explicitly within a portfolio management process.
 
 It's generally true that judgements about market conditions and strategies during pivotal moments play a paramount role in drawdown control. Often, a well-founded judgement regarding the efficacy of a strategy, even executed with rudimentary rule of thumbs in holding discipline, can shield investors reasonably from intolerable drawdowns.
 
@@ -18,7 +18,7 @@ While integrating explicit drawdown control into portfolio construction brings a
 With the benefits in mind, our focus in this blog turns to the risky asset holding discipline initially introduced by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can be used as a benchmark for determining the leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
 
 
-### Optimal Holding for Drawdown Control <a name="optimal"></a>
+### Optimal Holding with Drawdown Control <a name="optimal"></a>
 
 Let's begin by taking a closer look at the discipline itself.
 
@@ -42,7 +42,7 @@ M_t & = e^{rt}\mathop{Max}_{0\leq s\leq t}(W^{\pi}_s e^{-rs})
 \end{aligned}
 $$
 
-Despite the lenghty derivation, the optimal holding is quite intuitive of the Constant Proportion Portfolio Insurance(CPPI) type. With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection is at the cost of lower rate of wealth accumulation. When raising the maximum drawdown threshold from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
+Despite the lenghty derivation, the optimal holding is quite intuitive of the type similar to Constant Proportion Portfolio Insurance(CPPI). With a constant proportion $$\dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha}$$ of the the maximum acceptable loss (difference between current wealth and lowest acceptable wealth level defined by prior peak $$W_t - \alpha M_t$$) invested in risky asset, we can maximize expected power utility growth while restricting maximum drawdown below ($$1 - \alpha$$) almost surely. Obviously, this downside protection comes at the cost of lower rate of wealth accumulation. When raising the maximum drawdown threshold from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
 Looking into the optiomal holding in more details, larger 'safe cushion' above the floor ($$W_t - \alpha M_t$$), better expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and higher acceptable maximum drawdown ($$1 - \alpha$$) safeguard higher allocation to the risky asset. It's crucial to note that the optimality of this risky asset holding applies in the case of deterministic changing parameters of $$\mu$$ and $$\sigma$$, allowing for more flexible applications.
 
