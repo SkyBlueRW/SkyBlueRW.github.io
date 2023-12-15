@@ -68,7 +68,7 @@ $$
 
 ### The practical Side <a name="practice"></a>
 
-Here we are with a clearly defined optimal holding in risky asset. In the presence of one or a few risky assets following a Geometric Brownian motion and one riskless asset, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
+Here we are with a clearly defined optimal holding in risky asset. In the presence of one or a few risky assets following Geometric Brownian motion, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
 
 $$
 \begin{aligned}
@@ -77,7 +77,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-A direct way to put it in use 
+Quite naturally, this optimal holding in risky asset can fit into a two-step portfolio construction process, which involves building the portfolio of risky assets first and then determine the allocation to this (or these) portfolio as per the holding derived. Looking into the values required for the calculation of this optimal holding, drawdown treshold is predefined; current drawdown is observable; As to risk aversions, expected return and volatility, they are the standard inputs to a traditional Markowitz portfolio optimization. Essentially, if the Markowtize optimization is used for portfolio construction, we can add down side protection on top of it wihout additional estimation job.
 
 Now we can 
 
