@@ -68,7 +68,7 @@ $$
 
 ### The practical Side <a name="practice"></a>
 
-Here we are with a clearly defined optimal holding in risky asset. In the presence of one or a few risky assets following Geometric Brownian motion, a continuous re-allocation as per the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
+Here we are with a clearly defined optimal holding in risky asset. In the presence of one or a few risky assets following Geometric Brownian motion, a continuous re-allocation to these assets/portfolios as the the optimal holding leads to maximized wealth utility growth with predifined drawdown level almost surely.
 
 $$
 \begin{aligned}
@@ -77,39 +77,13 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-Quite naturally, this optimal holding in risky asset can fit into a two-step portfolio construction process, which involves building the portfolio of risky assets first and then determine the allocation to this (or these) portfolio as per the holding derived. Looking into the values required for the calculation of this optimal holding, drawdown treshold is predefined; current drawdown is observable; As to risk aversions, expected return and volatility, they are the standard inputs to a traditional Markowitz portfolio optimization. Essentially, if the Markowtize optimization is used for portfolio construction, we can add down side protection on top of it wihout additional estimation job.
+Quite naturally, this optimal holding in risky asset can fit into a two-step portfolio construction process, which involves building the portfolios of risky assets first and then take this or these portfolios as risky assets and determine their allocation as per the holding derived. Looking into the values required for the calculation of this optimal holding, drawdown threshold is predefined; current drawdown is observable; As to risk aversions, expected return and volatility, they are the standard inputs to a traditional Markowitz portfolio optimization. Essentially, if the Markowtize optimization is used for portfolio construction, we can add drawdown protection on top of it wihout additional estimation jobs.
 
-Now we can 
+Such a two-step process can be applied regularly at each rebalancing or as a response to the case of large deviation to the optimal risky holding or at both scenarios. Instantly, it raises the question: how often do we want to rebalance and how big is a deviation that we need to respond. This is a tradeoff involves tolerace on breaking the maximum drawdown threshold, transaction cost and return. For one hand, the optimality of the risky asset holding holds in the context of continous allocation. More frequent rebalancings and smaller deviations to respond leads to a higher chance of fufilling the maximum drawdown threshold. While on the other hand, they lead to more transaction costs and lower holding in risky asset hence a loss for expected returns.
 
-- natural way to apply it directly and regularly. no estimation
-- only at large deriviation - option 
-- one of the constraints.
+An analysis from the perspective of contigent claim might help to decide in this tradeoff. You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
 
-There are still a few more gaps to fill to apply it in a portfolio management process. 
-
-Firstly we need to fit the one risky asset scenario assumed to the broad investable universe we are facing in the real world. One way, as mentioned at the very beginning of the blog, is to set the portfolio construction in two steps: determine the risky asset mix first and then set the holding on the risky asset mix. In the sense, the optimal holding derived is used to restrict on the leverage of risky asset for the purpose of drawdown control. 
-
-In general, the incorporation of explicit control on drawdown as a regular portfolio manageemnt piece does not place additional burden on estimation. Current wealth level and previous peak wealth level are simply known and observable. As to expected performance and risk aversion, despite different assumption and faith we have, they are fundamental in a portfolio management process and should be there even wihout control on drawdown. 
-
-It is quite natural to have the allocation of wealth into risky asset and risk free asset as the second step right after the construction of the asset mix. Either it is to build a risky asset mix as a whole or it is to build multiple risky assets in terms of asset classses, component strategies.
-
-
-
-Assume the existence of this risk free asset ($$rdt$$) and one risky asset ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$). With $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
-
-$$
-\begin{aligned}
-dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
-\end{aligned}
-$$
-
-
-### The Perspective of Contigent Claim <a name="perspective"></a>
-
-You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold!
-
-Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides this drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown threshold (Though wihout any consideration on the reward side), hence providing a quantitative evaluation on current exposures to maximum drawdown.
+Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides this drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown threshold (Though wihout any consideration on the reward side), hence in some sense indicates the risk exposure to maximum drawdown.
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
