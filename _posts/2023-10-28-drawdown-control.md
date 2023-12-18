@@ -50,7 +50,7 @@ This holding is consistent with our intuition for relavant factors about drawdow
 
 **Two Handy Variants**
 
-This optimal holding can be further modified to variants expanding to other uses cases in drawdown management as well.
+This optimal holding can be further modified to variants that suit other use cases in drawdown management as well.
 
 Firstly, it can be extended to the case of drawdown defined by absolute amount of wealth. In scenarios where investors aim to retain at least K dolloars, the optimal holding can be modified slightly to account it. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant K, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
@@ -79,11 +79,11 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-Quite naturally, this optimal holding in risky asset fits into a two-step portfolio construction process, which involves building the portfolios of risky assets first and then determine the allocation within these risky portfolios and risk free asset. Looking into the values required for the calculation of this optimal holding, drawdown threshold is predefined; current drawdown is observable; As to risk aversions, expected return and volatility, they are the standard inputs to a traditional Markowitz portfolio optimization. Essentially, we can add drawdown protection on top of a Markowitz based portfolio management process wihout additional estimation jobs.
+Quite naturally, this optimal holding in risky asset fits into a two-step portfolio construction process, which involves building the portfolios of risky assets first and then determine the allocation within these risky portfolios and risk free asset as per the optimal holding in risky asset. Such a two-step process can be applied regularly at each rebalancing, as a response to large deviations to the optimal risky holding or at both scenarios. 
 
-Such a two-step process can be applied regularly at each rebalancing, as a response to large deviations to the optimal risky holding or at both scenarios. Instantly, it raises the question: how often do we want to rebalance and how big is a deviation that we need to respond. This is a tradeoff involves tolerace on breaking the maximum drawdown threshold, transaction cost and return. For one hand, the optimality of the risky asset holding holds in the context of continous allocation. More frequent rebalancings and smaller deviations to respond lead to a higher chance of fufilling the maximum drawdown threshold. While on the other hand, they lead to higher transaction costs and lower holding in risky asset hence a loss for expected returns.
+Instantly, it raises the question: how often do we want to rebalance and how big is a deviation that we need to respond. This is a tradeoff involves tolerace on breaking the maximum drawdown threshold, transaction cost and return. For one hand, the optimality of the risky asset holding holds in the context of continous allocation. More frequent rebalancings and smaller deviations to respond lead to a higher chance of fufilling the maximum drawdown threshold. While on the other hand, they lead to higher transaction costs and lower holding in risky asset hence a loss for expected returns.
 
-An analysis from the perspective of contigent claim might provide more insights to facilate decision making in this tradeoff. You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold! Such an contigent claim is an exotic option with abundant analytical tools available out there.
+For the decision on such a tradeoff, we may borrow some ingishts from an analysis from the perspective of contigent claim. You may already notice the similarities and links between this dynamic holding on risky asset and an option instrument on the same. It turns out that, entering into a call option with payoff of loss excessive of the maximum drawdown threshold ($$max(realized MDD - MDD threshold, 0)$$) provides similar protection against a predefined maximum drawdown threshold! Such an contigent claim is an exotic option with abundant analytical tools available out there.
 
 For instance, Vercer (2006) simulated the below delta exposure of this option given different maximum drawdown realized (MDD) and current realized drawdown (drawdown). Considering that a delta hedging portfolio of underlying can replicate this option that provides this drawdown protection. The delta itself implies a dynamic portfolio that can attain the maximum drawdown threshold (Though wihout any consideration on the reward side), hence in some sense indicates the risk exposure to maximum drawdown. The value of the delta can provide another angle on determining if our holding in risky assets deviates too far from the reference. This angle is independent from risk aversions and estimations on expected return. 
 
@@ -91,44 +91,11 @@ For instance, Vercer (2006) simulated the below delta exposure of this option gi
 
 source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
 
-The insights we can obtain from the perspective of contigent claim is not restricted to this delta plot only. We can also gain meaningful insights from Gamma, the derivative on delta as well. A higher gamma indicates volatile exposures to maximum drawdown, under such circumstances we may want reblance more frequently and set a lower range on deviation for the quickly changing exposure. Similar Monte Carlo simulation can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. It can provide us a lot more insights in addition to an optimized portfolio. For this purpose, a great deal of tools in the arsenal of derivative analysis become relavant via this angle.
+The insights we can obtain from the perspective of contigent claim is not restricted to this delta plot only. We can also gain meaningful insights from Gamma, the derivative on delta as well. A higher gamma indicates volatile exposures to maximum drawdown, under such circumstances we may want reblance more frequently and set a lower range on deviation for the quickly changing exposure. Similar Monte Carlo simulations can help to evaluate our exposures to maximum drawdown in the form of delta and other greeks under different circumstances of volatility, drift, big jumps and so on. It can provide us a lot more insights in addition to an optimized portfolio. For this purpose, a great deal of tools in the arsenal of derivative analysis become relavant via this angle.
 
+It is also worth to take a look at paramteres required for the calculation of this optimal holding. Looking into pieces consisting of the optimal holding, Drawdown threshold is predefined; current drawdown is observable; As to risk aversions, expected return and volatility, they are the standard inputs to a traditional Markowitz portfolio optimization. It seems that we can add drawdown protection on top of a Markowitz based portfolio management process wihout additional estimation jobs. 
 
-Assuming that the risk asset follows a Geometric Brownian motion ($$dP_t = P_t((\mu + r) dt + \sigma dZ_t)$$), with $$X_t$$ amount of wealth ($$W_t$$) invested in risky asset and the remaining in riskless asset, we have the wealth following the stochastic process:
-
-$$
-\begin{aligned}
-dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
-\end{aligned}
-$$
-
-
-$$
-\begin{aligned}
-U(W) &= \dfrac{W^{1-A}}{1-A} \\ 
-W^{\pi}_t &= Max_{0\leq s\leq t}(W^{\pi}_s e^{r(t-s)}) \\
-& lim_{T\to \infty} \dfrac{1}{(1-A)T}lnE[(1-A)U(W_T)] \\
-& lim_{T\to \infty} \dfrac{1}{T}lnE[W^{1-A}_T] \\
-W_t &\geq \alpha M_t \\
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-dP_t &= P_t((\mu + r) dt + \sigma dZ_t) \\
-dW_t &= X_t ((\mu + r) dt + \sigma dZ_t) + (W_t - X_t) r dt \\
-     &= r W_t dt + X_t (\mu dt + \sigma dZ_t) \\
-X_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{(1 - \alpha)A + \alpha} (W_t - \alpha M_t)
-\end{aligned}
-$$
-
-
-Now we have a powerful tool that can help to harvest wealth appreciation within desired drawdown range. Definitely it is not the only approach to deal with drawdown risk. It deserves to take a quick detour to some other promising ways. These additional aspects help to a diversified view on the situation, and serve as great supplement to the optimal holding discipline we discussed or even fill in the place where it is not fitted. 
-
-![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
-
-source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
+It is a legit choice to use the same paramters for the two steps of the portfolio construction process. While certainly there are cases that we don't want or simple can't do so. For the latter, there are a lot of risk-centric portfolio construction models as we discussed in the ["The Conviction Pyramid of Portfolio Construction"](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html) where the estimation of expected return is avoided for its instability. For the former,  there is indeed reason to use a different source of estimation. As estimation errors themselves can lead to drawdown. Hence from the perspective of risk management, it is to reasonable to base the paramters for drawdown control on more conservative assumptions. 
 
 ### Reference <a name="ref"></a>
 - Grossman & Zhou (1993): Optimal Investment Strategies For Controlling Drawdowns
