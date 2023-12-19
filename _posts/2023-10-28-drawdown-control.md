@@ -50,9 +50,9 @@ This holding aligns seamlessly with our intuitive understanding of relevant fact
 
 **Two Handy Variants**
 
-This optimal holding can be further modified to variants that suit other use cases in drawdown management.
+This optimal holding can be further tailored to variants suitable for various use cases in drawdown management.
 
-Firstly, it can be extended to the case of drawdown defined by absolute amount of wealth. In scenarios where investors aim to retain at least K dolloars, the optimal holding can be modified slightly to account for it. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant K, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
+Firstly, it can be extended to the scenario of drawdown defined by an absolute amount of wealth. In situations where investors aim to retain at least K dolloars, the optimal holding can be modified slightly to account for the change. Essentially it is equivalent to replace the constraint on floor from the stochastic $$M_t$$ to a constant K, leading to the safe cusion change from $$W_t - \alpha M_t$$ to $$W_t - K$$ and risk aversion adjustment from $$(1 - \alpha)A + \alpha$$ to $$A$$.
 
 $$
 \begin{aligned}
@@ -60,7 +60,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-It can also be extended to a multi risky assets scenario as done by Cvitanic & Karatzas (1994). Such expansion provides the flexibility to choose the granularity of risky asset classification. For instance, one can allocate funds within equities and treasury bond or more specifically within large-cap equity, small-cap equity, government bonds, credit bonds, and money market instruments, all under the same framework with a constraint on drawdown. Such flexibility would be quite helpful considering that our judgment may cover partially on the investment universe
+Additionally, it can also be extended to a scenario with multiple risky assets, as explored by Cvitanic & Karatzas (1994). Such expansion provides the flexibility to choose the granularity of risky asset classification. For example, one can allocate funds within equities and treasury bond or more specifically within large-cap equity, small-cap equity, government bonds, credit bonds, and money market instruments - all under the same framework with a constraint on drawdown. Such flexibility would be quite helpful especially when our judgment may cover partially on the investment universe
 
 $$
 \begin{aligned}
