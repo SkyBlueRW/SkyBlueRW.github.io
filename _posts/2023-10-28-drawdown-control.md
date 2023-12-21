@@ -9,13 +9,13 @@
 
 ### Introduction <a name="introduction"></a>
 
-In a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Building upon this foundation, let's explore practical approaches to explicitly incorporate drawdown management within a portfolio management process.
+In a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Following on these discussion, let's explore practical approaches to explicitly incorporate drawdown management within a portfolio management process.
 
 It's generally true that judgements about market conditions and strategies during pivotal moments play a crucial role in drawdown control. Often, a well-founded judgement regarding the efficacy of a strategy, even executed with rudimentary rule of thumbs in holding discipline, can shield investors reasonably from intolerable drawdowns.
 
 Integrating explicit control on drawdown into portfolio construction brings additional advantages, especially within a systematic portfolio management framework. It acts as a translator, converting judgments into a consistent portfolio language; It facilitates ex-ante/post attribution, crucial for informed decision-making and continuous improvement. In scenarios where confident judgment is unavailable, explicit incorporation enables us to fill the gap with backup plans grounded in clearly defined assumptions.
 
-With these benefits in mind, our focus in this blog turns to a journey of tool excavation, specifically around the risky asset holding discipline introduced by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can serve as a reference for the leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
+With these benefits in mind, our focus in this blog turns to a journey of tool excavation, specifically around the risky asset holding discipline introduced by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can serve as a reference for  leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
 
 ### Optimal Holding with Drawdown Control <a name="optimal"></a>
 
