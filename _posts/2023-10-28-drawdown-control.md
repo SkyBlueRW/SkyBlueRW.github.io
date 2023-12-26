@@ -9,11 +9,11 @@
 
 ### Introduction <a name="introduction"></a>
 
-In a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Following on the discussion, it's time to explore practical approaches for the explicit integration of drawdown management into a portfolio managemetn process.
+In a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Following on the discussion, it's time to explore practical approaches for the explicit integration of drawdown management into a portfolio management process.
 
-The landscape of drawdown control is undeniably shaped by critical judgments made at pivotal moments of  market fluctuations and strategic shifts. Often, a well-founded judgement regarding the efficacy of a strategy, even executed with basic rules in holding discipline, can shield investors reasonably from intolerable drawdowns.
+The landscape of drawdown control is undeniably shaped by critical judgments made at pivotal moments of  market fluctuations and regime shifts. Often, a well-founded judgement regarding the efficacy of a strategy, even executed with basic rules in holding discipline, can shield investors reasonably from intolerable drawdowns.
 
-The explicit incorporation of drawdown control into portfolio construction brings additional advantages, particularly within a systematic portfolio management framework. Acting as a translator, this integration converts judgments into a consistent portfolio language, facilitating both ex-ante and post-attribution analyses - crucial for informed decision-making and continuous improvement. In scenarios where confident judgment is not viable, the explicit inclusion enables us to bridge the gap with backup plans rooted in clearly defined assumptions.
+While an explicit incorporation of drawdown control into portfolio construction brings additional advantages, particularly within a systematic portfolio management framework. This integration converts judgments into a consistent portfolio language, facilitating both ex-ante and post-attribution analyses - crucial for informed decision-making and continuous improvement. What's more, in scenarios where confident judgment is not viable, the explicit inclusion enables us to bridge the gap with backup plans rooted in clearly defined assumptions.
 
 With these benefits in mind, our focus in this blog turns to a journey of tool excavation, catering around the risky asset holding discipline pioneered by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can serve as a reference for  leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
 
@@ -21,7 +21,9 @@ With these benefits in mind, our focus in this blog turns to a journey of tool e
 
 Let's begin by taking a closer look at the holding discipline.
 
-Assume $$W_t$$ represents the value of wealth at time t and $$M_t$$ denotes the highest wealth level achieved before or at t. To manage drawdown explicitly, Grossman & Zhou (1993) introduced a hard constraint on maximum drawdown, which is formulated as a stochastic floor determined from previous peak value ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$1 - \alpha$$ is the maximum acceptable drawdown). This constraint is imposed upon the classical portfolio optimization problem of maximizing the long term expected growth of power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). Accounting for different time values of current wealth and previous peak, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
+Assume $$W_t$$ represents the value of wealth at time t and $$M_t$$ denotes the highest wealth level achieved before or at t. To manage drawdown, Grossman & Zhou (1993) introduced a hard constraint on maximum drawdown, which is formulated as a stochastic floor determined from previous peak value ($$W_t \geq \alpha \mathop{Max}_{0\leq s\leq t}{W_s}$$, $$1 - \alpha$$ is the maximum acceptable drawdown). This constraint is imposed upon the classical portfolio optimization problem of maximizing the long term expected growth of power utility ($$U(W) = \dfrac{W^{1-A}}{1-A}$$). 
+
+Accounting for different time values of current wealth and previous peak, we are essentially conducting the following portfolio optimization. ($$X_t$$ is the amount of money invested in the risky asset).
 
 $$
 \begin{aligned}
@@ -45,7 +47,7 @@ Despite the lenghty derivation, the optimal holding derived is quite intuitive, 
 
 Obviously, this downside protection comes at the cost of a lower rate of wealth accumulation. As we raise the maximum drawdown threshold from 0 to $$1 - \alpha$$, the expected log utility growth is scaled by $$1 - (1 + \dfrac{1-\alpha}{\alpha}A)^{-1}$$
 
-This holding aligns with our intuitive understanding of relevant factors in drawdown control: a larger 'safe cushion' above the threshold ($$W_t - \alpha M_t$$), enhanced expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and a higher acceptable maximum drawdown level ($$1 - \alpha$$) justify a more substantial allocation to the risky asset. It's crucial to note that the optimality of this risky asset holding persists even in the case of deterministic changing parameters of $$\mu$$ and $$\sigma$$. In such cases, the proportion would dynamically adjust with changes in $$\mu$$ and $$\sigma$$ changes, allowing for much more flexible applications.
+This holding aligns with our intuitive understanding of relevant factors in drawdown control: a larger 'safe cushion' above the threshold ($$W_t - \alpha M_t$$), enhanced expected performance of the risky asset ($$\dfrac{\mu}{\sigma^2}$$), lower risk aversion (A) and a higher acceptable maximum drawdown level ($$1 - \alpha$$) justify for a more substantial allocation to the risky asset. It's crucial to note that the optimality of this risky asset holding persists even in the case of deterministic changing parameters of $$\mu$$ and $$\sigma$$. In such cases, the proportion would dynamically adjust with changes in $$\mu$$ and $$\sigma$$ changes, allowing for much more flexible applications.
 
 **Two Handy Variants**
 
@@ -59,7 +61,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-Additionally, it can also be extended to a scenario with multiple risky assets, as explored by Cvitanic & Karatzas (1994). Such expansion provides the flexibility to choose the granularity of risky asset classification. For example, one can allocate funds within equities and treasury bond or more specifically within large-cap equity, small-cap equity, government bonds, credit bonds, and money market instruments - all under the same framework with a constraint on drawdown. Such flexibility would be quite helpful especially when our judgment may cover a part of the investment universe
+Additionally, it can also be extended to a scenario with multiple risky assets, as explored by Cvitanic & Karatzas (1994). Such expansion provides the flexibility to choose the granularity of risky asset classification. For example, one can allocate funds within equities and treasury bond or more specifically within large-cap equity, small-cap equity, government bonds, credit bonds, and money market instruments - all under the same framework with a constraint on drawdown. Such flexibility would be quite helpful especially when our judgment may cover partially on the investment universe
 
 $$
 \begin{aligned}
@@ -69,7 +71,7 @@ $$
 
 ### The practical Side <a name="practice"></a>
 
-Now equipped with a clearly defined optimal holding in the risky asset, continuous re-allocation to these assets/portfolios, as per the derived optimal holding, paves the way for maximized wealth utility growth within a predefined drawdown level almost surely!
+Now equipped with a clearly defined optimal holding in the risky asset, continuous re-allocation to these assets/portfolios as per the derived optimal holding, paves the way for maximized wealth utility growth within a predefined drawdown level almost surely!
 
 $$
 \begin{aligned}
@@ -78,7 +80,7 @@ Y_t &= \dfrac{\mu}{\sigma^2} \dfrac{1}{A} (W_t - K) \\
 \end{aligned}
 $$
 
-This optimal holding naturally fits into a two-step portfolio construction process. The first step involves building portfolios of risky assets, followed by determining the allocation within these portfolios and the risk-free asset based on the optimal holding derived. This two-step process can be applied regularly during each rebalancing, in response to significant deviations from the optimal risky holding, or in both scenarios.
+This optimal holding naturally fits into a two-step portfolio construction process. The initial step involves building portfolios of risky assets, followed by determining the allocation within these portfolios and the risk-free asset based on the optimal holding derived. This two-step process can be applied regularly during each rebalancing, in response to significant deviations from the optimal risky holding, or in both scenarios.
 
 The immediate question arises: how frequently should we rebalance, and what magnitude of deviation warrants a response? This tradeoff involves considerations of tolerances on breaking the maximum drawdown threshold, transaction costs, and return. On one side, the optimality of the risky asset holding is rooted in continuous allocation. More frequent rebalancing and responding to smaller deviations increase the likelihood of meeting the maximum drawdown threshold. Conversely, they result in higher transaction costs and lower holdings in the risky asset, leading to a potential loss in expected returns.
 
