@@ -16,3 +16,5 @@ start from good old beta to incporate value and size in Fama French, to momentum
 
 
 Pontiff & McLean (2016) 26% lower out-of-sample and 58% lower post-publication
+
+1 - (1 - \alpha) ^ k
