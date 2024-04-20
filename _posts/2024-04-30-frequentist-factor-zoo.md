@@ -23,3 +23,6 @@ Pontiff & McLean (2016) 26% lower out-of-sample and 58% lower post-publication
 central limiet theorem distribution of empirical mean. 
 
 Bootstrap
+
+
+V
