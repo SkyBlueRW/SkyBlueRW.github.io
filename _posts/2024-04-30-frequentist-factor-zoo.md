@@ -19,3 +19,7 @@ what's p value?
 Pontiff & McLean (2016) 26% lower out-of-sample and 58% lower post-publication
 
 1 - (1 - \alpha) ^ k
+
+central limiet theorem distribution of empirical mean. 
+
+Bootstrap
