@@ -27,3 +27,4 @@ Bootstrap
 
 V
 https://mp.weixin.qq.com/s/QOdTdKjNE838FoM71gYJew
+https://www.stat.cmu.edu/~larry/=sml/Boot.pdf
