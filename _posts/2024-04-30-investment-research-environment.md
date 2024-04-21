@@ -10,6 +10,8 @@
 
 ### Introduction <a name="introduction"></a>
 
+an investment process consists of different modules. 
+
 There is way different excitement in research and in development. One originated more from uncertain. On the other hand, development brings satisfaction. Every line of new code brings the goal a little bit closer.
 
 systematic solution.
