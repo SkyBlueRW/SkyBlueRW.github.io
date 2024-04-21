@@ -1,6 +1,6 @@
 #
 
-## A Fun Try into the Development of an Integrated Investment Research Environment
+## A Fun Try into building an Integrated Investment Research Environment
 
 - [Introduction](#introduction)
 - [Expected Volatility under Q](#ma)
