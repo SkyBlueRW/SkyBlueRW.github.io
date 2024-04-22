@@ -23,3 +23,6 @@ Cycle of research
 3. monitor new clues about effective paper trading. 
 
 automate as much as possible to focus on the main part of the research.
+
+https://www.limina.com/blog/integrated-investment-management-solutions
+https://www.linkedin.com/pulse/integrated-investment-management-structure-associated-mircea/
