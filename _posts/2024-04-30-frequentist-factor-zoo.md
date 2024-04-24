@@ -35,3 +35,5 @@ identify 'true' factors sequentially.
 V
 https://mp.weixin.qq.com/s/QOdTdKjNE838FoM71gYJew
 https://www.stat.cmu.edu/~larry/=sml/Boot.pdf
+
+If you torture the data long enough, it will confess to anything. Ronald Coase
