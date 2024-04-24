@@ -30,6 +30,7 @@ central limiet theorem distribution of empirical mean.
 
 Bootstrap
 
+identify 'true' factors sequentially.
 
 V
 https://mp.weixin.qq.com/s/QOdTdKjNE838FoM71gYJew
