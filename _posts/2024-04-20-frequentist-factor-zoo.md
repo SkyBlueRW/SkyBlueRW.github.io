@@ -10,7 +10,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-![Lucky_Sharpe](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/lucky_shapre.png)
+![Lucky_Sharpe](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/lucky_sharpe.png)
 
 
 It's really not a rare situation in investment research, that one read into a new paper detailing about a new anomaly that can predict the cross sectional stock return. You try to replicate it and enhance it in terms of a alpha signal with the arsenal of all kinds of modification. While it does not work out of sample in a paper trading despite the amazing performance delivered historically. What's wrong?
