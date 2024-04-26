@@ -10,6 +10,8 @@
 
 ### Introduction <a name="introduction"></a>
 
+The idea emerged a couple of years ago when I started to have some research results and hoped to do more! It would be nice to have a system to scale for keeping track of updates on previous research results and facilitating the new research. Hopefully, there can be as much automation as possible so that the focus can be shifted to the key subject of the reseach.
+
 an investment process consists of different modules. 
 
 There is way different excitement in research and in development. One originated more from uncertain. On the other hand, development brings satisfaction. Every line of new code brings the goal a little bit closer.
