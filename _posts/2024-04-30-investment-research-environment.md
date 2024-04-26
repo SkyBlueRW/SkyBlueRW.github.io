@@ -10,7 +10,9 @@
 
 ### Introduction <a name="introduction"></a>
 
-The idea emerged a couple of years ago when I started to have some research results and hoped to do more! It would be nice to have a system to scale for keeping track of updates on previous research results and facilitating the new research. Hopefully, there can be as much automation as possible so that the focus can be shifted to the key subject of the reseach.
+The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research result and facilitating new research? 
+
+As much as tedious as it sounds, investment research, to me, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, post research update
 
 an investment process consists of different modules. 
 
