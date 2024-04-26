@@ -25,6 +25,8 @@ When we research the data set intensively and experiments hundreds of factors, t
 simulation. 
 
 
+With pre-determined factors (not necessary), how to identify if a candidate facotr perform taking luck into account
+
 what's p value?
 
 Pontiff & McLean (2016) 26% lower out-of-sample and 58% lower post-publication
