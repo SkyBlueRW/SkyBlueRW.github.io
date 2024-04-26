@@ -24,6 +24,7 @@ When we research the data set intensively and experiments hundreds of factors, t
 
 simulation. 
 
+Lasso, explicit account for multiple testing 
 
 With pre-determined factors (not necessary), how to identify if a candidate facotr perform taking luck into account
 
