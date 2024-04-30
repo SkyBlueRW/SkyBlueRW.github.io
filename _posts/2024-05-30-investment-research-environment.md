@@ -10,13 +10,9 @@
 
 ### Introduction <a name="introduction"></a>
 
-The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research result and facilitating new research? 
+The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research result and facilitating new research? As much as I hate to admit, investment research, to me, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, post research update
 
-As much as I hate to admit, investment research, to me, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, post research update
-
-an investment process consists of different modules. 
-
-There is way different excitement in research and in development. One originated more from uncertain. On the other hand, development brings satisfaction. Every line of new code brings the goal a little bit closer.
+I have dedicated some time every once a while to the development of this system imagined. I got to say, there is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of times is from the 
 
 systematic solution.
 
