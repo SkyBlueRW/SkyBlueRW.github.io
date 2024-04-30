@@ -28,5 +28,7 @@ Cycle of research
 
 automate as much as possible to focus on the main part of the research.
 
+![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
+
 https://www.limina.com/blog/integrated-investment-management-solutions
 https://www.linkedin.com/pulse/integrated-investment-management-structure-associated-mircea/
