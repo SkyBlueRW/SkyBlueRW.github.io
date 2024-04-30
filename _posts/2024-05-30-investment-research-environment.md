@@ -14,7 +14,7 @@ The idea emerged a couple of years ago when I started to have some research resu
 
 I have dedicated some time every once a while to the development of this system imagined in the next couple of years. I got to say, there is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
 
-The project is no near to finish yet and by no means I am trying to develop a well optimized product level system. While the skeleton is there and indeed make my life easier in research (especially when a lot of the research is done at personal time out of curiosity). 
+The project is no near to finish yet and by no means I am trying to develop a well optimized product level system. While the skeleton is there and indeed make my life easier in research. After all, the spirit is to have things done in a systematical way so that accumulation can be expected. It's what I am trying to do at work as well as personal research projects. 
 
 ### What do I need <a name="need"></a>
 
