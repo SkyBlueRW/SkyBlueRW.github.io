@@ -10,7 +10,7 @@
 
 ### Where it begins <a name="beg"></a>
 
-The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research results and facilitating new research? As much as I hate to admit, investment research, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, post research update.
+The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research results and facilitating new research? As much as I hate to admit, investment research, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, monitoring, tuning etc...
 
 I have dedicated some time every once a while to the development of this system imagined in the next couple of years. I got to say, there is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
 
