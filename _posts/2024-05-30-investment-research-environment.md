@@ -18,6 +18,9 @@ The project is no near to finish yet and by no means I am trying to develop a we
 
 ### What do I need <a name="need"></a>
 
+![Structure](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/environment_structure.png)
+
+
 modularized
 
 1. pre data - api
