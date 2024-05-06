@@ -12,8 +12,6 @@
 
 The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research results and facilitating new research? As much as I hate to admit, investment research, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, monitoring, tuning etc...
 
-I have dedicated some time every once a while to the development of this system imagined in the next couple of years. There is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
-
 The project is nowhere near to finish yet and by no means I am trying to develop a well optimized product level system. It's indeed beneficial. What's already there indeed make my life easier in research and the process of development prepared me to learn and do the coding for all my research.
 
 ### What do I need <a name="need"></a>
@@ -35,4 +33,4 @@ https://www.limina.com/blog/integrated-investment-management-solutions
 https://www.linkedin.com/pulse/integrated-investment-management-structure-associated-mircea/
 
 
-a story of an unprofessional programmer coding his way to facilitate research of interest.
+I have dedicated some time every once a while to the development of this system imagined in the next couple of years. There is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
