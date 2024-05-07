@@ -10,7 +10,9 @@
 
 ### Where it begins <a name="beg"></a>
 
-The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Wouldn't it be amazing to have a system to scale on monitoring existing research results and facilitating new research? As much as I hate to admit, investment research, is not only about the excitement of thinking and experimenting with solution of puzzles. There is also a quite heavy aspects of data cleaning, monitoring, tuning etc...
+The idea emerged a couple of years ago when I started to have some research results and hoped to do more! The 'hard lifting' like tracking on-going performance of existing reserach and clearning data for new research seem more and more repeatative and tedious. Hence my wondering - wouldn't it be amzing to have a system to scale on all of it so that more time is spent on the main part?
+
+It is true that research projects are distinct in nature. Different modeling is applied on various data set to answer different questions. 
 
 The project is nowhere near to finish yet and by no means I am trying to develop a well optimized product level system. It's indeed helpful. What's already there make my life easier in research and the process of development prepared me to learn and do the coding for all my research.
 
@@ -25,7 +27,6 @@ modularized
 2. tools, likely use existing tools - modularization. Historical backtest. No gaurantee, but do
 3. monitor new clues about effective paper trading. 
 
-automate as much as possible to focus on the main part of the research.
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
