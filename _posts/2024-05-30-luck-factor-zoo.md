@@ -1,6 +1,6 @@
 #
 
-## A frequentist peek into the factor zoo
+## The Adjustment for Luck!
 
 - [Introduction](#introduction)
 - [Expected Volatility under Q](#ma)
