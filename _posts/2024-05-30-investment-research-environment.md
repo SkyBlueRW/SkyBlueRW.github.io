@@ -16,9 +16,10 @@ A lite version that summarizes some universal pieces across research projects to
 
 ### How it is for the moment <a name="now"></a>
 
-More or less, the dream have come true, with some development after the following design of a research environment.
+To me, the key of achieving the goal is to abstract functions, calculations nad process that are likely to repeat, modularize them into pieces and divide and conque.  More or less, the dream have come true, with the following design. 
 
 ![Structure](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/environment_structure.png)
+
 
 
 modularized
