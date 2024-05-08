@@ -16,6 +16,8 @@ A lite version that summarizes some universal pieces across research projects to
 
 ### How it is for the moment <a name="now"></a>
 
+More or less, the dream have come true, with some development after the following design of a research environment.
+
 ![Structure](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/environment_structure.png)
 
 
