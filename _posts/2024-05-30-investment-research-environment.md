@@ -7,10 +7,11 @@
 
 ### Where and how it begins <a name="beg"></a>
 
-The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Those 'hard liftings' like tracking on-going performance of existing reserach and clearning data for new research seem more and more repeatative and tedious. Hence my wondering - wouldn't it be amzing to have a system to scale on all of it so that more time is spent on the main part?
+The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Those 'hard liftings' like tracking on-going performance of existing reserach and clearning data for new research seem more and more repeatative and tedious. Hence my wondering - wouldn't it be amzing to have a system to scale on all of it?
 
-Of course, I am not looking to develop a well optimized super system that can support all kinds of investment research. For one hand, research projects are distinct in their natures - different modeling is applied on various data sets to answer different questions of interest. More importantly, it's just to heavy in terms of personal interest. While a lite version of research envrionment that summarizes some universal pieces across research projects would already make my like easier. And that's what I am looking for.
+Of course, I am not looking to develop a well optimized super system that can support all kinds of investment research. For one hand, research projects are distinct in their natures - different modeling is applied on various data sets to answer different questions of interest. More importantly, it's just too heavy as a personal hobby :). 
 
+A lite version that summarizes some universal pieces across research projects to help me focus more on the fun part would already be enough! The dream is that those frequently used models and data sources are organized in modules easy for repeated use hence once an idea hit, I can quickly implement it into a calculation unit based on existing function and deploy it for check in historical simulation as well as onging monitor.
 
 
 ### How it is for the moment <a name="now"></a>
