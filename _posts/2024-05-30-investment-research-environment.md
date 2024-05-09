@@ -30,7 +30,7 @@ In Data API, various data sources are wrapped around standardized modules and fu
 
 Whereas those frequently used low level calculations like neumerical methods, statistical procedures, portfolio bactest and more high level modelings like nowcast, black-litterman allocation, performance allocations are summarized accordingly in different pacakges under the library section. 
 
-All these modules in data api and libraries fufill the first half of the goal, previous codes can be used in large extend for a new idea hence fastening the implementation! Now it comes to the second half of the goal. Once there is some results in a project, we obviously want to test in different scenarios. Like for a new factor, we want not on
+All these modules in data api and libraries fufill the first half of the goal, previous codes can be used in large extend for a new idea hence fastening the implementation! Now it comes to the second half of the goal. Once there is some results in a project, it's usually the case that we want to check its performance in different scenarios. Like for a new portfolio construction method, get the 
 
 
 
