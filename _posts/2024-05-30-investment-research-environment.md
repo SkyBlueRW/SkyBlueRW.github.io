@@ -16,13 +16,13 @@ A lite version that summarizes some universal pieces across research projects to
 
 ### How it is for the moment <a name="now"></a>
 
-To me, the key of achieving the goal is to abstract functions, calculations nad process that are likely to repeat, modularize them into pieces and divide and conque.  More or less, the dream have come true, with the following design. 
+To me, the key of achieving the goal is about abstract functions, calculations and process that are likely to repeat, modularizing them into pieces and divide and conque.  More or less, the dream have come true, with the following design. 
 
 ![Structure](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/environment_structure.png)
 
-The development of the environment actually took place seeminglessly along side the going of other research projects. A lot of times, it just took one more step on top of what is already required. For example, every time when looking into a portfolio construction model, it is quite likely that there involves steps of convex optimization and matrix operations. In this case rather than implementing it as a one shot deal, take a bit more time to have it as re-usable functions and classes in a package would save a lot effort the next time when a related topic is re-visited.  
+The development of the environment actually took place seeminglessly along side the going of other research projects. A lot of times, it just took one more step on top of what is already required. For example, every time when looking into a portfolio construction model, it is quite likely that there involves steps of convex optimization and matrix operations. In this case rather than implementing it as a one shot deal, take a bit more time to have it abstracted as re-usable functions and classes in a package would save a lot effort the next time when a related topic is re-visited.  
 
-Similarly, if there is a need to collect data from a new data source, I would always try to build a api to output data in a designed format and take extra care to use it in a point in time manner. Obviously it will take more time, while the benefit comes that the api can be used easily in one time research, historical simulation and ongoing monitor, faciliating the establish of a research environment.
+Similarly, if there is a need to collect data from a new data source, I would always prefer to build a api to output data in a designed format and take extra care to use it in a point in time manner. Obviously it will take more time, while the benefit comes that the api can be used easily in one time research, historical simulation and ongoing monitor, faciliating the establish of a research environment. Also keep the input aligned in all the activities.
 
 
 1. pre data - api
