@@ -37,13 +37,7 @@ All these modules in data api and libraries fufill the first half of the goal, p
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
 
-1. pre data - api
-2. tools, likely use existing tools - modularization. Historical backtest. No gaurantee, but do
-3. monitor new clues about effective paper trading. 
 
-
-https://www.limina.com/blog/integrated-investment-management-solutions
-https://www.linkedin.com/pulse/integrated-investment-management-structure-associated-mircea/
 
 
 I have dedicated some time every once a while to the development of this system imagined in the next couple of years. There is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
