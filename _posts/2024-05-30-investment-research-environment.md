@@ -20,17 +20,24 @@ To me, the key of achieving the goal is about abstract functions, calculations a
 
 ![Structure](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/environment_structure.png)
 
-The development of the environment actually took place seeminglessly along side the going of other research projects. A lot of times, it just took one more step on top of what is already required. For example, every time when looking into a portfolio construction model, it is quite likely that there involves steps of convex optimization and matrix operations. In this case rather than implementing it as a one shot deal, take a bit more time to have it abstracted as re-usable functions and classes in a package would save a lot effort the next time when a related topic is re-visited.  
+The development of the environment actually took place seeminglessly along side the going of other research projects. A lot of times, it just took one more step on top of what is already required. For example, every time when looking into a portfolio construction model, it is quite likely that there involves steps of convex optimization and matrix operations. In this case rather than implementing it as a one shot deal, take a bit more time to have it abstracted a re-usable functions or classes in a package would save a lot effort the next time when a related topic is re-visited.  
 
-Similarly, if there is a need to collect data from a new data source, I would always prefer to build a api to output data in a designed format and take extra care to use it in a point in time manner. Obviously it will take more time, while the benefit comes that the api can be used easily in one time research, historical simulation and ongoing monitor, faciliating the establish of a research environment. Also keep the input aligned in all the activities.
+Similarly, if there is a need to collect data from a new data source, I would always prefer to build a standardized api to output data in a designed format and take extra care to use it in a point in time manner. Obviously it will take more time, while the benefit comes that the api can be used easily in all kind of scenarios like one time research, historical simulation and ongoing monitor, faciliating the establish of an integrated research environment with aligned input in all the activities.
+
+These kinds of abstraction conclude the first 2 components of the research environment - Data API and Libraries of Models and Tools.
+
+In Data API, various data sources are wrapped around standardized modules and functions to output data in more aligned format. As mentioned above, special attention here is paid to avoid the looking ahead bias - using data in historical simulation before it is available! Additionally, those commonly used methods to clean and merge data such as accounting statement preprocess, calendar handling, etc. Everything built here serves the prupose of outputing a processed data set that is as clean as possible and can be used a variety of use cases.
+
+
+
+
+![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
 
 1. pre data - api
 2. tools, likely use existing tools - modularization. Historical backtest. No gaurantee, but do
 3. monitor new clues about effective paper trading. 
 
-
-![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
 https://www.limina.com/blog/integrated-investment-management-solutions
 https://www.linkedin.com/pulse/integrated-investment-management-structure-associated-mircea/
