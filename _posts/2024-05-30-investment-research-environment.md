@@ -4,6 +4,7 @@
 
 - [Where it begins](#beg)
 - [How it is for the moment](#now)
+- [placehoder](#hold)
 
 ### Where and how it begins <a name="beg"></a>
 
@@ -36,13 +37,14 @@ This demand is handdled in the last part of the data update module. Despite diff
 
 Similary other further calculations on top of this factor calculation such as historical long short performance of this factor, a strategy using this factor etc are simply another additional layer of calculation. 
 
+### placehoder <a name="hold"></a>
+
+So this is the investment research environment that. I have dedicated some time every once a while to the development of this system imagined in the next couple of years. There is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
-
-
-
-
-I have dedicated some time every once a while to the development of this system imagined in the next couple of years. There is a distinct kind of fun from the development than from a research project. In research, the excitement a lot of time is from finally understanding something or figuring out a solution, the aspiration arrives as a nice surprise after reading and verifying into the data. While when it comes to development, the joy of satisfaction arives gradually. With every line of new codes written, I feel I get a little bit close to this.
+- [DataRepo](https://github.com/SkyBlueRW/DataRepo)
+- [Backtest](https://github.com/SkyBlueRW/Backtest)
+- [PortCon](https://github.com/SkyBlueRW/PortCon)
 
 Build the wheel when you need it!
