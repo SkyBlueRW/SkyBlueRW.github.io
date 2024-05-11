@@ -4,7 +4,7 @@
 
 - [Where it begins](#beg)
 - [How it is for the moment](#now)
-- [An equity strategy example][#examp]
+- [An equity strategy example](#examp)
 
 ### Where and how it begins <a name="beg"></a>
 
