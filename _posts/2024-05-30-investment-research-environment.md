@@ -4,6 +4,7 @@
 
 - [Where it begins](#beg)
 - [How it is for the moment](#now)
+- [An equity strategy example][#examp]
 
 ### Where and how it begins <a name="beg"></a>
 
@@ -32,7 +33,12 @@ Whereas those frequently used low level calculations like neumerical methods, st
 
 All these modules in data api and libraries fufill the first half of the goal. Previous codes can be used in large extend for a new idea hence fastening the implementation! Now it comes to the other part of the goal. Once there is some results in a project, it's usually the case that we want to check its performance in different scenarios. Like for a new portfolio construction method, get a function implemention of transforming input into a portfolio is just the first step, the logical next step is to have it calculated for different scenarios hincluding history and onging out of sample.
 
-This demand is handdled in the last part. Despite different models. They all can be abstracted in to a series of data calculation unit depending on each other that requires calculation upon certain event. For example, when it comes to the development of an equity strategy, 
+This demand is handdled in the last part of the data update module. Despite different models. They all can be abstracted in to a series of data calculation unit depending on each other that requires calculation upon certain event. A data update module that can check the necessity of calculation, call the calculation accordingly and save and logging the cauculation would be of tremendous help. For example, with this data update pipeline, when it comes to the development of a new alpha signal about accounting statement. I can focus on the calculation of this factor with the help of all apis and libraries. With the calculation figured out for one period, with configurations about the dependency of this calculation as well as calculation frequency, the package can calculate data for history and on-going.
+
+Similary other further calculations on top of this factor calculation such as historical long short performance of this factor, a strategy using this factor etc are simply another additional layer of calculation. 
+
+### An equity strategy example <a name="examp"></a>
+
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
