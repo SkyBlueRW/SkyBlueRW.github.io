@@ -9,7 +9,7 @@
 
 The idea emerged a couple of years ago when I started to have some research results and hoped to do more! Those 'hard liftings' like tracking on-going performance of existing reserach and clearning data for new research seem more and more repeatative and tedious. Hence my wondering - wouldn't it be amzing to have a system to scale on all of it?
 
-Of course, I am not looking to develop a well optimized super system that can support all kinds of investment research. For one hand, research projects are distinct in their natures - different analysis is applied on various data sets to answer different questions of interest. More importantly, it's just too heavy as a personal hobby :). 
+Of course, I am not looking to develop a well optimized system that can support all kinds of investment research. For one hand, research projects are distinct in their natures - different analysis is applied on various data sets to answer different questions of interest. More importantly, it's just too heavy as a personal hobby :). 
 
 A lite version that summarizes some universal pieces across research projects to help me focus more on the fun part would already be good enough! The dream is that those frequently used models and data sources are organized in modules easy for repeated use. Hence once an idea hit, I can quickly implement it into a calculation unit based on existing function and deploy it for check in historical simulation as well as onging monitor with easy configurations.
 
@@ -30,9 +30,9 @@ In Data API, various data sources are wrapped around standardized modules and fu
 
 Whereas those frequently used low level calculations like neumerical methods, statistical procedures, portfolio bactest and high level modelings like nowcast, black-litterman allocation, performance allocations are summarized accordingly in different pacakges under the library section. 
 
-All these modules in data api and libraries fufill the first half of the goal. Previous codes can be used in large extend for a new idea hence fastening the implementation! Now it comes to the second half of the goal. Once there is some results in a project, it's usually the case that we want to check its performance in different scenarios. Like for a new portfolio construction method, get a function implemention of transforming input into a portfolio is just the first step, the logical next step is to have it calculated for different scenarios hincluding history and onging out of sample.
+All these modules in data api and libraries fufill the first half of the goal. Previous codes can be used in large extend for a new idea hence fastening the implementation! Now it comes to the other part of the goal. Once there is some results in a project, it's usually the case that we want to check its performance in different scenarios. Like for a new portfolio construction method, get a function implemention of transforming input into a portfolio is just the first step, the logical next step is to have it calculated for different scenarios hincluding history and onging out of sample.
 
-This demand is handdled in the last part. Despite different models. They all can be abstracted in to a series of data calculation unit depending on each other that requires calculation upon certain event.
+This demand is handdled in the last part. Despite different models. They all can be abstracted in to a series of data calculation unit depending on each other that requires calculation upon certain event. For example, when it comes to the development of an equity strategy, 
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
