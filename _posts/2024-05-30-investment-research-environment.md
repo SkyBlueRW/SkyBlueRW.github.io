@@ -12,7 +12,7 @@ The genesis of this endeavor sprouted a couple of years back when I found myself
 
 Of course, I am not aiming to develop a universally optimized system to accomodate all investment research needs. Research projects vary significantly in thir requirements, making such an endeavor impractical, especially as a personal hoby. 
 
-Instead, a lightweight version that distills universal componenets across many different projects that I am interested in became my goal. The dream is to have a system where frequently used models, data sources and update processes are neatly organized into modules for each reuse. Hence onece an idea hit, I can quickly implement it into a calculation unit based on existing tools and deploy it for data update process for historical and on-going performance monitor, a typical iteration in a research project.
+Instead, a lightweight version that distills universal componenets across many different projects that I am interested in became my goal. The dream is to have a system where frequently used models, data sources and update processes can be neatly organized into modules for respective reuse. Hence onece an idea hit, I can quickly implement it into a calculation unit based on existing tools and deploy it for data update process for historical and on-going performance monitor, a typical iteration in a research project.
 
 
 
@@ -34,18 +34,26 @@ Similarly, frequently used low-level calculations (e.g., numerical methods, stat
 
 Together, these modules fulfill the initial half of my goal—enabling the reuse of previous code to accelerate the implementation of new ideas. Now, attention shifts to the latter half: apply relavant calculation to common scenarios with a data update pipeline. Regardless of the underlying models, they can be abstracted into a series of data calculation units dependent on each other. This module orchestrates the necessity of calculations, executes them accordingly, and logs the outcomes. 
 
-For example, when developing a new alpha signal based on accounting statements, I can focus on the calculation aspect with the aid of APIs and libraries. Once calculations for a period are completed, with specified dependencies and frequencies as configuration for the data update pipeline, the module can generate historical and ongoing data. To take one step further, further subsequent calculations—such as historical long-short performance or strategy formulation—build upon this foundational data calculation layer.
+For example, when developing a new alpha signal based on accounting statements, I can focus on the calculation aspect with the aid of APIs and libraries. Once calculations for a period are completed, with calculation specified dependencies and frequencies as configuration for the data update pipeline, the module can generate historical and ongoing data. To take one step further, further subsequent calculations—such as historical long-short performance or strategy formulation—build upon this foundational data calculation layer.
 
 
 ### And More.. <a name="more"></a>
 
-This is the investment research environment I've envisioned. 
+More or less, this is the investment research environment I've envisioned. 
+
 
 I have dedicated some time every once a while to the development of this system over the past couple of years. There's a unique satisfaction in the development process, distinct from research. In research, the thrill often stems from understanding or finding a solution. In contrast, the satisfaction of development grows gradually. With each line of code, I inch closer to realizing this vision.
 
+It is indeed helpful in my research, saving great deal of the repetive exercises hence releasing more time to fucos on the fun part. For example, the following implementation represent one instance of the system specifically supporting equity strategies. 
+
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
-Some of the packages mentioned:
+The DataApi as described in the previous section acts as the source of all of the data requirements in all sections. The library section encodes those commonly used methods such as optimization method for portfolio construction and alpha model, backettest engine for strategy and factor research, portfolio attribution for ex-post analysis.
+
+In the production section, each package represents a module component together that defining a strategy. For each of the module, 
+
+
+Some of the packages developed in this effort for reference:
 
 - [DataRepo](https://github.com/SkyBlueRW/DataRepo)
 - [Backtest](https://github.com/SkyBlueRW/Backtest)
