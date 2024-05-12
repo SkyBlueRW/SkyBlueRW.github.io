@@ -4,15 +4,15 @@
 
 - [Where it begins](#beg)
 - [How it is for the moment](#now)
-- [placehoder](#hold)
+- [And More..](#more)
 
 ### Where and how it begins <a name="beg"></a>
 
-The genesis of this endeavor sprouted a couple of years back when I found myself knee-deep in research, craving efficiency and scalability. The repetitive nature of tasks like data cleansing and performance tracking began to feel tedious, making me wonder: could there be a more streamlined approach?
+The genesis of this endeavor sprouted a couple of years back when I found myself deeper in research projects, craving efficiency and scalability. The repetitive nature of tasks like data cleansing and performance tracking began to feel tedious, making me wonder: could there be a more streamlined approach?
 
-Of course, I am not aiming to develop a universally optimized system to accomodate all investment research needs. Research projects vary significantly in thir requirements, making such an endeavor impractical as a personal hoby. 
+Of course, I am not aiming to develop a universally optimized system to accomodate all investment research needs. Research projects vary significantly in thir requirements, making such an endeavor impractical, especially as a personal hoby. 
 
-Instead, a lightweight version that distills universal componenets across many different projects that I am interested in became my goal. The dream is a system where frequently used models, data sources and update processes are neatly organized into modules for each reuse. Hence onece an idea hit, I can quickly implement it into a calculation unit based on existing tools and deploy it for data update process for historical and on-going performance monitor.
+Instead, a lightweight version that distills universal componenets across many different projects that I am interested in became my goal. The dream is to have a system where frequently used models, data sources and update processes are neatly organized into modules for each reuse. Hence onece an idea hit, I can quickly implement it into a calculation unit based on existing tools and deploy it for data update process for historical and on-going performance monitor, a typical iteration in a research project.
 
 
 
@@ -32,14 +32,16 @@ In the Data API, diverse data sources are wrapped within standardized modules an
 
 Similarly, frequently used low-level calculations (e.g., numerical methods, statistical procedures) and high-level models (e.g., nowcasting, Black-Litterman allocation) are encapsulated within distinct packages under the Libraries section.
 
-Together, these modules fulfill the initial half of my goal—enabling the reuse of previous code to accelerate the implementation of new ideas. Now, attention shifts to the latter half: apply relavant calculation to common scenarios with a data update pipeline. Regardless of the underlying models, they can be abstracted into a series of data calculation units dependent on each other. This module orchestrates the necessity of calculations, executes them accordingly, and logs the outcomes. For example, when developing a new alpha signal based on accounting statements, I can focus on the calculation aspect with the aid of APIs and libraries. Once calculations for a period are completed, with specified dependencies and frequencies, the module can generate historical and ongoing data.
+Together, these modules fulfill the initial half of my goal—enabling the reuse of previous code to accelerate the implementation of new ideas. Now, attention shifts to the latter half: apply relavant calculation to common scenarios with a data update pipeline. Regardless of the underlying models, they can be abstracted into a series of data calculation units dependent on each other. This module orchestrates the necessity of calculations, executes them accordingly, and logs the outcomes. 
 
-Moreover, further subsequent calculations—such as historical long-short performance or strategy formulation—build upon this foundational data calculation layer.
+For example, when developing a new alpha signal based on accounting statements, I can focus on the calculation aspect with the aid of APIs and libraries. Once calculations for a period are completed, with specified dependencies and frequencies as configuration for the data update pipeline, the module can generate historical and ongoing data. To take one step further, further subsequent calculations—such as historical long-short performance or strategy formulation—build upon this foundational data calculation layer.
 
 
-### placehoder <a name="hold"></a>
+### And More.. <a name="more"></a>
 
-This is the investment research environment I've envisioned. I have dedicated some time every once a while to the development of this system over the past couple of years. There's a unique satisfaction in the development process, distinct from research. In research, the thrill often stems from understanding or finding a solution. In contrast, the satisfaction of development grows gradually. With each line of code, I inch closer to realizing this vision.
+This is the investment research environment I've envisioned. 
+
+I have dedicated some time every once a while to the development of this system over the past couple of years. There's a unique satisfaction in the development process, distinct from research. In research, the thrill often stems from understanding or finding a solution. In contrast, the satisfaction of development grows gradually. With each line of code, I inch closer to realizing this vision.
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
