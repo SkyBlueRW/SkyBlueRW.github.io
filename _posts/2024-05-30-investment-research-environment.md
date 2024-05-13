@@ -59,4 +59,4 @@ Some of the packages developed in this effort for reference:
 - [Backtest](https://github.com/SkyBlueRW/Backtest)
 - [PortCon](https://github.com/SkyBlueRW/PortCon)
 
-Build the wheel when you need it!
+A helpful detour from research to development. Build the wheel when you need it!
