@@ -26,13 +26,7 @@ The development of this environment seamlessly intertwined with ongoing research
 
 Following this thought, when integrating data from new sources, I would always prefer building standardized APIs to deliver data in a consistent format. Although this approach demands additional time initially, the long-term benefits are immense. These APIs become versatile tools, usable across various scenarios, from one-time research tasks to ongoing monitoring, thus fostering an integrated research environment with synchronized inputs.
 
-The culmination of such abstractions comprises the first two components of my research environment: the Data API and Libraries of Models and Tools.
-
-In the Data API, diverse data sources are wrapped within standardized modules and functions to yield aligned outputs. Here, special attention is paid to avoid lookahead bias, ensuring data is used appropriately in historical simulations after its release. Additionally, common data cleaning and merging methods—such as accounting statement preprocessing and calendar handling—are incorporated to expedite further data manipulation and usage across diverse applications.
-
-Similarly, frequently used low-level calculations (e.g., numerical methods, statistical procedures) and high-level models (e.g., nowcasting, Black-Litterman allocation) are encapsulated within distinct packages under the Libraries section.
-
-Together, these modules fulfill the initial half of my goal—enabling the reuse of previous code to accelerate the implementation of new ideas. Now, attention shifts to the latter half: apply relavant calculation to common scenarios with a data update pipeline. Regardless of the underlying models, they can be abstracted into a series of data calculation units dependent on each other. This module orchestrates the necessity of calculations, executes them accordingly, and logs the outcomes. 
+The culmination of such abstractions comprises the first two components of my research environment: the Data API and Libraries of Models and Tools. Together, these modules fulfill the initial half of my goal—enabling the reuse of previous code to accelerate the implementation of new ideas. Now, attention shifts to the latter half: apply relavant calculation to common scenarios with a data update pipeline. Regardless of the underlying models, they can be abstracted into a series of data calculation units dependent on each other. This module orchestrates the necessity of calculations, executes them accordingly, and logs the outcomes. 
 
 For example, when developing a new alpha signal based on accounting statements, I can focus on the calculation aspect with the aid of APIs and libraries. Once calculations for a period are completed, with calculation specified dependencies and frequencies as configuration for the data update pipeline, the module can generate historical and ongoing data. To take one step further, further subsequent calculations—such as historical long-short performance or strategy formulation—build upon this foundational data calculation layer.
 
@@ -48,9 +42,10 @@ It is indeed helpful in my research, saving great deal of the repetive exercises
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
-The DataApi as described in the previous section acts as the source of all of the data requirements in all sections. The library section encodes those commonly used methods such as optimization method for portfolio construction and alpha model, backettest engine for strategy and factor research, portfolio attribution for ex-post analysis.
+In the Data API, diverse data sources are wrapped within standardized modules and functions to yield aligned outputs. Here, special attention is paid to avoid lookahead bias, ensuring data is used appropriately in historical simulations after its release. Additionally, common data cleaning and merging methods—such as accounting statement preprocessing and calendar handling—are incorporated to expedite further data manipulation and usage across diverse applications.
 
-In the production section, each package represents a module component together that defining a strategy. For each of the module, 
+Similarly, frequently used low-level calculations (e.g., numerical methods, statistical procedures) and high-level models (e.g., nowcasting, Black-Litterman allocation) are encapsulated within distinct packages under the Libraries section.
+
 
 
 Some of the packages developed in this effort for reference:
