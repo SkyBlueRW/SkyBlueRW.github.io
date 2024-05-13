@@ -38,14 +38,13 @@ More or less, this is the investment research environment I've envisioned.
 
 I have dedicated some time every once a while to the development of this system over the past couple of years. There's a unique satisfaction in the development process, distinct from research. In research, the thrill often stems from understanding or finding a solution. In contrast, the satisfaction of development grows gradually. With each line of code, I inch closer to realizing this vision.
 
-It is indeed helpful in my research, saving great deal of the repetive exercises hence releasing more time to fucos on the fun part. For example, the following implementation represent one instance of the system specifically supporting equity strategies. 
+It is indeed helpful in my research, saving great deal of the repetive exercises hence releasing more time to fucos on the fun part. For example, the following implementation represent one instance of the system specifically supporting bottom up portfolio strategies. 
 
 ![System](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/system.png)
 
 In the Data API, diverse data sources are wrapped within standardized modules and functions to yield aligned outputs. Here, special attention is paid to avoid lookahead bias, ensuring data is used appropriately in historical simulations after its release. Additionally, common data cleaning and merging methods—such as accounting statement preprocessing and calendar handling—are incorporated to expedite further data manipulation and usage across diverse applications.
 
-Similarly, frequently used low-level calculations (e.g., numerical methods, statistical procedures) and high-level models (e.g., nowcasting, Black-Litterman allocation) are encapsulated within distinct packages under the Libraries section.
-
+Similarly, frequently used low-level calculations (e.g., numerical methods, statistical procedures) and high-level models (e.g., nowcasting, alpha model, portfolio construction models) are encapsulated within distinct packages under the Libraries section. Everything required in such a reseach project is organized as mutually dependent calculation units with their calculation conditions congirued in the data update pipeline configuration. 
 
 
 Some of the packages developed in this effort for reference:
