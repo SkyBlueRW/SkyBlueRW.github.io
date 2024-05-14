@@ -51,5 +51,3 @@ Some of the packages developed in this effort for reference:
 - [DataRepo](https://github.com/SkyBlueRW/DataRepo)
 - [Backtest](https://github.com/SkyBlueRW/Backtest)
 - [PortCon](https://github.com/SkyBlueRW/PortCon)
-
-A helpful detour from research to development. Build the wheel when you need it!
