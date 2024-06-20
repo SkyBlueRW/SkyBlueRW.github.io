@@ -14,9 +14,9 @@
 
 As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
-The other day, I was watching a documentary that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, it's hard to determine if this should be attributed to exceptional skill or luck. The balance might tilt a bit more into the latter, especially considering the fact almost all of his parterners exiting trading this way due to unbearable losses.
+The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, it's hard to determine if this should be attributed to exceptional skill or luck. The balance might tilt a bit more into the latter, especially considering the fact almost all of his parterners exiting trading this way due to unbearable losses.
 
-
+whether this factor/trader/pm with
 
 Back in 90s, the publish of Fama French factor model unleash an era of factor research. Ever since, tens of thousands of factors claimed to predict cross sectional security return variations are published in all kinds of articles 
 And it shouldn't be a surprise. Standing at 2024, the traditional data set such as market and fundamental data are investigated by too many researchers for too many trials. Quite naturally, tons of factors claimed to predict cross sectional security returns are there.
