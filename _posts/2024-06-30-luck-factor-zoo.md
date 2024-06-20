@@ -14,7 +14,9 @@
 
 As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
-The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, it's hard to determine if this should be attributed to exceptional skill or luck. The balance might tilt a bit more into the latter, especially considering the fact almost all of his parterners exiting trading this way due to unbearable losses.
+The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, it's hard to determine if this should be attributed to exceptional skill or luck. The balance might tilt a bit more into the latter, especially considering the fact that almost all of his parterners exiting trading the same way due to unbearable losses.
+
+Do these traders/portfolio managers/factors' nice historical performance come from something meaningful. Are they 
 
 whether this factor/trader/pm with
 
