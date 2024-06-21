@@ -14,9 +14,11 @@
 
 As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
-The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, it's hard to determine if this should be attributed to exceptional skill or luck. The balance might tilt a bit more into the latter, especially considering the fact that almost all of his parterners exiting trading the same way due to unbearable losses.
+The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, it's hard to determine if this should be attributed to exceptional skill or luck. Actually the balance might tilt a bit more toward the latter, considering the fact that almost all of his parterners exiting trading the same way like him due to unbearable losses.
 
-Do these traders/portfolio managers/factors' nice historical performance come from something meaningful. Are they 
+Do traders/portfolio managers/factors' nice historical performance come from something meaningful hence likely to continue in the future? This is definitely a million dollar question, with quite some hurdles to get a solid answer. As a matter of fact, people would not be that surprised to see a top performing factor or trader failing after a certain point. It can be due to the ever changing nature of the market - something used to work do not work anymore. Or even simpler, it can also be the case that the nice historical performance arises from luck, in which case the cease of success is nature.
+
+In the volatile financial market crowdeded with all kinds of participants, such temporary success from luck is not rare unicorn. It's like to have 10000 people tossing a fair coin for 10 times. It's expected to see some of them have 10 consecutive head toss even though they do not have special skill in tossing a head.
 
 whether this factor/trader/pm with
 
