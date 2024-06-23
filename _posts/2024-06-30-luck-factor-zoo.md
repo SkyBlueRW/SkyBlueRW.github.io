@@ -10,7 +10,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-![Lucky_Sharpe](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/lucky_sharpe.png)
+![Lucky_Sharpe](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/factor_zoo_bootstrap.png)
 
 As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
