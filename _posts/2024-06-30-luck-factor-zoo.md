@@ -29,6 +29,15 @@ Let's firstly put it in a formal statistical context for further discussion.
 
 enforce the null hypothesis to the context. alows for iteration to have an existing model set as null and then evaluate the incremental contribution.
 
+
+a. Orthogonalize 
+b. Bootstrap the data of original Y and orthogonalized X
+c. evaluate each of the orthogonalized and save the max statistic of choice
+d. repeat step b and c for M times to have the empirical statstics under the null of no predictability 
+e. Compare the results from un-modified data to the empirical distribution.
+f. proceed to other 
+
+
 The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, he, in some degree, lived under the shadow of anxiety about continuity of making profits via trading - it's hard to determine whether the previous performance arises from exceptional skill or luck. Actually the balance might tilt a bit more toward the latter, considering the fact that almost all of his parterners exiting trading the way like him due to unbearable losses.
 
 Do traders/portfolio managers/factors' nice historical performance come from something meaningful hence likely to continue in the future? This is definitely a million dollar question, with quite some hurdles to get a solid answer. As a matter of fact, deep in our hear, we know that it happes when a factor or trader with top the nouch historical performance fail. There can be really a lot reasons behind the curtain, each worthy for comprehensive discussion. In this blog, we will focus on one quite interesting scenario that can lead to it - a good historical performance due to luck in randomness and a logical fail afterward.
