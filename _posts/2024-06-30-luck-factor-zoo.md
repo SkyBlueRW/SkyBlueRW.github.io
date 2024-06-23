@@ -3,7 +3,7 @@
 ## The Adjustment for Luck!
 
 - [Introduction](#introduction)
-- [Expected Volatility under Q](#ma)
+- [A multiple testing problem](#mul)
 - [The anticipated volatility and the market take](#info)
 - [Appendix](#appendix)
 - [Reference](#ref)
@@ -14,18 +14,17 @@
 
 As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
-It starts with the million dollar question - What factors explain security expected return? Ever since Fama & French's empirical work on the 3 factor model unleashed the new era of empirical asset pricing in the 90s, hundreds (if not thousands) of factors claimed to predict cross sectional or time series security return emerged in acamdeic and insutry research materials. While even with this many factors at our diposal, we are not really in an ideal position to predict security expected return in real world investment! quite some of these facotrs, despite their good perfomance in same sample (hence the publication), deteriorate the performance significantly out of the sample.
+It starts with the million dollar question - What factors explain security expected return? Ever since Fama & French's empirical work on the 3 factor model unleashed the new era of empirical asset pricing in the 90s, hundreds (if not thousands) of factors claimed to predict cross sectional or time series security return emerged in acamdeic and insutry research materials. While even with this many factors at our diposal, we are not really in an ideal position to predict security expected return in real world investment! quite some of these facotrs, despite their great in-sample perfomance (hence the publication), deteriorate the performance significantly out of the sample.
 
-Pontiff & McLean (2016) used to followed up on the out of sample and post publication performance of ~100 cross sectional factors. Quite sadly, the factor returns shrank 26% out of the sample used in the correpsonding paper and 58% post the publication. There can be a lot of reasons behind the curtain, each worthy a comprehensive discussion. In this blog, we will focus on one quite interesting scenario that can lead to it - a good historical performance due to luck and a logical fail afterward.
+Pontiff & McLean (2016) used to followed up on the out of sample and post publication performance of ~100 cross sectional factors. Quite sadly, on average, the factor returns shrank 26% out of the sample used in the correpsonding paper and 58% post the publication. There can be a lot of reasons behind the curtain, each worthy a comprehensive discussion. In this blog, we will focus on one quite interesting scenario that can lead to it - a good historical performance due to luck and a logical fail afterward.
 
-
-
-Back in 90s, the publish of Fama French factor model unleash an era of factor research. Ever since, tens of thousands of factors claimed to predict cross sectional security return variations are published in all kinds of articles 
-And it shouldn't be a surprise. Standing at 2024, the traditional data set such as market and fundamental data are investigated by too many researchers for too many trials. Quite naturally, tons of factors claimed to predict cross sectional security returns are there.
+As bizzare as it might sounds at the first place, given the large number of candidate factors people tried, a significant number of them are meant to cross the finish line of publication due to luck! It's actually quit intuitive. Imagine someone without any special skill in tossing a fair coin. We would not expect him or her to toss 10 consecutive heads in a row - a low probability event (0.1%). While out of 10 thousand people replicating the same experiments, it's really not a surprise to see a few lucky guy achieve this low probability event out from luck! (the expected number is around 10).
 
 
 
+### A Multiple Testing Problem <a name="mul"></a>
 
+To put it in a fore formal statistical context.
 
 
 The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, he, in some degree, lived under the shadow of anxiety about continuity of making profits via trading - it's hard to determine whether the previous performance arises from exceptional skill or luck. Actually the balance might tilt a bit more toward the latter, considering the fact that almost all of his parterners exiting trading the way like him due to unbearable losses.
