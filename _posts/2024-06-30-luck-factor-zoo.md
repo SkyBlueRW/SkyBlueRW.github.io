@@ -16,7 +16,7 @@ As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, 
 
 It starts with the million dollar question - What factors explain security expected return? Ever since Fama & French's empirical work on the 3 factor model unleashed the new era of empirical asset pricing in the 90s, hundreds (if not thousands) of factors claimed to predict cross sectional or time series security return emerged in acamdeic and insutry research materials. While even with this many factors at our diposal, we are not really in an ideal position to predict security expected return in real world investment! quite some of these facotrs, despite their good perfomance in same sample (hence the publication), deteriorate the performance significantly out of the sample.
 
-Pontiff & McLean (2016) used to followed up on the out of sample ad post publication performance of ~100 cross sectional factors. Quite sadly, the factor returns shrank 26% out of the sample used in the correpsonding paper and 58% post the publication.
+Pontiff & McLean (2016) used to followed up on the out of sample and post publication performance of ~100 cross sectional factors. Quite sadly, the factor returns shrank 26% out of the sample used in the correpsonding paper and 58% post the publication. There can be a lot of reasons behind the curtain, each worthy a comprehensive discussion. In this blog, we will focus on one quite interesting scenario that can lead to it - a good historical performance due to luck and a logical fail afterward.
 
 
 
