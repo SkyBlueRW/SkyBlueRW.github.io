@@ -4,7 +4,7 @@
 
 - [Introduction](#introduction)
 - [A multiple testing problem](#mul)
-- [The anticipated volatility and the market take](#info)
+- [A Resample Procedure to account for luck](#resample)
 - [Appendix](#appendix)
 - [Reference](#ref)
 
@@ -13,22 +13,25 @@
 
 As the Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
-It starts with the million dollar question - What factors explain security expected return? Ever since Fama & French's empirical work on the 3 factor model unleashed the new era of empirical asset pricing in the 90s, hundreds (if not thousands) of factors claimed to predict cross sectional or time series security return emerged in acamdeic and insutry research materials. While even with this many factors at our diposal, we are not really in an ideal position to predict security expected return in real world investment! quite some of these facotrs, despite their great in-sample perfomance (hence the publication), deteriorate the performance significantly out of the sample.
+It starts with the million dollar question - What factors explain security expected return? Ever since Fama & French's empirical work on the 3 factor model unleashed the new era of empirical asset pricing in the 90s, hundreds (if not thousands) of factors claimed to predict cross sectional or time series security return emerged in acamdeic and insutry research materials. While even with this many factors at our diposal, we are not really in an ideal position to predict security expected return in real world investment! Quite some of these facotrs, despite their great in-sample perfomance (hence the publication), deteriorate the performance significantly out of the sample.
 
-Pontiff & McLean (2016) used to followed up on the out of sample and post publication performance of ~100 cross sectional factors. Quite sadly, on average, the factor returns shrank 26% out of the sample used in the correpsonding paper and 58% post the publication. Despite all the dicussion or even debats about if it means a replicating crisis in financial literature, the deteriorating out-performance were indeed observed for a lot of factors documented. There can be a lot of reasons behind the curtain, each worthy a comprehensive discussion. In this blog, we will focus on one quite interesting aspects of the issue - a good historical performance due to luck and a logical fail afterward.
+Pontiff & McLean (2016) used to followed up on the out of sample and post publication performance of ~100 cross sectional factors from acadmeic research. Quite sadly, on average, the factor returns shrank 26% out of the sample and 58% post the publication. Despite all the dicussion or even debats about if it means a replicating crisis in asset pricing literature, the deteriorating out-performance were indeed observed for a lot of factors documented. There are a lot of reasons behind the curtain, each worthy a comprehensive discussion. In this blog, we will focus on one quite interesting aspects of the problem - a good historical performance due to luck and a logical fail afterward.
 
 How good should one factor perform so that we are comfortable to declare statistical significance accounting for the turbulance of luck? That's the question we want to dive into in this blog along side with the resample statistical procedure that Harvey & Liu introduced to address the bias of luck from the traditional factor reseearch framework. The procedure turns out to be quite a handy tool to assist the modeling of expected return confronting the large number of facotrs documented, from which we need to select a subset that truly means something and are likely to continue to kick off the modeling.
 
 
 ### A Multiple Testing Problem <a name="mul"></a>
 
-As bizzare as it might sounds at the first place, given the large number of candidate factors people tried, a significant number of them are meant to cross the finish line of publication due to luck! It's actually quit intuitive. Imagine someone without any special skill in tossing a fair coin. We would not expect him or her to toss 10 consecutive heads in a row - a low probability event (0.1%). While out of 10 thousand people replicating the same experiments, it's really not a surprise to see a few lucky guy achieve this low probability event out from luck! (the expected number is around 10).
+As bizzare as it might sounds at the first place, given the large number of candidate factors people tried, a significant number of the published factors are meant to cross the finish line of publication due to luck! It's actually quit intuitive. Imagine someone without any special skill in tossing a fair coin. We would not expect him or her to toss 10 consecutive heads in a row - a low probability event (0.1%). While when the situation turns to 10 thousand pepole replicating the same experiments, it's really not a surprise to see a few lucky guys achieving this low probability event! (the expected number is around 10).
 
-Let's firstly put it in a formal statistical context for further discussion.
+Unfortunately, the market anomaly research resemble this aspect of the 10 thousand poeple tossing the coin example. In the spakling financial market, hundreds of thousands of researchers experimented countless versions of factors for any preditable power within quite similar data sets.
+
+It raises a significant issue of multiple testing. As we have tried so many versions of factors, a factor identified with nice in-sample predictability and above threshold t-score for single factor testing would quite likely arise from luck of randomness.
 
 enforce the null hypothesis to the context. alows for iteration to have an existing model set as null and then evaluate the incremental contribution.
 
 
+### A Resample Procedure to account for luck <a name="resample"></a>
 
 
 
