@@ -18,7 +18,7 @@ It starts with the million dollar question - What factors explain security expec
 
 Pontiff & McLean (2016) used to followed up on the out of sample and post publication performance of ~100 cross sectional factors. Quite sadly, on average, the factor returns shrank 26% out of the sample used in the correpsonding paper and 58% post the publication. Despite all the dicussion or even debats about if it means a replicating crisis in financial literature, the deteriorating out-performance were indeed observed for a lot of factors documented. There can be a lot of reasons behind the curtain, each worthy a comprehensive discussion. In this blog, we will focus on one quite interesting aspects of the issue - a good historical performance due to luck and a logical fail afterward.
 
-How good should one factor perform so that we are comfortable to declare statistical significance accounting for the turbulance of luck? That's the question we want to dive into in this blog along side with the resample statistical procedure that Harvey & Liu introduced to address this bias in their famous paper 'Lucky factors'.
+How good should one factor perform so that we are comfortable to declare statistical significance accounting for the turbulance of luck? That's the question we want to dive into in this blog along side with the resample statistical procedure that Harvey & Liu introduced to address this bias in their famous paper 'Lucky factors'. The procedure turns out to be quite a handy tool to assist the modeling of expected return in a data driven environment (I.E. a large factor repository from which factors are chosen for the modeling).
 
 
 
