@@ -2,24 +2,24 @@
 
 ## The Adjustment for Luck!
 
-- [Introduction](#introduction)
+- [Those Factors shrink out of sample](#introduction)
 - [A multiple testing problem](#mul)
 - [A Resample Procedure to account for luck](#resample)
 - [Appendix](#appendix)
 - [Reference](#ref)
 
-### Introduction <a name="introduction"></a>
+### Those Factors Shrink out of sample <a name="introduction"></a>
 
 
 As Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
 
 It starts with the million dollar question in finance and investment - What factors explain security expected return? Ever since the 90s when Fama and French's empirical work on the 3 factor model unleashed a new era of empirical asset pricing, hundreds (if not thousands) of factors have emerged in academic and industry research, each claiming to predict cross-sectional or time-series security returns. While despite this plethora of factors (John Cochrane calls it a factor zoo), predicting security expected returns in real-world investments remains a challenging task. Many of these factors, despite demonstrating strong in-sample performance (which lead to their publication), significantly underperform out-of-sample.
 
-For example, Pontiff and McLean (2016) examined the out-of-sample and post-publication performance of approximately 100 cross-sectional factors from academic research. Unfortunately, they found that, on average, factor returns shrank by 26% out-of-sample and 58% post-publication. Hou, Xue & Zhang (2020) further exapeded this exercises and found that for 65% of 452 factors they replicated out of sample, the t-statistics drop below 2.
+For example, Pontiff and McLean (2016) examined the out-of-sample and post-publication performance of around 100 cross-sectional factors from academic research. Unfortunately, they found that, on average, factor returns shrank by 26% out-of-sample and 58% post-publication. Hou, Xue & Zhang (2020) further exapeded this exercises to a total of 452 factors published and found that for as much as 65% of them,  t-statistics drop below 2 out of sample.
 
 Let's leave alone all the dicussion and debates about potential replicating crisis in asset pricing literature for the moment, deteriorating out sample performance was indeed observed for a lot of factors published. Why is it the situation? The reasons behind this performance deterioration out of sample are numerous and complex, each deserving thorough research and discussion. In this blog we will try to discuss about one particularly interesting aspect: strong historical performance due to luck and subsequent logical failure (lucky factors).
 
-Obviously, we hope to select factors that genuinly means something and are likely to maintain their predictive power out of sample to improve our chance of expected return prediction. These lucky factors are what we hope to avoid in the modeling of expected return. To this goal, how can we adjust our factor research framework for the existence of lucky factors and how good should one factor perform so that we are comfortable to declare its statistical significance accounting for the turbulance of luck. That's the question that we hope to answer in this blog. Specifically I hope introduce to your attention the resample statistical procedure from paper "Lucky Factor" (Harvey & Liu, 2021). Given a pool of candidate factors, such a statistical procedure is quite helpful in evaluating marginal improvement on exiesting factor models while also accounting for the lucky factor problem.
+Obviously, we hope to select factors that genuinly means something and are likely to maintain their predictive power out of sample to improve our chance of expected return prediction. These lucky factors are what we hope to avoid in the modeling of expected return. To this goal, how can we adjust our factor research framework for the existence of lucky factors and how good should one factor perform so that we are comfortable to declare its statistical significance accounting for the turbulance of luck. That's the question that we hope to answer in this blog. Specifically I hope to introduce to your attention the resample statistical procedure from paper "Lucky Factor" (Harvey & Liu, 2021). Given a pool of candidate factors, such a statistical procedure is quite helpful in evaluating marginal improvement on adding factors to existing factor models while also accounting for the lucky factor problem.
 
 
 ### A Multiple Testing Problem <a name="mul"></a>
@@ -108,5 +108,6 @@ If you torture the data long enough, it will confess to anything. Ronald Coase
 ### Reference <a name="ref"></a>
 - Harvey & Liu (2021): Lucky factor
 - Pontiff & McLean (2016): Does Academic Research Destroy Stock Return Predictability?
+- Hou, Xue & Zhang (2020): Replicating anomalies
 
 
