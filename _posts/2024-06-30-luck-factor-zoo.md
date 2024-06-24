@@ -22,7 +22,9 @@ Obviously, we hope to select factors that genuinly means something and are likel
 
 ### A Multiple Testing Problem <a name="mul"></a>
 
-As bizzare as it might sounds at the first place, considering the large number of candidate factors tested, many published factors achieve statistical significance likely by chance. This is similar to the fair coin-tossing analogy: while the probability of tossing 10 consecutive heads is low (0.1%), it becomes likely when 10,000 people attempt the same experiment—resulting in around 10 expected successes by chance.
+As bizzare as it might sounds at the first place, it's not surprise to see some published factors achieve statistical significance by chance, especially when considering the large number of factors ever tested, 
+
+
 
 Similarly, in financial markets, hundreds of thousands researchers have tested innumerable factors for predictive power using similar data sets. This leads to significant multiple testing issues. With so many factors tried, a factor showing strong in-sample predictability and a high t-statistic in the standard of single-factor testing is often a result of random chance rather than genuine predictive power.
 
