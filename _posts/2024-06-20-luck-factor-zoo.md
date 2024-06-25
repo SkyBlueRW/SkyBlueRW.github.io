@@ -24,9 +24,23 @@ Obviously, to improve our chance of expected return prediction, we hope to selec
 
 ### A Multiple Testing Problem <a name="mul"></a>
 
-What is this 'lucky factor' problem? It originates from the single hypothesis tests used for large number of candidate factors experimented without accounting for test multiplicity. 
+So, what is this 'lucky factor' problem? It originates from trying too hard to mine the data set without accounting for the test multiplicity from the large number of candiate factors experimented.
 
-When evaluating the performance of a single factor, we recognize its significance while accepting a small probability of false discovery. We test the null hypothesis that the expected return of the factor is zero. If this null hypothesis is not supported by the data, the factor is considered significant. A p-value is calculated to compare against a threshold, determining how compatible the null hypothesis is with the data. In the context of single hypothesis testing, a 5% p-value means there is a 5% risk of false discovery if we deem the factor significant.
+Essentially during factor research, we are inffereing an argument on population (I.E.What's the expected return of the factor?) based on sample observations (I.E. what's the mean return of the factor in this sample). Probability is our bridge to nagivate the two. we have the assurance like Law of Large Number or Hoeffding Inequality such that as long as the observation is sampled independently from the population, the sample performance would not be far from the genuine performance of the factor
+
+$$
+\begin{aligned}
+\hat{Performance(F)} &\rightarrow N(Performance(F), \dfrac{1}{N}\sigma^2)\\
+P(|\hat{Performance(F)} &- Performance(F)| > \epsilon) <= 2e^{-2\epsilon^2N} \\
+\end{aligned}
+$$
+
+
+
+
+, we recognize its significance while accepting an inevitable probability of false discovery. 
+
+We test the null hypothesis that the expected return of the factor is zero. If this null hypothesis is not supported by the data, the factor is considered significant. A p-value is calculated to compare against a threshold, determining how compatible the null hypothesis is with the data. In the context of single hypothesis testing, a 5% p-value means there is a 5% risk of false discovery if we deem the factor significant.
 
 However, this logic does not hold when many factors are tested. Imagine identifying one factor with a p-value of 5% — right at our threshold — after 399 unsuccessful attempts. The risk of accepting this 400th factor is no longer 5%. This is because, even if all 400 factors have an expected return of zero, randomness alone would give a probability greater than 99% of finding at least one factor with a p-value below 5%—these are the 'lucky' factors. Repeat the test 400 times do not do not properly describe our null hypothesis anymore. 
 
@@ -111,6 +125,5 @@ If you torture the data long enough, it will confess to anything. Ronald Coase
 - Harvey & Liu (2021): Lucky factor
 - Pontiff & McLean (2016): Does Academic Research Destroy Stock Return Predictability?
 - Hou, Xue & Zhang (2020): Replicating Anomalies
-- Abu-Mostafa, Magdon-Ismail & Lin (2012): Learning From Data
 
 
