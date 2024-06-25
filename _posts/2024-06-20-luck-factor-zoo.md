@@ -24,9 +24,10 @@ Obviously, to improve our chance of expected return prediction, we hope to selec
 
 ### A Multiple Testing Problem <a name="mul"></a>
 
-So, what is this 'lucky factor' problem? It originates from trying too hard to mine the data set without accounting for the test multiplicity from the large number of candiate factors experimented.
+So, what is this 'lucky factor' problem and where does it come from? In short, it originates from the exhaustive efforts of data mining conducted on financial data set without accounting for the test multiplicity arised.
 
-Essentially during factor research, we are inffereing an argument on population (I.E.What's the expected return of the factor?) based on sample observations (I.E. what's the mean return of the factor in this sample). Probability is our bridge to nagivate the two. we have the assurance like Law of Large Number or Hoeffding Inequality such that as long as the observation is sampled independently from the population, the sample performance would not be far from the genuine performance of the factor.
+In factor research, we infer an argument about the population (i.e., what is the expected return of the factor?) based on sample observations (i.e., what is the performance of the factor in this sample). Probability is our bridge for nagivating between the two. Statistical lemmas like Law of Large Number and Hoeffding Inequality assure us that as long as the observations are sampled independently from the population, the sample performance will not deviate significantly from the true performance of the factor given a sufficient number of observations N.
+
 
 $$
 \begin{aligned}
@@ -35,24 +36,13 @@ P(|\hat{Performance(F)} &- Performance(F)| > \epsilon) <= 2e^{-2\epsilon^2N} \\
 \end{aligned}
 $$
 
+While, as long as we do not have the full population, there is still a probability inversely proportional to N of a larger-than-expected gap between the true expected return and the sample estimation. Thus, we must generally accept an inevitable possibility of false discovery when recognizing the significance of a factor.
 
+Typically in factor research, we test the null hypothesis that the expected return of the factor is zero. If the null hypothesis contradicts the sample performance, indicating a rare event under the null hypothesis, we reject the null hypothesis and consider the factor to have a significant expected return. In this process, p-value is calculated and compared against a threshold to determine how compatible the null hypothesis is with the data. In the context of single hypothesis testing, a 5% p-value threshold means there is at most a 5% risk of false discovery if we deem the factor significant.
 
+However, this logic falters when many factors are tested. Imagine identifying one factor with a p-value of 5%—right at our threshold—after 399 unsuccessful attempts. The risk of accepting this 400th factor is no longer 5%. That is because, even if all 400 factors have an expected return of zero, randomness alone would give a probability greater than 99% of finding at least one factor with a p-value below 5% — the 'lucky' factors. Identifying one factor out of 400 trials is insufficient to contradict the null hypothesis since "none of the 400 factors tried has significant in-sample performance" is not an accurate description of the null hypothesis.
 
-
-
-, we recognize its significance while accepting an inevitable probability of false discovery. 
-
-We test the null hypothesis that the expected return of the factor is zero. If this null hypothesis is not supported by the data, the factor is considered significant. A p-value is calculated to compare against a threshold, determining how compatible the null hypothesis is with the data. In the context of single hypothesis testing, a 5% p-value means there is a 5% risk of false discovery if we deem the factor significant.
-
-However, this logic does not hold when many factors are tested. Imagine identifying one factor with a p-value of 5% — right at our threshold — after 399 unsuccessful attempts. The risk of accepting this 400th factor is no longer 5%. This is because, even if all 400 factors have an expected return of zero, randomness alone would give a probability greater than 99% of finding at least one factor with a p-value below 5%—these are the 'lucky' factors. Repeat the test 400 times do not do not properly describe our null hypothesis anymore. 
-
-Unfortunately, this scenario is common in factor research. In the sparkling financial markets, hundreds of thousands of researchers have tested countless factors for predictive power using similar data sets. They generally use a p-value threshold of 1% or 5% under the single hypothesis test framework, leading to significant multiple testing issues. With so many factors tried, a factor showing strong in-sample predictability by the standards of single-factor testing is quite likely a result of random chance rather than genuine predictive power.
-
-$$
-\begin{aligned}
-P(|\hat{\mu}_i - \mu| > \epsilon) & <= 2e^{-2\epsilon^2N} \\
-\end{aligned}
-$$
+Unfortunately, this scenario we would face in factor research. In the sparkling financial markets, hundreds of thousands of researchers have tested countless factors for predictive power using similar data sets. They generally use a p-value threshold of 1% or 5% under the single hypothesis test framework, leading to significant multiple testing issues. With so many factors tested, a factor showing strong in-sample predictability by the standards of single-factor testing is often the result of random chance rather than genuine predictive power.
 
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
