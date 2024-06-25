@@ -44,6 +44,8 @@ However, this logic falters when many factors are tested. Imagine identifying on
 
 Unfortunately, this scenario we would face in factor research. In the sparkling financial markets, hundreds of thousands of researchers have tested countless factors for predictive power using similar data sets. They generally use a p-value threshold of 1% or 5% under the single hypothesis test framework, leading to significant multiple testing issues. With so many factors tested, a factor showing strong in-sample predictability by the standards of single-factor testing is often the result of random chance rather than genuine predictive power.
 
+Hence it's really not surprising to see the deterioration of out sample performance. We get lucky factors in the respository of published factors!
+
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
 enforce the null hypothesis to the context. alows for iteration to have an existing model set as null and then evaluate the incremental contribution.
