@@ -34,7 +34,7 @@ Unfortunately, this scenario is common in factor research. In the sparkling fina
 
 $$
 \begin{aligned}
-P(|\hat{\mu} - \mu| > \epsilon) & <= 2e^{-2\epsilon^2N} \\
+P(|\hat{\mu}_i - \mu| > \epsilon) & <= 2e^{-2\epsilon^2N} \\
 \end{aligned}
 $$
 
