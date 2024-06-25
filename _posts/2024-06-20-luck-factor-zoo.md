@@ -24,7 +24,7 @@ Obviously, to improve our chance of expected return prediction, we hope to selec
 
 ### A Multiple Testing Problem <a name="mul"></a>
 
-So, what is this 'lucky factor' problem and where does it come from? In short, it originates from the exhaustive efforts of data mining conducted on financial data set without accounting for the test multiplicity arised.
+So, what is this 'lucky factor' problem and where does it come from? In short, it originates from the exhaustive efforts of data mining conducted on financial data set without accounting for the test multiplicity arised. Whener a factor is obtained by an extensive or even exhaustive search, there is the danger that its good performance not from its real prediction ability but rather just luck.
 
 In factor research, we infer an argument about the population (i.e., what is the expected return of the factor?) based on sample observations (i.e., what is the performance of the factor in this sample). Probability is our bridge for nagivating between the two. Statistical lemmas like Law of Large Number and Hoeffding Inequality assure us that as long as the observations are sampled independently from the population, the sample performance will not deviate significantly from the true performance of the factor given a sufficient number of observations N.
 
@@ -48,10 +48,14 @@ Hence it's really not surprising to see the deterioration of out sample performa
 
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
-enforce the null hypothesis to the context. alows for iteration to have an existing model set as null and then evaluate the incremental contribution.
+With the problem clearly defined and elaborated. What can we do about it? Of course there are statistical adjustments like Bonferroni Correction or Benjamini-Hochberg correction that can help. These corrections uses more appropriate measures such as the probability of at least one false discovery or the expected fraction of false discovery among all discoveries to adjust the null hypothesis for the multiplicity.  
+
+While these correction generally cost us too much of the power of the test. It would become too hard to reject the null hypothesis. In the case, good factors along side lucky factors are taken as insignificant results. This is definitely not ideal. 
 
 
-![Lucky_Sharpe](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/factor_zoo_bootstrap.png)
+enforce the null hypothesis to the context of multiplicity. alows for iteration to have an existing model set as null and then evaluate the incremental contribution. 
+
+![bootstrap](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/factor_zoo_bootstrap.png)
 
 
 
@@ -119,5 +123,6 @@ If you torture the data long enough, it will confess to anything. Ronald Coase
 - Harvey & Liu (2021): Lucky factor
 - Pontiff & McLean (2016): Does Academic Research Destroy Stock Return Predictability?
 - Hou, Xue & Zhang (2020): Replicating Anomalies
+- White (2000): A Reality Check for Data Snooping
 
 
