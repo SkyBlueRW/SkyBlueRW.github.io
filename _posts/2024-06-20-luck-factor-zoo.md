@@ -26,7 +26,7 @@ Obviously, to improve our chance of expected return prediction, we hope to selec
 
 So, what is this 'lucky factor' problem? It originates from trying too hard to mine the data set without accounting for the test multiplicity from the large number of candiate factors experimented.
 
-Essentially during factor research, we are inffereing an argument on population (I.E.What's the expected return of the factor?) based on sample observations (I.E. what's the mean return of the factor in this sample). Probability is our bridge to nagivate the two. we have the assurance like Law of Large Number or Hoeffding Inequality such that as long as the observation is sampled independently from the population, the sample performance would not be far from the genuine performance of the factor
+Essentially during factor research, we are inffereing an argument on population (I.E.What's the expected return of the factor?) based on sample observations (I.E. what's the mean return of the factor in this sample). Probability is our bridge to nagivate the two. we have the assurance like Law of Large Number or Hoeffding Inequality such that as long as the observation is sampled independently from the population, the sample performance would not be far from the genuine performance of the factor.
 
 $$
 \begin{aligned}
@@ -34,6 +34,8 @@ $$
 P(|\hat{Performance(F)} &- Performance(F)| > \epsilon) <= 2e^{-2\epsilon^2N} \\
 \end{aligned}
 $$
+
+
 
 
 
