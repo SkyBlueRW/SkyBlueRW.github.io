@@ -5,7 +5,6 @@
 - [Those Factors shrink out of sample](#introduction)
 - [A multiple testing problem](#mul)
 - [A Resample Procedure to account for luck](#resample)
-- [Appendix](#appendix)
 - [Reference](#ref)
 
 ### Those Factors Shrink out of sample <a name="introduction"></a>
@@ -17,14 +16,14 @@ It starts with the million dollar question in finance and investment - What fact
 
 For example, Pontiff and McLean (2016) examined the out-of-sample and post-publication performance of around 100 cross-sectional factors from academic research. Unfortunately, they found that, on average, factor returns shrank by 26% out-of-sample and 58% post-publication. Hou, Xue & Zhang (2020) further exapeded this exercises to a total of 452 factors published and found that for as much as 65% of them,  t-statistics drop below 2 out of sample.
 
-Let's leave alone all the dicussion and debates about potential replicating crisis in asset pricing literature for the moment, deteriorating out sample performance was indeed observed for a lot of factors published. Why is it the situation? The reasons behind this performance deterioration out of sample are numerous and complex, each deserving thorough research and discussion. In this blog we will try to discuss about one particularly interesting aspect of the problem: those "lucky factors" selected only because of test multiplicity from a large number of candidate factors. Likely, they would not continue the luck in a new sample!
+Let's leave alone all the dicussion and debates about potential replicating crisis in asset pricing literature for the moment, deteriorating out sample performance was indeed observed for a lot of factors published. Why is it the situation? The reasons behind this performance deterioration out of sample are numerous and complex, each deserving thorough research and discussion. In this blog we will try to discuss about one particularly interesting aspect of the problem: those "lucky factors" selected only because of test multiplicity from a large number of candidate factors. They would not continue the luck in a new sample!
 
 Obviously, to improve our chance of expected return prediction, we hope to select factors that genuinly means something and are likely to maintain their predictive power out of sample. These lucky factors are what we hope to avoid in the modeling of expected return. To this goal, how can we adjust our factor research framework for the existence of lucky factors and how good should one factor perform so that we are comfortable to declare its statistical significance accounting for the turbulance of luck. That's the question that we hope to discuss in this blog. Specifically I hope to introduce to your attention the resample statistical procedure from paper "Lucky Factor" (Harvey & Liu, 2021). Given a pool of candidate factors, such a statistical procedure is quite helpful in evaluating marginal improvement on adding factors to existing factor models while also accounting for the lucky factor problem.
 
 
 ### A Multiple Testing Problem <a name="mul"></a>
 
-So, what is this 'lucky factor' problem and where does it come from? In short, it originates from the exhaustive efforts of data mining conducted on financial data set without accounting for the test multiplicity arised. Whener a factor is obtained by an extensive or even exhaustive search, there is the danger that its good performance not from its real prediction ability but rather just luck.
+So, what is this 'lucky factor' problem and where does it come from? In short, it originates from the exhaustive efforts of data mining (or data snooping) conducted on financial data set without accounting for the test multiplicity arised. Whenever a factor is identified by an extensive or exhaustive search, there is the danger that its good performance is not from real prediction ability but rather just luck.
 
 In factor research, we infer an argument about the population (i.e., what is the expected return of the factor?) based on sample observations (i.e., what is the performance of the factor in this sample). Probability is our bridge for nagivating between the two. Statistical lemmas like Law of Large Number and Hoeffding Inequality assure us that as long as the observations are sampled independently from the population, the sample performance will not deviate significantly from the true performance of the factor given a sufficient number of observations N.
 
@@ -36,7 +35,7 @@ P(|\hat{Performance(F)} &- Performance(F)| > \epsilon) <= 2e^{-2\epsilon^2N} \\
 \end{aligned}
 $$
 
-While, as long as we do not have the full population, there is still a probability inversely proportional to N of a larger-than-expected gap between the true expected return and the sample estimation. Thus, we must generally accept an inevitable possibility of false discovery when recognizing the significance of a factor.
+While, as long as we do not have the full population, there is still a probability inversely proportional to N of a larger-than-expected gap between the true expected return and the sample estimation. Thus, we accept an inevitable possibility of false discovery when recognizing the significance of a factor.
 
 Typically in factor research, we test the null hypothesis that the expected return of the factor is zero. If the null hypothesis contradicts the sample performance, indicating a rare event under the null hypothesis, we reject the null hypothesis and consider the factor to have a significant expected return. In this process, p-value is calculated and compared against a threshold to determine how compatible the null hypothesis is with the data. In the context of single hypothesis testing, a 5% p-value threshold means there is at most a 5% risk of false discovery if we deem the factor significant.
 
@@ -48,14 +47,26 @@ Hence it's really not surprising to see the deterioration of out sample performa
 
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
-With the problem clearly defined and elaborated. What can we do about it? Of course there are statistical adjustments like Bonferroni Correction or Benjamini-Hochberg correction that can help. These corrections uses more appropriate measures such as the probability of at least one false discovery or the expected fraction of false discovery among all discoveries to adjust the null hypothesis for the multiplicity.  
+Now we know what is the lucky factor problem and where it originates. How to deal with it? 
 
-While these correction generally cost us too much of the power of the test. It would become too hard to reject the null hypothesis. In the case, good factors along side lucky factors are taken as insignificant results. This is definitely not ideal. 
+Harvey & Liu (2021) provides one viable solution. Basically they suggest to use max statistics to adjust for test multiplicity and design a statistical procedure combinig of orthoganoalization and resample to enforce the null hypothesis to the context of test multiplicity in regression style analysis. The procedure works with all kinds regression no matter it is time series regression, pannel regression or Fama-Macbeth like regression. What's even better, the procedure can be applied on an existing model as status quo, select additional factors to enhance it by measuring marginal improvement after accounting for luck.
 
-
-enforce the null hypothesis to the context of multiplicity. alows for iteration to have an existing model set as null and then evaluate the incremental contribution. 
+Suppose we have variable Y the observed return to predict and X the candidate factors to use. Based on solid research, we have already select K (1,2,...,K) significant factors from X to use. The following 4 steps help us to continue the selection in the remaining factors (K,K+1,...,M) with attention to test multiplicity.
 
 ![bootstrap](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/factor_zoo_bootstrap.png)
+
+At the first step, we want to get the residual $$Y_e$$ of Y after projection to selected factors $$X_{1...K}$$. $$Y_e$$ is the proportion of return that the current model can't explain and what we hope to improve upon. It should be noted that, if we are starting from scratch we can simply use the Y as $$Y_e$$ in the following steps as all of the return are the target. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
