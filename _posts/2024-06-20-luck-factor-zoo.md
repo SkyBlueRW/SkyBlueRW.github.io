@@ -32,6 +32,11 @@ However, this logic does not hold when many factors are tested. Imagine identify
 
 Unfortunately, this scenario is common in factor research. In the sparkling financial markets, hundreds of thousands of researchers have tested countless factors for predictive power using similar data sets. They generally use a p-value threshold of 1% or 5% under the single hypothesis test framework, leading to significant multiple testing issues. With so many factors tried, a factor showing strong in-sample predictability by the standards of single-factor testing is quite likely a result of random chance rather than genuine predictive power.
 
+$$
+\begin{aligned}
+P(|\hat{\mu} - \mu| > \epsilon) & <= 2e^{-2\epsilon^2N} \\
+\end{aligned}
+$$
 
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
@@ -105,6 +110,7 @@ If you torture the data long enough, it will confess to anything. Ronald Coase
 ### Reference <a name="ref"></a>
 - Harvey & Liu (2021): Lucky factor
 - Pontiff & McLean (2016): Does Academic Research Destroy Stock Return Predictability?
-- Hou, Xue & Zhang (2020): Replicating anomalies
+- Hou, Xue & Zhang (2020): Replicating Anomalies
+- Abu-Mostafa, Magdon-Ismail & Lin (2012): Learning From Data
 
 
