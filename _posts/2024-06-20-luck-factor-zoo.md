@@ -66,6 +66,7 @@ Such steps can be repeted to continue the selection of factors until the point w
 
 ### And More <a name="more"></a>
 
+It's good that our arsenal is not empty regarding to such lucky factor problem. To me, the resample precedure that Harvey & Liu (2021) introduced is helpful at least from two perspects. For one side, it provides a viable way to account for multiple testing in a common context of incremental enhancment of a prediction model. Secondly, the empirical distribution of max statistic is at our disposal so that we can get some sense about the magnitude of performance that can rise in a given length of a sample. As a matter of fact, other than the max statistic, we can definitie store more sattistics from each 
 
 The procedure helps control test multiplicity in data selection in a data-driven way. Additionally, the empirical distribution generated provides a reference for understanding how test multiplicity might look, which can inform future research.
 
