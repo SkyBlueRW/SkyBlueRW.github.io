@@ -66,15 +66,15 @@ Such steps can be repeted to continue the selection of factors until the point w
 
 ### And More <a name="more"></a>
 
-It's good that our arsenal is not empty regarding to such lucky factor problem. To me, the resample precedure that Harvey & Liu (2021) introduced is helpful at least from two perspects. For one side, it provides a viable way to account for multiple testing in a common context of incremental enhancment of a prediction model. Secondly, the empirical distribution of max statistic is at our disposal so that we can get some sense about the magnitude of performance that can rise in a given length of a sample. As a matter of fact, other than the max statistic, we can definitie store more sattistics from each 
+It's good that our arsenal is not empty regarding to such lucky factor problem. To me, the resample precedure that Harvey & Liu (2021) introduced is helpful at least from two perspects. For one side, it provides a viable way to account for multiple testing in a common context of incremental enhancment of a prediction model. Secondly, the empirical distribution of max statistic is at our disposal so that we can get some sense about the magnitude of performance that can rise in a given length of a sample. As a matter of fact, it is definitely viable to store more than just max statistic from each resampled data set, which can provide us a lot more insight in terms of risk management.
 
-The procedure helps control test multiplicity in data selection in a data-driven way. Additionally, the empirical distribution generated provides a reference for understanding how test multiplicity might look, which can inform future research.
+However, as all models, it indeed has its own limitations, which is defintiely worth discussion before closing the mark.
 
-However, before concluding, it is important to acknowledge a few limitations. 
+Firstly, quite inevitably, the real number of factors experimented is actually unknown and likely underestimated than we thought. Take the discussed scenario of selecting factors from a pool of candidate factors for expected return modeling as an examplem it is quite likely that these candidate factors themselves are results from a horse-racing style research. Even though, we start all our exercise from scratch, just reading articles about factors would likely expose us to the test multiplicity that author made unconciously as well. 
 
-Firstly, the real number of factors experimented with is often unknown. For example, in building an expected return model from a factor repository, these candidate factors are likely based on previous extensive searches. This means the true multiplicity of tests conducted may be underreported or unaccounted for.
+Secondly, all candidate factors are treated equally in this procedure. They are all judged equally based on the performance in the sample. That's probably not the way we want to 
 
-Secondly, all candidate factors are treated equally in this procedure. In reality, we might give more weight to some factors based on their solid theoretical foundations. The current method does not allow for this differentiation. A Bayesian approach to modeling could help incorporate this aspect by using priors to weigh factors according to their theoretical strengths and previous evidence.
+In reality, we might give more weight to some factors based on their solid theoretical foundations. The current method does not allow for this differentiation. A Bayesian approach to modeling could help incorporate this aspect by using priors to weigh factors according to their theoretical strengths and previous evidence.
 
 
 
