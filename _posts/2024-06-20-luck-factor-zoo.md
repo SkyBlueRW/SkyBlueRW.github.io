@@ -5,6 +5,7 @@
 - [Those Factors shrink out of sample](#introduction)
 - [A multiple testing problem](#mul)
 - [A Resample Procedure to account for luck](#resample)
+- [And More](#more)
 - [Reference](#ref)
 
 ### Those Factors Shrink out of sample <a name="introduction"></a>
@@ -57,9 +58,14 @@ Suppose we have variable Y, the observed return to predict, and X, the candidate
 
 First, we obtain the reidual $$Y_e$$ of Y after projection onto selected factors $$X_{1...K}$$. $$Y_e$$ represents the proportion of return that the current model fail to predict and what we hope to improve upon. If starting from scratch, we can simply use the Y as $$Y_e$$ since all of the return is the target to improve. After orghonalizing the remaining candidate factors with respect to the $$Y_e$$, the null hypothesis is established: $$X_e$$ is orthogonal to $$Y_e$$, indicating no predictive power of $$X_e$$ on $$Y_e$$ in the sample. 
 
-The second step is about learning the empirical distribution of lucky factors. For each sampling iteration i of $$(X_e^i, Y_e^i)$$ of the same dimmension as the original data set we draw. A chosen statistic such as t-statistic, p-value or R square is calculated for all candidate factors and the best statistic of all ($$T_e^i$$) is stored. Since we have already carved out all the prediction power in the dataset, a good $$T_e^i$$ would be a lucky factor in this resampled set. We can get the empirical distribution of this max statistic by sampleing for multiple iterations.
+The second step is about learning the empirical distribution of lucky factors. For each sampling iteration i of $$(X_e^i, Y_e^i)$$ we draw. A chosen statistic such as t-statistic, p-value or R square is calculated for all candidate factors and the best statistic of all ($$T_e^i$$) is stored. Since we have already carved out all the prediction power in the dataset, a good $$T_e^i$$ would be a lucky factor in this resampled set. We can get the empirical distribution of this max statistic by sampleing for multiple iterations.
 
-Once we have the distribution of the lucky factors, we can take it as the distribution under the null hypothesis that all factors have zero expected return. We can calculate the max statistic of the original data and compare it against the distribution of lucky factors to decide on selection. As deliberately designed in the orthogonalization step, the difference would be about the predictive power accounting for luck. If the max statistic is outstanding compared to the distribution of the lucky factors, we would have more confidence in its true predictive power.
+Once we have the distribution of the lucky factors, we can take it as the distribution under the null hypothesis that all factors have zero expected return. We can calculate the max statistic of the original data and compare it against the distribution of lucky factors to decide on selection. As deliberately designed in the orthogonalization step, the difference would be about the predictive power accounting for luck. If the max statistic is outstanding compared to the distribution of the lucky factors, we would have more confidence in its true predictive power beyond luck.
+
+Such steps can be repeted to continue the selection of factors until the point where we are no longer satisfied on the comparison of real max static and the empirical distribution of lucky factor any more. 
+
+### And More <a name="more"></a>
+
 
 The procedure helps control test multiplicity in data selection in a data-driven way. Additionally, the empirical distribution generated provides a reference for understanding how test multiplicity might look, which can inform future research.
 
