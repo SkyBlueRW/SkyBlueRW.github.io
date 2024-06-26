@@ -61,15 +61,13 @@ The second step is about learning the empirical distribution of lucky factors. F
 
 Once we have the distribution of the lucky factors, we can take it as the distribution under the null hypothesis that all factors have zero expected return. We can calculate the max statistic of the original data and compare it against the distribution of lucky factors to decide on selection. As deliberately designed in the orthogonalization step, the difference would be about the predictive power accounting for luck. If the max statistic is outstanding compared to the distribution of the lucky factors, we would have more confidence in its true predictive power.
 
-The procedure helps to control test multiplicity in data selection in a data-driven way. Additionally, the empirical distribution generated also provides a reference to help us understand how test multiplicity would look and bear that in mind for future research. 
+The procedure helps control test multiplicity in data selection in a data-driven way. Additionally, the empirical distribution generated provides a reference for understanding how test multiplicity might look, which can inform future research.
 
-While before call it a conclusion, I would also like to bring a few limitations of it.
+However, before concluding, it is important to acknowledge a few limitations. 
 
-For example, We do not know the real number of factors experimented with. For example, in building an expected return model from a factor repository, these candidate factors are likely based on previous extensive searches. This means the true multiplicity of tests conducted may be underreported or unaccounted for.
+Firstly, the real number of factors experimented with is often unknown. For example, in building an expected return model from a factor repository, these candidate factors are likely based on previous extensive searches. This means the true multiplicity of tests conducted may be underreported or unaccounted for.
 
-Also, all candidate factors are treated equally in this procedure. In reality, we might give more weight to some factors based on their solid theoretical foundations. The current method does not allow for this differentiation. A Bayesian approach to modeling could help incorporate this aspect by using priors to weigh factors according to their theoretical strengths and previous evidence.
-
-
+Secondly, all candidate factors are treated equally in this procedure. In reality, we might give more weight to some factors based on their solid theoretical foundations. The current method does not allow for this differentiation. A Bayesian approach to modeling could help incorporate this aspect by using priors to weigh factors according to their theoretical strengths and previous evidence.
 
 
 
