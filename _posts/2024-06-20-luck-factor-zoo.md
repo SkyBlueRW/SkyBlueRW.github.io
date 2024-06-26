@@ -47,7 +47,7 @@ Hence it's really not surprising to see the deterioration of out sample performa
 
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
-Now that we understand the 'lucky factor' problem and its origins, how can we address it?
+Now that we understand the 'lucky factor' problem and its origins, how can we address it? Thre are multiple angles to approach such a question.
 
 Harvey and Liu (2021) provide a viable solution. They suggest using max statistics to adjust for test multiplicity and design a statistical procedure combining orthogonalization and resampling to enforce the null hypothesis in the context of test multiplicity in regression analysis. This procedure works with various types of regressions, whether time series, panel regression, or Fama-Macbeth regressions. Even better, it can be applied to an existing model to select additional factors, enhancing it by measuring marginal improvement after accounting for luck.
 
