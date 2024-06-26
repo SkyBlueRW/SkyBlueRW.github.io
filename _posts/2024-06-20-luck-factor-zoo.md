@@ -43,92 +43,35 @@ However, this logic falters when many factors are tested in a horse-racing style
 
 Unfortunately, this is more or less what we face in factor research. In the sparkling financial markets, hundreds of thousands of researchers have tested countless factors for predictive power using similar data sets. They generally use a p-value threshold of 1% or 2.5% or 5% under the single hypothesis test framework, leading to significant multiple testing issues. With so many factors tested, a factor showing strong in-sample predictability by the standards of single-factor testing is often the result of random chance rather than genuine predictive power.
 
-Hence it's really not surprising to see the deterioration of out sample performance. We get lucky factors in the respository of published factors!
+Hence it's really not surprising to see the deterioration of out sample performance. We get lucky factors in the respository of published factors! 
 
 ### A Resample Procedure to account for luck <a name="resample"></a>
 
-Now we know what is the lucky factor problem and where it originates. How to deal with it? 
+Now that we understand the 'lucky factor' problem and its origins, how can we address it?
 
-Harvey & Liu (2021) provides one viable solution. Basically they suggest to use max statistics to adjust for test multiplicity and design a statistical procedure combinig of orthoganoalization and resample to enforce the null hypothesis to the context of test multiplicity in regression style analysis. The procedure works with all kinds regression no matter it is time series regression, pannel regression or Fama-Macbeth like regression. What's even better, the procedure can be applied on an existing model as status quo, select additional factors to enhance it by measuring marginal improvement after accounting for luck.
+Harvey and Liu (2021) provide a viable solution. They suggest using max statistics to adjust for test multiplicity and design a statistical procedure combining orthogonalization and resampling to enforce the null hypothesis in the context of test multiplicity in regression analysis. This procedure works with various types of regressions, whether time series, panel regression, or Fama-Macbeth regressions. Even better, it can be applied to an existing model to select additional factors, enhancing it by measuring marginal improvement after accounting for luck.
 
-Suppose we have variable Y the observed return to predict and X the candidate factors to use. Based on solid research, we have already select K (1,2,...,K) significant factors from X to use. The following 4 steps help us to continue the selection in the remaining factors (K,K+1,...,M) with attention to test multiplicity.
+Suppose we have variable Y, the observed return to predict, and X, the candidate factors to use. Based on previous research, we have already selected K significant factors from X to use. The following four steps help us continue the selection from the remaining factors (K+1 to M) while considering test multiplicity. The core idea of this procedure is to build the empirical distribution of the null hypothesis — what would the performance look like if all our candidate factors had zero expected return — and compare it to the true performance in the sample.
 
 ![bootstrap](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/factor_zoo_bootstrap.png)
 
-At the first step, we want to get the residual $$Y_e$$ of Y after projection to selected factors $$X_{1...K}$$. $$Y_e$$ is the proportion of return that the current model can't explain and what we hope to improve upon. It should be noted that, if we are starting from scratch we can simply use the Y as $$Y_e$$ in the following steps as all of the return are the target. 
+First, we obtain the reidual $$Y_e$$ of Y after projection onto selected factors $$X_{1...K}$$. $$Y_e$$ represents the proportion of return that the current model fail to predict and what we hope to improve upon. If starting from scratch, we can simply use the Y as $$Y_e$$ since all of the return is the target to improve. After orghonalizing the remaining candidate factors with respect to the $$Y_e$$, the null hypothesis is established: $$X_e$$ is orthogonal to $$Y_e$$, indicating no predictive power of $$X_e$$ on $$Y_e$$ in the sample. 
+
+The second step is about learning the empirical distribution of lucky factors. For each sampling iteration i of $$(X_e^i, Y_e^i)$$ of the same dimmension as the original data set we draw. A chosen statistic such as t-statistic, p-value or R square is calculated for all candidate factors and the best statistic of all ($$T_e^i$$) is stored. Since we have already carved out all the prediction power in the dataset, a good $$T_e^i$$ would be a lucky factor in this resampled set. We can get the empirical distribution of this max statistic by sampleing for multiple iterations.
+
+Once we have the distribution of the lucky factors, we can take it as the distribution under the null hypothesis that all factors have zero expected return. We can calculate the max statistic of the original data and compare it against the distribution of lucky factors to decide on selection. As deliberately designed in the orthogonalization step, the difference would be about the predictive power accounting for luck. If the max statistic is outstanding compared to the distribution of the lucky factors, we would have more confidence in its true predictive power.
+
+The procedure helps to control test multiplicity in data selection in a data-driven way. Additionally, the empirical distribution generated also provides a reference to help us understand how test multiplicity would look and bear that in mind for future research. 
+
+While before call it a conclusion, I would also like to bring a few limitations of it.
+
+For example, We do not know the real number of factors experimented with. For example, in building an expected return model from a factor repository, these candidate factors are likely based on previous extensive searches. This means the true multiplicity of tests conducted may be underreported or unaccounted for.
+
+Also, all candidate factors are treated equally in this procedure. In reality, we might give more weight to some factors based on their solid theoretical foundations. The current method does not allow for this differentiation. A Bayesian approach to modeling could help incorporate this aspect by using priors to weigh factors according to their theoretical strengths and previous evidence.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-The other day, I was watching a documentary video that tells the story of a future trader who acheived 2500%+ profit within 5 years since 2019. Quite a magnificent financial reward! Though even the trader himself admitted, he, in some degree, lived under the shadow of anxiety about continuity of making profits via trading - it's hard to determine whether the previous performance arises from exceptional skill or luck. Actually the balance might tilt a bit more toward the latter, considering the fact that almost all of his parterners exiting trading the way like him due to unbearable losses.
-
-Do traders/portfolio managers/factors' nice historical performance come from something meaningful hence likely to continue in the future? This is definitely a million dollar question, with quite some hurdles to get a solid answer. As a matter of fact, deep in our hear, we know that it happes when a factor or trader with top the nouch historical performance fail. There can be really a lot reasons behind the curtain, each worthy for comprehensive discussion. In this blog, we will focus on one quite interesting scenario that can lead to it - a good historical performance due to luck in randomness and a logical fail afterward.
-
-
-
-In the volatile financial market crowdeded with all kinds of participants, such temporary success from luck is not rare unicorn. It's like to have 10000 people tossing a fair coin for 10 times. It's expected to see some of them have 10 consecutive head toss even though they do not have special skill in tossing a head - they are not expected to replicate such results!
-
-whether this factor/trader/pm with
-
-Back in 90s, the publish of Fama French factor model unleash an era of factor research. Ever since, tens of thousands of factors claimed to predict cross sectional security return variations are published in all kinds of articles 
-And it shouldn't be a surprise. Standing at 2024, the traditional data set such as market and fundamental data are investigated by too many researchers for too many trials. Quite naturally, tons of factors claimed to predict cross sectional security returns are there.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-It's really not a rare situation in investment research, that one read into a new paper detailing about a new anomaly that can predict the cross sectional stock return. You try to replicate it and enhance it in terms of a alpha signal with the arsenal of all kinds of modification. While it does not work out of sample in a paper trading despite the amazing performance delivered historically. What's wrong?
-
-actually, there are hundreds of factors claim to predict cross-section stock return. A lot of times, (quantitative) investors would have trading signal 
-
-
-When we research the data set intensively and experiments hundreds of factors, the baseline is no more none of them work. Significant result can emerge just out of randomness. Take the coin toss guess as analogy, it's quite unlikely for one people to guess correctly for 10 consecutive times of coin toss, while if we find 10 thousands people, it is not surprising to see a few of them are able to guess correctly out of luck not from skills in guessing coin toss.
-
-simulation. 
-
-Lasso, explicit account for multiple testing, achieve null hypothesis with the data observed
-
-With pre-determined factors (not necessary), how to identify if a candidate facotr perform taking luck into account
-
-what's p value?
-
-Pontiff & McLean (2016) 26% lower out-of-sample and 58% lower post-publication
-
-1 - (1 - \alpha) ^ k
-
-central limiet theorem distribution of empirical mean. 
-
-Bootstrap
-
-identify 'true' factors sequentially.
-
-V
-https://mp.weixin.qq.com/s/QOdTdKjNE838FoM71gYJew
-https://www.stat.cmu.edu/~larry/=sml/Boot.pdf
-
-If you torture the data long enough, it will confess to anything. Ronald Coase
 
 ### Reference <a name="ref"></a>
 - Harvey & Liu (2021): Lucky factor
