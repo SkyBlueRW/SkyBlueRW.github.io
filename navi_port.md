@@ -22,3 +22,5 @@ title: Portfolio Construction
 ## Risk Measure
 
 [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html)
+
+[Holding Discipline for Drawdown Control](https://skybluerw.github.io/2023/12/31/drawdown-control.html)
