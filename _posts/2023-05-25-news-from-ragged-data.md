@@ -57,6 +57,8 @@ e_{i, t} &\sim N(0, I)
 \end{aligned}
 $$
 
+
+
 What's worth metioning is that it's also quite easy to impose further structures in the model. For instance, Banbura, Giannone & Reichlin(2010) partitioned the lattent factors into 3: One global factor $$f_t^{G}$$ that loads on every economic indicator and summarize the general economic condition and two factors $$f_t^{N}, f_t^{R}$$ that loads on nomial indicators and real indicators separately to account for cross section structure within real and nominal indicators.
 
 Such a formation can be easily implemented by imposing restrictions on the loading matrix, the transition matrix, and the covariance matrix as below. The adoption of a customized EM algorithm (more detials later) ensures that such restriction does not pose much problem during estimation. 
