@@ -1,6 +1,6 @@
 #
 
-## Bayesian!
+## The Bayesian Approach on Lucky Factor!
 
 - [Introduction](#introduction)
 - [Reference](#ref)
