@@ -1,6 +1,6 @@
 #
 
-## The Bayesian Modeling of Alpha Signals!
+## The Bayesian Modeling of Factors!
 
 - [Introduction](#introduction)
 - [Reference](#ref)
