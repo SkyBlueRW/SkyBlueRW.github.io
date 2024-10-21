@@ -1,6 +1,6 @@
 #
 
-## The Bayesian Approach on Lucky Factor!
+## The Bayesian Modeling of Alpha Signals!
 
 - [Introduction](#introduction)
 - [Reference](#ref)
