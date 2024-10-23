@@ -7,6 +7,8 @@
 
 ### Introduction <a name="introduction"></a>
 
+we are easily subject to multiple selection bias. clean representation of the null hypothesis with bootstrap
+
 $$
 \begin{aligned}
 \hat{\alpha}^i &= \alpha^i + \epsilon^i \\
