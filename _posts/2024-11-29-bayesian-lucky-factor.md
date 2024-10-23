@@ -9,6 +9,8 @@
 
 we are easily subject to multiple selection bias. clean representation of the null hypothesis with bootstrap
 
+refrain from local noise
+
 $$
 \begin{aligned}
 \hat{\alpha}^i &= \alpha^i + \epsilon^i \\
