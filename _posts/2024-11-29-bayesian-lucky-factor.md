@@ -20,3 +20,6 @@ E(\alpha|\hat{\alpha}) &= E(\alpha) + \dfrac{cov(\alpha, \hat{\alpha})}{var(\hat
 &= E(\hat{\alpha}) + \dfrac{1}{1 + \dfrac{var(\hat{\alpha})}{var(\alpha)}} (\hat{\alpha} - E(\hat{\alpha}))
 \end{aligned}
 $$
+
+### Reference <a name="ref"></a>
+- Jensen, Kelly & Pedersen (2021): Is There a Replication Crisis in Finance
