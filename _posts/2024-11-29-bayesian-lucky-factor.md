@@ -7,6 +7,10 @@
 
 ### Introduction <a name="introduction"></a>
 
+
+capped value weight, residual return compared to market
+
+
 we are easily subject to multiple selection bias. clean representation of the null hypothesis with bootstrap
 
 refrain from local noise
@@ -23,3 +27,4 @@ $$
 
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
+- Hou, Xue & Zhang (2020): Replicating Anomalies
