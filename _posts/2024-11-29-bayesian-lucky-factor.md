@@ -7,6 +7,8 @@
 
 ### Introduction <a name="introduction"></a>
 
+In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html))
+
 as as anoying as the xxx
 
 
