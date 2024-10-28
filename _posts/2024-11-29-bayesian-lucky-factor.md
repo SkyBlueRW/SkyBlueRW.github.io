@@ -7,9 +7,11 @@
 
 ### Introduction <a name="introduction"></a>
 
-In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html)), we have discussed one challenges that can lead to deteriorating 
+In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html)), we have discussed one challenge that can lead to deteriorating out of sample performance in security return prediction - the multiple testing problem. Essentially, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine ability. 
 
-as as anoying as the xxx
+The thousands of factors out there claimed to predict security return and hundreds of thousands factors potentially experimented to reach these publications obviously represent a quite exhustive effort in the searching of factors. 
+
+
 
 
 capped value weight, residual return compared to market
