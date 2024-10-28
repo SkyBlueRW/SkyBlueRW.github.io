@@ -7,7 +7,7 @@
 
 ### Introduction <a name="introduction"></a>
 
-In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html))
+In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html)), we have discussed one challenges that can lead to deteriorating 
 
 as as anoying as the xxx
 
