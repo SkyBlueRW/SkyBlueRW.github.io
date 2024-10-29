@@ -7,9 +7,9 @@
 
 ### Introduction <a name="introduction"></a>
 
-In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html)), we have discussed one challenge that can lead to deteriorating out of sample performance in security return prediction - the multiple testing problem. Essentially, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine ability. 
+In a previous blog ([The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html)), we have discussed one challenge that can lead to deteriorating out of sample performance in security return prediction - the multiple testing. Essentially, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine ability. 
 
-The thousands of factors out there claimed to predict security return and hundreds of thousands factors potentially experimented to reach these publications obviously represent a quite exhustive effort in the searching of factors. 
+The thousands of factors out there claimed to predict security return and hundreds of thousands factors potentially experimented to reach these publications obviously demonstrate a quite exhustive effort in the searching of factors. In this case the traditional t-statistic threshold of 1.96 is no longer sufficient to garuantee a maximum of 5% type I error. The bar should be much higher! For instance, Hou, Xue & Zhang (2020) adpoted a 2.78 t-statistic for the 5% confidence level to account for this multiple testing problem. 
 
 
 
