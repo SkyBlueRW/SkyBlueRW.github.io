@@ -3,6 +3,10 @@
 ## The Bayesian Modeling of Factors!
 
 - [Introduction](#introduction)
+
+- no start
+- Hou
+- Bayesian
 - [Reference](#ref)
 
 ### Introduction <a name="introduction"></a>
@@ -13,7 +17,9 @@ The thousands of factors out there claimed to predict security return and hundre
 
 The bootstrap method we discussed in the last blog come into play exactly to counter this problem.  Orthogonalization technique is used to establish a null hypothesis that is guarantted to hold in the population and bootstrap is used to generate the real distribution of some robust metrics under the null hypothesis as the control benchmark for comparison. Or to make things simpler, just raise the bar of the t-statistic to account for this much lossened selection! For instance, Hou, Xue & Zhang (2020) adpoted a 2.78 t-statistic for the 5% confidence level to account for this multiple testing problem. 
 
-All of this will be helpful in our battle against the multiple testing issues in factor research. While we definitely could use some more help. After all the statistical significance derived under the frequentist approach is an assessment on the compatability of data and the null hypothesis (generally set to be the factor do no have predictive power). In the sense it measures the likelihood of the data if the null hypothesis is true ($$P(Data|H_0)$$). Tough containing certain aspects of information, It is not as relavant as we hope at the first place. After all, the more relavant question in factor research is probably this - given the data observed, how likely is the factor truly bearing the predictive power.
+All of this will be helpful in our battle against the multiple testing issues in factor research. While we definitely could use some more help. After all the statistical significance derived under the frequentist approach is an assessment on the compatability of data and the null hypothesis (generally set to be the factor do no have predictive power). In the sense it measures the likelihood of the data if the null hypothesis is true ($$P(Data|H_0)$$). Tough containing certain aspects of information, It is not as relavant as we hope at the first place. After all, the more relavant question in factor research is probably this - given the data observed, how likely is the factor truly bearing the predictive power ($$P(H_1|Data)$$).
+
+
 
 
 
