@@ -1,15 +1,15 @@
 #
 
-## The Bayesian Modeling of Factors!
+## The Bayesian Adjustment For Luck
 
 - [The Replication "Crisis"](#Crisis)
 - [Bayes For Good!](#bay)
 - [Reference](#ref)
 
 
-In the previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we have discussed one challenge that can lead to factors failing out of sample in the real world - the multiple testing problem. Essentially, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine ability. 
+In the previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off the discussion around challenges finding factors working out of sample in the real word. Specifically, we talked about one critical blocker in this journey - the multiple testing problem. Essentially, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine predictive ability. 
 
-The thousands of factors out there claimed to predict security return and hundreds of thousands factors potentially experimented to reach these publications obviously demonstrate a quite exhustive effort in searching of factors. In this case, passing the traditional t-statistic threshold of 1.96 is no longer sufficient to garuantee 5% type I error. 
+The thousands of factors out there claimed to predict security return and hundreds of thousands factors potentially experimented behind the curton to reach these publications obviously demonstrate a quite exhustive effort in searching of factors. Facing this case of multiple testing, passing the traditional t-statistic threshold of 1.96 is no longer sufficient to garuantee 5% type I error. 
 
 The bootstrap method we discussed in the last blog come into play exactly to counter this problem.  Orthogonalization technique is used to establish a null hypothesis that is guarantted to hold in the population and bootstrap is used to generate the real distribution of some robust metrics under the null hypothesis as the control benchmark for comparison. 
 
