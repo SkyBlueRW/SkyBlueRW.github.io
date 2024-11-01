@@ -11,11 +11,11 @@ In the previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/
 
 The thousands of factors out there and hundreds of thousands factors more potentially experimented behind the curton to reach these publications obviously demonstrate a quite exhustive effort in searching of factors. Facing this scenario of multiple testing, passing the traditional t-statistic threshold of 1.96 is no longer a sufficient guarantee of 5% type I error. 
 
-The bootstrap method we discussed in the previous blog come into play  to counter this problem.  Orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the population by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point to start acknowledging and mitigating it.
+The bootstrap method we discussed in the previous blog come into play  to counter this problem.  Orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the sample by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point to start acknowledging and mitigating it.
 
-Time to continue the journey! With hundreds or even thousands of factors documented to predict security return separately in academic articles (Cochrane called this as 'Factor Zoo' in his presidential address to the American Finance Association), a lot more problems to reveal and a lot more modeling to discuss.
+Time to continue the journey! With hundreds or even thousands of factors documented to predict security return separately in academic articles (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and modeling to discuss!
 
-
+In this 
 
 ### The Replication "Crisis" <a name="crisis"></a>
 
