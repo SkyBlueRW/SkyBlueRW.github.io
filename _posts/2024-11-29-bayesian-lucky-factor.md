@@ -2,7 +2,7 @@
 
 ## The Bayesian Adjustment For Luck
 
-- [The Replication "Crisis"](#Crisis)
+- [The Replication 'Crisis'](#crisis)
 - [Bayes For Good!](#bay)
 - [Reference](#ref)
 
