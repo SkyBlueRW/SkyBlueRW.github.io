@@ -7,13 +7,13 @@
 - [Reference](#ref)
 
 
-In the previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off the discussion around challenges finding factors to predict security returns out of sample in the real word. Specifically, we talked about one critical blocker in this journey - the multiple testing problem. Broadly, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine predictive ability. 
+In the previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off our discussion around challenges finding factors to predict security returns out of sample in the real word. Specifically, we talked about one critical blocker in this journey - the multiple testing problem. Broadly, when factors are identified through extensive or exhaustive searches, their apparent predictive power in sample may stem more from luck than genuine predictive ability. 
 
 The thousands of factors out there and hundreds of thousands factors more potentially experimented behind the curton to reach these publications obviously demonstrate a quite exhustive effort in searching of factors. Facing this scenario of multiple testing, passing the traditional t-statistic threshold of 1.96 is no longer a sufficient guarantee of 5% type I error. 
 
 The bootstrap method we discussed in the previous blog come into play  to counter this problem.  Orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the population by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point to start acknowledging and mitigating it.
 
-Time to continue along the journey in this blog. 
+Time to continue the journey! With hundreds or even thousands of factors documented to predict security return separately in academic articles (Cochrane called this as 'Factor Zoo' in his presidential address to the American Finance Association), a lot more problems to reveal and a lot more modeling to discuss.
 
 
 
@@ -50,3 +50,4 @@ $$
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 - Hou, Xue & Zhang (2020): Replicating Anomalies
+- Cohcrane (2011): Discount Rates
