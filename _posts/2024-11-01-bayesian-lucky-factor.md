@@ -19,7 +19,9 @@ Time to continue the journey! With hundreds or even thousands of factors (Cochra
 
 This large number of factors documented to predict security return separately in academic articles does not really align the traditional wisdom in investment - expected return is hard to predict. We should be in a pretty good position in terms making prediction on expected return even if these documented factors have slight and marginal prediction power on it. While this is not the case and something is off with the large pool of factors.
 
-Hou, Xue & Zhang (2018) shed some light on this puzzle. In their article "Replicating Anomalies", they grouped around 200 factors into 6 categories, and tested all of them under the same treatment and data sets (1967 ~ 2016). 
+Hou, Xue & Zhang (2018) shed some light into this puzzle in the article "Replicating Anomalies". Quite amazingly, they grouped almost 200 factors into 6 categories, and tested all of them under the same treatment and data sets (1967 ~ 2016). Each of the factors are tested on their predictive power on the cross sectional return over 3 horizons (1, 6, 12 months). The result is not really in favor. 65% of the factors failed the tradtional 1.96 t-statistic threshold. The failure rate rose sharply to 82% if a 2.78 t-statistic 
+
+
 
 65%, 82%
 
