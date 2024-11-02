@@ -13,9 +13,13 @@ The thousands of factors out there and hundreds of thousands factors more potent
 
 The bootstrap method discussed in the previous blog come as an attempt to counter this problem. Customized orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the sample by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point acknowledging and mitigating it.
 
-Time to continue the journey! With hundreds or even thousands of factors documented to predict security return separately in academic articles (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and modeling to discuss!
+Time to continue the journey! With hundreds or even thousands of factors (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and modeling to discuss!
 
 ### The Replication "Crisis" <a name="crisis"></a>
+
+This large number of factors documented to predict security return separately in academic articles does not really align the traditional wisdom - expected return is hard to predict. We should be in a pretty good position in terms making prediction on expected return even if these documented factors have slight and marginal prediction power on it. While this is not the case and something is off with the large pool of factors.
+
+
 
 Or to make things simpler, just raise the bar of the t-statistic to account for this much lossened selection! For instance, Hou, Xue & Zhang (2020) adpoted a 2.78 t-statistic for the 5% confidence level to account for this multiple testing problem. 
 
