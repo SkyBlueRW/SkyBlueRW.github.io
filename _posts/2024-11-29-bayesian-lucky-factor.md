@@ -17,7 +17,9 @@ Time to continue the journey! With hundreds or even thousands of factors (Cochra
 
 ### The Replication "Crisis" <a name="crisis"></a>
 
-This large number of factors documented to predict security return separately in academic articles does not really align the traditional wisdom - expected return is hard to predict. We should be in a pretty good position in terms making prediction on expected return even if these documented factors have slight and marginal prediction power on it. While this is not the case and something is off with the large pool of factors.
+This large number of factors documented to predict security return separately in academic articles does not really align the traditional wisdom in investment - expected return is hard to predict. We should be in a pretty good position in terms making prediction on expected return even if these documented factors have slight and marginal prediction power on it. While this is not the case and something is off with the large pool of factors.
+
+65%, 82%
 
 
 
