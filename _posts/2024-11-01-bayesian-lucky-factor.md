@@ -19,6 +19,8 @@ Time to continue the journey! With hundreds or even thousands of factors (Cochra
 
 This large number of factors documented to predict security return separately in academic articles does not really align the traditional wisdom in investment - expected return is hard to predict. We should be in a pretty good position in terms making prediction on expected return even if these documented factors have slight and marginal prediction power on it. While this is not the case and something is off with the large pool of factors.
 
+Hou, Xue & Zhang (2018) shed some light on this puzzle. In their article "Replicating Anomalies", they grouped around 200 factors into 6 categories, and tested all of them under the same treatment and data sets (1967 ~ 2016). 
+
 65%, 82%
 
 
@@ -53,5 +55,5 @@ $$
 
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
-- Hou, Xue & Zhang (2020): Replicating Anomalies
+- Hou, Xue & Zhang (2018): Replicating Anomalies
 - Cohcrane (2011): Discount Rates
