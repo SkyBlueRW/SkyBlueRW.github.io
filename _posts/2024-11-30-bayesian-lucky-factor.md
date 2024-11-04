@@ -25,7 +25,7 @@ One cause of this low replication rate is the data set used. A 50-year long hist
 
 On the other side, Jensen, Kelly & Pedersen (2023) holds an apposing opinion on this gloomy replication results. They built an even broader data set spanning 93 countries around the world that go back as far as a century in the history for their own replication. Compared to the dire 18% successful rate from Hou, Xue & Zhang (2020), they achieved a significantly different 85% succesful rate of replication. Quite a drmatic difference, no wonder all the discussions and debates around wheather there is a replication crisis in empirical asset pricing research. 
 
-Several difference leads to this dramatic difference of replication rate. 
+Several difference leads to this dramatic difference of replication rate. ~30%,  1926
 
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 
