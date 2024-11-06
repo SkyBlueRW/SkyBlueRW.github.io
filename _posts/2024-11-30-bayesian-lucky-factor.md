@@ -21,7 +21,7 @@ In the article "Replicating Anomalies", Hou, Xue & Zhang (2020) shed some lights
 
 One cause of this low replication rate is the data set used. A 50-year long history of US security return constituets a quite comprehensive data set larger than the data set used in majority of the research documenting these factors. In the financial market full of uncertainties, it is not that surprising to see a factor working locally and fail in a longer sample. Especially when there are incentives to customize the sample to achieve more significance for publication. Another cause that Hou, Xue & Zhou hilighted a lot in their article is the over-emphasis on the micro cap stocks in the previous factor research. A lot of factors (especially those from a behavioral root) demonstrate much better predictive power among small stocks for their less attention received and higher transaction cost required. Treating these microcap stocks equally in a equal weight factor portfolio construction or OLS regression is defintely an excessive emphasis. As These microcap stocks account for as little as 3% in the total market capitalization but as much as 60% of total number of stocks. 
 
-On the other side, Jensen, Kelly & Pedersen (2023) holds an apposing opinion on this gloomy replication results. They built an even broader data set spanning 93 countries around the world that go back as far as a century in the history for their own replication. Compared to the dire 35% successful rate from Hou, Xue & Zhang (2020), they achieved a significantly different 85% succesful rate of replication. Quite a drmatic difference, no wonder all the discussions and debates around wheather there is a replication crisis in empirical asset pricing research. 
+On the other side, Jensen, Kelly & Pedersen (2023) holds an apposing opinion on this gloomy replication results. They built an even broader data set spanning 93 countries around the world that go back as far as a century in the history for their own replication. Compared to the dire 35% successful rate from Hou, Xue & Zhang (2020), they achieved a significantly different 85% succesful rate of replication. 
 
 Several difference leads to this dramatic difference of replication rate. First and foremost, Jensen et al are looking into the CAPM alpha instead of raw factor returns. This change alone account for a +20% raise in replication rate. It makes some sense to neutralize the market beta in the factor research, after all we want to gain marginal improvement in explaining security return with new factors. While it might also twist the factors in replication. For example, for the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. 
 
@@ -29,7 +29,7 @@ A lot more drivers are behind this sharp increase in successful rate. Like, Jens
 
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 
-
+35% vs 85% Quite a drmatic difference, no wonder all the discussions and debates around wheather there is a replication crisis in empirical asset pricing research. 
 
 
 
