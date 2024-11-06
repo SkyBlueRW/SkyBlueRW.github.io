@@ -25,11 +25,7 @@ On the other side, Jensen, Kelly & Pedersen (2023) holds an apposing opinion on 
 
 Several difference leads to this dramatic difference of replication rate. First and foremost, Jensen et al are looking into the CAPM alpha instead of raw factor returns. This change alone account for a +20% raise in replication rate. It makes some sense to neutralize the market beta in the factor research, after all we want to gain marginal improvement in explaining security return with new factors. While it might also twist the factors in replication. For example, for the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. 
 
-A lot more drivers are behind this sharp increase in successful rate. Like, Jensen et al uses a capped value weight in factor portfolio construction to avoid concentration in mega stocks like the magnificent seven. The market cap of a stock is capped at 80% percentile hence all stocks with size beyond this point would be assigned this 80% value. 
-
-Some other difference leads to the sharp increase rate of replication rate includes a capped value weight in factor portfolio construction to reduce influence from mega stocks, a long history of data used for the test, and focus only on the horizon of 1 month.
-
-~30%,  1926
+A lot more drivers are behind this sharp increase in successful rate. Like, Jensen et al uses a capped value weight in factor portfolio construction to avoid concentration in mega stocks like the magnificent seven. The market cap of a stock is capped at 80% percentile hence all stocks with size beyond this point would be assigned this 80% value. Additionaly, they are using a much longer history in US stock even compared to Hou et al's already extensive data set. Rather than looking into 3 horizons of 1 month, 6 month and 12 months, they exclusively focused on the 1 month horizon. 
 
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 
