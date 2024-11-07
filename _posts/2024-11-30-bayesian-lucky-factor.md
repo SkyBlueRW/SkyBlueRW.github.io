@@ -29,7 +29,7 @@ A lot more drivers are behind this sharp increase in successful rate. Like, Jens
 
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 
-35% vs 85% Quite a drmatic difference, no wonder all the discussions and debates around wheather there is a replication crisis in empirical asset pricing research. 
+35% vs 85% is quite a drmatic difference, no wonder all the discussions and debates around wheather there is a replication crisis in empirical asset pricing research. small make sense. 
 
 
 
