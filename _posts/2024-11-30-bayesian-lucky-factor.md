@@ -72,3 +72,4 @@ $$
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 - Hou, Xue & Zhang (2018): Replicating Anomalies
 - Cohcrane (2011): Discount Rates
+- Blitz (2023): The Cross-Section of Factor Returns
