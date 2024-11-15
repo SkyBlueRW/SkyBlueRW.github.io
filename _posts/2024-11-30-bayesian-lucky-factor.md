@@ -2,18 +2,18 @@
 
 ## A First Glimpse into the "Factor Zoo"
 
-- [The Replication 'Crisis'](#crisis)
+- [The Factor Zoo](#crisis)
 - [Bayes For Good!](#bay)
 - [Reference](#ref)
 
 
 In a previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off our discussion around finding factors that drive cross sectional security return out of sample in the real word. Specifically, we talked about one critical blocker in this journey - the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent predictive power in sample may stem more from luck than genuine predictive ability. 
 
-The thousands of factors out there and hundreds of thousands factors more experimented behind the curton to reach these publications obviously demonstrate a quite exhustive effort in searching factors. Facing this scenario of multiple testing, passing the traditional t-statistic threshold of 1.96 is no longer a sufficient guarantee of 5% type I error. The bootstrap method we discussed in the previous blog come as an attempt to mitigate this problem. Customized orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the sample by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point.
+The thousands of factors out there and hundreds of thousands factors more experimented behind the curton to reach these publications obviously demonstrate a quite exhustive effort in searching factors. Facing this scenario of multiple testing, the traditional 1.96 t-statistic threshold is no longer a sufficient guarantee of 5% type I error. The bootstrap method we discussed in the previous blog come as an attempt to mitigate this problem. Customized orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the sample by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point.
 
 Time to proceed along the journey! With hundreds or even thousands of factors (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and models to discuss!
 
-### The Replication "Crisis" <a name="crisis"></a>
+### The Factor Zoo <a name="crisis"></a>
 
 This huge number of factors documented to predict security return in academic articles does not really align with the traditional wisdom in investment community - expected return is hard to predict. Even if these documented factors have slight and marginal prediction power, we should be in a pretty good position in terms making prediction on expected return. While this is simply not the case. Something seems to be off with this factor zoo worth a bit digging here.
 
