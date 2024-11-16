@@ -7,9 +7,9 @@
 - [Reference](#ref)
 
 
-In a previous blog [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off our discussion around finding factors that drive cross sectional security return out of sample in the real word. Specifically, we talked about one critical blocker in this journey - the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent predictive power in sample may stem more from luck than genuine predictive ability. 
+In a previous blog, [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off our discussion in search of factors that drive cross-sectional security returns out-of-sample in the real word. Specifically, we talked about one key challenge in this journey - the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent in-sample predictive power often owes more to luck than to genuine predictive ability—a critical blocker on this journey.
 
-The thousands of factors out there and hundreds of thousands factors more experimented behind the curton to reach these publications obviously demonstrate a quite exhustive effort in searching factors. Facing this scenario of multiple testing, the traditional 1.96 t-statistic threshold is no longer a sufficient guarantee of 5% type I error. The bootstrap method we discussed in the previous blog come as an attempt to mitigate this problem. Customized orthogonalization technique is used to establish a purified null hypothesis that is guarantted to hold in the sample by design, followed by bootstrap to generate the real distribution of some robust metrics of choice under the null hypothesis as the adjusted control benchmark for comparison. Not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution. But definitely a good start point.
+The sheer volume of factors published, not to mention the countless more tested behind the scenes, highlights the exhaustive effort researchers have dedicated to this search. In this scenario, the traditional 1.96 t-statistic threshold no longer ensures a 5% Type I error rate. To address this, we discussed the bootstrap method as a way to mitigate the issue. This method combines customized orthogonalization—used to establish a purified null hypothesis that holds by design with bootstrapping to generate the actual distribution of robust metrics under the null hypothesis. These adjusted benchmarks provide a more reliable basis for comparison. While not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution, it’s certainly a solid starting point.
 
 Time to proceed along the journey! With hundreds or even thousands of factors (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and models to discuss!
 
@@ -74,4 +74,3 @@ $$
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 - Hou, Xue & Zhang (2018): Replicating Anomalies
 - Cohcrane (2011): Discount Rates
-- Blitz (2023): The Cross-Section of Factor Returns
