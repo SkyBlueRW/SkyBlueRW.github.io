@@ -2,7 +2,7 @@
 
 ## A First Glimpse into the "Factor Zoo"
 
-- [The Factor Zoo](#crisis)
+- [A Factor Zoo](#crisis)
 - [The Pro and Con sides](#two)
 - [Reference](#ref)
 
