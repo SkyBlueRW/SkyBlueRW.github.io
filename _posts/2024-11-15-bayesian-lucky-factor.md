@@ -2,7 +2,7 @@
 
 ## A First Glimpse into the "Factor Zoo"
 
-- [A Factor Zoo](#crisis)
+- [The Factor Zoo](#crisis)
 - [The Pro and Con sides](#two)
 - [Reference](#ref)
 
@@ -15,9 +15,10 @@ The sheer volume of factors published, not to mention the countless more tested 
 
 Time to proceed along the journey! With hundreds or even thousands of factors (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and models to discuss!
 
+This vast number of factors claimed to predict security returns stands in contrast to the traditional wisdom of the investment community - it is hard to predict expected returns. If these documented factors truly possessed even modest predictive power, we’d be in a strong position to combine them for return forecast. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s worth a bit digging.
+
 ### The Pro and Con sides <a name="two"></a>
 
-This vast number of factors claimed to predict security returns stands in contrast to the traditional wisdom of the investment community - it is hard to predict expected returns. If these documented factors truly possessed even modest predictive power, we’d be in a strong position to combine them for return forecast. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s worth a bit digging.
 
 In the paper "Replicating Anomalies", Hou, Xue & Zhang (2020) shed some lights on this puzzle. Quite remarkably, they replicated nearly 200 published factors and tested them using a comprehensive dataset of U.S. stocks (1967–2016) under consistent procedures. Each factor's predictive power was evaluated over three time horizons (1, 6, and 12 months) through sorted long-short portfolios. The finding was bitter: 65% of the factors failed to surpass the traditional t-statistic threshold of 1.96. The failure rate further climbed to an astonishing 82% when a stricter threshold of 2.78 accounting for multiple testing corrections.
 
