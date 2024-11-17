@@ -13,3 +13,4 @@ title: Financial Market & Statistical Method
 
 # Factor Model
 - [Nowcasting: The News From Jagged Economic Data](https://skybluerw.github.io/2023/05/25/news-from-ragged-data.html)
+- [The Covid Recession Update!](https://skybluerw.github.io/2024/09/29/nowcast.html)
