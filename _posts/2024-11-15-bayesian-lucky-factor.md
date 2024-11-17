@@ -3,8 +3,10 @@
 ## A First Glimpse into the "Factor Zoo"
 
 - [The Factor Zoo](#crisis)
-- [Bayes For Good!](#bay)
+- [The Pro and Con sides](#two)
 - [Reference](#ref)
+
+### The Factor Zoo <a name="crisis"></a>
 
 
 In a previous blog, [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off our discussion around finding factors that drive cross-sectional security returns out-of-sample in the real word. Specifically, we talked about one key challenge in this journey - the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent in-sample predictive power often owes more to luck than to genuine predictive ability.
@@ -13,7 +15,7 @@ The sheer volume of factors published, not to mention the countless more tested 
 
 Time to proceed along the journey! With hundreds or even thousands of factors (Cochrane called this as 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), a lot more observations, problems and models to discuss!
 
-### The Factor Zoo <a name="crisis"></a>
+### The Pro and Con sides <a name="two"></a>
 
 This vast number of factors claimed to predict security returns stands in contrast to the traditional wisdom of the investment community - it is hard to predict expected returns. If these documented factors truly possessed even modest predictive power, we’d be in a strong position to combine them for return forecast. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s worth a bit digging.
 
