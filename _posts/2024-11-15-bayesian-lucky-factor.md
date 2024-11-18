@@ -13,9 +13,9 @@ In a previous blog, [The Adjustment for Luck](https://skybluerw.github.io/2024/0
 
 The bootstrap method discussed previously comes as an attempt to mitigate this problem. By combining a customized orthogonalization technique, which sets up a purified null hypothesis that holds by design, with bootstrapping to generate the actual distribution of desired robust metrics under the null hypothesis, researchers can establish more reliable benchmarks for statistical test. While not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution, it’s certainly a solid starting point.
 
-Time to proceed along the journey! With hundreds or even thousands of factors (Cochrane called this a 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), there are a lot more observations, challenges and models to discuss! In this blog, let's check out two opposing views on the 'Factor Zoo'. 
+Time to pcontinue our exploration! With hundreds or even thousands of factors (what Cochrane called the 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), there are plenty more observations, challenges and models to discuss! 
 
-Think about the massive collection of factors, each claimed to predict security returns. It doesn't really line up with the conventional wisdom of investment community: predicting expected returns is difficult. If these documented factors truly possess even modest predictive power, we’d be well-equipped to forecast returns by combining them together. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s definitely worth a bit digging. 
+Consider the massive collection of factors, each claiming to predict security returns. This doesn't quite align with the conventional wisdom of investment community: predicting expected returns is difficult. If these documented factors truly possess even modest predictive power, we’d be well-equipped to forecast returns by combining them together. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s definitely worth a bit digging. In this blog, let's check out two opposing views around the 'Factor Zoo'. 
 
 ### The Pro and Con sides <a name="two"></a>
 
