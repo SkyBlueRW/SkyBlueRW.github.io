@@ -17,7 +17,7 @@ Time to pcontinue our exploration! With hundreds or even thousands of factors (w
 
 Consider the massive collection of factors, each claiming to predict security returns. This doesn't quite align with the conventional wisdom of investment community: predicting expected returns is difficult. If these documented factors truly possess even modest predictive power, we’d be well-equipped to forecast returns by combining them together. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s definitely worth a bit digging. In this blog, let's check out two opposing views around the 'Factor Zoo'. 
 
-### The Pro and Con sides <a name="two"></a>
+### The Skeptical and Optimistic sides <a name="two"></a>
 
 In the paper "Replicating Anomalies", Hou, Xue & Zhang (2020) shed some lights on this puzzle. Quite remarkably, they replicated nearly 200 published factors and tested them using a comprehensive dataset of U.S. stocks (1967–2016) under consistent procedures. Each factor's predictive power was evaluated over three horizons (1, 6, and 12 months) through sorted long-short portfolios. The finding was bitter: 65% of the factors failed to surpass the traditional t-statistic threshold of 1.96. The failure rate further climbed to an astonishing 82% when a stricter threshold of 2.78 accounting for multiple testing corrections.
 
