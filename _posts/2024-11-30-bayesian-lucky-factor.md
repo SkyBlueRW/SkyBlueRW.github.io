@@ -3,7 +3,7 @@
 ## A First Glimpse into the "Factor Zoo"
 
 - [The Factor Zoo](#crisis)
-- [The Skeptical and Optimistic](#two)
+- [The Skeptical and the Optimistic](#two)
 - [Reference](#ref)
 
 ### The Factor Zoo <a name="crisis"></a>
@@ -11,7 +11,7 @@
 
 In a previous blog, [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we kicked off the discussion around identifying factors that drive cross-sectional security returns out-of-sample in the real world. Specifically, we talked about one critical challenge in this journey - the multiple testing problem. Basically, when factors are identified through extensive searches, their apparent in-sample predictive power often owes more to luck than to genuine predictive ability. The massive number of factors published, not to mention the countless more tested behind the scenes, demonstrates a quite exhaustive effort researchers have devoted to this quest. Facing this typical mutiple testing scenario, the traditional 1.96 t-statistic threshold no longer ensures a 5% Type I error rate. 
 
-The bootstrap method discussed previously comes as an attempt to mitigate this problem. By combining a customized orthogonalization technique, which sets up a purified null hypothesis that holds by design, with bootstrapping to generate the actual distribution of desired robust metrics under the null hypothesis, researchers can establish more reliable benchmarks for statistical test. While not a perfect resolution, we are still subject to a sample of smaller size compared to number of factors with evolving distribution, it’s certainly a solid starting point.
+The bootstrap method discussed previously comes as an attempt to mitigate this problem. By combining a customized orthogonalization technique, which sets up a purified null hypothesis that holds by design, with bootstrapping, researchers can establish more reliable status quo for statistical test. While not a perfect resolution - we are still subject to a sample of smaller size compared to number of factors with evolving distribution, it’s certainly a solid starting point.
 
 Time to pcontinue our exploration! With hundreds or even thousands of factors (what Cochrane called the 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), there are plenty more observations, challenges and models to discuss! 
 
