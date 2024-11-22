@@ -15,7 +15,9 @@ The bootstrap method discussed previously comes as an attempt to mitigate this p
 
 Time to pcontinue our exploration! With hundreds or even thousands of factors (what Cochrane called the 'Factor Zoo' in his [presidential address](https://www.nber.org/papers/w16972) to the American Finance Association), there are plenty more observations, challenges and models to discuss! 
 
-Consider the massive collection of factors, each claiming to predict security returns. This doesn't quite align with the conventional wisdom of investment community: predicting expected returns is difficult. If these documented factors truly possess even modest predictive power, we’d be well-equipped to forecast returns by combining them together. Yet, this isn’t the case. Something seems off in this 'Factor Zoo' and it’s definitely worth a bit digging. In this blog, let's check out two opposing views around the 'Factor Zoo'. 
+Looking a little closer into this massive collection of factors, each claiming to predict security returns, it doesn't quite align with the conventional wisdom of investment community: predicting expected returns is really difficult. If these documented factors truly possess even modest predictive power, we’d be well-equipped to forecast returns by combining them together. Yet, it isn’t the case. Something seems off about this 'Factor Zoo' and it’s definitely worth a bit digging. 
+
+What can we take from the factor zoo? How should we interpret it? In this blog, let's check out two opposing views around the 'Factor Zoo'. 
 
 ### The Skeptical and Optimistic <a name="two"></a>
 
