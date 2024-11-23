@@ -27,9 +27,12 @@ Why such dismal replication rates? The authors believe the key driver is the exc
 
 Another key driver of the low replication rate, probably equally important, lies in the dataset used. The 50-year dataset of US security returns is much more comprehensive than the majority of data sets used in earlier factor studies. In the financial markets with inherently low signal-to-noise ratio, it’s not surprising for a factor to perform well in localized samples but fail in broader datasets. It is especially the case when there are incentives to customize the sample to achieve more significance for publication. 
 
-There is also a much more optimistic perspective in this discussion. In the article "Is There a Replication Crisis in Finance", Jensen, Kelly, and Pedersen (2023) offered a contrasting view. Using an even broader dataset spanning 93 countries with their innovative Bayesian testing framework, they reached a significantly different result: a 82% replication success rate compared to Hou et al.'s 35%. How could the outcomes diverge so dramatically? Several key differences in data and test procedure are behind this discrepancy. 
+There is also a much more optimistic angle in this discussion. In the article "Is There a Replication Crisis in Finance", Jensen, Kelly, and Pedersen (2023) offered a contrasting view. Using an even broader dataset spanning 93 countries with their innovative Bayesian testing framework, they reached a significantly different result: a 82% replication success rate.
 
+82% vs 35%! How could the outcomes diverge so dramatically? Jensen et al looked into this interesting  question themselves. Several key differences in the test procedure and data set are behind this discrepancy. 
 
+![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
+Source: Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 
 
 
@@ -37,8 +40,6 @@ Obviously the different data sets used account for a significant , Jensen et al.
 
 A lot more drivers are behind this sharp increase in successful rate. Like, Jensen et al uses a capped value weight in factor portfolio construction to avoid concentration in mega stocks. The market cap of a stock is capped at 80% percentile hence all stocks with size beyond this point would be assigned this 80% percentile value. Additionaly, they are using a much longer history in US stock even compared to Hou et al's already extensive data set. Rather than looking into 3 horizons of 1 month, 6 month and 12 months, they exclusively focused on the 1 month horizon. Their innovative bayesian modeling also leads to some degree of difference.
 
-![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
-Source: Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 
 
 35% vs 85% is quite a drmatic difference, no wonder all the discussions and debates around wheather there is a replication crisis in empirical asset pricing research. small make sense. 
