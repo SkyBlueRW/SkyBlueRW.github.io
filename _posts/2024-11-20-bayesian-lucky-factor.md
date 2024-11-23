@@ -25,9 +25,13 @@ In the paper "Replicating Anomalies", Hou, Xue & Zhang (2020) shed some lights i
 
 Why such dismal replication rates? The authors believe the key driver is the excessive emphasis on illiquid micro-cap stocks in earlier factor research. Many factors show much stronger predictive power among stocks of smaller size，likely due to the lower levels of investor attention recevied and higher transaction costs required to trade. These micro-cap stocks can account for as much as 60% of the total number of stocks but as little as 3% of the total market capitalization - an investment with questionable capacity and profitability. Obviously, weighting these micro-cap stocks equally as the other 97% in factor portfolio construction or regression as some previous factor research did would create a big imbalance and distort the conclusion drawn.
 
-Another driver probably equally important lies in the dataset used. The 50-year dataset of US security returns is much more comprehensive than the majority of data sets used in earlier factor studies. In the financial markets with inherently low signal-to-noise ratio, it’s not surprising for a factor to perform well in localized samples but fail in broader datasets. It is especially the case when there are incentives to customize the sample to achieve more significance for publication. 
+Another key driver of the low replication rate, probably equally important, lies in the dataset used. The 50-year dataset of US security returns is much more comprehensive than the majority of data sets used in earlier factor studies. In the financial markets with inherently low signal-to-noise ratio, it’s not surprising for a factor to perform well in localized samples but fail in broader datasets. It is especially the case when there are incentives to customize the sample to achieve more significance for publication. 
 
-On the other side, Jensen, Kelly, and Pedersen (2023) offered a contrasting view. Using an even broader dataset spanning 93 countries and nearly a century of history, they reached a significantly different result: a 82% replication success rate compared to Hou et al.’s 35%. How could the outcomes diverge so dramatically? Several key differences in data and test procedure are behind this discrepancy. 
+Turning to a more optimistic perspective. In the article "Is There a Replication Crisis in Finance", Jensen, Kelly, and Pedersen (2023) offered a contrasting view. Using an even broader dataset spanning 93 countries with their innovative Bayesian testing framework, they reached a significantly different result: a 82% replication success rate compared to Hou et al.'s 35%. How could the outcomes diverge so dramatically? Several key differences in data and test procedure are behind this discrepancy. 
+
+
+
+
 
 Obviously the different data sets used account for a significant , Jensen et al. switched from raw factor return to CAPM alpha, which alone increased the replication rate by over 20%. This adjustment makes some sense since the goal of factor research is to identify additional improvements beyond the market beta. However, it also introduce some unintentional distortions. For example, for the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return to the CAPM alpha, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. 
 
@@ -55,26 +59,7 @@ Or to make things simpler, just raise the bar of the t-statistic to account for 
 
 ### Bayes For Good <a name="bay"></a>
 
-All of this will be helpful in our battle against the multiple testing issues in factor research. While we definitely could use some more help. After all the statistical significance derived under the frequentist approach is an assessment on the compatability of data and the null hypothesis (generally set to be the factor do no have predictive power). In the sense it measures the likelihood of the data if the null hypothesis is true ($$P(Data|H_0)$$). Tough containing certain aspects of information, It is not as relavant as we hope at the first place. After all, the more relavant question in factor research is probably this - given the data observed, how likely is the factor truly bearing the predictive power ($$P(H_1|Data)$$).
 
-
-
-capped value weight, residual return compared to market
-
-
-we are easily subject to multiple selection bias. clean representation of the null hypothesis with bootstrap
-
-refrain from local noise
-
-$$
-\begin{aligned}
-\hat{\alpha}^i &= \alpha^i + \epsilon^i \\
-\epsilon^i &\sim N(0, \sigma^2) \\
-E(\alpha|\hat{\alpha}) &= E(\alpha) + \dfrac{cov(\alpha, \hat{\alpha})}{var(\hat{\alpha})} (\hat{\alpha} - E(\hat{\alpha})) \\
-&=E(\hat{\alpha}) + \dfrac{var(\alpha)}{var(\alpha) + var(\hat{\alpha})} (\hat{\alpha} - E(\hat{\alpha})) \\
-&= E(\hat{\alpha}) + \dfrac{1}{1 + \dfrac{var(\hat{\alpha})}{var(\alpha)}} (\hat{\alpha} - E(\hat{\alpha}))
-\end{aligned}
-$$
 
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
