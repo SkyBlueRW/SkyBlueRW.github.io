@@ -35,6 +35,8 @@ There is also a much more optimistic angle in this discussion. In the article "I
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 Source: Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 
+First and probably foremost, 
+
 
 
 
