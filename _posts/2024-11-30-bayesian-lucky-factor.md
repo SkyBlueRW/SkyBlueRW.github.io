@@ -27,7 +27,7 @@ Why such dismal replication rates? The authors believe the key driver is the exc
 
 Another key driver of the low replication rate, probably equally important, lies in the dataset used. The 50-year dataset of US security returns is much more comprehensive than the majority of data sets used in earlier factor studies. In the financial markets with inherently low signal-to-noise ratio, it’s not surprising for a factor to perform well in localized samples but fail in broader datasets. It is especially the case when there are incentives to customize the sample to achieve more significance for publication. 
 
-Turning to a more optimistic perspective. In the article "Is There a Replication Crisis in Finance", Jensen, Kelly, and Pedersen (2023) offered a contrasting view. Using an even broader dataset spanning 93 countries with their innovative Bayesian testing framework, they reached a significantly different result: a 82% replication success rate compared to Hou et al.'s 35%. How could the outcomes diverge so dramatically? Several key differences in data and test procedure are behind this discrepancy. 
+There is also a much more optimistic perspective in this discussion. In the article "Is There a Replication Crisis in Finance", Jensen, Kelly, and Pedersen (2023) offered a contrasting view. Using an even broader dataset spanning 93 countries with their innovative Bayesian testing framework, they reached a significantly different result: a 82% replication success rate compared to Hou et al.'s 35%. How could the outcomes diverge so dramatically? Several key differences in data and test procedure are behind this discrepancy. 
 
 
 
