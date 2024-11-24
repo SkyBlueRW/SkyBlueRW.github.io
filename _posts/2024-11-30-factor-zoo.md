@@ -35,21 +35,9 @@ There is also a much more optimistic angle in this discussion. In the article "I
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 Source: Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 
-First and probably foremost, factor returns are constructed differently in the two research. Especially, instead of using the raw portfolio return of the long short factor portfolio as Hou et al. did, Jensen et al. switched to the CAPM alpha, which is essentially the regression residual of the raw factor return over market portfolio. This change alone increased the successful rate by over 20%! Removing exposure to market beta definitely has its merit. After all, we hope to identify factors that can provide additional predictive power in addition to traditional factors like market beta. While, it is also worth to mention that it might introduce some unintentional distortions. For instance, when testing the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return to the CAPM alpha, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. We might be testing something different than we thought.
+First and probably foremost, factor returns are constructed differently. Especially, instead of using the raw portfolio return of the long short factor portfolio as Hou et al. did, Jensen et al. switched to the CAPM alpha, which is essentially the regression residual of the raw factor return over market portfolio. This change alone increased the successful rate by over 20%! Removing exposure to market beta definitely has its merit. After all, we hope to identify factors that can provide additional predictive power in addition to traditional factors like market beta. While, it is also worth to mention that it might introduce some unintentional distortions. For instance, when testing the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return to the CAPM alpha, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. We might be testing something different than we thought.
 
-
-
-
-
-
-
-65%, 82%
-
-
-
-Or to make things simpler, just raise the bar of the t-statistic to account for this much lossened selection! For instance, Hou, Xue & Zhang (2020) adpoted a 2.78 t-statistic for the 5% confidence level to account for this multiple testing problem. 
-
-
+The other part of the incerase in replicate rate can be attributed to all kinds of less impactful differences in test procedures and data set. Such as, Jensen et al. choose to use capped market value as weight in the factor portfolio construction to avoid exccessive impact from mega stocks. They also focus only on the 1 month holding horizon with a longer time series.  
 
 
 ### And More <a name="more"></a>
