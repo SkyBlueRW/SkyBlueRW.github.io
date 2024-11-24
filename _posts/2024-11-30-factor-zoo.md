@@ -35,15 +35,8 @@ There is also a much more optimistic angle in this discussion. In the article "I
 ![GDP](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/replication.jpg)
 Source: Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 
-First and probably foremost, 
+First and probably foremost, factor returns are constructed differently in the two research. Especially, instead of using the raw portfolio return of the long short factor portfolio as Hou et al. did, Jensen et al. switched to the CAPM alpha, which is essentially the regression residual of the raw factor return over market portfolio. This change alone increased the successful rate by over 20%! Removing exposure to market beta definitely has its merit. After all, we hope to identify factors that can provide additional predictive power in addition to traditional factors like market beta. While, it is also worth to mention that it might introduce some unintentional distortions. For instance, when testing the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return to the CAPM alpha, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. We might be testing something different than we thought.
 
-
-
-
-
-Obviously the different data sets used account for a significant , Jensen et al. switched from raw factor return to CAPM alpha, which alone increased the replication rate by over 20%. This adjustment makes some sense since the goal of factor research is to identify additional improvements beyond the market beta. However, it also introduce some unintentional distortions. For example, for the low volatility factor, the original intend is to see whether stocks with lower volatility outperform the others. While when regressing out the market return to the CAPM alpha, it actually turns the low volatility factor into something similar to the betting against beta factor - a distinct factor. 
-
-A lot more drivers are behind this sharp increase in successful rate. Like, Jensen et al uses a capped value weight in factor portfolio construction to avoid concentration in mega stocks. The market cap of a stock is capped at 80% percentile hence all stocks with size beyond this point would be assigned this 80% percentile value. Additionaly, they are using a much longer history in US stock even compared to Hou et al's already extensive data set. Rather than looking into 3 horizons of 1 month, 6 month and 12 months, they exclusively focused on the 1 month horizon. Their innovative bayesian modeling also leads to some degree of difference.
 
 
 
