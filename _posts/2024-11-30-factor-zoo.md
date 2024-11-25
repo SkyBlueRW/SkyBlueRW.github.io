@@ -43,8 +43,15 @@ The rest of the increase in the replication rate can be attributed to various le
 
 ### And More <a name="more"></a>
 
-We have seen two contrasting views, each bears merits of the analysis. What can we take.
+Now that we've acknowledged the existence of the Factor Zoo, it's clear that our impressions of factors can vary significantly depending on the construction methods adopted and the datasets examined. The way factors are built and tested can lead to different conclusions about their effectiveness and reliability.
 
+Moreover, the construction of factor portfolios isn't a one-size-fits-all process—it heavily depends on who the investor is, what their investment universe looks like, and how sensitive they are to transaction costs. Different investors have varying processes and methods to translate factors into actionable portfolios. For instance, some may prioritize liquidity to minimize transaction costs, while others might focus on specific market segments or investment horizons.
+
+Even though we have a multitude of factors at our disposal, this doesn't necessarily make predicting expected returns an easy task. Many factors share common ground in predicting returns, and adding more highly correlated factors doesn't contribute much additional predictive power. In fact, incorporating factors that are closely related can lead to redundancy and overfitting rather than improving the robustness of predictions.
+
+The differences arising from datasets can be even trickier to navigate. Using a short historical period might not provide sufficient data to derive statistically significant results, while relying on a longer history introduces the issue of changing distributions over time. Markets evolve, and the relationships captured by factors may shift. This raises a crucial question: how do we link the past with the future? How can we gain confidence that a factor working in the past is likely to continue working in the future?
+
+Perhaps one way to bridge this gap is to delve deeper into the economic channels and underlying assumptions behind each factor. Understanding the rationale and mechanisms that drive a factor's performance can provide insight into its potential persistence. If a factor is grounded in sound economic theory or reflects enduring behavioral biases, it may be more likely to remain effective over time.
 
 
 ### Reference <a name="ref"></a>
