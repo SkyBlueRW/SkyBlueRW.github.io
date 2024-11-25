@@ -43,7 +43,7 @@ The rest of the increase in the replication rate can be attributed to various le
 
 ### And More <a name="more"></a>
 
-Now that we've acknowledged the existence of the Factor Zoo, it's clear that our impressions of factors can vary significantly depending on the construction methods adopted and the datasets examined. The way factors are built and tested can lead to different conclusions about their effectiveness and reliability.
+Now that we've acknowledged the existence of the Factor Zoo and checked out the quite different replication results. It seems that our impressions of the validity of the factors can vary significantly depending on the test procedures adopted and the datasets examined. The way factors are built and tested can lead to different empirical results about their effectiveness and reliability.
 
 Moreover, the construction of factor portfolios isn't a one-size-fits-all process—it heavily depends on who the investor is, what their investment universe looks like, and how sensitive they are to transaction costs. Different investors have varying processes and methods to translate factors into actionable portfolios. For instance, some may prioritize liquidity to minimize transaction costs, while others might focus on specific market segments or investment horizons.
 
