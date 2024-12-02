@@ -51,10 +51,7 @@ While, it doesn't mean investors who share similar investing procedures as Jense
 
 It becomes even tricker when it comes to the difference in data sets of tests. Typically, statistical conclusions from a larger data set should provide more confidence hence Jensen et al's data set should be favored for the long history and wider coverage on financial markets globally. While this edge on confidence rely on the assumption of same distribution across history and markets. It's not always the case in both dimmensions. The market movement 70 years ago during World War II wouldn't provide much insights into how investors should invest nowadays. Also, it is not really shocking to know that different financial markets around the globe are running under different structures.
 
-
-
-Perhaps one way to bridge this gap is to delve deeper into the economic channels and underlying assumptions behind each factor. Understanding the rationale and mechanisms that drive a factor's performance can provide insight into its potential persistence. If a factor is grounded in sound economic theory or reflects enduring behavioral biases, it may be more likely to remain effective over time.
-
+That is still not the end of the story. Even if we figure out the test procedure and have a legit data set to draw reasonable statistical significance. How can we know if it is still the case tomorrow? What can help us to infer the future based on data from the past. That's probably the biggest trick in security return forecast. There is probably not a perfect or even good way to do it. What investors can take advantage of is that there is generally a phase of change even for a volatile system like the financial market. It will not change 180 degree all of a sudden hence we can still use the relevant information in the past. Additionally, it shows the benefit of a structural model instead of pure empirical results. With clearly defined assumption and logical chains, it is much guided in terms of understanding what is happenning and what is not. 
 
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
