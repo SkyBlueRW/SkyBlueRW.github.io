@@ -9,3 +9,9 @@
 
 Bayesian model
   11
+
+$$
+\begin{aligned}
+
+\end{aligned}
+$$
