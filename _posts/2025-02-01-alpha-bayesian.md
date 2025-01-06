@@ -12,6 +12,6 @@ Bayesian model
 
 $$
 \begin{aligned}
-
+E[]
 \end{aligned}
 $$
