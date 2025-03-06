@@ -15,6 +15,9 @@ benefit: flexible framwork to combine.  less vunerable to multiple testing, all 
 
 model for assessing factor replicability. hierarchical structure to model themes cross regions and regimes.
 
+
+pool of information about alpha cross different samples. 
+
 $$
 \begin{aligned}
 E[]
