@@ -9,7 +9,9 @@
 
 Bayesian model
 
-benefit: flexible framwork to combine.  less vunerable to multiple testing, all parameters can be modeled together much easily. 
+In a frequentist view, too less data to construct a large model. 
+
+benefit: flexible framwork to combine.  less vunerable to multiple testing, all parameters can be modeled together much easily. way more easier to work with large number of parameters. 
 
   11
 
