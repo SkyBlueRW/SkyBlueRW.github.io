@@ -19,7 +19,7 @@ model for assessing factor replicability. hierarchical structure to model themes
 pool of information about alpha cross different samples. 
 
 
-story - mean - variance large, hard particularly multiple factor, curse dimension, inject domain knowledge via bayesian framework - how the result compare.
+story - mean - variance large, hard particularly multiple factor, curse dimension, inject domain knowledge via bayesian framework - how the result compare - open flexibility for further structure for alpha and shock. 
 
 $$
 \begin{aligned} 
