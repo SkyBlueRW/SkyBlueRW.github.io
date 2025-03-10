@@ -25,4 +25,6 @@ E[]
 $$
 
 
+heavy role of prior.
+
 11
