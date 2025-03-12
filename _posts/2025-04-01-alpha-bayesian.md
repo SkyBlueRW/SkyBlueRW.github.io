@@ -5,10 +5,13 @@
 - [Reference](#ref)
 
 
-how is the portfolio constructed. 
+empirical aspects - how is the portfolio constructed. 
 
 
 ### The "Big Hit" <a name="introduction"></a>
+
+
+Although things more and more toward the direction of machine learning techniques instead of traditional econometric.
 
 Bayesian model
 
