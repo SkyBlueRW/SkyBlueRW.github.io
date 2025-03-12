@@ -5,6 +5,9 @@
 - [Reference](#ref)
 
 
+how is the portfolio constructed. 
+
+
 ### The "Big Hit" <a name="introduction"></a>
 
 Bayesian model
