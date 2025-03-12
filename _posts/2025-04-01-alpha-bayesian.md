@@ -5,6 +5,9 @@
 - [Reference](#ref)
 
 
+In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), 
+
+
 empirical aspects - how is the portfolio constructed. 
 
 
