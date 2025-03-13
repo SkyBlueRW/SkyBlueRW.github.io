@@ -5,10 +5,20 @@
 - [Reference](#ref)
 
 
-In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we take a quick glimpse into the hundreds of factors out there and witnesses how different their performance can be interpreted. All the discussions around whether there is a replicating problem in empirical financial literature is still going on. The context like the use case and how the modeling of testing of factor really matters when judging a facotr working or not. So naturally, as a second step to look into ways to 
 
 
-empirical aspects - how is the portfolio constructed. 
+In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a quite highe level look into the empirical results of factors within the "factor zoo" and saw how different or event opposite conclusions can be drawn from there. Despite the unsettled debates about whether there are serious replication problems in empirical asset pricing literature, it's time to zoom and take a closer look. In this blog, we turn our attention to the modeling and evaluation bits of the factors. 
+
+Obviously, to serve investment exercise, we look for more than a "yes or no" answer as hypothesis testing got us in academic research. The more we know about the distribution of the factor, the better position we obtain on the guided portfolio. 
+
+
+
+
+
+
+
+
+
 
 
 ### The "Big Hit" <a name="introduction"></a>
