@@ -5,7 +5,7 @@
 - [Reference](#ref)
 
 
-In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we take a quick glimpse into the hundreds of factors out there and witnesses how different their performance can be interpreted. All the discussions around whether there is a replicating problem in empirical financial literature is still going on. The context really matters when judging a facotr working or not. So naturally, as a second step to look into ways to 
+In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we take a quick glimpse into the hundreds of factors out there and witnesses how different their performance can be interpreted. All the discussions around whether there is a replicating problem in empirical financial literature is still going on. The context like the use case and how the modeling of testing of factor really matters when judging a facotr working or not. So naturally, as a second step to look into ways to 
 
 
 empirical aspects - how is the portfolio constructed. 
@@ -112,5 +112,5 @@ $$
 
 
 heavy role of prior.
-
-11
+### Reference <a name="ref"></a>
+- Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
