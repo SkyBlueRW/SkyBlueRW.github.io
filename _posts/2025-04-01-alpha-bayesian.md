@@ -5,7 +5,7 @@
 - [Reference](#ref)
 
 
-In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), 
+In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we take a quick glimpse into the hundreds of factors out there and witnesses how different their performance can be interpreted. All the discussions around whether there is a replicating problem in empirical financial literature is still going on. The context really matters when judging a facotr working or not. So naturally, as a second step to look into ways to 
 
 
 empirical aspects - how is the portfolio constructed. 
