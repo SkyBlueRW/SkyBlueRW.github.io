@@ -9,7 +9,7 @@
 
 In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a quite highe level look into the empirical results of factors within the "factor zoo" and saw how different or even opposite conclusions can be drawn from there. Despite the unsettled debates about whether there are serious replication problems in empirical asset pricing literature, it's time to zoom in and take a closer look. In this blog, we turn our attention to the modeling and evaluation bits of the "factor zoo".  
 
-Obviously, The goal does not align exactly of factor researchs in acadmia and in industry. To serve investment exercise, we generally look for more than a "yes or no" answer as hypothesis testing got us in academic research. Rather, the more we get to know about the distribution of the factor performance, the better we are positioned to use it for investment decisions.
+Obviously, The goal does not align exactly of factor researchs in acadmia and in industry. To serve investment exercise, we generally look for more than a "yes or no" answer as hypothesis testing got us in academic research. Rather, we look to learn as much as possible of the distribution of the factor performance, where any bit of additional information enhance the edge to use it in investment. 
 
 
 
