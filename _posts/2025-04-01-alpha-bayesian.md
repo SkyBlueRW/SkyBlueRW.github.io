@@ -9,11 +9,9 @@
 
 In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a high level look into the empirical results of factors within the "factor zoo" and saw how different or even opposite conclusions can be drawn from there. Despite the unsettled debates about whether there are serious replication problems in empirical asset pricing literature, it's time to zoom in and take a closer look. 
 
-Obviously, The goal does not align exactly of factor researchs in acadmia and in industry. To serve investment exercise, we generally look for more than a "yes or no" answer as hypothesis testing got us in academic research. Rather, we look to learn as much as possible of the distribution of the factor performance, where any bit of additional information enhance the edge in investment. But those spirites of modeling with insights of the market are universal. In this blog, we turn our attention to the modeling and evaluation bits of the "factor zoo". Especially, we will focus more on the Bayesian framework that Jensen, Kelly & Pedersen (2023) used, which provides greater flexibility to impose structures in the modeling of factors. 
+Obviously, The goal does not align exactly of factor researchs in acadmia and in industry. To serve investment exercise, we generally look for more than a "yes or no" answer as hypothesis testing got us in academic research. Rather, we look to learn as much as possible of the distribution of the factor performance, where any bit of additional information enhance the edge in investment. But those spirites of modeling with insights of the market are universal. In this blog, we turn our attention to the modeling and evaluation bits of the "factor zoo". Especially, we will focus more on the Bayesian framework that Jensen, Kelly & Pedersen (2023) used, which provides greater flexibility to impose structures in the modeling of factors. Even in the context of shifting paradigm from traditional econometrics to machine learning technologies nowadays, such structural modelling can still be  helpful for the relative limited amount data in financial market and their troubling natures of low signal to noise ratio. 
 
-Even in the context of shifting paradigm from traditional econometrics to machine learning technologies nowadays, such structural modelling can still be  helpful for the relative limited amount data in financial market and their troubling natures of low signal to noise ratio.
-
-
+Though we intend to look into the factor zoo in a more Bayesian lens in this blog, the story actually begins in a more frequentist flavor with all the traditional methods in empirical asset pricing to evaluate the facor performance. Originated from the 
 
 
 
