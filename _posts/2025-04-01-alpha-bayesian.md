@@ -13,7 +13,7 @@ Obviously, The goal does not align exactly of factor researchs in acadmia and in
 
 Even under the current context with more and more shifting of paradigm from traditional econometrics to machine learning technologies, such intuition and insights in structural modeling is still valuable and likely necessary for the relatively limited amount of data in financial market and their troubling natures of low signal to noise ratio.
 
-If we start from the theories of asset pricing (which we lightly talked about in a blog [Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html))
+If we start from the theories of asset pricing (which we lightly talked about in a blog [Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html)), the stochastic discount factor ($$m$$) is all we want to understand.
 
 
 
