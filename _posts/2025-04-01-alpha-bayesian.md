@@ -13,7 +13,7 @@ Obviously, The goal does not align exactly of factor researchs in acadmia and in
 
 Such intuition and insights in structural modeling, even under the current context with more and more shifting of paradigm from traditional econometrics to machine learning technologies, is still valuable and likely necessary for the relatively limited amount of data in financial market and their troubling natures of low signal to noise ratio.
 
-For some guidance in such a tough question, we start from the theories of asset pricing (which we lightly talked about in a previous blog [Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html)), the stochastic discount factor ($$m$$) is all we want to understand. It is the holy grail, with which the performance of every security and portfolio is known. 
+[Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html))
 
 
 
