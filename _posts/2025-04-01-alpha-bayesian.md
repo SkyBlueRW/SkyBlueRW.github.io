@@ -11,6 +11,8 @@ In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.g
 
 Obviously, The goal does not align exactly of factor researchs in acadmia and in industry. To serve investment exercise, we generally look for more than a "yes or no" answer as hypothesis testing got us in academic research. Rather, we look to learn as much as possible of the distribution of the factor performance, where any bit of additional information enhance the edge in investment. But those spirites of modeling with insights of the market are universal. In this blog, we turn our attention to the modeling and evaluation bits of the "factor zoo". We will start with the a more frequentist flavor with all the classic methods in empirical asset pricing for factor evaluation and march toward the Bayesian framework that Jesen, Kelly & Pedersen (2023) used, which provides greater flexibility to impose structures in the process.
 
+The framework guide heavily on 
+
 Such intuition and insights in structural modeling, even under the current context with more and more shifting of paradigm from traditional econometrics to machine learning technologies, is still valuable and likely necessary for the relatively limited amount of data in financial market and their troubling natures of low signal to noise ratio.
 
 [Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html))
