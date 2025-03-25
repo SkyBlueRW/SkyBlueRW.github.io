@@ -21,16 +21,17 @@ Traditionally, such managed portfolios are obtained via the construction of long
 
 $$
 \begin{aligned}
-f_t &= f(c_{t-1}, r_t)\\
+f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Using a portfolio instead of a few securities to proxy a fator defnitely helps to reduce the noise abundant in the financial market, while it's not all removed. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, there is another component of shocking $$\epsilon_t$$ for each of the horizon. 
+Obviously, using a portfolio instead of a few securities to proxy a fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, there is another component of shocking $$\epsilon_t$$ for each of the horizon. 
 
 $$
 \begin{aligned}
 f_t&= \alpha + \epsilon_t \\
 \epsilon_t &\sim N(0, \sigma^2) \\
+\forall t \in [1..T]
 \end{aligned}
 $$
 
