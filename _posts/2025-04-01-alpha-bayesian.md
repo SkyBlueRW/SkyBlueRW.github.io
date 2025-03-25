@@ -30,7 +30,7 @@ Using a portfolio instead of a few securities to proxy a fator defnitely helps t
 $$
 \begin{aligned}
 f_t&= \alpha + \epsilon_t \\
-& \epsilon_t \sim N(0, \sigma^2) \\
+\epsilon_t &\sim N(0, \sigma^2) \\
 \end{aligned}
 $$
 
