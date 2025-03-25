@@ -15,11 +15,15 @@ Even under the current context of more and more shifting of research paradigm fr
 
 When we say a factor helps to predict expected return, we actually declare some co-movements of security returns identified and measured. While unfortunately, though these kinds of co-movements can originate from a variety of causes like economic growth, geopolitical status, consumption, demand, investor sentiment... They are generally abstract concept that can hardly be defined and measured precisely and timely. For example, every body knows investor sentiment play a huge role in securities' return. Market roar when investors feel good and become vulnerable when permistism spreads. While no one can define excatly what's the equation for sentiment and how to measure it reasonably, which makes all the following efforts like estimating the sensitivity of volatile security return on the not well defined factor quite hopeless.
 
-Obviously, defining and measuring factor itself is already a challenge. Researchers circled around for mitigations. Rather than defining and measuring the factor directly, they cleverly announce that the part of factors that is relevant with the financial market - a projection of the factor onto the payoff space of securities is all we care. A factor can have much more meaning beyond financial market in all kinds of aspects, while as long as financial market is the only focus, there is not a reason stopping us from building a managed portfolio of securities - the building block of financial market, to measure the financial aspect of that factor. Now things become much easier, we turn the problem from precisely define and measure a factor to finding out a managed portfolio whose performance proxy the financial aspect of the factor. Quite naturally, we can start from security characteristics seen relevant with its sensitivity to such factor and take it for the construction of the managed portfolio. 
+Obviously, defining and measuring factor itself is already a challenge. Researchers circled around for mitigations. Rather than defining and measuring the factor directly, they cleverly announce that the part of factors that is relevant with the financial market - a projection of the factor onto the payoff space of securities is all we care. A factor can have much more meaning beyond financial market in all kinds of aspects, while as long as financial market is the only focus, there is not a reason stopping us from building a managed portfolio of securities - the building block of financial market, to measure the financial aspect of that factor. Now things become much easier, we turn the problem from precisely define and measure a factor to find out a managed portfolio whose performance proxy the financial aspect of the factor. Quite naturally, we can start from security characteristics seen relevant with its sensitivity to such factor and take it for the construction of the managed portfolio. 
 
+Traditionally, such managed portfolios are obtained via long short sorting of security characterstics
 
-
-A managed portfolio is generally the first stop when we want to talk about factor performance. After all, using factors to predict security return is essential an effort to extract co-movement. let it be economic growth, thses co-movement not generally abstract and not measured timely and precisely enough to guide.
+$$
+\begin{aligned}
+f_t &= f(c_{t-1}, r_t)\\
+\end{aligned}
+$$
 
 
 [Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html))
