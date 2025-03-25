@@ -25,7 +25,7 @@ f_t &= f(c_{t-1}, r_t)\\
 \end{aligned}
 $$
 
-Using a portfolio instead of a few securities to proxy a fator defnitely helps to reduce the noise abundant in the financial market, while it's not all removed. 
+Using a portfolio instead of a few securities to proxy a fator defnitely helps to reduce the noise abundant in the financial market, while it's not all removed. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, there is another component of shocking $$\epsilon_t$$ for each of the horizon. 
 
 $$
 \begin{aligned}
