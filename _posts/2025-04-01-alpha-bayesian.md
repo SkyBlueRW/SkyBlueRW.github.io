@@ -25,6 +25,15 @@ f_t &= f(c_{t-1}, r_t)\\
 \end{aligned}
 $$
 
+Using a portfolio instead of a few securities to proxy a fator defnitely helps to reduce the noise abundant in the financial market, while it's not all removed. 
+
+$$
+\begin{aligned}
+f_t&= \alpha + \epsilon_t \\
+& \epsilon_t \sim N(0, \sigma^2) \\
+\end{aligned}
+$$
+
 
 [Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html))
 
