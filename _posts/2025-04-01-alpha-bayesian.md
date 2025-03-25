@@ -25,13 +25,13 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Obviously, using a portfolio instead of a few securities to proxy a fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, there is another component of shocking $$\epsilon_t$$ for each of the horizon. 
+Obviously, using a portfolio instead of a few securities to proxy a fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, there is a series of shocking $$\epsilon_t$$ component for each of the horizon. 
 
 $$
 \begin{aligned}
 f_t&= \alpha + \epsilon_t \\
 \epsilon_t &\sim N(0, \sigma^2) \\
-\forall t \in [1..T]
+&\forall t \in [1..T]
 \end{aligned}
 $$
 
