@@ -25,7 +25,7 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Obviously, using a portfolio instead of a few securities to proxy a fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, there is a series of shocking $$\epsilon_t$$ component for each of the horizon. 
+Obviously, using a portfolio instead of a few securities to proxy a fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, another key part behind $$f_t$$ (a lot of the times larger in magnitued) is a series of disturbance term $$\epsilon_t$$ specific to each of the period. 
 
 $$
 \begin{aligned}
