@@ -35,7 +35,7 @@ f_t&= \alpha + \epsilon_t \\
 \end{aligned}
 $$
 
-Traditionally in empirical asset pricing, the signal embeded in the facotr $$\alpha$$ is seen as a constant, which leads to pretty straightfoward estimation. The sample mean of the realized returns from the managed portfolio, with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. Further analysis like hypothesis testing is quite natrual from here.
+Traditionally in empirical asset pricing, the signal embeded in the facotr $$\alpha$$ is seen as a constant, which leads to pretty straightfoward estimation. The sample mean of the realized returns from the managed portfolio (from here on, let's just call it factor return for short), with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. Further analysis like hypothesis testing is quite natrual from here.
 
 $$
 \begin{aligned}
@@ -43,6 +43,7 @@ $$
 \end{aligned}
 $$
 
+While, unfortunately, a concise and intuive estimation doesn't mean that evaluating the factor return is a easy task. 
 
 
 
