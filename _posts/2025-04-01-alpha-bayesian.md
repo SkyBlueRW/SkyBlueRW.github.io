@@ -35,7 +35,7 @@ f_t&= \alpha + \epsilon_t \\
 \end{aligned}
 $$
 
-Traditionally in empirical asset pricing, the signal $$\alpha$$ is seen as a constant, which leads to a straightfoward estimation. The sample mean of the realized returns from the managed portfolio, with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also easily captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. 
+Traditionally in empirical asset pricing, the signal embeded in the facotr $$\alpha$$ is seen as a constant, which leads to pretty straightfoward estimation. The sample mean of the realized returns from the managed portfolio, with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. Further analysis like hypothesis testing is quite natrual from here.
 
 $$
 \begin{aligned}
