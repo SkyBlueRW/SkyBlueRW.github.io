@@ -35,7 +35,7 @@ f_t&= \alpha + \epsilon_t \\
 \end{aligned}
 $$
 
-Traditionally in empirical asset pricing, the signal $$\alpha$$ is seen as a constant, which leads to a straightfoward estimation. The sample mean of the realized returns from the managed portfolio, with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$.
+Traditionally in empirical asset pricing, the signal $$\alpha$$ is seen as a constant, which leads to a straightfoward estimation. The sample mean of the realized returns from the managed portfolio, with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also easily captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. 
 
 $$
 \begin{aligned}
@@ -43,11 +43,6 @@ $$
 \end{aligned}
 $$
 
-
-
-
-
-[Stochastic Discount Factor: a nutshell of asset pricing](https://skybluerw.github.io/2023/03/17/sdf-nutshell.html))
 
 
 
