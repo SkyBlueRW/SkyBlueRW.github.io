@@ -155,3 +155,4 @@ $$
 heavy role of prior.
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
+- Bali, Engle & Murray (2016): Empirical Asset Pricing: The Cross Section of Stock Returns
