@@ -25,13 +25,21 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Obviously, using a portfolio instead of a few securities to proxy a fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, another key part behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ specific to each of the period. $$\alpha$$ is traditionally taken as a constant as the expeced return available from the particular factor. 
+Obviously, using a portfolio instead of a few securities to proxy fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key part behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ specific to each of the period. 
 
 $$
 \begin{aligned}
 f_t&= \alpha + \epsilon_t \\
 \epsilon_t &\sim N(0, \sigma^2) \\
 &\forall t \in [1..T]
+\end{aligned}
+$$
+
+Traditionally in empirical asset pricing, the signal $$\alpha$$ is seen as a constant, which leads to a straightfoward estimation. The sample mean of the realized returns from the managed portfolio, with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$.
+
+$$
+\begin{aligned}
+\hat{\alpha} &= \bar{f_t}= \dfrac{1}{T}\sum_t f_t = \alpha + \dfrac{1}{T}\sum_t \epsilon_t \\
 \end{aligned}
 $$
 
