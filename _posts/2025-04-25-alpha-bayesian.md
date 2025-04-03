@@ -25,7 +25,7 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Obviously, using a portfolio instead of a few securities to proxy fator helps to reduce the noise abundant in the financial market, while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key part behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ specific to each of the period. 
+Obviously, using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
 
 $$
 \begin{aligned}
@@ -43,7 +43,7 @@ $$
 \end{aligned}
 $$
 
-While, unfortunately, a concise and intuive estimation doesn't mean that evaluating the factor return is a easy task. 
+While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a close speed.
 
 
 
