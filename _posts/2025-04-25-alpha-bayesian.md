@@ -43,7 +43,7 @@ $$
 \end{aligned}
 $$
 
-While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a close speed.
+While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a comparable speed - not even close!
 
 
 
