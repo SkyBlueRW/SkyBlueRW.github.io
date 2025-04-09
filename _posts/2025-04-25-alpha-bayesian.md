@@ -19,6 +19,8 @@ Obviously, defining and measuring factor itself is already a challenge. Luckily,
 
 Traditionally, such managed portfolios are obtained via the construction of long short portfolios based on security characterstics. There are a lot of pieces and dots in their construction: whether we are doing this by sorting, whether the sorting should be conditional on some other characteristics for their control, or even whether regression is a better mean than sorting. Despite all the details, for each rebalancing, the return of the managed portfolio $$f_t$$ is a function of characterstics observed ahead of time $$c_{t-1}$$. The return series of such a managed portfolio is supposed to be a proxy of a factor's impact on all kinds of securities in the financial market.
 
+Facing this trend of small N (sample size) and large K ()
+
 $$
 \begin{aligned}
 f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
