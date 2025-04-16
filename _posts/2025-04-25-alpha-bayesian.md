@@ -7,7 +7,7 @@
 
 
 
-In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a high level look into the empirical results of factors within the "factor zoo" and saw how different or even opposite conclusions can be drawn from there. Despite the unsettled debates about whether there are serious replication problems in empirical asset pricing literature, it's time to zoom in and take a closer look. 
+In the previous blog [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a bird's eye view of the empirical results of factors within the "factor zoo" and saw how different or even contradictory conclusions can emerge. Despite the lingering debates over replication issues in empirical asset pricing research, it's time to step close and zoom into the machinery behind those factors. 
 
 Obviously, The goal does not align exactly for factor researchs in acadmia and in industry. To serve investment exercise, we look for more than a "yes or no" answer as hypothesis testing got us in academic research. Rather, we look to learn as much as possible of the distribution of the factor performance, where any bit of additional information enhance the edge in investment. But those spirites of modeling originated from insights of the market are universal. In this blog, we turn our attention to the modeling and evaluation bits of the "factor zoo". We will start with the a more frequentist flavor with all the classic methods in empirical asset pricing for factor evaluation and march toward the Bayesian framework that Jesen, Kelly & Pedersen (2023) used, which provides greater flexibility to impose structures in modeling.
 
