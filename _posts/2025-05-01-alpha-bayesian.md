@@ -47,10 +47,12 @@ $$
 \end{aligned}
 $$
 
-While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a comparable speed - not even close! Facing a data set that features more and more high-dimensional, it's probably time to set sail for some innovation. 
+While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a comparable speed - not even close! This is also the reason why there is rarely effort following the trail to model all factors jointly as a whole. The additional parameters required to mdoel the interaction among the factors just make things worse. Clearly, we can use some innovation beyond the traditional framework to light our road ahead.
 
 
 ### The Bayesian Len <a name="bayes"></a>
+
+The Bayesian statistic is potentially 
 
 
 Although things more and more toward the direction of machine learning techniques instead of traditional econometric.
