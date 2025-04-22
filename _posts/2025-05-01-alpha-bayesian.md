@@ -1,7 +1,7 @@
 ## Navigating the Factor Zoo!
 
-- [Defining Factors: From Theory to Managed Portfolios](#portfolio)
-- [Here Comes the Change](#change)
+- [From Factors to Managed Portfolios](#portfolio)
+- [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
 
@@ -13,15 +13,15 @@ Obviously, The goal does not align exactly for factor researchs in acadmia and i
 
 Even under the current context of more and more shifting of research paradigm from traditional econometric methods to machine learning techniques, such insights expressed as model structures can be quite helpful and likely necessary considering the limited size of sample available in the financial market, their fastly hiking dimensions and troubling natures of low signal to noise ratio.
 
-### Defining Factors: From Theory to Managed Portfolios <a name="portfolio"></a>
+### From Factors to Managed Portfolios <a name="portfolio"></a>
 
-When we say a factor helps to predict expected return, what do we actually mean? We actually declare some co-movements of security returns identified and measured. While unfortunately, though these kinds of co-movements can originate from a variety of causes like economic growth, geopolitical status, consumption, demand, investor sentiment... They are generally abstract concept that can hardly be defined and measured precisely and timely. For example, every body knows investor sentiment play a huge role in securities' return. Market roar when investors feel good and become vulnerable when permistism spreads. While no one can define excatly what's the equation for sentiment and how to measure it reasonably, which makes all the following efforts like estimating the sensitivity of volatile security returns on the not well defined factor quite hopeless.
+One immediate difficulty is defining what exactly counts as a "factor".
 
-Obviously, defining and measuring factor itself is already a challenge. Luckily, there is a way to circle around it. Rather than defining and measuring the factor directly, researchers cleverly announce that only the part of factors that is relevant with the financial market - a projection of the factor onto the payoff space of securities is all investors care. A factor can have much more meaning beyond financial market in all kinds of aspects, while as long as financial market is the only focus, there is not a reason stopping us from building a managed portfolio of securities - the building block of financial market, to measure the financial aspect of that factor. Now things become much easier, we turn the problem from precisely define and measure a factor to find out a managed portfolio whose performance proxy the financial aspect of the factor. Quite naturally, we can start from security characteristics seen relevant with its sensitivity to such factor and take it for the construction of the managed portfolio. 
+When we say a factor helps to predict expected return, we actually declare some co-movements of security returns identified and measured. While unfortunately, though these kinds of co-movements can originate from a variety of causes like economic growth, geopolitical status, consumption, demand, investor sentiment... They are generally abstract concept that can hardly be defined and measured precisely and timely. For example, every body knows investor sentiment play a huge role in securities' return. Market roar when investors feel good and become vulnerable when permistism spreads. While no one can define excatly what's the equation for sentiment and how to measure it reasonably, which makes all the following efforts like estimating the sensitivity of volatile security returns on the not well defined factor quite hopeless.
+
+Obviously, defining and measuring factor itself is already a challenge. Luckily, there is a way to dodge around it. Rather than defining and measuring the factor exactly and directly, researchers cleverly announce that only the part of factors that is relevant with the financial market - a projection of the factor onto the payoff space of securities is all investors care. A factor can have much more meaning beyond financial market in all kinds of aspects, while as long as financial market is the only focus, there is not a reason stopping us from building a managed portfolio of securities - the building block of financial market, to measure the financial aspect of that factor. Now things become much easier, we turn the problem from precisely define and measure an abstract concept of factor to find out a managed portfolio whose performance proxy the financial aspect of the factor. Quite naturally, we can start from security characteristics seen relevant with its sensitivity to such factor and take it for the construction of the managed portfolio. 
 
 Traditionally, such managed portfolios are obtained via the construction of long short portfolios based on security characterstics. There are a lot of pieces and dots in their construction: whether we are doing this by sorting, whether the sorting should be conditional on some other characteristics for their control, or even whether regression is a better mean than sorting. Despite all the details, for each rebalancing, the return of the managed portfolio $$f_t$$ is a function of characterstics observed ahead of time $$c_{t-1}$$. The return series of such a managed portfolio is supposed to be a proxy of a factor's impact on all kinds of securities in the financial market.
-
-Facing this trend of small N (sample size) and large K ()
 
 $$
 \begin{aligned}
@@ -29,7 +29,7 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Obviously, using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
+Using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
 
 $$
 \begin{aligned}
@@ -39,7 +39,7 @@ f_t&= \alpha + \epsilon_t \\
 \end{aligned}
 $$
 
-Traditionally in empirical asset pricing, the signal embeded in the facotr $$\alpha$$ is seen as a constant, which leads to pretty straightfoward estimation. The sample mean of the realized returns from the managed portfolio (from here on, let's just call it factor return for short), with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. Further analysis like hypothesis testing is quite natrual from here.
+Traditionally in empirical asset pricing, the signal embeded in the facotr $$\alpha$$ is seen as a constant, which leads to pretty straightfoward estimation. The sample mean of the realized returns from the managed portfolio (from here on, let's just call it factor return for short), with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. Further analysis like hypothesis testing is a natural extension from here.
 
 $$
 \begin{aligned}
@@ -52,7 +52,7 @@ While, unfortunately, such a concise and intuive estimation process does not nec
 More structures in the model, in the context of limited sample become a natural
 
 
-### The "Big Hit" <a name="introduction"></a>
+### The Bayesian Len <a name="bayes"></a>
 
 
 Although things more and more toward the direction of machine learning techniques instead of traditional econometric.
@@ -156,3 +156,4 @@ heavy role of prior.
 ### Reference <a name="ref"></a>
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 - Bali, Engle & Murray (2016): Empirical Asset Pricing: The Cross Section of Stock Returns
+- Cochrane (2011): Presidential Address: Discount Rates
