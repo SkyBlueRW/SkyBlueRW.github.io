@@ -47,12 +47,18 @@ $$
 \end{aligned}
 $$
 
-While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a comparable speed - not even close! This is also the reason why there is rarely effort following the trail to model all factors jointly as a whole. The additional parameters required to mdoel the interaction among the factors just make things worse. Clearly, we can use some innovation beyond the traditional framework to light our road ahead.
+While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead. For one hand, volatility.
+
+especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While we are not accumulating the sample of data at a comparable speed - not even close! This is also the reason why there is rarely effort following the trail to model all factors jointly as a whole. The additional parameters required to mdoel the interaction among the factors just make things worse. 
+
+On the other hand, the data sets are notoriously famous for its 
+
+Clearly, we can use some innovation beyond the traditional framework to light our road ahead.
 
 
 ### The Bayesian Len <a name="bayes"></a>
 
-The Bayesian statistic is potentially 
+The Bayesian statistic is potentially an answer. Facing a data set with classic feature of small N (sample size) and large k (dimension), it's probably a good idea to in
 
 
 Although things more and more toward the direction of machine learning techniques instead of traditional econometric.
