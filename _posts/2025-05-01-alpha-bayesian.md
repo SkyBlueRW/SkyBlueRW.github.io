@@ -1,4 +1,4 @@
-## Bayesian len in factor zoo!
+## Navigating the Factor Zoo!
 
 - [The "Big Hit"](#introduction)
 - [Here Comes the Change](#change)
