@@ -47,7 +47,7 @@ $$
 \end{aligned}
 $$
 
-While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a comparable speed - not even close! Facing a data set that becomes more and more high-dimensional, it's probably time to set sail for improvement in the Bayesian world. 
+While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead, especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While on the other hand, we are not accumulating the sample of data at a comparable speed - not even close! Facing a data set that features more and more high-dimensional, it's probably time to set sail for some innovation. 
 
 
 ### The Bayesian Len <a name="bayes"></a>
