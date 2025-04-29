@@ -14,9 +14,11 @@ In this blog, we'll try to unpack the nuts and bolts behind the modeling and eva
 
 ### From Factors to Managed Portfolios <a name="portfolio"></a>
 
-The naturally question following is probably - what's exactly a "factor"?
+The natural next question is: what exactly is a factor in the context of asset pricing? 
 
-When we say a factor helps to predict expected return, we actually declare some co-movements of security returns identified and measured. While unfortunately, though these kinds of co-movements can originate from a variety of causes like economic growth, geopolitical status, consumption, demand, investor sentiment... They are generally abstract concept that can hardly be defined and measured precisely and timely. For example, every body knows investor sentiment play a huge role in securities' returns. Market roar when investors feel good and become vulnerable when permistism spreads. While no one can define excatly what's the equation for sentiment and how to measure it reasonably, which makes all the following efforts like estimating the sensitivity of volatile security returns on the not well defined factor quite meaningless.
+Nothing mystical! A factor is simply a measurable variable that captures patterns of co-movement among security returns. Though these co-movemoents can originate from a wide variety of forces (economic growth, geopolitical status, consumption, deman, investor sentiment, and so on), it is unfortunate that these underlying drivers are usually abstract and unobservable concepts. For instance, it's everyone agrees that investor sentiment moves markets, prices would surge on optimism and retreat on pessimism. Yet no one knows the "true" equation to define investor sentiment or how to observe it in real time.
+
+
 
 Luckily, there is a way to dodge around it. Rather than defining and measuring the factor exactly and directly, researchers cleverly announce that only the part of factors that is relevant with the financial market - a projection of the factor onto the payoff space of securities is all investors care. A factor can have much more meaning beyond financial market in all kinds of aspects, while as long as financial market is the only focus, there is not a reason stopping us from building a managed portfolio of securities - the building block of financial market, to measure the financial aspect of that factor. Now things become much easier, we turn the problem from precisely define and measure an abstract concept of factor to find out a managed portfolio whose performance proxy the financial aspect of the factor. Quite naturally, investors start from security characteristics seen relevant with its sensitivity to such factor and take it for the construction of the managed portfolio. 
 
