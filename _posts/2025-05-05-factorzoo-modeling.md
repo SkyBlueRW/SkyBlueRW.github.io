@@ -1,6 +1,7 @@
 ## Navigating the Factor Zoo!
 
 - [From Factors to Managed Portfolios](#portfolio)
+- [The Classic](#classic)
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
@@ -18,7 +19,7 @@ Nothing mystical! A factor is simply a measurable variable that captures pattern
 
 Fortunately, we can sidestep this challenge with managed portfolios! Although a factor may carry implications across a wide range of domains from social psychology to consumer behavior to political events... In asset pricing, we discard any dimension unrelated to security return and focus solely on the market relevant component of the factor - essentially its projection onto the return space of tradable securities. Now we reframe our objective from defining an abstract concept to measuring its projected returns, something equally powerful in financial markets but far easier to measure. It is viable to construct a managed portfolio of securities whose returns directly capture this projection and by extension the factor’s financial impact.
 
-Traditionally, managed portfolios are implemented as long-short portfolios built on observable security characteristics. The implementation choices are abundant: we can opt for characteristic sorting versus regression approaches, include or omit controls for the cross-effects of other factors, select quantile breakpoints, set rebalancing intervals, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, drawing on previous period characteristics ($$c_{t-1}$$) and contemporaneous return $$r_t$$.
+Traditionally, managed portfolios are implemented as long-short portfolios built on observable security characteristics. The implementation choices are abundant: we can opt for characteristic sorting versus regression approaches, include or omit controls for the cross-effects of other factors, select quantile breakpoints, set rebalancing intervals, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, drawing on previous period characteristics ($$c_{t-1}$$) and contemporaneous return ($$r_t$$).
 
 $$
 \begin{aligned}
@@ -27,6 +28,10 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 $$
 
 Using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
+
+### The Classic <a name="classic"></a>
+
+
 
 $$
 \begin{aligned}
