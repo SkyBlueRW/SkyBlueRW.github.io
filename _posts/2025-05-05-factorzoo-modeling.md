@@ -19,7 +19,9 @@ Nothing mystical! A factor is simply a measurable variable that captures pattern
 
 Fortunately, we can sidestep this challenge with managed portfolios! Although a factor may carry implications across a wide range of domains from social psychology to consumer behavior to political events... In asset pricing, we discard any dimension unrelated to security return and focus solely on the market relevant component of the factor - essentially its projection onto the return space of tradable securities. Now we reframe our objective from defining an abstract concept to measuring its projected returns, something equally powerful in financial markets but far easier to define and measure. It is viable to construct a managed portfolio of securities whose returns directly capture this projection and by extension the factor’s financial impact.
 
-Traditionally, managed portfolios are implemented as long-short portfolios built on observable security characteristics. The implementation choices are abundant: we can opt for characteristic sorting versus regression approaches, include or omit controls for the cross-effects of other factors, select quantile breakpoints, set rebalancing intervals, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, drawing on previous period characteristics ($$c_{t-1}$$) and contemporaneous return ($$r_t$$).
+Still take the investor sentiment as an example: although the true state of market mood is impossible to define or measure, we know that certain securities (for example, those with high analyst forecast dispersion or larger short position open interest) tend to react more strongly to sentiment swings. A managed portfolio is designed (hopefully) to capture the difference of performance of various securities originated from their different sensitivities and provide a proxy for the factor portfolio.
+
+For the most of the time, managed portfolios are implemented as long-short portfolios built on observable security characteristics. The implementation choices are abundant: we can opt for characteristic sorting versus regression approaches, include or omit controls for the cross-effects of other factors, select quantile breakpoints, set rebalancing intervals, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, drawing on previous period characteristics ($$c_{t-1}$$) and contemporaneous return ($$r_t$$).
 
 $$
 \begin{aligned}
@@ -27,7 +29,7 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-The shift to managed portfolio comes with obvious convenience in research.
+The shift to managed portfolios brings immediate convenience. something concrete to work with. Easier to measure. Unconditional
 
 
 
