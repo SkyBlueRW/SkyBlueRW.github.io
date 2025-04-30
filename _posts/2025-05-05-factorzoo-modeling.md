@@ -5,11 +5,11 @@
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
-In our previous blog, [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a bird's eye view of the empirical evidence for hundreds of factors in the "Factor Zoo" and saw how often studies arrive at conflicting conclusions. Despite the lingering debates over replication issues in empirical asset pricing research, it's time to step closer and zoom in on the inner workings of factor modeling and evaluation.
+In our previous blog, [A First Glimpse into the "Factor Zoo"](https://skybluerw.github.io/2024/12/07/factor-zoo.html), we took a bird's eye view of the empirical evidence for hundreds of factors in the "Factor Zoo" and saw how drastically different conclusions studies can arrive at. Despite the lingering debates over replication issues in empirical asset pricing research, it's time to step closer and zoom in on the inner workings of factor modeling and evaluation.
 
-At the heart of empirical factor research usually lies one question: "Is this factor's alpha statistically different from zero, and is it economically meaningful?". Traditionally, researchers address this by focusing (almost exclusively) on a factor’s expected return and variance, reflecting theory’s emphasis on covariates and their first two moments and the analytical convenience that comes with them. It is true that it's not always the case. For example, investors during their investment exercise would definitely appreciate a more comprehensive picture of the return distribution for features like higher moments, tail behavior, invariant parameters and so one. Every extra insight can translate into an investment edge. While regardless of whether mean and variance summarize well to describe the performance of a factor, a clear, explicitely stated process for factor modeling and evaluatioin delivers value from every aspect. 
+At the heart of empirical factor research usually lies one question: "Is this factor's alpha statistically different from zero, and is it economically meaningful hence expected to repeat?". Traditionally, researchers address this by focusing (almost exclusively) on a factor’s expected return and variance, reflecting theory’s emphasis on covariates and their first two moments and the analytical convenience that comes with them. It is true that it's not always the case. For example, investors during their investment exercise would definitely appreciate a more comprehensive picture of the return distribution for features like higher moments, tail behavior, invariant parameters and so one. Every extra insight can translate into an investment edge. While regardless of whether mean and variance summarize well to describe the performance of a factor, a clear, explicitely stated process for factor modeling and evaluatioin delivers value from every aspect. 
 
-In this blog, we'll try to unpack the nuts and bolts behind the modeling and evaluation. We will begin with the traditional, frequentist toolkit with those classic methods in empirical research and then march toward a Bayesian framwork innovation that Jensen, Kelly & Pedersen (2023) introduced to incorporate additional structures in modeling. Even under the current trend with machine learning techniques gainning more and more attention, these structured econometric insights remain crucial when samples are small, dimensions explode and signals hide in noise - the very challenges endemic to financial markets!
+In this blog, we'll try to unpack the nuts and bolts behind the modeling and evaluation. We will begin with the traditional, frequentist toolkit with those classic methods in empirical asset pricing research and then march toward a Bayesian framwork innovation that Jensen, Kelly & Pedersen (2023) introduced to incorporate additional structures in modeling. Even under the current trend with machine learning techniques gainning more and more attention, these structured econometric insights remain crucial when samples are small, dimensions explode and signals hide in noise - the very challenges endemic to financial markets!
 
 ### From Factors to Managed Portfolios <a name="portfolio"></a>
 
@@ -17,7 +17,7 @@ What, then is a factor under the context of asset pricing?
 
 Nothing mystical! A factor is simply a measurable variable that captures patterns of co-movement among security returns. Though these co-movements may originate from a wide variety of forces (economic growth, geopolitical status, consumption, demand, investor sentiment, and so on), it is unfortunate that these underlying drivers are usually abstract and unobservable concepts. For instance, we all know that investor sentiment moves markets, prices would surge on optimism and retreat on pessimism. Yet no one knows the "true" equation to define investor sentiment or how to observe it in real time.
 
-Fortunately, we can sidestep this challenge with managed portfolios! Although a factor may carry implications across a wide range of domains from social psychology to consumer behavior to political events... In asset pricing, we discard any dimension unrelated to security return and focus solely on the market relevant component of the factor - essentially its projection onto the return space of tradable securities. Now we reframe our objective from defining an abstract concept to measuring its projected returns, something equally powerful in financial markets but far easier to measure. It is viable to construct a managed portfolio of securities whose returns directly capture this projection and by extension the factor’s financial impact.
+Fortunately, we can sidestep this challenge with managed portfolios! Although a factor may carry implications across a wide range of domains from social psychology to consumer behavior to political events... In asset pricing, we discard any dimension unrelated to security return and focus solely on the market relevant component of the factor - essentially its projection onto the return space of tradable securities. Now we reframe our objective from defining an abstract concept to measuring its projected returns, something equally powerful in financial markets but far easier to define and measure. It is viable to construct a managed portfolio of securities whose returns directly capture this projection and by extension the factor’s financial impact.
 
 Traditionally, managed portfolios are implemented as long-short portfolios built on observable security characteristics. The implementation choices are abundant: we can opt for characteristic sorting versus regression approaches, include or omit controls for the cross-effects of other factors, select quantile breakpoints, set rebalancing intervals, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, drawing on previous period characteristics ($$c_{t-1}$$) and contemporaneous return ($$r_t$$).
 
@@ -27,9 +27,15 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
+The shift to managed portfolio comes with obvious convenience in research.
+
+
 
 ### The Classic <a name="classic"></a>
+
+
+
+Using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
 
 
 
