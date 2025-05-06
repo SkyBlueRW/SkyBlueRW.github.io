@@ -19,7 +19,7 @@ Nothing mystical! A factor is simply a measurable variable that captures pattern
 
 Fortunately, managed portfolios (sometimes also called factor mimicking portfolio with subtle difference) offer a workaround! A factor may carry implications across a wide range of domains from social psychology to consumer behavior to political events... While in asset pricing, it's our choice to discard any dimension unrelated to security return and focus solely on the market relevant component of the factor - essentially the projection of the factor onto the return space of securities. Now we reframe our objective from defining an abstract concept to measuring its projected returns - something equally powerful in financial markets but far easier to define and measure. With our focus squarely on financial market only, it is viable to construct a managed portfolio of securities whose returns directly capture this projection and by extension the factor’s financial impact.
 
-Still take the investor sentiment as an example: although the true state of market mood is inherently hard to define or quantify, we know that certain securities (for example, those with high analyst forecast dispersion or larger short position open interest) tend to react more strongly to sentiment swings. A managed portfolio built on these characteristics aims to capture those performance differences and thus proxy the  factor. 
+Still take the investor sentiment as an example: although the true state of market mood is inherently hard to define or quantify, we know that certain securities (for example, those with high analyst forecast dispersion or larger short position open interest) tend to react more strongly to sentiment swings. A managed portfolio built on these characteristics aims to capture those performance differences and thus proxy the factor. 
 
 Typically, such managed portfolios are implemented as long-short portfolios built on observable security characteristics. The implementation choices are abundant: we can opt for characteristic sorting versus regression approaches, include or omit controls for the cross-effects of other factors, select quantile breakpoints, set rebalancing intervals, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, with predefined portfolio construction using previous period characteristics ($$c_{t-1}$$) and contemporaneous return ($$r_t$$).
 
@@ -29,7 +29,8 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-The adopt of managed portfolio comes with clear convenience. Rather than chasing an unobservable economic construct and bear with all the bias and inaccuracy of the estimation following, we now work with a time series of predefined portfolio, which is easy to quantify, analyze and simulate from an investment perspective. 
+The adoption of managed portfolio comes with clear convenience. Rather than chasing an unobservable economic construct and bear with all the ambiguity followed, we now work with a time series of predefined portfolio, which is easy to quantify, analyze, simulate from an investment perspective and also trace back to macro economcic forces. It's not a surprise for us to feel uncertain about the mood of the market while with its corresponding managed portfolio, there is explicitely a number measured on a regular basis at a cost of additional noise brought in.
+
 
 The shift to managed portfolios brings immediate convenience. something concrete to work with. Easier to measure. Unconditional
 
