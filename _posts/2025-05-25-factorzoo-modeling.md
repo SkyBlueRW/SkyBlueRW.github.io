@@ -29,12 +29,7 @@ f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
 \end{aligned}
 $$
 
-Adopting managed portfolios brings obvious conveniences. We now work with a time series of well defined portfolios, which is easy to quantify, analyze, simulate from an investment perspective and also trace back to some meaningful macro economic forces. 
-
-Rather than chasing an unobservable economic construct and bear with all the ambiguity followed, we now work with a time series of predefined portfolio, which is easy to quantify, analyze, simulate from an investment perspective and also trace back to macro economcic forces. It's not a surprise for us to feel uncertain about the mood of the market while with its corresponding managed portfolio, there is explicitely a number measured on a regular basis.
-
-
-The shift to managed portfolios brings immediate convenience. something concrete to work with. Easier to measure. Unconditional
+Adopting the approach of managed portfolios brings obvious conveniences. We now work with the return time series of a well defined portfolio, which is usually easy to quantify, analyze, simulate from an investment perspective and also remain its potential to link to some meaningful macro economic forces. It's not really surprising for investors to feel ambiguous on the market sentiment. 
 
 
 
