@@ -19,9 +19,9 @@ It's probably worth to dig a little bit on what we have assumed and gained via t
 $$
 \begin{aligned}
 R_{i, t+1} &= E[R_{i,t+1}] + \epsilon_{i, t+1} = G(x_{i,t}) + \epsilon_{i, t+1}\\
+& E[\epsilon_{i,t+1}] = 0\\
 & i = 1..N \\
 & t = 1..T \\
-& E[\epsilon_{i,t+1}] = 0\\
 \end{aligned}
 $$
 
