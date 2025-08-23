@@ -19,6 +19,8 @@ Strip everything down the set up is quite simple.
 $$
 \begin{aligned}
 R_{i, t+1} &= G(x_{i,t}) + \epsilon_{i, t+1}\\
+& i = 1..N \\
+& t = 1..T \\
 \end{aligned}
 $$
 
