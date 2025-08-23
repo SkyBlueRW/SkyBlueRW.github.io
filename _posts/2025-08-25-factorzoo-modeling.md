@@ -14,6 +14,8 @@ In this blog, we'll try to unpack the nuts and bolts behind the modeling and eva
 
 ### From Factors to Managed Portfolios <a name="portfolio"></a>
 
+sutble difference.
+
 What, then, is a factor in asset pricing?
 
 Nothing mystical! A factor is simply a measurable variable that captures some patterns of co-movement among security returns. It's worth highlighting that, although these co-movements may stem from a wide variety of forces (economic growth, geopolitical status, consumption, demand, investor sentiment, and so on), these drivers are a lot of the times abstract and unobservable concepts. For instance, we all know that investor sentiment moves markets, prices would surge on optimism and retreat on pessimism. Yet no one knows the "true" equation to define investor sentiment or how to gauge it in real time.
