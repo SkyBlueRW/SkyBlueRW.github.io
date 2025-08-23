@@ -14,15 +14,17 @@ In this blog, we'll try to unpack the nuts and bolts behind the modeling and eva
 
 ### From Square One to Managed Portfolios <a name="portfolio"></a>
 
-It's probably worth to dig a little bit on what we have assumed and gained via the traditional empirical asset pricing framework. Stripping everything down, it's a straightfoward prediction problem. For the $$N$$ securities available from time 1 to T, we hope to find some variables whose lagged value ($$z_t$$) is able to predict the future of the return ($$R_{i,t+1}$$) 
+It's probably worth to dig a little bit on what we have assumed and gained via the traditional empirical asset pricing framework. Stripping everything down, it's a straightfoward prediction problem. For the $$N$$ securities available from time 1 to T, we hope to find some variables whose lagged values ($$z_t$$) are able to predict the future of the return ($$R_{i,t+1}$$). 
 
 $$
 \begin{aligned}
-R_{i, t+1} &= G(x_{i,t}) + \epsilon_{i, t+1}\\
+R_{i, t+1} &= E[R_{i,t+1}] + \epsilon_{i, t+1}=G(x_{i,t}) + \epsilon_{i, t+1}\\
 & i = 1..N \\
 & t = 1..T \\
 \end{aligned}
 $$
+
+Obviously, this generic setup of the 
 
 
 
