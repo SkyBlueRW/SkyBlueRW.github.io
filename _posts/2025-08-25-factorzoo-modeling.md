@@ -24,6 +24,17 @@ R_{i, t+1} &= G(x_{i,t}) + \epsilon_{i, t+1}\\
 \end{aligned}
 $$
 
+
+
+
+
+
+
+
+
+
+
+
 sutble difference.
 
 What, then, is a factor in asset pricing?
