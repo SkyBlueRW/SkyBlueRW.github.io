@@ -9,10 +9,18 @@ In the previous blog, [A First Glimpse into the "Factor Zoo"](https://skybluerw.
 
 At the heart of empirical factor research sits a straightforward yet stubborn question: "Is this factor's return statistically different from zero, and is it economically meaningful hence likely to persist?". It's no surprise that investors care about more than mean and variance of return when judging factors and associated expected returns. Extra looks at the distibution such as tail risk, time varying parameter, dependnce on the past can translate into a real world edge in investment. Even so, a Gaussian framework, uniquely defined by mean and variance remains a reasonable starting point, for its theoretical gounding and analytical tractability. That's exactly where we'll start this time.
 
-In this blog, we'll try to unpack the nuts and bolts behind the modeling and evaluation. We start with the classic frequentist toolkit used in in empirical asset pricing research and then explore the Bayesian framework that Jensen, Kelly & Pedersen (2023) recommended to add addtional structure and reduce variance. Even with machine learning thecniques in the spotlight nowadays, these structured econometric techniques and the market structures that they explicit still matter when samples are short, dimensions explode, and signals hide in noise - the everyday reality for much of what we face in financial markets.
+In this blog, we'll try to unpack the nuts and bolts behind the modeling and evaluation. We start from the square point and see how and why those structures are added with the classic frequentist toolkit used in in empirical asset pricing research and then explore the Bayesian framework that Jensen, Kelly & Pedersen (2023) recommended to add addtional structure and reduce variance. Even with machine learning thecniques in the spotlight nowadays, these structured econometric techniques and the market structures that they explicit still matter when samples are short, dimensions explode, and signals hide in noise - the everyday reality for much of what we face in financial markets.
 
 
-### From Factors to Managed Portfolios <a name="portfolio"></a>
+### From Square One to Managed Portfolios <a name="portfolio"></a>
+
+Strip everything down the set up is quite simple. 
+
+$$
+\begin{aligned}
+R_{i, t+1} &= G(x_{i,t}) + \epsilon_{i, t+1}\\
+\end{aligned}
+$$
 
 sutble difference.
 
