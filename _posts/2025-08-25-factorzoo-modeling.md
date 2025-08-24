@@ -16,7 +16,7 @@ In this blog, we'll try to unpack the nuts and bolts behind the modeling and eva
 
 In its essence, factor research is a finance-specific way to approach prediction tasks. In almost every factor study, well see a regularly rebalanced long–short portfolio built from lagged security (or issuer) characteristics, and then all analysis is run on that portfolio’s return — a managed portfolio meant to represent the factor. 
 
-Before diving into the details, it's definitely worth steping one step back and ask: why do we do it this way? The motivation is clear when looking into a generic prediction setup. For N securities over $$t=1,..,T$$, we attempt to use variables know at time t ($$x_{i,t}$$) to predict next period's return ($$R_{i,t+1}$$). This formulation obviously stands for way more flexibility compared to the traditional factor research in the sense that it can accomodate all kinds of market structure that we can think of, either if it is regime shifts, term structure, market segmentation, and so on.
+Before diving into the details, it's definitely worth steping one step back and ask: why do we do it this way? The motivation is clear when looking into a generic prediction setup. For N securities over $$t=1,..,T$$, we attempt to use variables know at time t ($$x_{i,t}$$) to predict next period's return ($$R_{i,t+1}$$). The task is to figure out the function $$G$$. This formulation obviously stands for way more flexibility compared to the traditional factor research in the sense that it can accomodate all kinds of market structure that we can think of, either if it is regime shifts, term structure, market segmentation, and so on.
 
 $$
 \begin{aligned}
