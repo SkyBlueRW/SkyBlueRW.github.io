@@ -6,4 +6,6 @@
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
-Take a step back, audit
+Take a step back, audit.
+
+Conditional expectation of future realized excess return
