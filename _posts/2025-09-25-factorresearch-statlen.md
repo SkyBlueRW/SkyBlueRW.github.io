@@ -8,4 +8,6 @@
 
 Take a step back, audit.
 
-Conditional expectation of future realized excess return
+Conditional expectation of future realized excess return.
+
+machine learning helpful 1 prediction, 2 high dimension, 3 nonlinearity
