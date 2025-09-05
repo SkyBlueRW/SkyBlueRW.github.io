@@ -27,4 +27,5 @@ $r_{i,t+1} = E_t(r_{i, t+1}) + \epsilon_{i,t+1},  E_t(r_{i, t+1}) = g(x_{i,t})$
 
 a. The transition of view from security to portfolio representation. The low signal to noise ratio issue, diversifaction cornerstone of finance helps to extract truly meanigful information from portfolio. It's also reasonable as investment decision need to turn into actionable portfolios. 
 b. focus on cross sectional. Still it's a hard problem. We further simplyfy by removing mean. The prediction of general market is a stand alone topic and we can focus on relative performance of securities. It's also reasonable when we look at long-short portfolio or overlay on top of a benchmark. 
-c. 
+c. Parsinomious number acadmeic 4,5 industry a dozen 
+d. Linear
