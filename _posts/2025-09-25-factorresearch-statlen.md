@@ -29,3 +29,8 @@ a. The transition of view from security to portfolio representation. The low sig
 b. focus on cross sectional. Still it's a hard problem. We further simplyfy by removing mean. The prediction of general market is a stand alone topic and we can focus on relative performance of securities. It's also reasonable when we look at long-short portfolio or overlay on top of a benchmark. 
 c. Sparsity: Parsinomious number acadmeic 4,5 industry a dozen 
 d. Linear
+
+
+### Reference <a name="ref"></a>
+- Nagel: Machine Learning in Asset Pricing
+- Gu, Kelly & Xiu (2020): Empirical Asset Pricing via Machine Learning
