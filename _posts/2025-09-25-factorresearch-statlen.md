@@ -25,6 +25,8 @@ $r_{i,t+1} = E_t(r_{i, t+1}) + \epsilon_{i,t+1},  E_t(r_{i, t+1}) = g(x_{i,t})$
 6. Secondaly the goal is ultimately building a portfolio with desired return risk profile. There is difference between this goal and a sucessful prediction. What investor care is the the final distribution of economic profit. It's a combination of both predicting and tradeoff between risk and return. 
 7. We customize
 
+   sparsity not from economic insights more of a compromise
+
 so far no assumption, no model or algorithm that works well on all possible distribution.
 
 a. The transition of view from security to portfolio representation. The low signal to noise ratio issue, diversifaction cornerstone of finance helps to extract truly meanigful information from portfolio. It's also reasonable as investment decision need to turn into actionable portfolios. 
