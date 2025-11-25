@@ -23,4 +23,4 @@ This blog serves as a space where I share my thoughts, learnings, and research o
 
 I write about portfolio optimization techniques, statistical methods, asset pricing models, and occasionally share insights on building research tools and environments. Thank you for visiting, and I hope you find the content here informative and thought-provoking!
 
-## Blogs
+## Here are the Blogs!
