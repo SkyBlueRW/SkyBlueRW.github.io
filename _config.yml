@@ -1,8 +1,6 @@
 title: "Ray's Hub"
 author: "Ruitao Wang"
-description: "Ray's hub for research & learning on portfolio construction, asset pricing, and statistical methods"
-url: "https://skybluerw.github.io"
-baseurl: ""
+description: "Ray's hub for research & learning"
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
@@ -10,18 +8,23 @@ email: "wang.ruitao@outlook.com"
 github_username: "SkyBlueRW"
 linkedin_username: "ruitao-ray-wang-155516a4"
 
-# Navigation pages to appear in the header
+
 header_pages:
   - navi_port.md
   - navi_asset_pricing.md
-  - navi_statistical_method.md
   - navi_other.md
-  - about.md
-  - archive.md
-
+  
+#########################################################################################
+######### Nothing below needs to be changed (unless you know what you're doing) #########
+#########################################################################################
 theme: "minima"
+# remote_theme: pages-themes/cayman@v0.2.0
 
-# Markdown settings
+
+markdown: kramdown
+
+rss: rss
+
 markdown: kramdown
 markdown_ext: markdown,mkd,mkdn,md
 textile_ext: textile
@@ -29,21 +32,15 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
   input: GFM
-
-# Plugins for GitHub Pages
+    
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-# Title handling
+  #- jekyll-remote-theme 
 titles_from_headings:
   strip_title: true
   collections: true
 
-# RSS feed
-rss: rss
-
-# Default front matter values
 defaults:
   - scope:
       path: ""
