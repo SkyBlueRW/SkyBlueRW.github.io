@@ -11,7 +11,7 @@ Stock-bond correlation is one of those topics that never really gets old, and fo
 
 For decades, bonds have entered investors' portfolios as the natural diversifier, nurturing traditional allocations like the 60/40. On top of that, correlations move slowly compared to returns and volatility, making them stable enough to anchor strategies like the famous risk parity and maximum diversification.
 
-But none of this is guaranteed. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years. It not only erode the diversification a stock-bond portfolio is expected to deliver, but also put strategies that rely on stable correlations under real pressure. Feels like a good time to revisit the old question.
+But none of this is guaranteed. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years. It not only erodes the diversification a stock-bond portfolio is supposed to deliver, but also puts strategies that rely on stable correlations under real pressure. Feels like a good time to revisit the old question.
 
 
 
