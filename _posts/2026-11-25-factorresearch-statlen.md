@@ -10,6 +10,18 @@
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
 - https://research-center.amundi.com/files/nuxeo/dl/eb84a66b-ebac-4901-8d70-70f3ed02a0d4?inline=
 
+Open with the puzzle — the regime flip, cross-country differences. Same as before.
+Step 1: Original Ilmanen (2003) — cash flow vs. shared discount rate. Same as before, briefly.
+Step 2: Decompose, with an empirical anchor. This is where the AQR 2023 paper enters. Your prose can stay intuitive ("split the discount rate into shared and asset-specific pieces"), but you cite Brixton et al. (2023) as the formal version that operationalizes this with growth/inflation news factors.
+Step 3: Three findings the framework delivers. Use the paper's own results:
+
+It's inflation uncertainty, not level, that matters (sharpens the mental model)
+The growth-inflation correlation is the underrated third driver (story about supply vs. demand shocks)
+The model holds internationally with R² 32-85%, and where it fails, it fails for exactly the reasons the framework predicts (Italy = credit risk)
+
+
+Outlook + caveats — supply shock prevalence, central bank credibility, the "good luck vs. good policy" question. The paper's outlook section, which now reads as roughly correct in hindsight (written Oct 2022, predicted a possible return to negative SBC if central banks succeeded), is itself a nice illustration.
+
 
 $$
 \begin{aligned}
