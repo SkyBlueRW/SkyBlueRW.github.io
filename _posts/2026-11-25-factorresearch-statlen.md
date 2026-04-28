@@ -6,8 +6,12 @@
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
-- ### Intro <a name="intro"></a>
 
+Stock-bond correlation is a long-running topic and a critical input to asset allocation decisions.
+
+On one side, for the past two decades, bonds entered portfolios as a diversifier, nurturing traditional allocations like the 60/40. On the other side, correlations move slowly compared to other things we care about like expected return and volatility, which makes them estimable enough to anchor strategies like risk parity and maximum diversification.
+
+But none of this is granted. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years — fading the diversification in a stock-bond portfolio, and putting strategies built on stable correlations under pressure. A good time to revisit this old question.
 
 
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
