@@ -7,11 +7,11 @@
 - [Reference](#ref)
 
 
-Stock-bond correlation is one of those topics that never really gets old, and for good reason. It's a critical input into asset allocation.
+Stock-bond correlation is one of the oldest topics in asset allocation, and it keeps coming back for a reason. It really matters for how portfolios get built.
 
-For decades, bonds have entered investors' portfolios as the natural diversifier, nurturing traditional allocations like the 60/40. On top of that, correlations move slowly compared to returns and volatility, making them stable enough to anchor strategies like the famous risk parity and maximum diversification.
+For decades, bonds have played the role of natural diversifier in investors' portfolios, nurturing traditional allocations like the 60/40. Correlations also move slowly compared to returns or volatility, making them more stable estimate to anchor strategies like risk parity and maximum diversification.
 
-But none of this is guaranteed. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years. It not only erodes the diversification a stock-bond portfolio is supposed to deliver, but also puts strategies that rely on stable correlations under real pressure. Feels like a good time to revisit the old question.
+But none of this is guaranteed. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. Feels like a good time to revisit the old question.
 
 
 
