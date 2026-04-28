@@ -6,58 +6,20 @@
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
+- ### Intro <a name="intro"></a>
+
+
 
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
 - https://research-center.amundi.com/files/nuxeo/dl/eb84a66b-ebac-4901-8d70-70f3ed02a0d4?inline=
 
-Open with the puzzle — the regime flip, cross-country differences. Same as before.
-Step 1: Original Ilmanen (2003) — cash flow vs. shared discount rate. Same as before, briefly.
-Step 2: Decompose, with an empirical anchor. This is where the AQR 2023 paper enters. Your prose can stay intuitive ("split the discount rate into shared and asset-specific pieces"), but you cite Brixton et al. (2023) as the formal version that operationalizes this with growth/inflation news factors.
-Step 3: Three findings the framework delivers. Use the paper's own results:
+1. Start with the original Ilmanen (2003) framework. Stocks and bonds are both valued by discounting expected cash flows. The original insight: stocks and bonds don't share their cash flows, but they do share a discount rate. So whichever channel is the louder source of news — cash flows or the shared discount rate — determines the sign of the correlation. This already explains the major US regime flips: cash-flow-dominated periods produce negative correlation, discount-rate-dominated periods (high or volatile inflation) produce positive correlation.
+2. Add structure inside the discount rate. Decompose it into a shared component (real risk-free rate + expected inflation) and an asset-specific risk premium (term premium for bonds, equity risk premium for stocks, plus credit spread for corporates or sovereign/FX premia for EM). The shared piece is what Ilmanen treats as a single object; making the asset-specific pieces explicit lets you see when discount-rate news moves stocks and bonds together versus apart.
+3. The decomposition explains the residuals. With the shared-vs-specific split, three patterns the simple model handles awkwardly fall out naturally:
 
-It's inflation uncertainty, not level, that matters (sharpens the mental model)
-The growth-inflation correlation is the underrated third driver (story about supply vs. demand shocks)
-The model holds internationally with R² 32-85%, and where it fails, it fails for exactly the reasons the framework predicts (Italy = credit risk)
-
-
-Outlook + caveats — supply shock prevalence, central bank credibility, the "good luck vs. good policy" question. The paper's outlook section, which now reads as roughly correct in hindsight (written Oct 2022, predicted a possible return to negative SBC if central banks succeeded), is itself a nice illustration.
-
-
-$$
-\begin{aligned}
-P&= \sum_t \dfrac{E[\text{CF}_t]}{(1+r_t)^t} \\
-r_t &= r_t^f + \pi_t^e + RP_t^{asset}
-\end{aligned}
-$$
-
-
-
-Take a step back, audit.
-
-Conditional expectation of future realized excess return.
-
-machine learning helpful 1 prediction, 2 high dimension, 3 nonlinearity
-
-
-General empirical asset pricing 
-$r_{i,t+1} = E_t(r_{i, t+1}) + \epsilon_{i,t+1},  E_t(r_{i, t+1}) = g(x_{i,t})$
-
-
-1. a most generic view of joint distribution of return and other variables
-2. focus on return based on observable variables of conditional then DGP 
-3. the loss function will be like this just like any other prediction problem if we do not inject any domain knowledge form finance and also starting point if we approach we machine learning techniques
-4. We inject financial domain knowledge at least for two reasons.
-5. Firstly, due to the nature of the financial market, high dimension with limited data. Also low signal to noise ratio. It's helpful to add more structures to guide. a tradeoff of bias and variancce
-6. Secondaly the goal is ultimately building a portfolio with desired return risk profile. There is difference between this goal and a sucessful prediction. What investor care is the the final distribution of economic profit. It's a combination of both predicting and tradeoff between risk and return. 
-7. We customize
-
-   sparsity not from economic insights more of a compromise
-
-so far no assumption, no model or algorithm that works well on all possible distribution.
-
-a. The transition of view from security to portfolio representation. The low signal to noise ratio issue, diversifaction cornerstone of finance helps to extract truly meanigful information from portfolio. It's also reasonable as investment decision need to turn into actionable portfolios. 
-b. focus on cross sectional. Still it's a hard problem. We further simplyfy by removing mean. The prediction of general market is a stand alone topic and we can focus on relative performance of securities. It's also reasonable when we look at long-short portfolio or overlay on top of a benchmark. 
-c. Sparsity: Parsinomious number acadmeic 4,5 industry a dozen 
+Historical regime changes — which component was the dominant source of news at the time
+Cross-country differences — Japan's near-zero correlation for two decades was the shared channel being switched off by ZIRP/YCC; EM's persistent positive correlation reflects sovereign credit and FX premia that are equity-correlated by construction
+Instrument differences within a country — Treasuries-vs-equity, IG-corp-vs-equity, and EM-sovereign-vs-equity sit at structurally different correlation levels for reasons unrelated to regime
 d. Linear
 
 
