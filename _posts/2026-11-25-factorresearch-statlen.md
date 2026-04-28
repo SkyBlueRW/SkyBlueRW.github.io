@@ -39,5 +39,4 @@ d. Linear
 
 
 ### Reference <a name="ref"></a>
-- Nagel: Machine Learning in Asset Pricing
-- Gu, Kelly & Xiu (2020): Empirical Asset Pricing via Machine Learning
+- Antti Ilmanen (2003): Stock-Bond Correlation
