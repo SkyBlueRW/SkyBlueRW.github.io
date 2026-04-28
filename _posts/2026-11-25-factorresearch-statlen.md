@@ -6,6 +6,9 @@
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
+- https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
+- https://research-center.amundi.com/files/nuxeo/dl/eb84a66b-ebac-4901-8d70-70f3ed02a0d4?inline=
+
 Take a step back, audit.
 
 Conditional expectation of future realized excess return.
