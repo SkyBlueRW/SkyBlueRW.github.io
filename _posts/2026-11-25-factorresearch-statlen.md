@@ -6,8 +6,19 @@
 - [The Bayesian Len](#bayes)
 - [Reference](#ref)
 
+
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
 - https://research-center.amundi.com/files/nuxeo/dl/eb84a66b-ebac-4901-8d70-70f3ed02a0d4?inline=
+
+
+$$
+\begin{aligned}
+P&= \sum_t \dfrac{E[\text{CF}_t]}{(1+r_t)^t} \\
+r_t &= r_t^f + \pi_t^e + RP_t^{asset}
+\end{aligned}
+$$
+
+
 
 Take a step back, audit.
 
