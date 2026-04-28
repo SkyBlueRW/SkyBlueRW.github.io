@@ -51,3 +51,4 @@ d. Linear
 
 ### Reference <a name="ref"></a>
 - Antti Ilmanen (2003): Stock-Bond Correlation
+- Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation
