@@ -30,7 +30,14 @@ Now things become much clearer. The shared yield Y sits in both denominators, mo
 
 The analysis would have ended neatly here if all these variables were exogenous and independent. But they're not. There are probably no variables more endogenous than bond yield and equity risk premium, since the concepts originated from valuation directly. Bond yield also co-moves with economic growth through channels like monetary policy, long term growth expectation and financial conditions. To go further, Ilmanen (2003) takes the analysis one level deeper, to two more fundamental drivers: growth and inflation.
 
+Inflation builds into the bond yield Y directly. When inflation rises, Y rises, and the discount rate goes up for both stocks and bonds. Both prices fall together. So at times when inflation is the focus of the market, stock and bond prices tend to move in the same direction, which means high correlation. On the other hand, Growth works differently. Better growth lifts stock prices through the cash flow channel by raising expected dividends
+D. But it also lifts Y through monetary policy and long-term rate expectations, which hurts bond prices. So growth pushes stocks up and bonds down at the same time. At times when growth is the dominant story, stock and bond prices decouple, and correlation falls.
 
+This straightforward mental model turns out to explain a lot of what has happened and what's happening now. 
+
+Looking at the beginning of the modern era, the last three decades of the 20th century were marked by huge inflation volatility. Two oil shocks in the 1970s pushed inflation sharply higher. Then Volcker came in and fought it with brutal rate hikes, kicking off two decades of declining inflation through the 1980s and 1990s as the Fed slowly rebuilt its credibility. Inflation was the loudest noise in the room throughout. No surprise that US stock-bond correlation stayed firmly positive over this period, ranging from +0.3 to +0.5.
+
+Things started to change as we entered the 21st century. Deepening globalization brought in cheap goods supply from emerging market producers. With that tailwind, central banks earned enough credibility to keep inflation anchored around target. For the first time in a while, inflation stopped being a concern. Growth expectations took over as the main headline instead. The major events of the period, dotcom bubble, financial crisis, China slowdown, were all about growth. As the model would predict, we got 20 years of clean diversification from a negative correlation.
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/refs/heads/main/_posts/asset/bond_stock_correlation_scenarios.png)
 
