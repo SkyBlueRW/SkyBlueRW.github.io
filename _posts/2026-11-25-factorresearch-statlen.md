@@ -32,7 +32,9 @@ The analysis would have ended neatly here if all these variables were exogenous 
 
 
 
+![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/refs/heads/main/_posts/asset/bond_stock_correlation_scenarios.png)
 
+*Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation*
 
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
 - https://research-center.amundi.com/files/nuxeo/dl/eb84a66b-ebac-4901-8d70-70f3ed02a0d4?inline=
