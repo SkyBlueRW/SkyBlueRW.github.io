@@ -26,7 +26,11 @@ $$
 
 The crux of stock-bond correlation comes down to what stocks and bonds share, and what they don't, in their cash flows and discount rates. With a bit simplification, a bond pays fixed coupon (C) while a stock pays a stream of uncertain dividends (D) that varies with economic growth (G). On the discounted rate side, stock and bond share a bond yield part (Y) while sotck also carries its unique equity risk premium (ERP).
 
-Now things become much clearer, change in bond yield drives the price of stock and bond moving toward the same direction leading to higher bond-stock correlation. On the other side, economic growth and risk premium 
+Now things become much clearer. The shared yield Y sits in both denominators, moving stock and bond price in the same direction. That's what pushes correlation up. The other two pieces, growth G and the equity risk premium ERP, only show up in the stock formula. When G or ERP moves, stock and bond price startsto decouple, pushing correlation down.
+
+The analysis would have ended neatly here if all the variables are exogenous and indepedent. Obviously it's not the case. There is probably no variable that are more endogenous than bond yield and equity risk primum as the concetps live with the valuation of bond and stocks. Bond yield will also 
+
+
 
 
 
