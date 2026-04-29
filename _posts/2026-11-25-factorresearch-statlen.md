@@ -11,7 +11,9 @@ Stock-bond correlation is one of the oldest topics in asset allocation, and it k
 
 For decades, bonds have played the role of natural diversifier in investors' portfolios, nurturing traditional allocations like the 60/40. Correlations also move slowly compared to returns or volatility, making them more stable estimate to anchor strategies like risk parity and maximum diversification.
 
-But none of this is guaranteed. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. Feels like a good time to revisit the old question.
+But none of this is guaranteed. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years with a continuing momentum. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. It's a good time to revisit the old question.
+
+There is no shortage of well rooted models for the estimation of correlation. DCC-GARCH decomposes a covariance matrix to volatility and correlation for their different dynamics. Regime switching and hierachical clustering models try to enhance and capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for the slow moving nature of correlation. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
 
 
 
