@@ -28,7 +28,7 @@ The crux of stock-bond correlation comes down to what stocks and bonds share, an
 
 Now things become much clearer. The shared yield Y sits in both denominators, moving stock and bond price in the same direction. That's what pushes correlation up. The other two pieces, growth G and the equity risk premium ERP, only show up in the stock formula. When G or ERP moves, stock and bond price startsto decouple, pushing correlation down.
 
-The analysis would have ended neatly here if all the variables are exogenous and indepedent. Obviously it's not the case. There is probably no variable that are more endogenous than bond yield and equity risk primum as the concetps live with the valuation of bond and stocks. Bond yield will also 
+The analysis would have ended neatly here if all these variables were exogenous and independent. But they're not. There are probably no variables more endogenous than bond yield and equity risk premium, since the concepts originated from valuation directly. Bond yield also co-moves with economic growth through channels like monetary policy, long term growth expectation and financial conditions. To go further, Ilmanen (2003) takes the analysis one level deeper, to two more fundamental drivers: growth and inflation.
 
 
 
