@@ -15,12 +15,17 @@ But none of this is guaranteed. Since the pandemic, stock-bond correlation has f
 
 There is no shortage of well rooted models for the estimation of correlation. DCC-GARCH decomposes a covariance matrix to volatility and correlation for their different dynamics. Regime switching and hierachical clustering models try to enhance and capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for the slow moving nature of correlation. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
 
+The model starts from a surprisingly simple and intuive place: the discounted cash flow framework. Both stocks and bonds, like any other asset, are priced as the expected present value of their future cash flows.
+
 $$
 \begin{aligned}
 P_{\text{stock}} &= E[\sum_{t=1}^{\infty} (\dfrac{1+G}{1 + Y_t + \text{ERP}_t})^t D] \\
 P_{Bond} &= E[\sum_{t=1}^T \dfrac{C}{(1+Y_t)^t} + \dfrac{100}{(1+Y_T)^T}]
 \end{aligned}
 $$
+
+The crux of stock-bond correlation just comes from the what they share and distinct in the cash flow and discounted rate! With a little bit simplification, a bond pays fixed coupon (C) while a stock pays a stream of uncertain dividends (D) that varies with economic growth (G). On the discounted rate side, stock and bond share a bond yield part (Y) while sotck also carries its unique equity risk premium (ERP).
+
 
 
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
