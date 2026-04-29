@@ -7,7 +7,7 @@
 - [Reference](#ref)
 
 
-Stock-bond correlation is one of the oldest topics in asset allocation, and it keeps coming back for a reason. It really matters for how portfolios get built.
+Stock-bond correlation is one of the oldest topics in asset allocation, and it keeps coming back for a reason. 
 
 For decades, bonds have played the role of natural diversifier in investors' portfolios, nurturing traditional allocations like the 60/40. Correlations also move slowly compared to returns or volatility, making them more stable estimate to anchor strategies like risk parity and maximum diversification.
 
