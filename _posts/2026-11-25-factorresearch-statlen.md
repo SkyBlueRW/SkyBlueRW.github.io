@@ -15,7 +15,12 @@ But none of this is guaranteed. Since the pandemic, stock-bond correlation has f
 
 There is no shortage of well rooted models for the estimation of correlation. DCC-GARCH decomposes a covariance matrix to volatility and correlation for their different dynamics. Regime switching and hierachical clustering models try to enhance and capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for the slow moving nature of correlation. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
 
-
+$$
+\begin{aligned}
+P_{\text{stock}} &= E[\sum_{t=1}^{\infty} (\dfrac{1+G}{1 + Y_t + \text{ERP}_t})^t D] \\
+P_{Bond} &= E[\sum_{t=1}^T \dfrac{C}{(1+Y_t)^t} + \dfrac{100}{(1+Y_T)^T}]
+\end{aligned}
+$$
 
 
 - https://www.blackrock.com/us/financial-professionals/insights/bonds-offer-more-diversification
