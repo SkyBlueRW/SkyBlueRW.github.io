@@ -24,7 +24,7 @@ P_{Bond} &= E[\sum_{t=1}^T \dfrac{C}{(1+Y_t)^t} + \dfrac{100}{(1+Y_T)^T}]
 \end{aligned}
 $$
 
-The crux of stock-bond correlation comes down to what stocks and bonds share, and what they don't, in their cash flows and discount rates. With a bit simplification, a bond pays fixed coupon (C) while a stock pays a stream of uncertain dividends (D) that varies with economic growth (G). On the discounted rate side, stock and bond share a bond yield part (Y) while sotck also carries its unique equity risk premium (ERP).
+The crux of stock-bond correlation comes down to what stocks and bonds share and what they don't in their cash flows and discount rates. With a bit simplification, a bond pays fixed coupon (C) while a stock pays a stream of uncertain dividends (D) that varies with economic growth (G). On the discounted rate side, stock and bond share a bond yield part (Y) while sotck also carries its unique equity risk premium (ERP).
 
 Now things become much clearer. The shared yield Y sits in both denominators, moving stock and bond price in the same direction. That's what pushes correlation up. The other two pieces, growth G and the equity risk premium ERP, only show up in the stock formula. When G or ERP moves, stock and bond price startsto decouple, pushing correlation down.
 
