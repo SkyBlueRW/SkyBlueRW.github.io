@@ -46,9 +46,9 @@ Brixton, Ilmanen et al. (2023) quantify this story by splitting the 1972 to 2022
 
 *Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation*
 
-This is the kind of model that I enjoy reading. It's based on solid economic meaning and focus on what really matters from seas of variables. Reader benefit a lot from reading it.
+This is the kind of model I enjoy reading. It's grounded in solid economic meaning and focuses on what really matters out of a sea of variables. Readers benefit a lot from working through and reasoning with it.
 
-But like any model, it's not perfect. A few things sit outside its frame. The simplifications focus on sovereign bonds and equity, so credit and other risk premia don't show up. It also doesn't speak to cases where central banks suppress the discount rate channel directly through QE or yield curve control, which is exactly what kept Japan's correlation flat for two decades. And because it leans on long-term variables like inflation and growth, it doesn't say much about short or medium-term moves in correlation.
+But like any model, it's not perfect. A few things sit outside its simple and intuitive frame. The simplifications focus on sovereign bonds and equity, leaving credit and other risk premia out. It also doesn't speak to cases where central banks control the yield curve directly through QE or yield curve control, which is another important driver of yield curve moves. And because it leans on long-term variables like inflation and growth, it doesn't say much about short or medium-term moves in correlation.
 
 ### Reference <a name="ref"></a>
 - Antti Ilmanen (2003): Stock-Bond Correlation
