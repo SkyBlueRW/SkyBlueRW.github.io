@@ -50,6 +50,14 @@ This is the kind of model I enjoy reading. It's grounded in solid economic meani
 
 But like any model, it's not perfect. A few things sit outside its simple and intuitive frame. The simplifications focus on sovereign bonds and equity, leaving credit and other risk premia out. It also doesn't speak to cases where central banks control the yield curve directly through QE or yield curve control, which is another important driver of yield curve moves. And because it leans on long-term variables like inflation and growth, it doesn't say much about short or medium-term moves in correlation.
 
+Adding more structures help to react to these scenarios. For example, instead of treating bond yield as a shared component of the dicount rate, we can decompose discount rate with some thing like 
+
+$$
+\begin{alinged}
+r &= \text{real risk free rate} + \text{expected inflation} + \text{term premium} + RP^{asset}
+\end{aligned}
+$$
+
 ### Reference <a name="ref"></a>
 - Antti Ilmanen (2003): Stock-Bond Correlation
 - Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation
