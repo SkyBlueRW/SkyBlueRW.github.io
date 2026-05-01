@@ -13,9 +13,9 @@ For decades, bonds have played the role of natural diversifier in investors' por
 
 But none of this is taken for granted. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years with a continuing momentum. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. It's a good time to revisit this old question.
 
-There is no shortage of well established models for estimating correlation. DCC-GARCH decomposes the covariance matrix to volatility and correlation for their respective dynamics. Regime switching and hierachical clustering models try to capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for the slow moving nature of correlation. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
+There is no shortage of well established models for estimating correlation. DCC-GARCH decomposes the covariance matrix to volatility and correlation for their respective dynamics. Regime switching and hierarchical clustering models try to capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for its slow moving nature. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
 
-The model starts from a surprisingly simple and intuive place: the discounted cash flow framework. Both stocks and bonds, like any other asset, are priced as the expected present value of their future cash flows.
+The model starts from a surprisingly simple and intuitive place: the discounted cash flow valuation. Both stocks and bonds, like any other asset, are priced as the expected present value of their future cash flows.
 
 $$
 \begin{aligned}
