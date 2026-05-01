@@ -50,13 +50,19 @@ This is the kind of model I enjoy reading. It's grounded in solid economic meani
 
 But like any model, it's not perfect. A few things sit outside its simple and intuitive frame. The simplifications focus on sovereign bonds and equity, leaving credit and other risk premia out. It also doesn't speak to cases where central banks control the yield curve directly through QE or yield curve control, which is another important driver of yield curve moves. And because it leans on long-term variables like inflation and growth, it doesn't say much about short or medium-term moves in correlation.
 
-Adding more structures help to react to these scenarios. For example, instead of treating bond yield as a shared component of the dicount rate, we can decompose discount rate with some thing like 
+Adding more structure helps handle these scenarios. Instead of treating the bond yield as a single shared component in the discount rate, we can break it into more granular pieces. Splitting it into real risk-free rate, expected inflation, and term premium helps in a few ways. Pulling the real rate apart from inflation lets us think about monetary policy that's doing more than just fighting inflation, like QE or yield curve control. Adding a term premium gives us the flexibility to think about the curve shape and account for assets with different durations. The asset-specific risk premium then naturally absorbs credit spreads for corporate bonds, FX impact for EM bonds, and the equity risk premium for stocks, which extends the framework to a wider set of asset pairs.
+
+Similarly, the cash flow growth can be decomposed into real growth and expected inflation. This especially when inflation passes through to different assets' cash flows differently. Utilities and regulated industries sit at the other end, where pricing is constrained and cash flows can't keep up with inflation.
+
 
 $$
 \begin{aligned}
-r &= \text{real risk free rate} + \text{expected inflation} + \text{term premium} + RP^{asset}
+\text{discount rate} &= \text{real risk free rate} + \text{expected inflation} + \text{term premium} + RP^{asset} \\ 
+g &= \text{real growth} + \text{expected inflation}
 \end{aligned}
 $$
+
+Finally, I'd like to come back to the original mental model for a proper close. Standing where we are now, it's interesting to see a framework laid out in 2003 explain why correlation had just turned negative, and still work well two decades later when correlation flipped back positive after 2020. The same mechanism, two opposite regimes. Let's take this mental model with us and watch what comes next, and see whether the negative correlation of the 2000s and 2010s turns out to have been a rare anomaly as some believed, or whether another regime change is coming sooner than we expect.
 
 ### Reference <a name="ref"></a>
 - Antti Ilmanen (2003): Stock-Bond Correlation
