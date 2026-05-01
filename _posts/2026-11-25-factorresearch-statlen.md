@@ -38,7 +38,7 @@ Things started to change as we entered the 21st century. Deepening globalization
 
 Things flipped again in the 2020s, triggered initially by the pandemic and sustained by the continuing deglobalization and geopolitical uncertainty. We're past the good old days when inflation wasn't a concern. As of March 2026, US CPI inflation is running at 3.3%, well above the 2% target and showing noe clear path back down yet. Inflation, the variable that touches everyone's daily life, is back as the dominant headline. No surprise we're in a new era of positive stock-bond correlation.
 
-Brixton, Ilmanen et al. (2023) quantify this story by splitting the 1972 to 2022 history into growth and inflation regimes. The pattern is clear: inflation news moves stocks and bonds in the same direction, while growth news pushes them apart. They formalize this in a regression with three variables: growth volatility, inflation volatility, and the correlation between growth and inflation news. The model captures around 70% of the variation in US stock-bond correlation, with similar results across major developed markets.
+In the following paper "A Changing Stock-Bond Correlation", Brixton, Ilmanen et al. (2023) quantify this story by splitting the 1972 to 2022 history into growth and inflation regimes. The pattern is clear: inflation news moves stocks and bonds in the same direction, while growth news pushes them apart. They formalize this in a regression with three variables: growth volatility, inflation volatility, and the correlation between growth and inflation news. The model captures around 70% of the variation in US stock-bond correlation, with similar results across major developed markets.
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/refs/heads/main/_posts/asset/bond_stock_correlation_scenarios.png)
 
@@ -50,7 +50,7 @@ But like any model, it's not perfect. A few things sit outside its simple and in
 
 Adding more structure helps handle these scenarios. Instead of treating the bond yield as a single shared component in the discount rate, we can break it into more granular pieces. Splitting it into real risk-free rate, expected inflation, and term premium helps in a few ways. Pulling the real rate apart from inflation lets us think about monetary policy that's doing more than just fighting inflation, like QE or yield curve control. Adding a term premium gives us the flexibility to think about the curve shape and account for assets with different durations. The asset-specific risk premium then naturally absorbs credit spreads for corporate bonds, FX impact for EM bonds, and the equity risk premium for stocks, which extends the framework to a wider set of asset pairs.
 
-Similarly, the cash flow growth can be decomposed into real growth and expected inflation. This especially when inflation passes through to different assets' cash flows differently. Utilities and regulated industries sit at the other end, where pricing is constrained and cash flows can't keep up with inflation.
+Similarly, the cash flow growth can be decomposed into real growth and expected inflation. This matters because inflation passes through to different assets' cash flows in very different ways. Stocks in the energy sector can often pass inflation through to revenues directly, leading to dividend growth that tracks inflation more closely. Utilities and regulated industries sit at the other end, where pricing is constrained and cash flows can't keep up with inflation.
 
 
 $$
@@ -60,8 +60,10 @@ g &= \text{real growth} + \text{expected inflation}
 \end{aligned}
 $$
 
+A lot more structure can be added like this, though they trade off some of its simplicity as a cost. Though it's still good to have the option to get the version that matchs the taks at hand.
+
 Finally, I'd like to come back to the original mental model for a proper close. Standing where we are now, it's interesting to see a framework laid out in 2003 explain why correlation had just turned negative, and still work well two decades later when correlation flipped back positive after 2020. The same mechanism, two opposite regimes. Let's take this mental model with us and watch what comes next, and see whether the negative correlation of the 2000s and 2010s turns out to have been a rare anomaly as some believed, or whether another regime change is coming sooner than we expect.
 
 ### Reference <a name="ref"></a>
 - Antti Ilmanen (2003): Stock-Bond Correlation
-- Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation
+- Brixton, Ilmanen et al (2023): A Changing Stock-Bond Correlation
