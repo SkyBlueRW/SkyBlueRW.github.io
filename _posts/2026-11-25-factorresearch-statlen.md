@@ -30,7 +30,7 @@ The analysis would have ended neatly here if all these variables were exogenous 
 
 Inflation builds into the bond yield Y directly. When inflation rises, Y rises, and the discount rate goes up for both stocks and bonds. Both prices fall together. So at times when inflation is the focus of the market, stock and bond prices tend to move in the same direction, which means high correlation. On the other hand, growth works differently. Better growth lifts stock prices by raising expected dividends D. But it also lifts Y through monetary policy and long-term rate expectations, which hurts bond prices. So growth pushes stocks up and bonds down at the same time. At times when growth is the dominant story, stock and bond prices decouple, and correlation falls.
 
-A quite straightforward and intuive mental model! What's even better? It turns out to explain a lot of what has happened and what's happening now. 
+A straightforward and intuitive mental model! What's even better, it turns out to explain a lot of what has happened and what's happening now.
 
 Looking at the beginning of the modern era, the last three decades of the 20th century were marked by huge inflation volatility. Two oil shocks in the 1970s pushed inflation sharply higher. Then Volcker came in and fought it with brutal rate hikes, kicking off two decades of declining inflation through the 1980s and 1990s as the Fed slowly rebuilt its credibility. Inflation was the loudest noise in the room throughout. No surprise that US stock-bond correlation stayed firmly positive over this period, ranging from +0.3 to +0.5.
 
