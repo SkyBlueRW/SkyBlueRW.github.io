@@ -1,5 +1,5 @@
 
-## Correlation
+## Stock-bond correlation: an old model and a new regime
 
 - [A Mental Model](#model)
 - [Putting to to work: 3 regimes of history](#regimes)
