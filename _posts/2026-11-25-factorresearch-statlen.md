@@ -1,9 +1,9 @@
 
 ## Correlation
 
-- [From Factors to Managed Portfolios](#portfolio)
-- [The Classic](#classic)
-- [The Bayesian Len](#bayes)
+- [A Mental Model](#model)
+- [Putting to to work: 3 regimes of history](#regimes)
+- [A Little More](#more)
 - [Reference](#ref)
 
 
@@ -14,6 +14,9 @@ For decades, bonds have played the role of natural diversifier in investors' por
 But none of this is taken for granted. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years with a continuing momentum. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. It's a good time to revisit this old question.
 
 There is no shortage of well established models for estimating correlation. DCC-GARCH decomposes the covariance matrix to volatility and correlation for their respective dynamics. Regime switching and hierarchical clustering models try to capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for its slow moving nature. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
+
+### A Mental Model <a name="model"></a>
+
 
 The model starts from a surprisingly simple and intuitive place: the discounted cash flow valuation. Both stocks and bonds, like any other asset, are priced as the expected present value of their future cash flows. The crux of stock-bond correlation comes down to what stocks and bonds share and what they don't in their cash flows and discount rates. With a bit simplification, a bond pays fixed coupon (C) while a stock pays a stream of uncertain dividends (D) that varies with economic growth (G). On the discounted rate side, stock and bond share a bond yield part (Y) while sotck also carries its unique equity risk premium (ERP).
 
@@ -30,6 +33,9 @@ The analysis would have ended neatly here if all these variables were exogenous 
 
 Inflation builds into the bond yield Y directly. When inflation rises, Y rises, and the discount rate goes up for both stocks and bonds. Both prices fall together. So at times when inflation is the focus of the market, stock and bond prices tend to move in the same direction, which means high correlation. On the other hand, growth works differently. Better growth lifts stock prices by raising expected dividends D. But it also lifts Y through monetary policy and long-term rate expectations, which hurts bond prices. So growth pushes stocks up and bonds down at the same time. At times when growth is the dominant story, stock and bond prices decouple, and correlation falls.
 
+### Putting to to work: 3 regimes of history <a name="regimes"></a>
+
+
 A straightforward and intuitive mental model! What's even better, it turns out to explain a lot of what has happened and what's happening now.
 
 Looking at the beginning of the modern era, the last three decades of the 20th century were marked by huge inflation volatility. Two oil shocks in the 1970s pushed inflation sharply higher. Then Volcker came in and fought it with brutal rate hikes, kicking off two decades of declining inflation through the 1980s and 1990s as the Fed slowly rebuilt its credibility. Inflation was the loudest noise in the room throughout. No surprise that US stock-bond correlation stayed firmly positive over this period, ranging from +0.3 to +0.5.
@@ -45,6 +51,9 @@ In the following paper "A Changing Stock-Bond Correlation", Brixton, Ilmanen et 
 *Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation*
 
 This is the kind of model I enjoy reading. It's grounded in solid economic meaning and focuses on what really matters out of a sea of variables. Readers benefit a lot from working through and reasoning with it.
+
+### A Little More  <a name="more"></a>
+
 
 But like any model, it's not perfect. A few things sit outside its simple and intuitive frame. The simplifications focus on sovereign bonds and equity, leaving credit and other risk premia out. It also doesn't speak to cases where central banks control the yield curve directly through QE or yield curve control, which is another important driver of yield curve moves. And because it leans on long-term variables like inflation and growth, it doesn't say much about short or medium-term moves in correlation.
 
