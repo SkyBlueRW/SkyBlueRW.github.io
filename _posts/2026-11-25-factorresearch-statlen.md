@@ -53,7 +53,7 @@ But like any model, it's not perfect. A few things sit outside its simple and in
 Adding more structures help to react to these scenarios. For example, instead of treating bond yield as a shared component of the dicount rate, we can decompose discount rate with some thing like 
 
 $$
-\begin{alinged}
+\begin{aligned}
 r &= \text{real risk free rate} + \text{expected inflation} + \text{term premium} + RP^{asset}
 \end{aligned}
 $$
