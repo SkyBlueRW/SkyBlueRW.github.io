@@ -13,10 +13,10 @@ For decades, bonds have played the role of natural diversifier in investors' por
 
 But none of this is taken for granted. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years with a continuing momentum. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. It's a good time to revisit this old question.
 
-There is no shortage of well established models for estimating correlation. DCC-GARCH decomposes the covariance matrix to volatility and correlation for their respective dynamics. Regime switching and hierarchical clustering models try to capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for its slow moving nature. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
-
 ### A Mental Model <a name="model"></a>
 
+
+There is no shortage of well established models for estimating correlation. DCC-GARCH decomposes the covariance matrix to volatility and correlation for their respective dynamics. Regime switching and hierarchical clustering models try to capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for its slow moving nature. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
 
 The model starts from a surprisingly simple and intuitive place: the discounted cash flow valuation. Both stocks and bonds, like any other asset, are priced as the expected present value of their future cash flows. The crux of stock-bond correlation comes down to what stocks and bonds share and what they don't in their cash flows and discount rates. With a bit simplification, a bond pays fixed coupon (C) while a stock pays a stream of uncertain dividends (D) that varies with economic growth (G). On the discounted rate side, stock and bond share a bond yield part (Y) while sotck also carries its unique equity risk premium (ERP).
 
