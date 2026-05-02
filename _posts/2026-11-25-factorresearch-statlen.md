@@ -2,7 +2,7 @@
 ## Stock-bond correlation: an old model and a new regime
 
 - [A Mental Model](#model)
-- [Putting to to work: 3 regimes of history](#regimes)
+- [Putting to work: 3 regimes of history](#regimes)
 - [A Little More](#more)
 - [Reference](#ref)
 
@@ -33,7 +33,7 @@ The analysis would have ended neatly here if all these variables were exogenous 
 
 Inflation builds into the bond yield Y directly. When inflation rises, Y rises, and the discount rate goes up for both stocks and bonds. Both prices fall together. So at times when inflation is the focus of the market, stock and bond prices tend to move in the same direction, which means high correlation. On the other hand, growth works differently. Better growth lifts stock prices by raising expected dividends D. But it also lifts Y through monetary policy and long-term rate expectations, which hurts bond prices. So growth pushes stocks up and bonds down at the same time. At times when growth is the dominant story, stock and bond prices decouple, and correlation falls.
 
-### Putting to to work: 3 regimes of history <a name="regimes"></a>
+### Putting to work: 3 regimes of history <a name="regimes"></a>
 
 
 A straightforward and intuitive mental model! What's even better, it turns out to explain a lot of what has happened and what's happening now.
