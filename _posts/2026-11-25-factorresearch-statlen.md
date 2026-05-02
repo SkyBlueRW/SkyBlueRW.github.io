@@ -77,7 +77,7 @@ A lot more structures can be added like this, though they trade off some of its 
 ### Closing Marks <a name="close"></a>
 
 
-Finally, I'd like to come back to the original mental model for a proper close. Standing where we are now, it's interesting to see a framework laid out in 2003 explain why correlation had just turned negative, and still work well two decades later when correlation flipped back positive after 2020. The same mechanism, two opposite regimes. Let's take this mental model with us and watch what comes next, and see whether the negative correlation of the 2000s and 2010s turns out to have been a rare anomaly as some believed, or whether another regime change is coming sooner than we expect.
+Finally, I'd like to come back to the original mental model for a proper close. Standing where we are now, it's interesting to see a framework laid out in 2003 explains why correlation had just turned negative, and still works well two decades later when correlation flipped back positive after 2020. The same mechanism, two opposite regimes. Let's take this mental model with us and watch what comes next, and see whether the negative correlation of the 2000s and 2010s turns out to have been a rare anomaly as some believed, or whether another regime change is coming sooner than we expect.
 
 ### Reference <a name="ref"></a>
 - Antti Ilmanen (2003): Stock-Bond Correlation
