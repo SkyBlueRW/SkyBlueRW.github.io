@@ -52,10 +52,10 @@ In a following paper "A Changing Stock-Bond Correlation", Brixton, Ilmanen et al
 
 *Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation*
 
-This is the kind of model I enjoy reading. It's grounded in solid economic meaning and focuses on what really matters out of a sea of variables. Readers benefit a lot from working through and reasoning with it.
 
 ### A Little More  <a name="more"></a>
 
+This is the kind of model I enjoy reading. It's grounded in solid economic meaning and focuses on what really matters out of a sea of variables. Readers benefit a lot from working through and reasoning with it.
 
 But like any model, it's not perfect. A few things sit outside its simple and intuitive frame. The simplifications focus on sovereign bonds and equity, leaving credit and other risk premia out. It also doesn't speak to cases where central banks control the yield curve directly through QE or yield curve control, which is another important driver of yield curve moves. And because it leans on long-term variables like inflation and growth, it doesn't say much about short or medium-term moves in correlation.
 
