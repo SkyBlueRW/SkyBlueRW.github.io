@@ -4,6 +4,7 @@
 - [A Mental Model](#model)
 - [Putting to work: 3 regimes of history](#regimes)
 - [A Little More](#more)
+- [Closing Marks](#close)
 - [Reference](#ref)
 
 
@@ -71,7 +72,10 @@ g &= \text{real growth} + \text{expected inflation}
 \end{aligned}
 $$
 
-A lot more structure can be added like this, though they trade off some of its simplicity as a cost. Though it's still good to have the option to get the version that matchs the taks at hand.
+A lot more structures can be added like this, though they trade off some of its simplicity as a cost. Though it's still good to have the option to get the version that matchs the taks at hand.
+
+### Closing Marks <a name="close"></a>
+
 
 Finally, I'd like to come back to the original mental model for a proper close. Standing where we are now, it's interesting to see a framework laid out in 2003 explain why correlation had just turned negative, and still work well two decades later when correlation flipped back positive after 2020. The same mechanism, two opposite regimes. Let's take this mental model with us and watch what comes next, and see whether the negative correlation of the 2000s and 2010s turns out to have been a rare anomaly as some believed, or whether another regime change is coming sooner than we expect.
 
