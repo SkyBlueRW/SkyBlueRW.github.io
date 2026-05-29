@@ -1,16 +1,14 @@
-#
-
-## A First Glimpse into the "Factor Zoo"
-
-- [The Factor Zoo](#crisis)
-- [The Skeptical and the Optimistic](#two)
-- [The Take](#more)
-- [Reference](#ref)
+---
+title: 'A First Glimpse into the "Factor Zoo"'
+date: 2024-12-07 12:00:00 -0500
+categories: [Asset Pricing]
+tags: [factor-zoo]
+---
 
 ### The Factor Zoo <a name="crisis"></a>
 
 
-In our previous blog, [The Adjustment for Luck](https://skybluerw.github.io/2024/06/26/luck-factor-zoo.html), we embarked on an exploration of how to identify factors that genuinely drive cross-sectional security returns out-of-sample in the real world. We focused on one critical challenge in this journey: the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent in-sample predictive power often owes more to luck than to true predictive ability. The massive number of factors published, not to mention the countless others tested behind the scenes, highlights just how exhaustive researchers have been in this quest. In the face of this typical multiple testing scenario, the traditional 1.96 t-statistic threshold no longer ensures a 5% Type I error rate.
+In our previous blog, [The Adjustment for Luck](/posts/luck-factor-zoo/), we embarked on an exploration of how to identify factors that genuinely drive cross-sectional security returns out-of-sample in the real world. We focused on one critical challenge in this journey: the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent in-sample predictive power often owes more to luck than to true predictive ability. The massive number of factors published, not to mention the countless others tested behind the scenes, highlights just how exhaustive researchers have been in this quest. In the face of this typical multiple testing scenario, the traditional 1.96 t-statistic threshold no longer ensures a 5% Type I error rate.
 
 The bootstrap method also discussed in that blog comes as an attempt to mitigate this problem. By combining a customized orthogonalization technique, which sets up a purified null hypothesis that holds by design, with bootstrapping, researchers can establish more reliable baselines for statistical tests. While it's not a perfect solution - we are still subject to a sample of smaller size compared to number of factors with evolving distribution, it’s certainly a solid starting point.
 

@@ -1,13 +1,10 @@
-#
-
-## Stochastic Discount Factor: a nutshell of asset pricing 
-
-
-- [Introduction](#introduction)
-- [The origin: as little as LOOP](#ma)
-- [P = E(mx)](#im)
-- [The modeling](#model)
-- [Summary](#summary)
+---
+title: 'Stochastic Discount Factor: a Nutshell of Asset Pricing'
+date: 2023-03-17 12:00:00 -0500
+categories: [Asset Pricing]
+tags: [asset-pricing, sdf]
+math: true
+---
 
 ### Introduction <a name="introduction"></a>
 

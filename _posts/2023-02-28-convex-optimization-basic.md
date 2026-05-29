@@ -1,14 +1,10 @@
-##
-
-## Numerical Optimization: a 101 refresh and further
-
-
-- [Why should you care?](#introduction)
-- [Convex Optimization: what and why?](#convex)
-- [Numerical algorithms to solve](#solve)
-- [Duality: Further Insights](#dual)
-- [Summary](#summary)
-
+---
+title: 'Numerical Optimization: a 101 Refresh and Further'
+date: 2023-02-28 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [optimization, convex-optimization]
+math: true
+---
 
 ### Why should you care? <a name="introduction"></a>
 

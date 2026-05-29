@@ -1,12 +1,10 @@
-#
-
-## From Volatility to Maximum Drawdown
-
-
-- [Introduction](#introduction)
-- [Maximum Drawdown: The Way to Approach](#approach)
-- [Maximum Drawdown Greek: A Simulation View](#factor)
-- [Reference](#ref)
+---
+title: 'From Volatility to Maximum Drawdown'
+date: 2023-10-15 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [risk, drawdown]
+math: true
+---
 
 ### Introduction <a name="introduction"></a>
 

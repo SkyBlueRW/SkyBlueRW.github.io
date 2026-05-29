@@ -1,21 +1,15 @@
-
-
-#
-
-## The "Maximum Diversification Frontier"
-
-- [Introduction](#introduction)
-- [MD Portfolio: the theoretical underpings](#why)
-  - [Let's go for diversification](#subparagraph1)
-  - [The optimal assmuption of risk return consistency](#subparagraph2)
-  - [The frontier part](#subparagraph3)
-- [How's the performance for the past decade](#perf)
-- [Reference](#ref)
+---
+title: 'The "Maximum Diversification Frontier"'
+date: 2023-06-22 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [asset-allocation, diversification]
+math: true
+---
 
   ### Introduction <a name="introduction"></a>
 
 
-In the previous blog post [The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to maximize diversification in terms of correlation. It is a direct application of the notion diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
+In the previous blog post [The Conviction Pyramid of Portfolio Construction](/posts/pyramid-optimization/#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to maximize diversification in terms of correlation. It is a direct application of the notion diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
 
 Expanding our exploration of MD, this blog post will take a closer look at its **application in strategic asset allocation**. We will examine the underlying assumption of consistent long-term balance between risk and return that underpins MD. More importantly, we will explore MD at various volatility targets to construct an achievable "Maximum Diversification Frontier" and examine its performance at major markets like US, Eurozone, Japan, and China.
 
@@ -44,7 +38,7 @@ By targeting the diversification ratio as the optimization objective, MD overwei
 #### The optimal assmuption of risk return consistency? <a name="subparagraph2"></a>
 
 
-Is there any further rationale behind MD beyond its direct implementation of diversification? Absolutely! Particularly in the context of strategic asset allocation. In our previous [discusion](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html#risk), we observed that for a portfolio to be MD, the following conditions must hold for every pair of securities within the portfolio:
+Is there any further rationale behind MD beyond its direct implementation of diversification? Absolutely! Particularly in the context of strategic asset allocation. In our previous [discusion](/posts/pyramid-optimization/#risk), we observed that for a portfolio to be MD, the following conditions must hold for every pair of securities within the portfolio:
 
 $$
 \begin{aligned}

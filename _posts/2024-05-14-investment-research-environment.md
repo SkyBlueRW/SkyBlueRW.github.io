@@ -1,10 +1,9 @@
-#
-
-## A Fun Try into Building an Integrated Research Environment
-
-- [Where it begins](#beg)
-- [How it is for the moment](#now)
-- [And More..](#more)
+---
+title: 'A Fun Try into Building an Integrated Research Environment'
+date: 2024-05-14 12:00:00 -0500
+categories: [Dev]
+tags: [tooling, research]
+---
 
 ### Where and how it begins <a name="beg"></a>
 

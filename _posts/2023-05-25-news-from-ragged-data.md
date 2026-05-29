@@ -1,15 +1,10 @@
-
-#
-
-
-## Nowcasting: The News From Jagged Economic Data 
-
-- [Economic Indicators: the informative and nerve-wracking data flow](#data)
-- [The Nowcasting modeling of Economic Indicators](#dfm)
-- [EM Estimation](#em)
-- [The Practical Aspect](#news)
-- [Reference](#ref)
-
+---
+title: 'Nowcasting: The News From Jagged Economic Data'
+date: 2023-05-25 12:00:00 -0500
+categories: [Factor Models]
+tags: [nowcasting, dynamic-factor-model]
+math: true
+---
 
 ### Economic Indicators: the informative and nerve-wracking data flow <a name="data"></a>
 

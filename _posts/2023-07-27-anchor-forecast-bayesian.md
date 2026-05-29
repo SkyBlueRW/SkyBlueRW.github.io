@@ -1,22 +1,16 @@
-
-#
-
-## Anchor Your Forecast the Bayesian Way
-
-- [Introduction](#introduction)
-- [The Bayesian Taste of Black Litterman](#bay)
-  - [The Prior](#subparagraph1)
-  - [The Investment View (Likelihood)](#subparagraph2)
-  - [The Posterior](#subparagraph3)
-- [Deviate From a Neutral Point!](#dev)
-- [Summary](#summary)
-- [Reference](#ref)
+---
+title: 'Anchor Your Forecast the Bayesian Way'
+date: 2023-07-27 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [black-litterman, bayesian]
+math: true
+---
 
 ### Introduction <a name="introduction"></a>
 
 Mean Variance Optimization stands as the brilliant foundation of almost everything built in the name of modern portfolio theory (Dr. Markowitz, the genius behind this foundation sadly passed away last month. RIP sir). While it can perform quite peculiar confronted with estimation errors on expected return! 
 
-In a previous blog ([The Conviction Pyramid of Portfolio Construction](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html)), we explored the trail of thought aimed at alleviating this issue by reducing reliance on expected return estimates. While the allure of better forecasting expected returns and reaping the rewards is truly irresistible. Even a slight improvement in estimating expected returns can lead to tremendous financial rewards! Now, the time has come to delve deeper into this line of thinking to enhance our approach for expected return estimation.
+In a previous blog ([The Conviction Pyramid of Portfolio Construction](/posts/pyramid-optimization/)), we explored the trail of thought aimed at alleviating this issue by reducing reliance on expected return estimates. While the allure of better forecasting expected returns and reaping the rewards is truly irresistible. Even a slight improvement in estimating expected returns can lead to tremendous financial rewards! Now, the time has come to delve deeper into this line of thinking to enhance our approach for expected return estimation.
 
 Obtaining a reliable estimate of expected returns ranks among the most formidable challenges in the modern world of finance. The volatility and ever-changing nature of security returns create a complex puzzle that hinders the task. In the meanwhile, it is probably this complexity that makes it an intriguing and captivating topic. In this ever-evolving landscape, there is no universally guaranteed or recognized method for accurate estimation, leaving us with ample room for exploration and hang out.
 
@@ -24,7 +18,7 @@ In this blog, let's start the journey with the Bayesian framework initially brou
 
 ### The Bayesian Taste of Black-Litterman <a name="bay"></a>
 
-Looking into the ingredints of security return distribution. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](https://skybluerw.github.io/2023/06/22/The-Maximum-Diversification-Frontier.html)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainty. 
+Looking into the ingredints of security return distribution. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](/posts/maximum-diversification-frontier/)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainty. 
 
 $$
 \begin{aligned}

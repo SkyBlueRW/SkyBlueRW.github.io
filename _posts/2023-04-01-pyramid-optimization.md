@@ -1,12 +1,10 @@
-#
-
-## The Conviction Pyramid of Portfolio Construction
-
-- [Introduction](#introduction)
-- [Maximum Sharpe Ratio Portfolio](#msrp)
-- [Risk Centric Portfolio Construction](#risk)
-
-
+---
+title: 'The Conviction Pyramid of Portfolio Construction'
+date: 2023-04-01 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [optimization, risk]
+math: true
+---
 
 ![Image of Pyramid](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/portfolio_pyramid.png)
 

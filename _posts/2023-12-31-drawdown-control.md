@@ -1,15 +1,14 @@
-#
-
-## Holding Discipline for Drawdown Control
-
-- [Introduction](#introduction)
-- [Optimal Holding with Drawdown Control](#optimal)
-- [The Practical Side](#practice)
-- [Reference](#ref)
+---
+title: 'Holding Discipline for Drawdown Control'
+date: 2023-12-31 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [risk, drawdown]
+math: true
+---
 
 ### Introduction <a name="introduction"></a>
 
-In a previous blog [From Volatility to Maximum Drawdown](https://skybluerw.github.io/2023/10/15/max-drawdown.html), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Following on the discussion, it's time to explore practical approaches to integrate drawdown management into a portfolio management process explicitly.
+In a previous blog [From Volatility to Maximum Drawdown](/posts/max-drawdown/), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Following on the discussion, it's time to explore practical approaches to integrate drawdown management into a portfolio management process explicitly.
 
 The landscape of drawdown control is undeniably shaped by critical judgments made at pivotal moments of  market fluctuations and regime shifts. Often, a well-founded judgement regarding the efficacy of a strategy, even executed with basic rules in holding discipline, can shield investors reasonably from intolerable drawdowns.
 
@@ -96,7 +95,7 @@ Insights from the perspective of contingent claims extend beyond the delta plot.
 
 Lastly, but certainly not least, it's also worth examining the parameters required for the calculation of this optimal holding. Among the components of the optimal holding, the drawdown threshold is predefined, and the current drawdown is readily observable. Regarding risk aversions, expected return, and volatility, they are standard inputs to a traditional Markowitz portfolio optimization. Adding drawdown protection to a Markowitz-based portfolio management process without requiring additional estimation tasks is plausible.
 
-Opting for the same parameters in both steps of the portfolio construction process is a valid choice. However, there are cases where it may not be desirable or even possible to do so. For the latter, numerous risk-centric portfolio construction models as we discussed in the ["The Conviction Pyramid of Portfolio Construction"](https://skybluerw.github.io/2023/04/01/pyramid-optimization.html) are employed to avoid estimating expected return due to its instability. For the former, there is indeed a reason to use different sources of estimation. Estimation errors themselves can contribute to drawdown, making it reasonable, from a risk management perspective, to derive parameters for drawdown control from diverse sources. In either scenario, we retain the flexibility to articulate explicit and clearly stated assumptions concerning expected return, volatility, or Sharpe ratio, aligning them with the specific nuances of the case at hand.
+Opting for the same parameters in both steps of the portfolio construction process is a valid choice. However, there are cases where it may not be desirable or even possible to do so. For the latter, numerous risk-centric portfolio construction models as we discussed in the ["The Conviction Pyramid of Portfolio Construction"](/posts/pyramid-optimization/) are employed to avoid estimating expected return due to its instability. For the former, there is indeed a reason to use different sources of estimation. Estimation errors themselves can contribute to drawdown, making it reasonable, from a risk management perspective, to derive parameters for drawdown control from diverse sources. In either scenario, we retain the flexibility to articulate explicit and clearly stated assumptions concerning expected return, volatility, or Sharpe ratio, aligning them with the specific nuances of the case at hand.
 
 
 

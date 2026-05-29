@@ -1,12 +1,10 @@
-#
-
-## The Adjustment for Luck!
-
-- [Those Factors shrink out of sample](#introduction)
-- [A multiple testing problem](#mul)
-- [A Resample Procedure to account for luck](#resample)
-- [And More](#more)
-- [Reference](#ref)
+---
+title: 'The Adjustment for Luck'
+date: 2024-06-26 12:00:00 -0500
+categories: [Asset Pricing]
+tags: [factor-zoo, multiple-testing]
+math: true
+---
 
 ### Those Factors Shrink out of sample <a name="introduction"></a>
 

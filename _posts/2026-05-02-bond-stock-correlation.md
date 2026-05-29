@@ -1,12 +1,10 @@
-
-## Stock-bond correlation: an old model and a new regime
-
-- [A Mental Model](#model)
-- [Putting it to work: 3 regimes of history](#regimes)
-- [A Little More](#more)
-- [Closing Marks](#close)
-- [Reference](#ref)
-
+---
+title: 'Stock-Bond Correlation: an Old Model and a New Regime'
+date: 2026-05-02 12:00:00 -0500
+categories: [Asset Pricing]
+tags: [asset-allocation, correlation]
+math: true
+---
 
 Stock-bond correlation is one of the oldest topics in asset allocation, and it keeps coming back for a reason. No surprise: it's a key input for modern portfolio construction.
 

@@ -1,15 +1,10 @@
-##
-
-## Not (entirely) a BlackBox: Optimization Constraint Attribution
-
-
-- [Introduction](#introduction)
-- [The Lagrangian Dual Decomposition of MVO](#lagrangian)
-- [Benchmark of Oppotunity Set + Overlay of Investment Decission](#meaning)
-- [Application](#app)
-- [Reference](#ref)
-
-
+---
+title: 'Not (Entirely) a Black Box: Optimization Constraint Attribution'
+date: 2023-04-15 12:00:00 -0500
+categories: [Portfolio Construction]
+tags: [optimization, mvo]
+math: true
+---
 
 ### Introduction? <a name="introduction"></a>
 
@@ -32,7 +27,7 @@ For this blog, I would like to breifly introduce this powerful technique of cons
 
 ### The Lagrangian Dual Decomposition of MVO <a name="lagrangian"></a>
 
-The optimization constraint decomposition stems from the first order dual condition that we talked about in a previous [post](https://skybluerw.github.io/2023/02/28/convex-optimization-basic.html#dual). 
+The optimization constraint decomposition stems from the first order dual condition that we talked about in a previous [post](/posts/convex-optimization-basic/#dual). 
 
 Without loss of generality, for a MVO in the following form where $$f_j$$ refers to addtional terms in the objective function representing penalty on transaction cost, preferrence for ESG ... and $$g_i$$ refers to direct constraint for risk managment, regulation ... etc
 
