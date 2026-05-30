@@ -30,12 +30,3 @@ actually use for research. A curated selection below; the rest lives on
   implementation. Companion to the [Oh, VIX!](/posts/vix/) post.
 - **[Asset_Pricing](https://github.com/SkyBlueRW/Asset_Pricing)** — a research repo for empirical
   asset pricing.
-
-## AI / ML & learning
-
-- **[LLM-Play-Ground](https://github.com/SkyBlueRW/LLM-Play-Ground)** — experiments with large
-  language models.
-- **[financial-machine-learning](https://github.com/SkyBlueRW/financial-machine-learning)** — a
-  curated list of practical financial-ML tools and applications.
-- **[bayesian-statistc](https://github.com/SkyBlueRW/bayesian-statistc)** — notes and code on
-  Bayesian statistics.
