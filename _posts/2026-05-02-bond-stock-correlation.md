@@ -12,7 +12,7 @@ For decades, bonds have played the role of natural diversifier in investors' por
 
 But none of this is taken for granted. Since the pandemic, stock-bond correlation has flipped positive for the first time in twenty years with a continuing momentum. The diversification a stock-bond portfolio is supposed to deliver is fading, and strategies that rely on stable correlations are under real pressure. It's a good time to revisit this old question.
 
-### A Mental Model <a name="model"></a>
+### A Mental Model {#model}
 
 
 There is no shortage of well established models for estimating correlation. DCC-GARCH decomposes the covariance matrix to volatility and correlation for their respective dynamics. Regime switching and hierarchical clustering models try to capture a nonlinear aspect of the association. Even a plain rolling sample correlation works reasonably well for its slow moving nature. But when I want to actually make sense of stock-bond correlation, the mental model I keep coming back to is from Ilmanen's 2003 paper.
@@ -34,7 +34,7 @@ The analysis would have ended neatly here if all these variables were exogenous 
 
 Inflation builds into the bond yield Y directly. When inflation rises, Y rises, and the discount rate goes up for both stocks and bonds. Both prices fall together. So at times when inflation is the focus of the market, stock and bond prices tend to move in the same direction, which means high correlation. On the other hand, growth works differently. Better growth lifts stock prices by raising expected dividends D. But it also lifts Y through monetary policy and long-term rate expectations, which hurts bond prices. So growth pushes stocks up and bonds down at the same time. At times when growth is the dominant story, stock and bond prices tend to decouple, and correlation falls.
 
-### Putting it to work: 3 regimes of history <a name="regimes"></a>
+### Putting it to work: 3 regimes of history {#regimes}
 
 
 A straightforward and intuitive mental model! What's even better, it turns out to explain a lot of what has happened and what's happening now.
@@ -52,7 +52,7 @@ In a following paper "A Changing Stock-Bond Correlation", Brixton, Ilmanen et al
 *Brixton, Ilmanen etc (2023): A Changing Stock-Bond Correlation*
 
 
-### A Little More  <a name="more"></a>
+### A Little More {#more}
 
 This is the kind of model I enjoy reading. It's grounded in solid economic meaning and focuses on what really matters out of a sea of variables. Readers benefit a lot from working through and reasoning with it.
 
@@ -72,11 +72,11 @@ $$
 
 A lot more structures can be added like this, though they trade off some of its simplicity as a cost. Though it's still good to have the option to get the version that matchs the taks at hand.
 
-### Closing Marks <a name="close"></a>
+### Closing Marks {#close}
 
 
 Finally, I'd like to come back to the original mental model for a proper close. Standing where we are now, it's interesting to see a framework laid out in 2003 explains why correlation had just turned negative, and still works well two decades later when correlation flipped back positive after 2020. The same mechanism, two opposite regimes. Let's take this mental model with us and watch what comes next, and see whether the negative correlation of the 2000s and 2010s turns out to have been a rare anomaly as some believed, or whether another regime change is coming sooner than we expect.
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Antti Ilmanen (2003): Stock-Bond Correlation
 - Brixton, Ilmanen et al (2023): A Changing Stock-Bond Correlation

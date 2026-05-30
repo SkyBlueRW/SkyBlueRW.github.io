@@ -6,7 +6,7 @@ tags: [risk, drawdown]
 math: true
 ---
 
-### Introduction <a name="introduction"></a>
+### Introduction {#introduction}
 
 In the realm of risk measures, volatility stands out as a star player, and with good reason. It has deep roots in asset pricing theories, intricately connected to the concepts of both risk and reward; It lends itself to reliable estimation and forecasting in real-world applications. It bears favorable analytical properties hence can be extensively analyzed and efficeintly controlled in portfolio construction ...
 
@@ -17,7 +17,7 @@ Maximum Drawdown takes the center stage as one of the most popular risk measures
 In this blog, let's embark the journey to explore maximum drawdown. Our initial section touch upon ideas to approach this measure despite tis less-than-ideal analytical properties. Subsequently, we examine the crucial factors that influence Maximum Drawdown through simulations, starting from the standard IID Gaussian and extending into the intricate realm of time dependence and non-Gaussian distributions. Many insights in the second section are drawn from the informative article [Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3583864)
 
 
-### Maximum Drawdown: The Approach <a name="approach"></a>
+### Maximum Drawdown: The Approach {#approach}
 
 The definition and ex-post calculation of Maximum Dradwon ($$MDD_t$$) are unambiguous. Given the time series of net value on a strategy or security ($$P_t$$), we begin by identifying the peak ($$M_t$$) up to each point t. From there, it's straightforwad to calculate the drawdown ($$D_t$$) as the loss compared to that cumulative peak for each moment. The shapest drawdown observed is what we term as maximum drawdown.
 
@@ -41,7 +41,7 @@ Additionally, while obtaining a closed-form function to describe the distributio
 
 To delve deeper into the practical application of these efforts. We would appreciate to have some impressions about relavant factors and their impact on Maximum Drawdown. This is precisely what we aim to explore through simulations in the next section.
 
-### Maximum Drawdown Greek: A simualtion view <a name="factor"></a>
+### Maximum Drawdown Greek: A simualtion view {#factor}
 
 In the absence of an analytical description of the Maximum Drawdown distribution, we turn to the tool of simulation. Swinging the hammer of simulation, we can get a sense of how the probability of reaching a specific Maximum Drawdown level is influenced by some key relavant attributes.
 
@@ -97,7 +97,7 @@ $$
 
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 
 - Van Hemert, Ganz, Harvey, Rattraym Martin & Yawitch (2020): Drawdowns
 - Magdon-Ismail, Atiya, Pratap & Abu-Mostafa (2004): On the Maximum Drawdown of a Brownian Motion

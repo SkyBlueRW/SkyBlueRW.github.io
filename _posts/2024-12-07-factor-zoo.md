@@ -5,7 +5,7 @@ categories: [Asset Pricing]
 tags: [factor-zoo]
 ---
 
-### The Factor Zoo <a name="crisis"></a>
+### The Factor Zoo {#crisis}
 
 
 In our previous blog, [The Adjustment for Luck](/posts/luck-factor-zoo/), we embarked on an exploration of how to identify factors that genuinely drive cross-sectional security returns out-of-sample in the real world. We focused on one critical challenge in this journey: the multiple testing problem. Essentially, when factors are identified through extensive searches, their apparent in-sample predictive power often owes more to luck than to true predictive ability. The massive number of factors published, not to mention the countless others tested behind the scenes, highlights just how exhaustive researchers have been in this quest. In the face of this typical multiple testing scenario, the traditional 1.96 t-statistic threshold no longer ensures a 5% Type I error rate.
@@ -18,7 +18,7 @@ Looking a bit closer at this massive collection of factors, each claiming to pre
 
 So, what can we take from the Factor Zoo? How should we interpret it? In this blog, let's start this quest by examining two opposing views on the matter.
 
-### The Skeptical and The Optimistic <a name="two"></a>
+### The Skeptical and The Optimistic {#two}
 
 First, let's consider the perspective offered by Hou, Xue, and Zhang (2020). In their paper 'Replicating Anomalies', they shed light on the Factor Zoo by undertaking an ambitious task of replicating nearly 200 published factors. Using a comprehensive dataset of the U.S. stock market spanning from 1967 to 2016, they evaludated each factor's predictive power under the same test procedures of sorted long-short portfolios across three investment horizons (1, 6, and 12 months). The findings were sobering: **65% of the factors failed to surpass the traditional t-statistic threshold of 1.96**. When a stricter threshold of 2.78 was applied to account for multiple testing corrections, the failure rate climbed further to an astonishing 82%!
 
@@ -39,7 +39,7 @@ Removing exposure to market beta definitely has its merits. After all, we are ai
 
 The remainder of the replication rate increase can be traced to various, somewhat less influential adjustments in test procedures and datasets. For instance, Jensen et al. opted to cap market value weights in their factor portfolios to prevent mega-cap stocks from exerting an outsized influence. They also focused exclusively on a 1-month holding period and utilized a longer dataset. While these changes might seem minor, they collectively contributed to the improved replication outcomes.
 
-### The Take <a name="more"></a>
+### The Take {#more}
 
 Now that we’ve acknowledged the existence of the Factor Zoo, it’s evident that our impressions of these factors can vary widely, depending on the test procedures used and the datasets examined. The methods researchers choose to construct and evaluate factors can lead to strikingly different conclusions about their predictive power and reliability. So, what can we learn from all this complexity?
 
@@ -56,7 +56,7 @@ And yet, the list of challenges don’t end there. Even if we manage to find a r
 How do we translate yesterday’s insights into tomorrow’s actions? How can we navigate from insights drawn from dataset in the past to actions in the future? This might be the biggest puzzle in forecasting security returns. In truth, there may never be a perfect or even a good enough method to bridge this gap. Investors typically rely on the fact that markets, while volatile, rarely pivot 180 degrees overnight, allowing us to glean useful information from the recent past. This is also where structural models can shine. By providing a framework with clearly defined assumptions and logical connections, these models can guide us more reliably than raw empirical results alone, helping us understand what’s happening and what might come next. 
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 - Hou, Xue & Zhang (2018): Replicating Anomalies
 - Cohcrane (2011): Discount Rates

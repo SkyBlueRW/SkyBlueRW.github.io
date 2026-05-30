@@ -6,7 +6,7 @@ tags: [asset-allocation, diversification]
 math: true
 ---
 
-  ### Introduction <a name="introduction"></a>
+  ### Introduction {#introduction}
 
 
 In the previous blog post [The Conviction Pyramid of Portfolio Construction](/posts/pyramid-optimization/#risk), we embarked on an exploration on various portfolio construction methods, each tailored to different levels of market information availability. One such method we discussed (and I found very handy in quite some applications) is the Maximum Diversification (MD), which aims to maximize diversification in terms of correlation. It is a direct application of the notion diversification for efficient risk premium harvest and provides much more flexibility in integrating optimization constraints compared to its closely related couterpart Risk Parity (RP). 
@@ -18,9 +18,9 @@ The resulting "Maximum Diversification Frontier" showcases an upward frontier, d
 ![MD Frontier](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/MD_Frontier.png)
 
 
-### MD Portfolio: the theoretical underpings <a name="why"></a>
+### MD Portfolio: the theoretical underpings {#why}
 
-#### Let's go for diversification ! <a name="subparagraph1"></a>
+#### Let's go for diversification ! {#subparagraph1}
 
 Diversification has long been regarded as a fundamental principle since the advent of modern portfolio theory. The renowned Nobel Prize laureate Harry Markowitz is reported to have said "diversification is the only free lunch" in investing. The prevailing belief is that in a rational market over long term, only non-diversifiable systematic risks (those covary with stochastic discount factor, consumption...etc) are rewarded with expected returns. Therefore, efficient diversification, which reduces idiosyncratic risk, is considered crucial for enhancing risk-adjusted returns (at least in an unconditional context without additional information).
 
@@ -35,7 +35,7 @@ $$
 
 By targeting the diversification ratio as the optimization objective, MD overweights securities that exhibit low correlations with others, resulting in a straightforward and intuitive implementation of the diversification principle.
 
-#### The optimal assmuption of risk return consistency? <a name="subparagraph2"></a>
+#### The optimal assmuption of risk return consistency? {#subparagraph2}
 
 
 Is there any further rationale behind MD beyond its direct implementation of diversification? Absolutely! Particularly in the context of strategic asset allocation. In our previous [discusion](/posts/pyramid-optimization/#risk), we observed that for a portfolio to be MD, the following conditions must hold for every pair of securities within the portfolio:
@@ -74,7 +74,7 @@ It also aligns with the long term capital market expectation forecast from insti
 
 In both cases, asset classes cluster around a straight line,  indicating that they share a comparable return-to-volatility ratio.
 
-#### The frontier part <a name="subparagraph3"></a>
+#### The frontier part {#subparagraph3}
 
 So MD is a good choice in asset allocation. What about the "frontier" aspect mentioned in the blog title? 
 
@@ -84,7 +84,7 @@ Among these constraints, the volatility target aligns particularly well with MD 
 
 By applying MD optimization with volatility targets, we can generate a set of well-diversified portfolios for any given volatility target, thereby forming a "Maximum Diversification Frontier," as demonstrated in the chart at the beginning of the blog post. From my perspective, this frontier offers tremendous convenience in providing a comprehensive range of options that can align with the utility function of client or specific product madates
 
-### How's the performance for the past decade <a name="perf"></a>
+### How's the performance for the past decade {#perf}
 
 Let's examine the performance of such an idea in the markets of US, Eurozone, Japan and China.
 
@@ -120,5 +120,5 @@ In my perspective, the MD approach with risk targets serves as an exceptional fo
 
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Choueifaty & Coignard (2008): Toward Maximum Diversification

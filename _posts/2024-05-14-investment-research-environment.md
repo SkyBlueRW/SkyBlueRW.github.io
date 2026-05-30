@@ -5,7 +5,7 @@ categories: [Dev]
 tags: [tooling, research]
 ---
 
-### Where and how it begins <a name="beg"></a>
+### Where and how it begins {#beg}
 
 The genesis of this endeavor sprouted a couple of years back when I found myself in various research projects, craving efficiency and scalability. The repetitive tasks of data cleansing and performance tracking began to weigh heavy, making me wonder: could there be a more streamlined approach?
 
@@ -15,7 +15,7 @@ Instead, my aim was to create a lightweight version that distilled common elemen
 
 
 
-### How it is for the moment <a name="now"></a>
+### How it is for the moment {#now}
 
 To me, the crux of achieving this goal lies in abstraction and modularization—distilling reusable calculations and processes into manageable units. This vision has largely materialized through the following design and implementation.
 
@@ -29,7 +29,7 @@ The culmination of such abstractions comprises the first two components of my re
 
 Initially, this task seemed daunting. WWhat sort of data update pipeline could support all kinds of data processes, potentially spanning macroeconomic, accounting, and pricing data? Let alone for the steps of verifying the need for calculation, carrying on the calculation, logging and validatig? Soon I realized that regardless of the underlying models, most calculations could be abstracted into a series of units dependent on each other. These units are designed to identify timestamps or events for potential calculation, verify necessary conditions such as upstream data source availability, trigger the calculation if desired, and log the calculation's completeness and validation.
 
-### And More.. <a name="more"></a>
+### And More.. {#more}
 
 More or less, this is the investment research environment I've envisioned. 
 

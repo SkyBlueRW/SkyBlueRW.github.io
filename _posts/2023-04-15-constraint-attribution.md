@@ -6,7 +6,7 @@ tags: [optimization, mvo]
 math: true
 ---
 
-### Introduction? <a name="introduction"></a>
+### Introduction? {#introduction}
 
 Let's face it. Though laying the foundation of modern portfolio theory with its profound economic meaning, Mean Variance Optimization (MVO) often behave somewhat like a black box in practice. Even the slightest adjustment to an existing MVO can lead to counterintuitive changes in the optimal portfolio, impeding further insight into the portfolio.
 
@@ -25,7 +25,7 @@ With this decomposition, we can easily extend analysis to the decomposition of r
 For this blog, I would like to breifly introduce this powerful technique of constraint decomposition. I will first explore the origins and intuition behind Lagrangian Dual decomposition and then delve into practical applications of constraint decomposition in portfolio optimization. 
 
 
-### The Lagrangian Dual Decomposition of MVO <a name="lagrangian"></a>
+### The Lagrangian Dual Decomposition of MVO {#lagrangian}
 
 The optimization constraint decomposition stems from the first order dual condition that we talked about in a previous [post](/posts/convex-optimization-basic/#dual). 
 
@@ -73,7 +73,7 @@ The optimal portfolio is now the addition of 3 distinct components. The first co
 Now the question remains: does such a decomposition make economic sense from the perspecitve of portfolio construction?
 
 
-### Benchmark of Oppotunity Set + Overlay of Investment Decision <a name="meaning"></a>
+### Benchmark of Oppotunity Set + Overlay of Investment Decision {#meaning}
 
 Yes it does make sense in the context of portfolio construction. As we examine the contents of each of the three components, the economic meaning of the decomposition become clear.
 
@@ -147,7 +147,7 @@ x &= \dfrac{1}{A_i^T Q^{-1}A_i} Q^{-1}A_i
 $$
 
 
-### Application <a name="app"></a>
+### Application {#app}
 
 The linear decomposition of the optimal portfolio into benchmark and overlay portfolios enables a wide range of portfolio analyses. 
 
@@ -163,7 +163,7 @@ $$
 Similarly, this decomposition can provide insights into other areas, such as how changes in constraints can affect portfolio concentration or exposure to credit. By utilizing the linear decomposition approach, we can gain a better understanding of the optimization process in portfolio construction, which can help to demystify it and make it less like a black box.
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Scherer & Xu (2007): The Impact of Constraints on Value-Added
 - Bender, Lee & Stefek (2009): Decomposing the Impact of Portfolio Constraints
 - Stubbs & Vandenbussche (2010): Constraint Attribution

@@ -6,7 +6,7 @@ tags: [risk, drawdown]
 math: true
 ---
 
-### Introduction <a name="introduction"></a>
+### Introduction {#introduction}
 
 In a previous blog [From Volatility to Maximum Drawdown](/posts/max-drawdown/), we delved into the widely quoted risk measure, maximum drawdown, exploring factors impacting it and uncovering pain points in its analysis and control. Following on the discussion, it's time to explore practical approaches to integrate drawdown management into a portfolio management process explicitly.
 
@@ -16,7 +16,7 @@ While the explicit integration of drawdown control offers additional advantages,
 
 With these benefits in mind, our focus in this blog turns to a journey of tool excavation, catering around the risky asset holding discipline pioneered by Grossman & Zhou (1993). This discipline advocates for investing a constant proportion of the largest acceptable loss in risky assets to maximize expected utility growth within the desired drawdown range. The optimal holding derived from this approach can serve as a reference for  leverage of the risky asset mix, whether on a regular basis or in response to significant deviations.
 
-### Optimal Holding with Drawdown Control <a name="optimal"></a>
+### Optimal Holding with Drawdown Control {#optimal}
 
 Let's begin by taking a closer look at the holding discipline.
 
@@ -68,7 +68,7 @@ X_t = \mu {(\sigma^{-1})}^2 \dfrac{1}{(1 - \alpha)A} (W_t - \alpha M_t) 1 \\
 \end{aligned}
 $$
 
-### The practical Side <a name="practice"></a>
+### The practical Side {#practice}
 
 Now equipped with a clearly defined optimal holding in the risky asset, continuous re-allocation to these assets/portfolios as per the derived optimal holding, paves the way for maximized wealth utility growth within a predefined drawdown level almost surely!
 
@@ -89,7 +89,7 @@ For instance, Vercer (2006) conducted simulations on the delta exposure of this 
 
 ![Gaussian](https://raw.githubusercontent.com/SkyBlueRW/SkyBlueRW.github.io/main/_posts/asset/mdd_call_delta.png)
 
-source: [Vecer (2006): Maximum Drawdown and Directional Trading](http://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
+source: [Vecer (2006): Maximum Drawdown and Directional Trading](https://www.stat.columbia.edu/~vecer/maxdrawdown3.pdf)
 
 Insights from the perspective of contingent claims extend beyond the delta plot. Meaningful insights can be gained from Gamma, the derivative of delta as well. Higher gamma indicates volatile exposures to delta, suggesting the need for more frequent rebalancing and a lower deviation range for the quickly changing exposure. Similar Monte Carlo simulations can help evaluate exposures to maximum drawdown in the form of delta and other Greeks under different circumstances of volatility, drift, big jumps, and more. The numerous tools in the arsenal of derivative analysis can provide a wealth of insights in addition to an optimized portfolio. 
 
@@ -99,7 +99,7 @@ Opting for the same parameters in both steps of the portfolio construction proce
 
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Grossman & Zhou (1993): Optimal Investment Strategies For Controlling Drawdowns
 - Cvitanic & Karatzas (1994): On Portfolio Optimization Under "Drawdown" Constraints
 - Vecer (2006): Maximum Drawdown and Directional Trading

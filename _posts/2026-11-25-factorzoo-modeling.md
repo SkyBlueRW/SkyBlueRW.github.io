@@ -13,7 +13,7 @@ At the heart of empirical factor research sits a straightforward yet stubborn qu
 In this blog, we'll try to unpack the nuts and bolts behind the modeling and evaluation. We start from the classic frequentist toolkit used in in empirical factor research and then explore the Bayesian framework that Jensen, Kelly & Pedersen (2023) recommended to add addtional structure and reduce variance. Even with machine learning thecniques in the spotlight nowadays, these structured econometric techniques and the market structures that they explicit still matter when samples are short, dimensions explode, and signals hide in noise - the everyday reality for much of what we face in financial markets.
 
 
-### Building a "Managed Portfolio" <a name="portfolio"></a>
+### Building a "Managed Portfolio" {#portfolio}
 
 In its essence, factor research is a finance-specific way to approach prediction tasks. In almost every factor study, well see a regularly rebalanced long–short portfolio built from lagged security (or issuer) characteristics, and then all analysis is run on that portfolio’s return — a managed portfolio meant to represent the factor. 
 
@@ -67,7 +67,7 @@ Adopting the approach of managed portfolios brings obvious conveniences. We now 
 
 
 
-### The Classic <a name="classic"></a>
+### The Classic {#classic}
 
 
 
@@ -100,7 +100,7 @@ On the other hand, the data sets are notoriously famous for its
 Clearly, we can use some innovation beyond the traditional framework to light our road ahead.
 
 
-### The Bayesian Len <a name="bayes"></a>
+### The Bayesian Len {#bayes}
 
 The Bayesian statistic is potentially an answer. Facing a data set with classic feature of small N (sample size) and large k (dimension), it's probably a good idea to in
 
@@ -203,7 +203,7 @@ $$
 
 
 heavy role of prior.
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
 - Bali, Engle & Murray (2016): Empirical Asset Pricing: The Cross Section of Stock Returns
 - Gu, Kelly & Xiu (2020): Empirical Asset Pricing via Machine Learning

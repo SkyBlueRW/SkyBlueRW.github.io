@@ -6,7 +6,7 @@ tags: [factor-zoo, multiple-testing]
 math: true
 ---
 
-### Those Factors Shrink out of sample <a name="introduction"></a>
+### Those Factors Shrink out of sample {#introduction}
 
 
 As Nobel Laureate Ronald Coase once said: "If you torture data long enough, it will confess to anything".
@@ -20,7 +20,7 @@ Let's leave alone all the dicussion and debates about potential replicating cris
 Obviously, to improve our chance of expected return prediction, we hope to select factors that genuinly means something and are likely to maintain their predictive power out of sample. These lucky factors are what we hope to avoid in the modeling of expected return. To this goal, how can we adjust our factor research framework for the existence of lucky factors and how good should one factor perform so that we are comfortable to declare its statistical significance accounting for the turbulance of luck. That's the question that we hope to discuss in this blog. Specifically I hope to introduce to your attention the resample statistical procedure from paper "Lucky Factor" (Harvey & Liu, 2021). Given a pool of candidate factors, such a statistical procedure is quite helpful in evaluating marginal improvement on adding factors to existing factor models while also accounting for the lucky factor problem.
 
 
-### A Multiple Testing Problem <a name="mul"></a>
+### A Multiple Testing Problem {#mul}
 
 So, what is this 'lucky factor' problem and where does it come from? In short, it originates from the exhaustive efforts of data mining (or data snooping) conducted on financial data set without accounting for the test multiplicity arised. Whenever a factor is identified by an extensive or exhaustive search, there is the danger that its good performance is not from real prediction ability but rather just luck.
 
@@ -44,7 +44,7 @@ Unfortunately, this is more or less what we face in factor research. In the spar
 
 Hence it's really not surprising to see the deterioration of out sample performance. We have these lucky factors in the respository of published factors! 
 
-### A Resample Procedure to account for luck <a name="resample"></a>
+### A Resample Procedure to account for luck {#resample}
 
 Now with some better understanding about the 'lucky factor' problem and its origins, how can we address it? Thre are multiple angles to approach such a question.
 
@@ -62,7 +62,7 @@ This distribution of lucky factors serves as the null hypothesis distribution wh
 
 Such steps can be repeted to continue the selection of factors until the point where we are no longer satisfied on the comparison between the real max statistic and the empirical distribution of lucky factors. And it concludes all the factors we are comfortable to add under the procedure with attention paid to lucky factors.
 
-### And More <a name="more"></a>
+### And More {#more}
 
 It's reassuring to know that we have tools to address, or at least mitigate, the lucky factor problem. To me, this resample precedure is particularly helpful for at least two reasons. Firstly, it offers a practical method to account for multiple testing in the context of incrementally enhancing a prediction model. Secondly, having the empirical distribution of the max statistic at our disposal allows us to gauge the magnitude of lucky factor performance that can emerge in a given sample. In fact, storing more than just the max statistic from each resampled dataset can provide valuable insights for risk management.
 
@@ -73,7 +73,7 @@ Firstly, the true number of factors experimented is generally unknown and likely
 Additionally, this procedure treats all candidate factors equally, evaluating them solely based on their sample performance. Ideally, we would give more credits to factors with solid theoretical foundations, as these factors embody the wisdom derived from structural modeling or correlated datasets, which can improve our predictive accuracy. The sampling method doesn't actually support this kind of differentiation well. While we can take theory-backed factors as selected and build from there, imposing any intricate structure might be better suited to a Bayesian framework, which allows for modeling them in the prior. As for the Bayesian approach to modeling expected return, we'll leave that for discussion in the next blog.
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 - Harvey & Liu (2021): Lucky factor
 - Pontiff & McLean (2016): Does Academic Research Destroy Stock Return Predictability?
 - Hou, Xue & Zhang (2020): Replicating Anomalies

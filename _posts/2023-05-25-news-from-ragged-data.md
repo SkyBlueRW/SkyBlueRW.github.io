@@ -6,7 +6,7 @@ tags: [nowcasting, dynamic-factor-model]
 math: true
 ---
 
-### Economic Indicators: the informative and nerve-wracking data flow <a name="data"></a>
+### Economic Indicators: the informative and nerve-wracking data flow {#data}
 
 
 Financial market is like a bustling abstraction of the economic world, where people jump into the bus for economic objects such as sharing income and mitigating risk. Therefore, it comes as no surprise that economic conditions are quite relavant in participating in the market.
@@ -27,7 +27,7 @@ Fortunately, we have the nowcasting model at our disposal to navigate this compl
 
 In this blog, we will explore the remarkable capabilities of the nowcasting model. We will delve into the intuition behind this powerful tool, focusing on its modeling and estimation aspects. Additionally, we will provide practical insights on ways to incorporate this model into the decision-making process through illustrative toy examples.
 
-### The Nowcasting modeling of Economic Indicators <a name="dfm"></a>
+### The Nowcasting modeling of Economic Indicators {#dfm}
 
 Embarking on our exploration, let's delve into the inner workings of the nowcasting model. 
 
@@ -163,7 +163,7 @@ $$
 $$
 
 
-### EM estimation <a name="em"></a>
+### EM estimation {#em}
 
 With the utilization of linking functions and Kalman filters, we finally obtained a model that can effectively handle the jagged and mixed-frequency data. While before delving into the practical usage of the model, let's take a detour and discuss the customized EM algorithm required for estimation. After all, a model can be as comprehensive and accurate as it can, but it is of little use if there is no reliable way to estimate the parameters.
 
@@ -206,7 +206,7 @@ $$
 vec(\Lambda(j+1)) = (\sum_{t=1}^{t_i}E_j(f_t f_t^{'}|\Omega_{t_i})\bigotimes w_t)^{-1} vec((\sum_{t=1}^{t_i}E_j(y_t f_t^{'}|\Omega_{t_i})))
 $$
 
-### The Practical Aspect <a name="news"></a>
+### The Practical Aspect {#news}
 
 Finally, we have developed a nowcasting model capable of handling jagged data flow, along with a reliable method for estimating it. Now the question arises: what can we gain from it?
 
@@ -227,7 +227,7 @@ E[y_t|I_{v+1}] &= \sum_{j \in J_{v+1}} b_{j,t,v+1}(x_{j, T_{j,v+1}} - E[y_j,T_{j
 \end{aligned}
 $$
 
-Let's demonstrate the forecast update process dudring a reporting cycle (or even beyond) using a toy example. In the example I have utilized a similar set up as in Chad Fultons' [blog](http://www.chadfulton.com/topics/statespace_large_dynamic_factor_models.html) where 126 montlhy indicators from 8 groups along with the quarterly GDP are included.
+Let's demonstrate the forecast update process dudring a reporting cycle (or even beyond) using a toy example. In the example I have utilized a similar set up as in Chad Fultons' [blog](https://www.chadfulton.com/topics/statespace_large_dynamic_factor_models.html) where 126 montlhy indicators from 8 groups along with the quarterly GDP are included.
 
 As depicted below, we are tracking the forecast for the 2023 Q2 GDP over the past four months. Initially, based on data prior to January 2023, our GDP estimate stood at 2.25%. As we gathered more information over time, our GDP forecast reached its peak in February 2023 and subsequently declined in March and April. Once a new batch of data is released, the difference between our previous forecast and the published value is linearly aggregated to update our GDP forecast.
 
@@ -255,10 +255,10 @@ With these economic condition indexes at our disposal, it remains our choice to 
 
 The possibilities are abundant while falls beyond the scope of our current discussion. For now, our discussion comes to a conclusion. Hopefully you find it interesting :) 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
 
 
 - Banbura, Giannone & Reichlin(2010): Nowcasting
 - Banbura & Modugno (2010): Maximum Likelihood Estimation of Factor Models on Datasets with Arbitrary Pattern of Missing Data
 - Bok, Caratelli, Giannone, Sbordone & Tambalotti (2018): Macroeconomic Nowcasting and Forecasting with Big Data
-- Chad Fulton's Blog: [Large dynamic factor models, forecasting, and nowcasting](http://www.chadfulton.com/topics/statespace_large_dynamic_factor_models.html)
+- Chad Fulton's Blog: [Large dynamic factor models, forecasting, and nowcasting](https://www.chadfulton.com/topics/statespace_large_dynamic_factor_models.html)

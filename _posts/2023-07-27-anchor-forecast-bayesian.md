@@ -6,7 +6,7 @@ tags: [black-litterman, bayesian]
 math: true
 ---
 
-### Introduction <a name="introduction"></a>
+### Introduction {#introduction}
 
 Mean Variance Optimization stands as the brilliant foundation of almost everything built in the name of modern portfolio theory (Dr. Markowitz, the genius behind this foundation sadly passed away last month. RIP sir). While it can perform quite peculiar confronted with estimation errors on expected return! 
 
@@ -16,7 +16,7 @@ Obtaining a reliable estimate of expected returns ranks among the most formidabl
 
 In this blog, let's start the journey with the Bayesian framework initially brought within the Black-Litterman model (BL). Such a framework enables us to start from a neutral point and incorporate investors' views/forecast on expected return to deviate from it.
 
-### The Bayesian Taste of Black-Litterman <a name="bay"></a>
+### The Bayesian Taste of Black-Litterman {#bay}
 
 Looking into the ingredints of security return distribution. Covariance $$\Sigma$$ can usually be estimated from past returns in reasonable accuracy (We are generally able to maintain a volatility target based on historical data as shown in [The "maximum Diversification Frontier"](/posts/maximum-diversification-frontier/)). While in majority cases, the expected return $$\mu$$ can not be known with reasonable certainty. 
 
@@ -38,7 +38,7 @@ Aligning this idea, the Black-Litterman (BL) takes investors' original forecast 
 
 One last word before diving into the details. It's definitely possible  to expand the framework to a more general probalistic expressions (I.E. [Kolm, Ritter & Simonian (2021)](https://www.pm-research.com/content/iijpormgmt/47/5/91) proposed such an expression with much less assumptions that can even incorporate views on hidden factors) while this kind of expansion generally comes with cost of tractbillity and computational burden. Let's stick to the Gaussian world with the traditional BL models in this blog. 
 
-#### The Prior <a name="subparagraph1"></a>
+#### The Prior {#subparagraph1}
 
 The immediate question you might ask (and it is definitely a legit one). You mentioned we are starting from a neutral point in the framework. While you also menteiond the great volatility and ever-changing nature of security return. What should this neutral starting point be? Can we trust any kind of return information to be our neutral start point? Black & litterman's answer was yes and their choice rest upon the CAPM model. 
 
@@ -66,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-#### The Investment View (Likelihood) <a name="subparagraph2"></a>
+#### The Investment View (Likelihood) {#subparagraph2}
 
 With a reasonable and well-founded neutral point established, we can now turn to the more thrilling part of incorporating investment views and forecasts. This is where we unlock the potential for active returns (and for sure perhaps loss). As I see it, this particular aspect of the Black-Litterman model truly embodies its innovation and power.
 
@@ -143,7 +143,7 @@ $$
 
 This represents our valuable information on expected returns from the "adventurous" side of the equation, guiding us to take bearable and rewardable risk.
 
-#### The Posterior <a name="subparagraph3"></a>
+#### The Posterior {#subparagraph3}
 
 **Posterior for $$\mu$$**
 
@@ -185,7 +185,7 @@ $$
 In comparison to the original $$r\|\mu \sim N(\mu, \Sigma_{\pi})$$, we replace the true $$\mu$$ with our refined estimation $$\mu^{\star}$$. Simultaneously, the variance expands to $$\Sigma + M$$ accounting for uncerntainty around our forecast on expected return as well. 
 
 
-### Deviate From a Neutral Point! <a name="dev"></a>
+### Deviate From a Neutral Point! {#dev}
 
 After all the groundwork laid out, the moment of revelation has arrived. Does our final result align with the concept of deviating from a neutral point based on investment views, as proposed? The clarity we seek will unfold through a few more algebraic steps.
 
@@ -251,7 +251,7 @@ $$
 
 
 
-### Summary <a name="summary"></a>
+### Summary {#summary}
 
 In the blog, we have delved into the Black-Litterman (BL) model from a Bayesian perspective, and I trust you will found it as valuable a tool for expected return estimation as I have. 
 
@@ -260,7 +260,7 @@ The BL model stands out for its exceptional ability to address challenges posed 
 Even with this anchoring mechanism, we recognize the importance of assessing the uncertainty surrounding our ivesment views/forecast. Here is where the brilliance of the Bayesian framework within the BL model shines through. It empowers us to rigorously evaluate uncertainty and make informed decisions, leveraging the available information in a risk-aware manner.
 
 
-### Reference <a name="ref"></a>
+### Reference {#ref}
   
   - Black & Litterman (1991): Global Asset Allocation: combining investors views with market equilibrium
   - Idzorek (2007): A Step-By-Step Guide to Black-Litterman Model: Incorporating user-specified confidence level

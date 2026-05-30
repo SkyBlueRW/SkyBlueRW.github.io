@@ -6,7 +6,7 @@ tags: [optimization, convex-optimization]
 math: true
 ---
 
-### Why should you care? <a name="introduction"></a>
+### Why should you care? {#introduction}
 
 It is likely that you will agree optimization has become an indispensable tool in the world of finance. Nowdays, it's common to see people using optimizers to decide allocation of resources (like portfolio construction or cash flow management), to determine parameters in model fitting (like regression), to ...
 
@@ -17,7 +17,7 @@ While you may be wondering why you should care about the details under the hood.
 - **Knowing optimization helps to get a sense of the boundary**. Last but not least, optimzation is not a magical box that can always be solved. It is crutial to know whether an optimization can be solved and to what degree. Is it garuanteed to have a global optimum? Will local optimum provide a reasonable approximation if it's not? As far as I am concerned, there are a bunch of questions to ask yourself when looking into the arsenal of optimization methods during a project.
 
 
-### Convex Optimization: what and why? <a name="convex"></a>
+### Convex Optimization: what and why? {#convex}
 
 I will take "agreed" as your response if you do not close the page yet :) 
 
@@ -46,7 +46,7 @@ In addition, many real world problems can be formulated as convex optimization. 
 
 It is an incredibly useful technique that has a wide range of applications.
 
-### Numerical Algorithms to solve <a name="solve"></a>
+### Numerical Algorithms to solve {#solve}
 
 With such an optimization problem at hand, we can easily feed it into one of the optimizers and get the optimal solution. However, it's imporant to note that optimizers offer various numerical algorithms to solve the problem, and the choice of algorithm can significantly impact the efficiency of the process. How to choose? It largely depends on questions such as whether the optimization is strongly convex, whether it is huge in dimensions, whether it is large in scale, or whether we have any knowledge of the first or second derivative of the objective function. 
 
@@ -67,7 +67,7 @@ Incoporating second order derivatives (**Newton Method**) can potentially improv
 
 $$x_{k+1} = x_{k} - H(x_k)^{-1} \triangledown f(x_{k})$$
 
-### Duality: Further Insights <a name="dual"></a>
+### Duality: Further Insights {#dual}
 
 Duality is the unavoidable next stop if we want to gain further insights. It looks a little ambiguous at first glance but makes a lot of sense in various aspects very quickly. In plain English, for a convex optimization in general form as detailed in the first section, duality is to find a lower bound function of the original objective function. The maximization of such a lower bound function leads us to the best lower bound and is called the dual problem of the original primal problem.
 
@@ -102,7 +102,7 @@ Second, it can be used to simplify complex optimization problems. Often, the dua
 Last but not least, it can be used to prove the optimality of a solution. By solving the dual problem and comparing its objective value with the objective value of the original problem, we can determine whether a given solution is optimal or at least close to optimal. A lot of optimizers out there are actually using the duality gap as a stop criteria to determine the convergence of the algorithm.
 
 
-### Summary <a name="summary"></a>
+### Summary {#summary}
 
 With a focus on convex optimization and financial applications, we talked about the meaning, the solver algorithm, and duality of numerical optimizations. I hope you find it relavant and interesting upon reading. If you feel interested in delving deeper, I highly recommend the following books for further reference.
 

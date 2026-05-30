@@ -10,7 +10,7 @@ math: true
 
 *Hallerbach(2015): Advances in Portfolio Risk Control*
 
-### Introduction <a name="introduction"></a>
+### Introduction {#introduction}
 
 
 Ever since the birth of Mordern Portfolio Theory, mean variance optimization has taken a significant presence in portfolio construction, tilting the "science and art" blend a bit more toward the former. However, mean variance optimization is almost "notorious" for its sensitivity to small estimation errors in inputs, particularly when return and risk estimates are not well aligned.
@@ -23,7 +23,7 @@ The choice among these portfolio construction methods then depends on how confid
 
 In this blog post, I will try to delve into portfolio construction methods along Hallerbach's decision pyramid. The objective is to gain some intuitive understanding of each method by examining their marginal conditions and aligning them with the mean variance efficient portfolio and each other.
 
-### Maximum Sharpe Ratio Portfolio <a name="msrp"></a>
+### Maximum Sharpe Ratio Portfolio {#msrp}
 
 Let's begin by setting the benchmark with the Maximum Sharpe Ratio Portfolio (MSRP). It is the tangent portfolio on the efficient frontier with highest sharpe ratio ($$\dfrac{R - R^{f}}{\sigma} = \dfrac{R^{e}}{\sigma}$$) across the opportunity set. 
 
@@ -62,7 +62,7 @@ Without additional constraints, MSRP will consider our inputs as truth without a
 
 The sad fact remains that under quite some scenarios our estimations are no better than assertions like "all security share the same expected return", "all asset classes share similar sharpe ratios", "CAPM generally holds" ...
 
-### Risk centric Portfolio Construction <a name="risk"></a>
+### Risk centric Portfolio Construction {#risk}
 
 That is when risk-centric portfolio can come into play. Risk-centric portfolio construction methods can help to address scenarios where reliable estimation is not available for certain inputs. Although these methods represent a compromise in the absence of reliable estimations, portfolios generated using them can be robust and perform comparably well to the true mean variance efficient portfolio in certain market scenarios (as suggested by their marginal conditions). 
 

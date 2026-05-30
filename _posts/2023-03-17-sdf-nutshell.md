@@ -6,7 +6,7 @@ tags: [asset-pricing, sdf]
 math: true
 ---
 
-### Introduction <a name="introduction"></a>
+### Introduction {#introduction}
 
 It all starts with $$P_t = E_t(m_{t+1}x_{t+1})$$! 
 
@@ -19,7 +19,7 @@ Throughout this blog, I would like to kick off the discussion on the subject of 
 There are actually several ways to get to the asset pricing formula. I will begin with the one that requires the fewest assumptions and gradually build upon it with more perspectives and assumptions. 
 
 
-### The Origin: as little as LOOP <a name="ma"></a>
+### The Origin: as little as LOOP {#ma}
 
 In its most general form, **Law of One Price** (LOOP later in the blog) garuantees the pricing formula. As long as portfolios with the same payoff have the same price, there exists such a random variable of stochastic discount factor that prices all payoffs. 
 
@@ -46,7 +46,7 @@ Here we are with the pricing equation $$p = E(mx)$$ :)  To state it more formall
 It is worth noting that this SDF may not be the only one available. In cases where the payoff space does not span the entire future scenario set (**incomplete market**) we can simply go beyond the payoff space to obtain an alternative SDF ($$E(mX) = E((m+\epsilon)X) $$) by adding an arbitrary orthogonal component ($${\epsilon: E(\epsilon X)=0}$$).
 
 
-### P = E(mx) <a name="im"></a>
+### P = E(mx) {#im}
 
 Let's take a moment to consider the equation at hand and explore various representations that can be derived from it.
 
@@ -122,7 +122,7 @@ $$
 It is truly remarkable that wihout much modeling yet, we can extend the pricing equation to these useful concepts with direct rewriting of the equation. Having access to different representations with different focuses is incredibly convenient in application. We can choose the representation that best suits our application and continue with further modeling. Moreover, the insights gained from one representation can be extended to all other representations since they are equivalent in the first place.
 
 
-### The modeling <a name="model"></a>
+### The modeling {#model}
 
 As you might notice at the moment, though insightful, the pricing equation is highly general with limited structure imposed yet. It has enough generality to apply to different securities and perspectives, but it functions more as a paradigm than a fully-fledged model. To gain further insights, we need to introduce additional assumptions and structures to this foundation.
 
@@ -174,7 +174,7 @@ $$
 
 
 
-### Summary <a name="summary"></a> 
+### Summary {#summary} 
 
 In this blog, we delved into the fundamentals of asset pricing with a focus on the Stochastic Discount Factor (SDF) and its role in pricing securities. We discussed the existence of SDF and its different representations, and briefly touched upon the models that can be placed on the equation.
 
