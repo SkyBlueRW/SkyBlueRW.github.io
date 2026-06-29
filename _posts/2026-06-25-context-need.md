@@ -3,7 +3,7 @@ title: 'Context Is All You Give'
 date: 2026-06-25 12:00:00 -0500
 categories: [LLM]
 tags: [llm, context-engineering, knowledge-base, mcp, agents]
-description: Our part to get more from it
+description: Knowledge, tools, and handoffs - our part in getting more from them
 ---
 
 LLMs broke into my life, probably like they did for everyone. I can't remember the last task I did without one in the loop. An ad-hoc analysis, sketching out code, a large-scope research project, everyday things like personal-development planning, recurring chores like following the news or routine reporting, even this blog you're reading. LLMs slot instantly into my workflow and double, triple, sometimes 10x my efficiency.
