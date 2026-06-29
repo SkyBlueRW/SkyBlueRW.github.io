@@ -1,7 +1,7 @@
 ---
 title: 'Context Is All You Need'
 date: 2026-06-25 12:00:00 -0500
-categories: [AI Engineering]
+categories: [LLM]
 tags: [llm, context-engineering, knowledge-base, mcp, agents]
 description: how I stop LLMs from guessing
 ---
