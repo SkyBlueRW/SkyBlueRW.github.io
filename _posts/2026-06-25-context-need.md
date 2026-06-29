@@ -3,7 +3,7 @@ title: 'Context Is All You Need'
 date: 2026-06-25 12:00:00 -0500
 categories: [LLM]
 tags: [llm, context-engineering, knowledge-base, mcp, agents]
-description: how I stop LLMs from guessing
+description:  
 ---
 
 LLMs broke into my life, probably like they did for everyone. I can't remember the last task I did without one in the loop. An ad-hoc analysis, sketching out code, a large-scope research project, everyday things like personal-development planning, recurring chores like following the news or routine reporting, even this blog you're reading. LLMs slot instantly into my workflow and double, triple, sometimes 10x my efficiency.
