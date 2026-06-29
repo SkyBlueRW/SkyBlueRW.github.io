@@ -14,9 +14,11 @@ Luckily, the smartest minds have handled all of that for us. Using these models 
 
 ### Grounding, not guessing {#grounding}
 
-Hallucination and random responses are probably the biggest headache you'll run into. When the model is unsure about something, it won't stop and fail like a calculator throwing an error. It fails by guessing instead: even with little real confidence underneath, it hands back a complete, fluent, and often wrong answer. It makes something up rather than stopping.
+Hallucination and random responses are probably the biggest headache we all run into. When the model is unsure about something, it won't stop and fail like a calculator throwing an error. It fails by guessing instead: even with little real confidence underneath, it hands back a complete, fluent, and often wrong answer. It makes something up rather than stopping.
 
-Over time I've settled into three habits that head most of this off, and they go into almost every project I start. I lean on a growing knowledge base, kept under strict rules for updating and querying, so the model has a ground truth to stand on instead of its own memory. I pull the parts of the work that have to be exact out of its hands and give them to deterministic tools, so quality is guarded by code. And I let it write things down as it goes, a CSV of data here, a markdown note there, so results survive from one step to the next and from one session into another.
+Working well with these models, I've come to think, is mostly a matter of managing their context. Three design choices do most of that work for me, and they go into almost every project I start. I give the model a knowledge base to draw on, so it reasons from a ground truth instead of its own memory. I keep the parts that have to be exact out of its context, handing them to deterministic tools so quality is guarded by code. And I let it write things down as it goes, passing results between steps as files, so context persists instead of living only in its head.
+
+What's even better, less hallucination is only the first payoff. The same design choices make the work more reproducible, easier to check, and robust across whichever model or environment I happen to be working in, all of which we'll unpack as we go. 
 
 ### The knowledge base {#kb}
 
