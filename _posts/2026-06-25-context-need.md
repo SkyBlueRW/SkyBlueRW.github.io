@@ -50,7 +50,7 @@ The other choice I reach for is MCP. It's more restrictive and a bit more work t
 
 And whichever form a tool takes, its result still has to get to the next step.
 
-### Files as the intermediate {#files}
+### Files to carry and last {#files}
 
 A natural follow-up, once tools are in the picture, is how to return their intermediate results. The straightforward way is to let the model read the output of the function call directly. That works until it doesn't, and the clearest case is a large dataset. I can't think of a single situation where loading a big dataset into context is a good idea: it buries the model's attention and it hurts precision. So instead of reading the result, pass it as a file.
 
@@ -60,8 +60,8 @@ Files also outlast the conversation. Context is wiped the moment a session ends,
 
 ### Bringing it together {#together}
 
-So that's the shape of it. Start with a knowledge base, so the model has facts to work from instead of its own memory. Pull the parts of a workflow that have to be exact into tools, especially when it's something I'll reuse. And pass results between steps as files, so nothing important has to live in the model's head. Three habits, one idea: give the model the right context instead of hoping it remembers.
+So that's the shape of it. Start with a knowledge base, so the model has facts to work from instead of its own memory. Pull the parts of a workflow that have to be exact into tools, especially when it's something I'll reuse. And pass results between steps as files, so nothing important has to live in the model's head. Three design choices, one idea: give the model the right context instead of hoping it remembers.
 
-None of this is complicated, and that's sort of the point. These few habits, plus the discipline of checking a result rather than trusting it when it really matters, do most of the work for me. They cut down the hallucinations, they keep the model's attention on what actually matters, and they turn a one-off chat into a workflow I can run again next week without babysitting it. The model stops guessing and starts standing on something.
+None of this is complicated, and that's sort of the point. These few choices, plus the discipline of checking a result rather than trusting it when it really matters, do most of the work for me. They cut down the hallucinations, they keep the model's attention on what actually matters, and they turn a one-off chat into a workflow I can run again next week without babysitting it. The model stops guessing and starts standing on something.
 
-At the end of the day, the model is already a remarkably powerful tool, far beyond anything I could build myself. Providing the right context, in the right way, is the small part that's left to me, and it's the part that decides whether all that power actually shows up in my work. Give it that, and it becomes the best assistant I've ever had. Context, it turns out, really is most of what you need.
+At the end of the day, the model is already a remarkably powerful tool, far beyond anything I could build myself. Providing the right context, in the right way, is the small part that's left to me, and it's the part that decides whether all that power actually shows up in my work. Give it that, and it becomes the best assistant I've ever had. Context, it turns out, really is all we give.
