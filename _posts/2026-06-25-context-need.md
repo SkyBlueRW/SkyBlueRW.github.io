@@ -3,14 +3,14 @@ title: 'Context Is All You Give'
 date: 2026-06-25 12:00:00 -0500
 categories: [LLM]
 tags: [llm, context-engineering, knowledge-base, mcp, agents]
-description: Grounding LLM with knowledge, tools and files.
+description: Grounding LLMs with knowledge, tools and files.
 ---
 
-LLMs broke into my life, probably like they did for everyone. I can't remember the last task I did without one in the loop. An ad-hoc analysis, sketching out code, a large-scope research project, everyday things like personal-development planning, recurring chores like following the news or routine reporting, even this blog you're reading. LLMs slot instantly into my workflow and double, triple, sometimes 10x my efficiency.
+LLMs broke into my life, probably like they did for everyone. I can't remember the last task I did without one in the loop. An ad-hoc analysis, sketching out code, a large-scope research project, everyday things like personal-development planning, recurring chores like following the news or routine reporting, even this blog you're reading. LLMs slot instantly into my workflow and turn a few days' work into a single night.
 
-These models took a monumental effort to build. To make one that can do almost everything, the labs had to stack attention and feedforward layers deep enough to link the context and store the knowledge. Let alone all the labeling and human and AI response collection behind the post-training that turns a model from merely predicting the next token into something actually helpful. To me, it's like the Manhattan Project of our age!
+These models took a monumental effort to build. To make one that can do almost everything, the frontier labs had to stack attention and feedforward layers deep enough to link the context and store the knowledge, let alone all the labeling and demonstrations behind the post-training that turns a model from merely predicting the next token into something actually helpful. To me, it's like the Apollo program of our age!
 
-Luckily, the smartest minds have handled all of that for us. Using these models can be as simple as a casual conversation. Still, it takes effort to use them well, and "context is all we need" is what I keep feeling after leaning on them across every aspect of my life. Provide the proper context in the right form, and you get the best assistant you've ever had.
+Luckily, the smartest minds have handled all of that for us. Using these models can be as simple as a casual conversation. Still, it takes effort to use them well, and "context is all you give" is what I keep feeling after leaning on them across every aspect of my life. Provide the proper context in the right form, and you get the best assistant you've ever had.
 
 ### Grounding, not guessing {#grounding}
 
