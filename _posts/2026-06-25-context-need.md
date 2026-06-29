@@ -1,210 +1,65 @@
 ---
-title: 'Navigating the Factor Zoo!'
-date: 2026-11-25 12:00:00 -0500
-categories: [Asset Pricing]
-tags: [factor-zoo, bayesian]
-math: true
+title: 'Context Is All You Need'
+date: 2026-06-28 12:00:00 -0500
+categories: [AI Engineering]
+tags: [llm, context-engineering, knowledge-base, mcp, agents]
+description: how I stop LLMs from guessing
 ---
 
-In the previous blog, [A First Glimpse into the "Factor Zoo"](/posts/factor-zoo/), we took a bird’s eye view of the empirical evidence and saw how drastically conclusions can swing given different datasets and portfolio construction choices. Replication debates aside, it’s time to step closer and look at how factor evaluation and modeling actually work.
+LLMs broke into my life, probably like they did for everyone. I can't remember the last task I did without one in the loop. An ad-hoc analysis, sketching out code, a large-scope research project, everyday things like personal-development planning, recurring chores like following the news or routine reporting, even this blog you're reading. LLMs slot instantly into my workflow and double, triple, sometimes 10x my efficiency.
 
-At the heart of empirical factor research sits a straightforward yet stubborn question: "Is this factor's return statistically different from zero, and is it economically meaningful hence likely to persist?". It's no surprise that investors care about more than mean and variance of return when judging factors and associated expected returns. Extra looks at the distibution such as tail risk, time varying parameter, dependnce on the past can translate into a real world edge in investment. Even so, a Gaussian framework, uniquely defined by mean and variance remains a reasonable starting point, for its theoretical gounding and analytical tractability. That's exactly where we'll start this time.
+These models took a monumental effort to build. To make one that can do almost everything, the labs had to stack attention and feedforward layers deep enough to link the context and store the knowledge. Let alone all the labeling and human and AI response collection behind the post-training that turns a model from merely predicting the next token into something actually helpful. To me, it's like the Manhattan Project of our age!
 
-In this blog, we'll try to unpack the nuts and bolts behind the modeling and evaluation. We start from the classic frequentist toolkit used in in empirical factor research and then explore the Bayesian framework that Jensen, Kelly & Pedersen (2023) recommended to add addtional structure and reduce variance. Even with machine learning thecniques in the spotlight nowadays, these structured econometric techniques and the market structures that they explicit still matter when samples are short, dimensions explode, and signals hide in noise - the everyday reality for much of what we face in financial markets.
+Luckily, the smartest minds have handled all of that for us. Using these models can be as simple as a casual conversation. Still, it takes effort to use them well, and "context is all we need" is what I keep feeling after leaning on them across every aspect of my life. Provide the proper context in the right form, and you get the best assistant you've ever had.
 
+### Grounding, not guessing {#grounding}
 
-### Building a "Managed Portfolio" {#portfolio}
+Hallucination and random responses are probably the biggest headache you'll run into. When the model is unsure about something, it won't stop and fail like a calculator throwing an error. It fails by guessing instead: even with little real confidence underneath, it hands back a complete, fluent, and often wrong answer. It makes something up rather than stopping.
 
-In its essence, factor research is a finance-specific way to approach prediction tasks. In almost every factor study, well see a regularly rebalanced long–short portfolio built from lagged security (or issuer) characteristics, and then all analysis is run on that portfolio’s return — a managed portfolio meant to represent the factor. 
+Over time I've settled into three habits that head most of this off, and they go into almost every project I start. I lean on a growing knowledge base, kept under strict rules for updating and querying, so the model has a ground truth to stand on instead of its own memory. I pull the parts of the work that have to be exact out of its hands and give them to deterministic tools, so quality is guarded by code. And I let it write things down as it goes, a CSV of data here, a markdown note there, so results survive from one step to the next and from one session into another.
 
-Before diving into the details, it's definitely worth steping one step back and ask: why do we do it this way? The motivation is clear when looking into a generic prediction setup. For N securities over $$t=1,..,T$$, we attempt to use variables know at time t ($$x_{i,t}$$) to predict next period's return ($$R_{i,t+1}$$). The task is to figure out the function $$G$$. This formulation obviously stands for way more flexibility compared to the traditional factor research in the sense that it can accomodate all kinds of market structure that we can think of, either if it is regime shifts, term structure, market segmentation, and so on.
+### The knowledge base {#kb}
 
-$$
-\begin{aligned}
-R_{i, t+1} &= E[R_{i,t+1}] + \epsilon_{i, t+1} = G(x_{i,t}) + \epsilon_{i, t+1}\\
-& E[\epsilon_{i,t+1}] = 0\\
-& i = 1..N \\
-& t = 1..T \\
-\end{aligned}
-$$
+It didn't take long, once LLMs were part of my daily routine, to notice I was repeating myself: the same set of context, fed by hand, to all kinds of projects. Rarely is a new project truly independent of the ones before it. There's almost always shared background, a similar domain, the same preferences, the same hard-won lessons. And even for the rare anomaly that really does stand alone, soon enough another project comes along that shares its context. Accumulating all of it in one knowledge base just makes sense.
 
-However, such a generic model is not estimable in practice. With N assets across T periods, we are effectively trying to learn $$N \times T$$ conditional variables from just one realization each in a very low singal to noise environment (the average volatility of security returns is concevied way larger compare to their means). The combination of exploding dimensionality and noise enforces us to focus on only a few aspects that can be drawn from the data set available to us.
+Such a knowledge base only helps if it can grow continuously and seamlessly, right alongside the daily work it assists. And the more useful it gets, the bigger it gets: a knowledge base is most valuable when it holds a large set of contexts, which is exactly what would swallow a huge chunk of the context window, and dilute the model's attention, if you loaded it all at once. That tension is where the design matters.
 
-The framework of factor research is actually building the fence for us. It's a set of reasonable assumptions for us to make, with which estimation is more possible. Inevitably, we give up a lot of information and deviate the direct way in the way but are left with something that is way more reachable.  
+What works for me is a pile of small markdown files that link to each other, not one giant document. Any project or conversation starts with nothing more than a high-level table of contents of the repo. From there, the model follows only the links that matter, pulling in the few well-named files that are right on topic and leaving the rest on disk. That's progressive loading: follow the links that help, skip the ones that aren't relevant to the project at hand.
 
-By building a portfolio as per characteristic universally across time, we actually assume a common mapping of the predicting function $$G$$, that a characteristic has equal impact all securities across the time. The benefit of the assumption is obvious, it's reasonable to apply the same rule at each rebalancing for each security 
+A big pile of files only stays trustworthy if it grows organically with everyday use and stays easy for the model to navigate. A carefully designed maintenance manual is the bedrock for all of that. Believe me, I used to direct every query and update by hand, and I was quickly overwhelmed by the sheer burden of it. The fix is to write the rules down once, where the model can see them, and let it do the upkeep. Reading is mostly what we just discussed: always enter through the index, search out the relevant links, and ground the answer on the pages you find rather than improvising.
 
+Writing is the more interesting half. The first rule is that any update or new page has to respect the small, well-named file convention, so the base stays navigable as it grows. It also helps to give the model a clear sense of taste about what is worth keeping: the lessons genuinely learned rather than a transcript of the chat, the preferences and decisions that will recur, and above all the moments I disagreed with the model and why. And whenever a new note contradicts something already in the base, the rule is to stop and re-confirm rather than quietly write over it.
 
+One more piece of this that I genuinely enjoy is the health check. Roughly once a week, also depending on how much token budget my plan has left that week (only half joking :)), I walk the whole base with the model and ask it to flag inconsistencies across everything in it. A contradiction it surfaces is usually one of three things: a genuinely new circumstance, a drift in my own preferences, or simply me failing to stick to a long-term value. Each is worth a small log entry, and together they make the health check a surprisingly fun act of reflection, where I get to watch myself change as a person over time.
 
+### Replace the exact steps with tools {#tools}
 
+A knowledge base is the bedrock, but it isn't the only place hallucination can creep in. It shows up just as readily in the doing as in the knowing: the model can start off perfectly and slip somewhere later.
 
+Thoughtful instructions help steer it toward correct execution, but we can do more. Most LLM-integrated workflows mix two kinds of work. Take a small research analysis: pulling the raw dataset is a data fetch that has to be exact, fitting a regression or computing a correlation is a calculation that has to be exact, reshaping the variables into the right form is a transformation that has to be exact. None of those should come from the model's memory. But what the result implies, which hypothesis it supports, what to test next, how to frame the finding, that's the open-ended part, and exactly where I want the model thinking freely.
 
+Especially when the workflow is a reusable piece, it pays to identify the exact steps and consider handing them to a predefined tool that returns a deterministic result, instead of letting the model improvise freely from beginning to end.
 
+For those exact steps, instead of randomness leaking into every detail, a tool pulls it back to a much smaller surface: choosing the right tool and specifying the correct inputs from the context so far. The model is good at that small, bounded decision, far better than it is at carrying a long computation in its head without slipping. Each tool becomes a reliable fixed point in a long chain, a place where the workflow can rest on a known-correct result instead of a guess. And adding a quality check to each tool is not much extra work, so every one of those fixed points can also validate its own output, catching problems at the step where they happen instead of at the very end.
 
+Tools can take a lot of forms. In my case, most of the time they're old packages I've built or short shell scripts, all wrapped in a command-line interface and called from the command line. A CLI gives the most flexibility: it lets the model reuse everything I've already developed behind nothing more than a command.
 
+The other choice I reach for is MCP. It's more restrictive and a bit more work to build, but it's a great fit for collaboration. And collaboration isn't only about different people running different models with different preferences, which in my experience is usually fine. The harder problem is the execution environment. Whether the model is driving a CLI agent like Claude Code or Codex, or a desktop chat app, each comes with a very different setup: different access to databases, different packages installed, a different network. A local MCP server smooths that over. With something like FastMCP, it's easy to stand up one unified execution environment, the same data access and the same network, no matter which client is calling.
 
+And whichever form a tool takes, its result still has to get to the next step.
 
+### Files as the intermediate {#files}
 
-sutble difference.
+A natural follow-up, once tools are in the picture, is how to return their intermediate results. The straightforward way is to let the model read the output of the function call directly. That works until it doesn't, and the clearest case is a large dataset. I can't think of a single situation where loading a big dataset into context is a good idea: it buries the model's attention and it hurts precision. So instead of reading the result, pass it as a file.
 
-What, then, is a factor in asset pricing?
+A file isn't just a workaround for size, it's a universal channel. The filesystem is shared not only across the steps of one session, but across different agents, and even across different models. It also smooths over the differences between environments: whether the model is running in a desktop app or a command-line agent, almost all of them can reach a file. The execution environments may vary widely in what databases and packages they expose, but a file on disk is the one thing nearly all of them can touch. It's the same instinct the big multi-agent setups follow: each agent keeps its own private context and hands off through a shared file rather than merging memories. The model's context is private; the file is the public channel everything can read.
 
-Nothing mystical! A factor is simply a measurable variable that captures some patterns of co-movement among security returns. It's worth highlighting that, although these co-movements may stem from a wide variety of forces (economic growth, geopolitical status, consumption, demand, investor sentiment, and so on), these drivers are a lot of the times abstract and unobservable concepts. For instance, we all know that investor sentiment moves markets, prices would surge on optimism and retreat on pessimism. Yet no one knows the "true" equation to define investor sentiment or how to gauge it in real time.
+Files also outlast the conversation. Context is wiped the moment a session ends, but a file stays, so it becomes the memory that lets me stop in the middle and pick up tomorrow. And because every handoff is written down, I can open it when something looks wrong and replay a later step on the same file without redoing the expensive ones before it. The workflow stops being a black box and becomes a sequence of checkable artifacts.
 
-Here it comes the handy tool of factor mimicking portfolios! A factor may carry implications across a wide range of domains from social psychology to consumer behavior to political events... While in asset pricing, it's our choice to discard any dimension unrelated to security return and focus solely on the market relevant component of the factor - essentially the projection of the factor onto the return space of securities. Now we reframe our objective from defining an abstract concept to measuring its projected returns - something equally powerful in financial markets but far easier to define and measure. With our focus squarely on financial market only, it is viable to construct a managed portfolio of securities whose returns proxy the factor mimicking portfolio and by extension the factor’s financial impact.
+### Bringing it together {#together}
 
-Still take the investor sentiment as an example: although the true state of market mood is inherently hard to define or quantify, we know that certain securities (for example, those with high analyst forecast dispersion or larger short position open interest) tend to react more strongly to sentiment swings. A managed portfolio built on these characteristics aims to capture those performance differences and thus proxy the factor. 
+So that's the shape of it. Start with a knowledge base, so the model has facts to work from instead of its own memory. Pull the parts of a workflow that have to be exact into tools, especially when it's something I'll reuse. And pass results between steps as files, so nothing important has to live in the model's head. Three habits, one idea: give the model the right context instead of hoping it remembers.
 
-Typically, these portfolios are long–short portfolios built from observable characteristics. Implementation choices abound: sorts versus cross-sectional regressions, with/without controls for other factors, quantile breakpoints, rebalancing frequency, neutrality constraints, and so on. Despite all these flexibilities, the core idea remains the same: at each rebalancing date $$t$$, we form a portfolio whose return proxies the factor's projection, with predefined portfolio construction using previous period characteristics ($$c_{t-1}$$) and contemporaneous return ($$r_t$$).
+None of this is complicated, and that's sort of the point. These few habits, plus the discipline of checking a result rather than trusting it when it really matters, do most of the work for me. They cut down the hallucinations, they keep the model's attention on what actually matters, and they turn a one-off chat into a workflow I can run again next week without babysitting it. The model stops guessing and starts standing on something.
 
-$$
-\begin{aligned}
-f_t &= f(c_{t-1}, r_t), \forall t \in [1..T]\\
-\end{aligned}
-$$
-
-Adopting the approach of managed portfolios brings obvious conveniences. We now work with the return time series of a well defined portfolio, which is usually easy to quantify, analyze, simulate from an investment perspective and also remain its potential to link to some meaningful macro economic forces. It's not really surprising for investors to feel ambiguous on the market sentiment. 
-
-
-
-### The Classic {#classic}
-
-
-
-Using a portfolio instead of a few securities to proxy fator helps to reduce noise,  while definitely not all of them. Other than the true signal $$\alpha$$ that governs the long term performance of the factor, which is likely to linger around in the future out of sample and what we care! Another key driver behind $$f_t$$ (a lot of the times larger in magnitude) is a series of disturbance term $$\epsilon_t$$ representing shokc specific to each of the period. 
-
-
-
-$$
-\begin{aligned}
-f_t&= \alpha + \epsilon_t \\
-\epsilon_t &\sim N(0, \sigma^2) \\
-&\forall t \in [1..T]
-\end{aligned}
-$$
-
-Traditionally in empirical asset pricing, the signal embeded in the facotr $$\alpha$$ is seen as a constant, which leads to pretty straightfoward estimation. The sample mean of the realized returns from the managed portfolio (from here on, let's just call it factor return for short), with the distrubance term netting out for their 0 expected value, is our estimate on $$\alpha$$. Its standard error is also captured as $$\dfrac{1}{T}\sigma^2$$ under the IID Gaussian assumption. Further analysis like hypothesis testing is a natural extension from here.
-
-$$
-\begin{aligned}
-\hat{\alpha} &= \bar{f_t}= \dfrac{1}{T}\sum_t f_t = \alpha + \dfrac{1}{T}\sum_t \epsilon_t \\
-\end{aligned}
-$$
-
-While, unfortunately, such a concise and intuive estimation process does not necessarily lead to a smooth journey ahead. For one hand, volatility.
-
-especially nowadays with the continous emergence of new factors. For one hand, the number of parameters required for estimation increased exponentially with the increase of factors. While the sample of the data does not grow at a comparable speed - not even close! This is also the reason why there is rarely effort following the trail to model all factors jointly as a whole. The additional parameters required to mdoel the interaction among the factors just make things worse. 
-
-On the other hand, the data sets are notoriously famous for its 
-
-Clearly, we can use some innovation beyond the traditional framework to light our road ahead.
-
-
-### The Bayesian Len {#bayes}
-
-The Bayesian statistic is potentially an answer. Facing a data set with classic feature of small N (sample size) and large k (dimension), it's probably a good idea to in
-
-
-Although things more and more toward the direction of machine learning techniques instead of traditional econometric.
-
-Bayesian model
-
-In a frequentist view, too less data to construct a large model. 
-
-benefit: flexible framwork to combine.  less vunerable to multiple testing, all parameters can be modeled together much easily. way more easier to work with large number of parameters. 
-
-model for assessing factor replicability. hierarchical structure to model themes cross regions and regimes.
-
-
-pool of information about alpha cross different samples. 
-
-
-story - mean - variance large, hard particularly multiple factor, curse dimension, inject domain knowledge via bayesian framework - how the result compare - open flexibility for further structure for alpha and shock. 
-
-$$
-\begin{aligned} 
-&\text{Frequentist} \\
-f_t&= \alpha + \epsilon_t \\
-& \epsilon_t \sim N(0, \sigma^2) \\
-\hat{\alpha} &= \bar{f_t}= \dfrac{1}{T}\sum_t f_t = \alpha + \dfrac{1}{T}\sum_t \epsilon_t \\
-&\text{dimensional curse ...} \\
-&\text{Bayesian} \\
-\alpha &\sim N(0, \tau^2) ~~\text{(prior)}\\
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\mathbb{E}[X|Y,Z] &= \mu_x + (\Sigma_{XY}, \Sigma_{XZ}) 
-\begin{pmatrix} 
-\Sigma_{YY} & \Sigma_{YZ}  \\
-\Sigma_{ZY} & \Sigma_{ZZ}  \\
-\end{pmatrix}^ {-1} 
-\begin{pmatrix}
-Y-\mu_Y \\
-Z-\mu_Z \\
-\end{pmatrix} \\
-Var(X|Y,Z) &= \Sigma_{XX} -  (\Sigma_{XY}, \Sigma_{XZ}) 
-\begin{pmatrix} 
-\Sigma_{YY} & \Sigma_{YZ}  \\
-\Sigma_{ZY} & \Sigma_{ZZ}  \\
-\end{pmatrix}^ {-1} 
-\begin{pmatrix}
-\Sigma_{XY} \\
-\Sigma_{XZ} \\
-\end{pmatrix} \\
-\end{aligned} 
-$$
-
-$$
-\begin{aligned}
-E[\alpha|\hat{\alpha}]&=\dfrac{\tau^2}{\tau^2 + \sigma^2/T} \hat{\alpha}\\
-Var[\alpha|\hat{\alpha}]&=\dfrac{\tau^2/T}{\tau^2 + \sigma^2/T}\Sigma^2
-\end{aligned}
-$$
-
-
-**alpha hacking**
-
-$$
-\begin{aligned}
-f_t^{OOS} &= \alpha + \epsilon_t \\
-\hat{\alpha}^{OOS} &=\bar{f_t}^{OOS} = \alpha + \dfrac{1}{T^{OOS}} \sum_t \epsilon_t \\
-f_t^{IS} &= \alpha + \epsilon_t + u_t, ~~~ u_t\sim(\bar{\epsilon}, \sigma_u^2) \\
-\hat{\alpha}^{IS} &= \bar{f_t}^{IS} = \alpha + \dfrac{1}{T^{IS}}\sum_t{(\epsilon_t+u_t)}\\
-&\Downarrow\\
-E(\alpha|\hat{\alpha}^{IS}, \hat{\alpha}^{OOS}) &= \dfrac{1}{1 + \dfrac{1}{1 + (\dfrac{\tau^2 T^{IS}}{\sigma^2+\sigma_u^2} + \dfrac{\tau^2 T^{OOS}}{\sigma^2})}} (w(\hat{\alpha}^{IS}-\bar{\epsilon}) + (1-w)\hat{\alpha}^{OOS}) \\
-w&= \dfrac{\sigma^2/T^{OOS}}{(\sigma^2+\sigma_u^2)/T^{IS} + \sigma^2/T^{OOS}}
-\end{aligned}
-$$
-
-**hierachy**
-
-$$
-\begin{aligned}
-f_t^i &= \alpha^i + \epsilon_t^i \\
-\alpha^i &= c + w^i, ~~c\sim N(0, \tau_c^2), ~w^i\sim N(0, \tau_w^2) \\
-Cor(\epsilon_t^i \epsilon_t^j) &=\rho \\
-&\Downarrow \\
-E(\alpha^i|\hat{\alpha}^1,..,\hat{\alpha}^N)&= \dfrac{1}{1 + \dfrac{\rho\sigma^2}{\tau_c^2T}+ \dfrac{\tau_w^2+(1-\rho)\sigma^2/T}{\tau_c^2N}}\dfrac{1}{N}\sum_j^N \alpha_j + \dfrac{1}{1 + \dfrac{(1-\rho)\sigma^2}{\tau_w^2T}}(\hat{\alpha}^i - \dfrac{1}{1 + \dfrac{\tau_w^2+(1-\rho)\sigma^2/T}{(tau_c^2+\rho\sigma^2/T)N}}\dfrac{1}{N}\sum_j^N \alpha_j)
-\end{aligned}
-$$
-
-
-
-**finally**
-
-$$
-\begin{aligned}
-&\Omega = var(\alpha), \Sigma = var(\epsilon) \\
-E(\alpha|\hat{\alpha}) &= (\Omega^{-1} + T\Sigma^{-1})^{-1}(\Omega^{-1}\mathbb{1}\alpha^0 + T\Sigma^{-1}\hat{\alpha})
-\end{aligned}
-$$
-
-
-heavy role of prior.
-### Reference {#ref}
-- Jensen, Kelly & Pedersen (2023): Is There a Replication Crisis in Finance
-- Bali, Engle & Murray (2016): Empirical Asset Pricing: The Cross Section of Stock Returns
-- Gu, Kelly & Xiu (2020): Empirical Asset Pricing via Machine Learning
-- Cochrane (2011): Presidential Address: Discount Rates
+At the end of the day, the model is already a remarkably powerful tool, far beyond anything I could build myself. Providing the right context, in the right way, is the small part that's left to me, and it's the part that decides whether all that power actually shows up in my work. Give it that, and it becomes the best assistant I've ever had. Context, it turns out, really is most of what you need.
