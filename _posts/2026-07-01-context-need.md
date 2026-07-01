@@ -1,6 +1,6 @@
 ---
 title: 'Context Is All You Give'
-date: 2026-07-01 12:00:00 -0500
+date: 2026-07-01 06:00:00 -0500
 categories: [LLM]
 tags: [llm, context-engineering, knowledge-base, mcp, agents]
 description: Grounding LLMs with knowledge, tools and files.
