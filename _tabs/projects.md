@@ -4,9 +4,15 @@ icon: fas fa-laptop-code
 order: 4
 ---
 
-Alongside the writing, I build and maintain open-source quant infrastructure — the tooling I
-actually use for research. A curated selection below; the rest lives on
+Alongside the writing, I build and maintain open-source tooling — the quant infrastructure and
+LLM workflows I actually use for research. A curated selection below; the rest lives on
 [my GitHub](https://github.com/SkyBlueRW).
+
+## LLM & agent tooling
+
+- **[knowledge-os](https://github.com/SkyBlueRW/knowledge-os)** — a seed for a personal
+  knowledge base run by an LLM: your agent reads the contract, interviews you, and builds your
+  vault in plain Markdown. The setup behind [Context Is All You Give](/posts/context-need/).
 
 ## Portfolio construction & optimization
 
